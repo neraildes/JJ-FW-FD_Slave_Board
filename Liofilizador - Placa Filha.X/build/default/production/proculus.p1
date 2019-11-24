@@ -1,0 +1,931 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"94 ./global.h
+[; ;./global.h: 94: struct {
+[s S140 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S140 . flag_usart_rx flag_usart_error flag_power_off flag_led_tmr0 flag_led_usart flag_led_memory flag_global_hot flag_main_loop_WDT ]
+"116
+[; ;./global.h: 116:       struct {
+[s S142 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S142 . flag_global_aquecimento flag_global_condensador flag_global_vacuo ]
+"114
+[; ;./global.h: 114: union {
+[u S141 `uc 1 `S142 1 ]
+[n S141 . bits . ]
+"33 ./usart.h
+[; ;./usart.h: 33: void USART_put_int(int value);
+[v _USART_put_int `(v ~T0 @X0 0 ef1`i ]
+"32
+[; ;./usart.h: 32: void USART_putc(char value);
+[v _USART_putc `(v ~T0 @X0 0 ef1`uc ]
+"115 ./proculus.h
+[; ;./proculus.h: 115: void PROCULUS_Delay(unsigned int tempo_ms);
+[v _PROCULUS_Delay `(v ~T0 @X0 0 ef1`ui ]
+"38 ./usart.h
+[; ;./usart.h: 38: unsigned char USART_input_buffer(void);
+[v _USART_input_buffer `(uc ~T0 @X0 0 ef ]
+"9 proculus.c
+[; ;proculus.c: 9: volatile extern unsigned char usart_buffer[25];
+[v _usart_buffer `Vuc ~T0 @X0 -> 0 `x e ]
+"56 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\string.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\string.h: 56: extern size_t strlen(const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"52 ./proculus.h
+[; ;./proculus.h: 52: typedef struct {
+[s S143 `ui 1 `uc 1 `uc 1 `ui 1 `uc 1 `ui -> 20 `i ]
+[n S143 . header size function VP length data ]
+[v F1196 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
+[v __delay `JF1196 ~T0 @X0 0 e ]
+[p i __delay ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 54: __asm("INDF equ 00h");
+[; <" INDF equ 00h ;# ">
+"61
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 61: __asm("TMR0 equ 01h");
+[; <" TMR0 equ 01h ;# ">
+"68
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 68: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"75
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 75: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 161: __asm("FSR equ 04h");
+[; <" FSR equ 04h ;# ">
+"168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 168: __asm("PORTA equ 05h");
+[; <" PORTA equ 05h ;# ">
+"230
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 230: __asm("PORTB equ 06h");
+[; <" PORTB equ 06h ;# ">
+"292
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 292: __asm("PORTC equ 07h");
+[; <" PORTC equ 07h ;# ">
+"354
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 354: __asm("PORTE equ 09h");
+[; <" PORTE equ 09h ;# ">
+"375
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 375: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"382
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 382: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"460
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 460: __asm("PIR1 equ 0Ch");
+[; <" PIR1 equ 0Ch ;# ">
+"516
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 516: __asm("PIR2 equ 0Dh");
+[; <" PIR2 equ 0Dh ;# ">
+"573
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 573: __asm("TMR1 equ 0Eh");
+[; <" TMR1 equ 0Eh ;# ">
+"580
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 580: __asm("TMR1L equ 0Eh");
+[; <" TMR1L equ 0Eh ;# ">
+"587
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 587: __asm("TMR1H equ 0Fh");
+[; <" TMR1H equ 0Fh ;# ">
+"594
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 594: __asm("T1CON equ 010h");
+[; <" T1CON equ 010h ;# ">
+"688
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 688: __asm("TMR2 equ 011h");
+[; <" TMR2 equ 011h ;# ">
+"695
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 695: __asm("T2CON equ 012h");
+[; <" T2CON equ 012h ;# ">
+"766
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 766: __asm("SSPBUF equ 013h");
+[; <" SSPBUF equ 013h ;# ">
+"773
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 773: __asm("SSPCON equ 014h");
+[; <" SSPCON equ 014h ;# ">
+"843
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 843: __asm("CCPR1 equ 015h");
+[; <" CCPR1 equ 015h ;# ">
+"850
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 850: __asm("CCPR1L equ 015h");
+[; <" CCPR1L equ 015h ;# ">
+"857
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 857: __asm("CCPR1H equ 016h");
+[; <" CCPR1H equ 016h ;# ">
+"864
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 864: __asm("CCP1CON equ 017h");
+[; <" CCP1CON equ 017h ;# ">
+"961
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 961: __asm("RCSTA equ 018h");
+[; <" RCSTA equ 018h ;# ">
+"1056
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1056: __asm("TXREG equ 019h");
+[; <" TXREG equ 019h ;# ">
+"1063
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1063: __asm("RCREG equ 01Ah");
+[; <" RCREG equ 01Ah ;# ">
+"1070
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1070: __asm("CCPR2 equ 01Bh");
+[; <" CCPR2 equ 01Bh ;# ">
+"1077
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1077: __asm("CCPR2L equ 01Bh");
+[; <" CCPR2L equ 01Bh ;# ">
+"1084
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1084: __asm("CCPR2H equ 01Ch");
+[; <" CCPR2H equ 01Ch ;# ">
+"1091
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1091: __asm("CCP2CON equ 01Dh");
+[; <" CCP2CON equ 01Dh ;# ">
+"1161
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1161: __asm("ADRESH equ 01Eh");
+[; <" ADRESH equ 01Eh ;# ">
+"1168
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1168: __asm("ADCON0 equ 01Fh");
+[; <" ADCON0 equ 01Fh ;# ">
+"1269
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1269: __asm("OPTION_REG equ 081h");
+[; <" OPTION_REG equ 081h ;# ">
+"1339
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1339: __asm("TRISA equ 085h");
+[; <" TRISA equ 085h ;# ">
+"1401
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1401: __asm("TRISB equ 086h");
+[; <" TRISB equ 086h ;# ">
+"1463
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1463: __asm("TRISC equ 087h");
+[; <" TRISC equ 087h ;# ">
+"1525
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1525: __asm("TRISE equ 089h");
+[; <" TRISE equ 089h ;# ">
+"1546
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1546: __asm("PIE1 equ 08Ch");
+[; <" PIE1 equ 08Ch ;# ">
+"1602
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1602: __asm("PIE2 equ 08Dh");
+[; <" PIE2 equ 08Dh ;# ">
+"1659
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1659: __asm("PCON equ 08Eh");
+[; <" PCON equ 08Eh ;# ">
+"1706
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1706: __asm("OSCCON equ 08Fh");
+[; <" OSCCON equ 08Fh ;# ">
+"1771
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1771: __asm("OSCTUNE equ 090h");
+[; <" OSCTUNE equ 090h ;# ">
+"1823
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1823: __asm("SSPCON2 equ 091h");
+[; <" SSPCON2 equ 091h ;# ">
+"1885
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1885: __asm("PR2 equ 092h");
+[; <" PR2 equ 092h ;# ">
+"1892
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1892: __asm("SSPADD equ 093h");
+[; <" SSPADD equ 093h ;# ">
+"1899
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1899: __asm("SSPMSK equ 093h");
+[; <" SSPMSK equ 093h ;# ">
+"1904
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1904: __asm("MSK equ 093h");
+[; <" MSK equ 093h ;# ">
+"2021
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2021: __asm("SSPSTAT equ 094h");
+[; <" SSPSTAT equ 094h ;# ">
+"2190
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2190: __asm("WPUB equ 095h");
+[; <" WPUB equ 095h ;# ">
+"2260
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2260: __asm("IOCB equ 096h");
+[; <" IOCB equ 096h ;# ">
+"2330
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2330: __asm("VRCON equ 097h");
+[; <" VRCON equ 097h ;# ">
+"2400
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2400: __asm("TXSTA equ 098h");
+[; <" TXSTA equ 098h ;# ">
+"2486
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2486: __asm("SPBRG equ 099h");
+[; <" SPBRG equ 099h ;# ">
+"2548
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2548: __asm("SPBRGH equ 09Ah");
+[; <" SPBRGH equ 09Ah ;# ">
+"2618
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2618: __asm("PWM1CON equ 09Bh");
+[; <" PWM1CON equ 09Bh ;# ">
+"2688
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2688: __asm("ECCPAS equ 09Ch");
+[; <" ECCPAS equ 09Ch ;# ">
+"2770
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2770: __asm("PSTRCON equ 09Dh");
+[; <" PSTRCON equ 09Dh ;# ">
+"2814
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2814: __asm("ADRESL equ 09Eh");
+[; <" ADRESL equ 09Eh ;# ">
+"2821
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2821: __asm("ADCON1 equ 09Fh");
+[; <" ADCON1 equ 09Fh ;# ">
+"2855
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2855: __asm("WDTCON equ 0105h");
+[; <" WDTCON equ 0105h ;# ">
+"2908
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2908: __asm("CM1CON0 equ 0107h");
+[; <" CM1CON0 equ 0107h ;# ">
+"2973
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 2973: __asm("CM2CON0 equ 0108h");
+[; <" CM2CON0 equ 0108h ;# ">
+"3038
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3038: __asm("CM2CON1 equ 0109h");
+[; <" CM2CON1 equ 0109h ;# ">
+"3089
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3089: __asm("EEDATA equ 010Ch");
+[; <" EEDATA equ 010Ch ;# ">
+"3094
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3094: __asm("EEDAT equ 010Ch");
+[; <" EEDAT equ 010Ch ;# ">
+"3101
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3101: __asm("EEADR equ 010Dh");
+[; <" EEADR equ 010Dh ;# ">
+"3108
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3108: __asm("EEDATH equ 010Eh");
+[; <" EEDATH equ 010Eh ;# ">
+"3115
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3115: __asm("EEADRH equ 010Fh");
+[; <" EEADRH equ 010Fh ;# ">
+"3122
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3122: __asm("SRCON equ 0185h");
+[; <" SRCON equ 0185h ;# ">
+"3179
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3179: __asm("BAUDCTL equ 0187h");
+[; <" BAUDCTL equ 0187h ;# ">
+"3231
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3231: __asm("ANSEL equ 0188h");
+[; <" ANSEL equ 0188h ;# ">
+"3275
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3275: __asm("ANSELH equ 0189h");
+[; <" ANSELH equ 0189h ;# ">
+"3325
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3325: __asm("EECON1 equ 018Ch");
+[; <" EECON1 equ 018Ch ;# ">
+"3370
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3370: __asm("EECON2 equ 018Dh");
+[; <" EECON2 equ 018Dh ;# ">
+"32 ./global.h
+[p x FOSC = INTRC_NOCLKOUT ]
+"33
+[p x WDTE = OFF ]
+"34
+[p x PWRTE = ON ]
+"35
+[p x MCLRE = OFF ]
+"36
+[p x CP = ON ]
+"37
+[p x CPD = OFF ]
+"38
+[p x BOREN = ON ]
+"39
+[p x IESO = ON ]
+"40
+[p x FCMEN = ON ]
+"41
+[p x LVP = OFF ]
+"44
+[p x BOR4V = BOR40V ]
+"45
+[p x WRT = OFF ]
+"103
+[; ;./global.h: 103: } generic_status;
+[v _generic_status `S140 ~T0 @X0 1 e ]
+"121
+[; ;./global.h: 121:       } statuspower;
+[v _statuspower `S141 ~T0 @X0 1 e ]
+"13 proculus.c
+[; ;proculus.c: 13: void PROCULUS_Control_Register_Write(unsigned char *vetor, unsigned char size){
+[v _PROCULUS_Control_Register_Write `(v ~T0 @X0 1 ef2`*uc`uc ]
+{
+[e :U _PROCULUS_Control_Register_Write ]
+[v _vetor `*uc ~T0 @X0 1 r1 ]
+[v _size `uc ~T0 @X0 1 r2 ]
+[f ]
+"14
+[; ;proculus.c: 14:      USART_put_int(0x5AA5);
+[e ( _USART_put_int (1 -> 23205 `i ]
+"15
+[; ;proculus.c: 15:      USART_putc((unsigned char)(1+size));
+[e ( _USART_putc (1 -> -> + -> 1 `i -> _size `i `uc `uc ]
+"16
+[; ;proculus.c: 16:      USART_putc(0x80);
+[e ( _USART_putc (1 -> -> 128 `i `uc ]
+"17
+[; ;proculus.c: 17:      for(unsigned char i=0;i<size;i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $U 148  ]
+[e :U 145 ]
+"18
+[; ;proculus.c: 18:          USART_putc(vetor[i]);
+[e ( _USART_putc (1 -> *U + _vetor * -> _i `ux -> -> # *U _vetor `ui `ux `uc ]
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 148 ]
+[e $ < -> _i `i -> _size `i 145  ]
+[e :U 146 ]
+}
+"19
+[; ;proculus.c: 19:      PROCULUS_Delay(1);
+[e ( _PROCULUS_Delay (1 -> -> 1 `i `ui ]
+"20
+[; ;proculus.c: 20: }
+[e :UE 144 ]
+}
+"22
+[; ;proculus.c: 22: void PROCULUS_Control_Register_Read(unsigned char reg, unsigned char size, unsigned char *retorno){
+[v _PROCULUS_Control_Register_Read `(v ~T0 @X0 1 ef3`uc`uc`*uc ]
+{
+[e :U _PROCULUS_Control_Register_Read ]
+[v _reg `uc ~T0 @X0 1 r1 ]
+[v _size `uc ~T0 @X0 1 r2 ]
+[v _retorno `*uc ~T0 @X0 1 r3 ]
+[f ]
+"23
+[; ;proculus.c: 23:      USART_put_int(0x5AA5);
+[e ( _USART_put_int (1 -> 23205 `i ]
+"24
+[; ;proculus.c: 24:      USART_putc((unsigned char)(3+size));
+[e ( _USART_putc (1 -> -> + -> 3 `i -> _size `i `uc `uc ]
+"25
+[; ;proculus.c: 25:      USART_putc(0x81);
+[e ( _USART_putc (1 -> -> 129 `i `uc ]
+"26
+[; ;proculus.c: 26:      USART_putc(reg);
+[e ( _USART_putc (1 -> _reg `uc ]
+"27
+[; ;proculus.c: 27:      USART_putc(size);
+[e ( _USART_putc (1 -> _size `uc ]
+"29
+[; ;proculus.c: 29:      if(USART_input_buffer()){
+[e $ ! != -> ( _USART_input_buffer ..  `i -> 0 `i 150  ]
+{
+"30
+[; ;proculus.c: 30:         for(unsigned char i=0;i<25;i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 25 `i 151  ]
+[e $U 152  ]
+[e :U 151 ]
+"31
+[; ;proculus.c: 31:             retorno[i] = usart_buffer[(unsigned char)(6+i)];
+[e = *U + _retorno * -> _i `ux -> -> # *U _retorno `ui `ux *U + &U _usart_buffer * -> -> + -> 6 `i -> _i `i `uc `ux -> -> # *U &U _usart_buffer `ui `ux ]
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 25 `i 151  ]
+[e :U 152 ]
+}
+"32
+[; ;proculus.c: 32:      }
+}
+[e :U 150 ]
+"33
+[; ;proculus.c: 33:      PROCULUS_Delay(1);
+[e ( _PROCULUS_Delay (1 -> -> 1 `i `ui ]
+"34
+[; ;proculus.c: 34: }
+[e :UE 149 ]
+}
+"40
+[; ;proculus.c: 40: void PROCULUS_VP_Write(unsigned int vp, char *vetor, char size){
+[v _PROCULUS_VP_Write `(v ~T0 @X0 1 ef3`ui`*uc`uc ]
+{
+[e :U _PROCULUS_VP_Write ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[v _vetor `*uc ~T0 @X0 1 r2 ]
+[v _size `uc ~T0 @X0 1 r3 ]
+[f ]
+"41
+[; ;proculus.c: 41:      USART_put_int(0x5AA5);
+[e ( _USART_put_int (1 -> 23205 `i ]
+"42
+[; ;proculus.c: 42:      USART_putc((unsigned char)(3+size));
+[e ( _USART_putc (1 -> -> + -> 3 `i -> _size `i `uc `uc ]
+"43
+[; ;proculus.c: 43:      USART_putc(0x82);
+[e ( _USART_putc (1 -> -> 130 `i `uc ]
+"44
+[; ;proculus.c: 44:      USART_put_int(vp);
+[e ( _USART_put_int (1 -> _vp `i ]
+"45
+[; ;proculus.c: 45:      for(unsigned char i=0;i<size;i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $U 158  ]
+[e :U 155 ]
+"46
+[; ;proculus.c: 46:          USART_putc(vetor[i]);
+[e ( _USART_putc (1 *U + _vetor * -> _i `ux -> -> # *U _vetor `ui `ux ]
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 158 ]
+[e $ < -> _i `i -> _size `i 155  ]
+[e :U 156 ]
+}
+"48
+[; ;proculus.c: 48:      PROCULUS_Delay(1);
+[e ( _PROCULUS_Delay (1 -> -> 1 `i `ui ]
+"49
+[; ;proculus.c: 49: }
+[e :UE 154 ]
+}
+"52
+[; ;proculus.c: 52: void PROCULUS_VP_Read(unsigned int vp, char *vetor, char size){
+[v _PROCULUS_VP_Read `(v ~T0 @X0 1 ef3`ui`*uc`uc ]
+{
+[e :U _PROCULUS_VP_Read ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[v _vetor `*uc ~T0 @X0 1 r2 ]
+[v _size `uc ~T0 @X0 1 r3 ]
+[f ]
+"53
+[; ;proculus.c: 53:      USART_put_int(0x5AA5);
+[e ( _USART_put_int (1 -> 23205 `i ]
+"54
+[; ;proculus.c: 54:      USART_putc(4);
+[e ( _USART_putc (1 -> -> 4 `i `uc ]
+"55
+[; ;proculus.c: 55:      USART_putc(0x83);
+[e ( _USART_putc (1 -> -> 131 `i `uc ]
+"56
+[; ;proculus.c: 56:      USART_put_int(vp);
+[e ( _USART_put_int (1 -> _vp `i ]
+"57
+[; ;proculus.c: 57:      USART_putc((unsigned char)(size>>1));
+[e ( _USART_putc (1 -> -> >> -> _size `i -> 1 `i `uc `uc ]
+"59
+[; ;proculus.c: 59:      if(USART_input_buffer()){
+[e $ ! != -> ( _USART_input_buffer ..  `i -> 0 `i 160  ]
+{
+"60
+[; ;proculus.c: 60:         for(unsigned char i=0;i<size;i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $U 164  ]
+[e :U 161 ]
+"61
+[; ;proculus.c: 61:             (vetor[i]) = usart_buffer[(unsigned char)(7+i)];
+[e = *U + _vetor * -> _i `ux -> -> # *U _vetor `ui `ux -> *U + &U _usart_buffer * -> -> + -> 7 `i -> _i `i `uc `ux -> -> # *U &U _usart_buffer `ui `ux `uc ]
+[e ++ _i -> -> 1 `i `uc ]
+[e :U 164 ]
+[e $ < -> _i `i -> _size `i 161  ]
+[e :U 162 ]
+}
+"62
+[; ;proculus.c: 62:         }
+}
+[e :U 160 ]
+"63
+[; ;proculus.c: 63:      PROCULUS_Delay(1);
+[e ( _PROCULUS_Delay (1 -> -> 1 `i `ui ]
+"64
+[; ;proculus.c: 64: }
+[e :UE 159 ]
+}
+"71
+[; ;proculus.c: 71: void PROCULUS_VP_Write_Byte(unsigned int vp, unsigned char value){
+[v _PROCULUS_VP_Write_Byte `(v ~T0 @X0 1 ef2`ui`uc ]
+{
+[e :U _PROCULUS_VP_Write_Byte ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[v _value `uc ~T0 @X0 1 r2 ]
+[f ]
+"72
+[; ;proculus.c: 72:      char vetor[1];
+[v _vetor `uc ~T0 @X0 -> -> 1 `i `ux a ]
+"73
+[; ;proculus.c: 73:      vetor[0]=value;
+[e = *U + &U _vetor * -> -> -> 0 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> _value `uc ]
+"74
+[; ;proculus.c: 74:      PROCULUS_VP_Write(vp,vetor,1);
+[e ( _PROCULUS_VP_Write (3 , , _vp &U _vetor -> -> 1 `i `uc ]
+"75
+[; ;proculus.c: 75: }
+[e :UE 165 ]
+}
+"76
+[; ;proculus.c: 76: unsigned char PROCULUS_VP_Read_Byte(unsigned int vp){
+[v _PROCULUS_VP_Read_Byte `(uc ~T0 @X0 1 ef1`ui ]
+{
+[e :U _PROCULUS_VP_Read_Byte ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[f ]
+"77
+[; ;proculus.c: 77:      char vetor[1];
+[v _vetor `uc ~T0 @X0 -> -> 1 `i `ux a ]
+"78
+[; ;proculus.c: 78:      PROCULUS_VP_Read(vp,vetor,1);
+[e ( _PROCULUS_VP_Read (3 , , _vp &U _vetor -> -> 1 `i `uc ]
+"79
+[; ;proculus.c: 79:      return vetor[0];
+[e ) -> *U + &U _vetor * -> -> -> 0 `i `ui `ux -> -> # *U &U _vetor `ui `ux `uc ]
+[e $UE 166  ]
+"80
+[; ;proculus.c: 80: }
+[e :UE 166 ]
+}
+"85
+[; ;proculus.c: 85: void PROCULUS_VP_Write_UInt16(unsigned int vp, unsigned int value){
+[v _PROCULUS_VP_Write_UInt16 `(v ~T0 @X0 1 ef2`ui`ui ]
+{
+[e :U _PROCULUS_VP_Write_UInt16 ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[v _value `ui ~T0 @X0 1 r2 ]
+[f ]
+"86
+[; ;proculus.c: 86:      char vetor[2];
+[v _vetor `uc ~T0 @X0 -> 2 `i a ]
+"87
+[; ;proculus.c: 87:      unsigned char *pt;
+[v _pt `*uc ~T0 @X0 1 a ]
+"88
+[; ;proculus.c: 88:      pt=(unsigned char *)(&value);
+[e = _pt -> &U _value `*uc ]
+"89
+[; ;proculus.c: 89:      vetor[1]=(char)(value>>8);
+[e = *U + &U _vetor * -> -> -> 1 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> >> _value -> 8 `i `uc ]
+"90
+[; ;proculus.c: 90:      vetor[0]=(char)(value);
+[e = *U + &U _vetor * -> -> -> 0 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> _value `uc ]
+"91
+[; ;proculus.c: 91:      PROCULUS_VP_Write(vp,vetor,2);
+[e ( _PROCULUS_VP_Write (3 , , _vp &U _vetor -> -> 2 `i `uc ]
+"92
+[; ;proculus.c: 92: }
+[e :UE 167 ]
+}
+"93
+[; ;proculus.c: 93: unsigned int PROCULUS_VP_Read_UInt16(unsigned int vp){
+[v _PROCULUS_VP_Read_UInt16 `(ui ~T0 @X0 1 ef1`ui ]
+{
+[e :U _PROCULUS_VP_Read_UInt16 ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[f ]
+"94
+[; ;proculus.c: 94:      char vetor[2];
+[v _vetor `uc ~T0 @X0 -> 2 `i a ]
+"95
+[; ;proculus.c: 95:      PROCULUS_VP_Read(vp,vetor,2);
+[e ( _PROCULUS_VP_Read (3 , , _vp &U _vetor -> -> 2 `i `uc ]
+"96
+[; ;proculus.c: 96:      return (unsigned int)((vetor[0]<<8)+vetor[1]);
+[e ) -> + << -> *U + &U _vetor * -> -> -> 0 `i `ui `ux -> -> # *U &U _vetor `ui `ux `i -> 8 `i -> *U + &U _vetor * -> -> -> 1 `i `ui `ux -> -> # *U &U _vetor `ui `ux `i `ui ]
+[e $UE 168  ]
+"97
+[; ;proculus.c: 97: }
+[e :UE 168 ]
+}
+"102
+[; ;proculus.c: 102: void PROCULUS_VP_Write_Long32(unsigned int vp,long value){
+[v _PROCULUS_VP_Write_Long32 `(v ~T0 @X0 1 ef2`ui`l ]
+{
+[e :U _PROCULUS_VP_Write_Long32 ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[v _value `l ~T0 @X0 1 r2 ]
+[f ]
+"103
+[; ;proculus.c: 103:      char vetor[4];
+[v _vetor `uc ~T0 @X0 -> 4 `i a ]
+"104
+[; ;proculus.c: 104:      unsigned char *pt;
+[v _pt `*uc ~T0 @X0 1 a ]
+"105
+[; ;proculus.c: 105:      pt=(unsigned char *)(&value);
+[e = _pt -> &U _value `*uc ]
+"106
+[; ;proculus.c: 106:      vetor[3]=(char)(*(pt++));
+[e = *U + &U _vetor * -> -> -> 3 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> *U ++ _pt * -> -> 1 `i `x -> -> # *U _pt `i `x `uc ]
+"107
+[; ;proculus.c: 107:      vetor[2]=(char)(*(pt++));
+[e = *U + &U _vetor * -> -> -> 2 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> *U ++ _pt * -> -> 1 `i `x -> -> # *U _pt `i `x `uc ]
+"108
+[; ;proculus.c: 108:      vetor[1]=(char)(*(pt++));
+[e = *U + &U _vetor * -> -> -> 1 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> *U ++ _pt * -> -> 1 `i `x -> -> # *U _pt `i `x `uc ]
+"109
+[; ;proculus.c: 109:      vetor[0]=(char)(*(pt++));
+[e = *U + &U _vetor * -> -> -> 0 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> *U ++ _pt * -> -> 1 `i `x -> -> # *U _pt `i `x `uc ]
+"110
+[; ;proculus.c: 110:      PROCULUS_VP_Write(vp,vetor,4);
+[e ( _PROCULUS_VP_Write (3 , , _vp &U _vetor -> -> 4 `i `uc ]
+"111
+[; ;proculus.c: 111: }
+[e :UE 169 ]
+}
+"112
+[; ;proculus.c: 112: long PROCULUS_VP_Read_Long32(unsigned int vp){
+[v _PROCULUS_VP_Read_Long32 `(l ~T0 @X0 1 ef1`ui ]
+{
+[e :U _PROCULUS_VP_Read_Long32 ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[f ]
+"113
+[; ;proculus.c: 113:      char vetor[4];
+[v _vetor `uc ~T0 @X0 -> 4 `i a ]
+"114
+[; ;proculus.c: 114:      PROCULUS_VP_Read(vp,vetor,4);
+[e ( _PROCULUS_VP_Read (3 , , _vp &U _vetor -> -> 4 `i `uc ]
+"115
+[; ;proculus.c: 115:      return ((long)*(vetor+0)<<24)|
+[e ) | | | << -> *U + &U _vetor * -> -> 0 `i `x -> -> # *U &U _vetor `i `x `l -> 24 `i << -> *U + &U _vetor * -> -> 1 `i `x -> -> # *U &U _vetor `i `x `l -> 16 `i << -> *U + &U _vetor * -> -> 2 `i `x -> -> # *U &U _vetor `i `x `l -> 8 `i -> *U + &U _vetor * -> -> 3 `i `x -> -> # *U &U _vetor `i `x `l ]
+[e $UE 170  ]
+"119
+[; ;proculus.c: 119: }
+[e :UE 170 ]
+}
+"147
+[; ;proculus.c: 147: void PROCULUS_VP_Write_Float32(unsigned int vp, float value){
+[v _PROCULUS_VP_Write_Float32 `(v ~T0 @X0 1 ef2`ui`f ]
+{
+[e :U _PROCULUS_VP_Write_Float32 ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[v _value `f ~T0 @X0 1 r2 ]
+[f ]
+"148
+[; ;proculus.c: 148:      char vetor[4];
+[v _vetor `uc ~T0 @X0 -> 4 `i a ]
+"149
+[; ;proculus.c: 149:      unsigned char *pt;
+[v _pt `*uc ~T0 @X0 1 a ]
+"150
+[; ;proculus.c: 150:      pt=(unsigned char *)(&value);
+[e = _pt -> &U _value `*uc ]
+"151
+[; ;proculus.c: 151:      vetor[3]=(char)(*(pt++));
+[e = *U + &U _vetor * -> -> -> 3 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> *U ++ _pt * -> -> 1 `i `x -> -> # *U _pt `i `x `uc ]
+"152
+[; ;proculus.c: 152:      vetor[2]=(char)(*(pt++));
+[e = *U + &U _vetor * -> -> -> 2 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> *U ++ _pt * -> -> 1 `i `x -> -> # *U _pt `i `x `uc ]
+"153
+[; ;proculus.c: 153:      vetor[1]=(char)(*(pt++));
+[e = *U + &U _vetor * -> -> -> 1 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> *U ++ _pt * -> -> 1 `i `x -> -> # *U _pt `i `x `uc ]
+"154
+[; ;proculus.c: 154:      vetor[0]=(char)(*(pt++));
+[e = *U + &U _vetor * -> -> -> 0 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> *U ++ _pt * -> -> 1 `i `x -> -> # *U _pt `i `x `uc ]
+"155
+[; ;proculus.c: 155:      PROCULUS_VP_Write(vp,vetor,4);
+[e ( _PROCULUS_VP_Write (3 , , _vp &U _vetor -> -> 4 `i `uc ]
+"156
+[; ;proculus.c: 156: }
+[e :UE 171 ]
+}
+"157
+[; ;proculus.c: 157:  float PROCULUS_VP_Read_Float32(unsigned int vp){
+[v _PROCULUS_VP_Read_Float32 `(f ~T0 @X0 1 ef1`ui ]
+{
+[e :U _PROCULUS_VP_Read_Float32 ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[f ]
+"158
+[; ;proculus.c: 158:      char vetor[4];
+[v _vetor `uc ~T0 @X0 -> 4 `i a ]
+"159
+[; ;proculus.c: 159:      PROCULUS_VP_Read(vp,vetor,4);
+[e ( _PROCULUS_VP_Read (3 , , _vp &U _vetor -> -> 4 `i `uc ]
+"160
+[; ;proculus.c: 160:      return 0;
+[e ) -> -> 0 `i `f ]
+[e $UE 172  ]
+"161
+[; ;proculus.c: 161: }
+[e :UE 172 ]
+}
+"186
+[; ;proculus.c: 186: void PROCULUS_VP_Write_Double32(unsigned int vp, double value){
+[v _PROCULUS_VP_Write_Double32 `(v ~T0 @X0 1 ef2`ui`d ]
+{
+[e :U _PROCULUS_VP_Write_Double32 ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[v _value `d ~T0 @X0 1 r2 ]
+[f ]
+"187
+[; ;proculus.c: 187:      char vetor[4];
+[v _vetor `uc ~T0 @X0 -> 4 `i a ]
+"194
+[; ;proculus.c: 194:      PROCULUS_VP_Write(vp,vetor,4);
+[e ( _PROCULUS_VP_Write (3 , , _vp &U _vetor -> -> 4 `i `uc ]
+"195
+[; ;proculus.c: 195: }
+[e :UE 173 ]
+}
+"196
+[; ;proculus.c: 196: double PROCULUS_VP_Read_Double32(unsigned int vp){
+[v _PROCULUS_VP_Read_Double32 `(d ~T0 @X0 1 ef1`ui ]
+{
+[e :U _PROCULUS_VP_Read_Double32 ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[f ]
+"197
+[; ;proculus.c: 197:      char vetor[4];
+[v _vetor `uc ~T0 @X0 -> 4 `i a ]
+"198
+[; ;proculus.c: 198:      PROCULUS_VP_Read(vp,vetor,4);
+[e ( _PROCULUS_VP_Read (3 , , _vp &U _vetor -> -> 4 `i `uc ]
+"199
+[; ;proculus.c: 199:      return 0;
+[e ) -> -> 0 `i `d ]
+[e $UE 174  ]
+"200
+[; ;proculus.c: 200: }
+[e :UE 174 ]
+}
+"205
+[; ;proculus.c: 205: void PROCULUS_VP_Write_String(unsigned int vp, char *text){
+[v _PROCULUS_VP_Write_String `(v ~T0 @X0 1 ef2`ui`*uc ]
+{
+[e :U _PROCULUS_VP_Write_String ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[v _text `*uc ~T0 @X0 1 r2 ]
+[f ]
+"206
+[; ;proculus.c: 206:      PROCULUS_VP_Write(vp, text, strlen(text)+1);
+[e ( _PROCULUS_VP_Write (3 , , _vp _text -> + ( _strlen (1 -> _text `*Cuc -> -> 1 `i `ui `uc ]
+"207
+[; ;proculus.c: 207: }
+[e :UE 175 ]
+}
+"208
+[; ;proculus.c: 208: void PROCULUS_VP_Read_String(unsigned int vp, char *text){
+[v _PROCULUS_VP_Read_String `(v ~T0 @X0 1 ef2`ui`*uc ]
+{
+[e :U _PROCULUS_VP_Read_String ]
+[v _vp `ui ~T0 @X0 1 r1 ]
+[v _text `*uc ~T0 @X0 1 r2 ]
+[f ]
+"209
+[; ;proculus.c: 209:      PROCULUS_VP_Read(vp, text, 0x0A);
+[e ( _PROCULUS_VP_Read (3 , , _vp _text -> -> 10 `i `uc ]
+"210
+[; ;proculus.c: 210: }
+[e :UE 176 ]
+}
+"217
+[; ;proculus.c: 217: unsigned char PROCULUS_Read_Version(void){
+[v _PROCULUS_Read_Version `(uc ~T0 @X0 1 ef ]
+{
+[e :U _PROCULUS_Read_Version ]
+[f ]
+"218
+[; ;proculus.c: 218:     unsigned char retorno[2];
+[v _retorno `uc ~T0 @X0 -> 2 `i a ]
+"219
+[; ;proculus.c: 219:     PROCULUS_Control_Register_Read(0x00,2,retorno);
+[e ( _PROCULUS_Control_Register_Read (3 , , -> -> 0 `i `uc -> -> 2 `i `uc &U _retorno ]
+"220
+[; ;proculus.c: 220:     return retorno[0];
+[e ) *U + &U _retorno * -> -> -> 0 `i `ui `ux -> -> # *U &U _retorno `ui `ux ]
+[e $UE 177  ]
+"221
+[; ;proculus.c: 221: }
+[e :UE 177 ]
+}
+"223
+[; ;proculus.c: 223: void PROCULUS_Buzzer(unsigned int time_ms_x_10){
+[v _PROCULUS_Buzzer `(v ~T0 @X0 1 ef1`ui ]
+{
+[e :U _PROCULUS_Buzzer ]
+[v _time_ms_x_10 `ui ~T0 @X0 1 r1 ]
+[f ]
+"224
+[; ;proculus.c: 224:      unsigned char vetor[2];
+[v _vetor `uc ~T0 @X0 -> 2 `i a ]
+"225
+[; ;proculus.c: 225:      time_ms_x_10 /= 10.0;
+[e =/ _time_ms_x_10 .10.0 ]
+"226
+[; ;proculus.c: 226:      vetor[0]=0x02;
+[e = *U + &U _vetor * -> -> -> 0 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> -> 2 `i `uc ]
+"227
+[; ;proculus.c: 227:      vetor[1]=(unsigned char) time_ms_x_10;
+[e = *U + &U _vetor * -> -> -> 1 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> _time_ms_x_10 `uc ]
+"228
+[; ;proculus.c: 228:      PROCULUS_Control_Register_Write(vetor,2);
+[e ( _PROCULUS_Control_Register_Write (2 , &U _vetor -> -> 2 `i `uc ]
+"229
+[; ;proculus.c: 229: }
+[e :UE 178 ]
+}
+"231
+[; ;proculus.c: 231: void PROCULUS_Reset(void){
+[v _PROCULUS_Reset `(v ~T0 @X0 1 ef ]
+{
+[e :U _PROCULUS_Reset ]
+[f ]
+"232
+[; ;proculus.c: 232:      unsigned char vetor[3];
+[v _vetor `uc ~T0 @X0 -> 3 `i a ]
+"233
+[; ;proculus.c: 233:      vetor[0]=0xEE;
+[e = *U + &U _vetor * -> -> -> 0 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> -> 238 `i `uc ]
+"234
+[; ;proculus.c: 234:      vetor[1]=0x5A;
+[e = *U + &U _vetor * -> -> -> 1 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> -> 90 `i `uc ]
+"235
+[; ;proculus.c: 235:      vetor[2]=0xA5;
+[e = *U + &U _vetor * -> -> -> 2 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> -> 165 `i `uc ]
+"236
+[; ;proculus.c: 236:      PROCULUS_Control_Register_Write(vetor,3);
+[e ( _PROCULUS_Control_Register_Write (2 , &U _vetor -> -> 3 `i `uc ]
+"237
+[; ;proculus.c: 237: }
+[e :UE 179 ]
+}
+"243
+[; ;proculus.c: 243: void PROCULUS_Show_Screen(unsigned int screen){
+[v _PROCULUS_Show_Screen `(v ~T0 @X0 1 ef1`ui ]
+{
+[e :U _PROCULUS_Show_Screen ]
+[v _screen `ui ~T0 @X0 1 r1 ]
+[f ]
+"244
+[; ;proculus.c: 244:      unsigned char vetor[3];
+[v _vetor `uc ~T0 @X0 -> 3 `i a ]
+"245
+[; ;proculus.c: 245:      vetor[0] = 0x03;
+[e = *U + &U _vetor * -> -> -> 0 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> -> 3 `i `uc ]
+"246
+[; ;proculus.c: 246:      vetor[1] = (char)(screen>>8);
+[e = *U + &U _vetor * -> -> -> 1 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> -> >> _screen -> 8 `i `uc `uc ]
+"247
+[; ;proculus.c: 247:      vetor[2] = (char) screen;
+[e = *U + &U _vetor * -> -> -> 2 `i `ui `ux -> -> # *U &U _vetor `ui `ux -> -> _screen `uc `uc ]
+"248
+[; ;proculus.c: 248:      PROCULUS_Control_Register_Write(vetor,3);
+[e ( _PROCULUS_Control_Register_Write (2 , &U _vetor -> -> 3 `i `uc ]
+"249
+[; ;proculus.c: 249: }
+[e :UE 180 ]
+}
+"254
+[; ;proculus.c: 254: void PROCULUS_Buffer_to_Proculus(t_proculus *proculus){
+[v _PROCULUS_Buffer_to_Proculus `(v ~T0 @X0 1 ef1`*S143 ]
+{
+[e :U _PROCULUS_Buffer_to_Proculus ]
+[v _proculus `*S143 ~T0 @X0 1 r1 ]
+[f ]
+"255
+[; ;proculus.c: 255:      proculus->header =(*(usart_buffer+0)<<8)+*(usart_buffer+1);
+[e = . *U _proculus 0 -> + << -> *U + &U _usart_buffer * -> -> 0 `i `x -> -> # *U &U _usart_buffer `i `x `i -> 8 `i -> *U + &U _usart_buffer * -> -> 1 `i `x -> -> # *U &U _usart_buffer `i `x `i `ui ]
+"256
+[; ;proculus.c: 256:      proculus->size = *(usart_buffer+2);
+[e = . *U _proculus 1 *U + &U _usart_buffer * -> -> 2 `i `x -> -> # *U &U _usart_buffer `i `x ]
+"257
+[; ;proculus.c: 257:      proculus->function = *(usart_buffer+3);
+[e = . *U _proculus 2 *U + &U _usart_buffer * -> -> 3 `i `x -> -> # *U &U _usart_buffer `i `x ]
+"258
+[; ;proculus.c: 258:      proculus->VP =(*(usart_buffer+4)<<8)+*(usart_buffer+5);
+[e = . *U _proculus 3 -> + << -> *U + &U _usart_buffer * -> -> 4 `i `x -> -> # *U &U _usart_buffer `i `x `i -> 8 `i -> *U + &U _usart_buffer * -> -> 5 `i `x -> -> # *U &U _usart_buffer `i `x `i `ui ]
+"259
+[; ;proculus.c: 259:      proculus->length = *(usart_buffer+6);
+[e = . *U _proculus 4 *U + &U _usart_buffer * -> -> 6 `i `x -> -> # *U &U _usart_buffer `i `x ]
+"260
+[; ;proculus.c: 260:      for(unsigned char i=0;i<20;i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 20 `i 182  ]
+[e $U 183  ]
+[e :U 182 ]
+"261
+[; ;proculus.c: 261:          proculus->data[i] = usart_buffer[7+i];
+[e = *U + &U . *U _proculus 5 * -> _i `ux -> -> # *U &U . *U _proculus 5 `ui `ux -> *U + &U _usart_buffer * -> -> + -> 7 `i -> _i `i `ui `ux -> -> # *U &U _usart_buffer `ui `ux `ui ]
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 20 `i 182  ]
+[e :U 183 ]
+}
+"262
+[; ;proculus.c: 262: }
+[e :UE 181 ]
+}
+"267
+[; ;proculus.c: 267: void PROCULUS_Delay(unsigned int tempo_ms){
+[v _PROCULUS_Delay `(v ~T0 @X0 1 ef1`ui ]
+{
+[e :U _PROCULUS_Delay ]
+[v _tempo_ms `ui ~T0 @X0 1 r1 ]
+[f ]
+"268
+[; ;proculus.c: 268:     for(unsigned int i=0;i<tempo_ms;i++){
+{
+[v _i `ui ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `ui ]
+[e $U 189  ]
+[e :U 186 ]
+{
+"269
+[; ;proculus.c: 269:         _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"270
+[; ;proculus.c: 270:     }
+}
+[e ++ _i -> -> 1 `i `ui ]
+[e :U 189 ]
+[e $ < _i _tempo_ms 186  ]
+[e :U 187 ]
+}
+"271
+[; ;proculus.c: 271: }
+[e :UE 185 ]
+}

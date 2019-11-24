@@ -1,0 +1,13 @@
+PT100 BOARD
+
+v1.0.3
+ Placa Vacuo/Tensão com saidas invertidas (0=Tensao, 1=Vacuo)
+
+v1.0.2
+ contagem de resets incluido
+
+v1.0.1
+ (none)
+
+V.:1.0.0 
+Início do processo de versionamento git.
