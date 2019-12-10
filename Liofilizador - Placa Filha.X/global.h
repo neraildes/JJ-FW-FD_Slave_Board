@@ -16,11 +16,11 @@
 #define XTAL_8MHZ
 
 
-#define VACCUM_BOARD
+//#define VACCUM_BOARD
 
 //#define PT100_UMIDADE
 
-//#define NTC_BOARD
+#define NTC_BOARD
 
 //------------------------------------------------------------------------------
 
@@ -30,7 +30,7 @@
 
 // CONFIG1
 #pragma config FOSC = INTRC_NOCLKOUT// Oscillator Selection bits (INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on RA7/OSC1/CLKIN)
-#pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
+#pragma config WDTE = ON        // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
 #pragma config PWRTE = ON       // Power-up Timer Enable bit (PWRT enabled)
 #pragma config MCLRE = OFF      // RE3/MCLR pin function select bit (RE3/MCLR pin function is MCLR)
 #pragma config CP = ON          // Code Protection bit (Program memory code protection is enabled)

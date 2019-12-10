@@ -37,11 +37,8 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Dropbox/01-IndKa%20Ind.%20e%20Com.%20Ltda/Repositorio/JJCientifica/Liofilizador/Firmware/Placa%20Filha/Liofilizador%20-%20Placa%20Filha.X/versao.h</file>
-            <file>file:/C:/Dropbox/01-IndKa%20Ind.%20e%20Com.%20Ltda/Repositorio/JJCientifica/Liofilizador/Firmware/Placa%20Filha/Liofilizador%20-%20Placa%20Filha.X/global.h</file>
-            <file>file:/C:/Dropbox/01-IndKa%20Ind.%20e%20Com.%20Ltda/Repositorio/JJCientifica/Liofilizador/Firmware/Placa%20Filha/Liofilizador%20-%20Placa%20Filha.X/usart.h</file>
-            <file>file:/C:/Dropbox/01-IndKa%20Ind.%20e%20Com.%20Ltda/Repositorio/JJCientifica/Liofilizador/Firmware/Placa%20Filha/Liofilizador%20-%20Placa%20Filha.X/SlaveLiofilizadorVer1.c</file>
-            <file>file:/C:/Dropbox/01-IndKa%20Ind.%20e%20Com.%20Ltda/Repositorio/JJCientifica/Liofilizador/Firmware/Placa%20Filha/Liofilizador%20-%20Placa%20Filha.X/I2C.c</file>
+            <file>file:/Y:/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/global.h</file>
+            <file>file:/Y:/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/versao.h</file>
         </group>
     </open-files>
 </project-private>

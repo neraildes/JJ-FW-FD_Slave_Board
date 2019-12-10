@@ -1,5 +1,8 @@
 PT100 BOARD
 
+v1.0.4
+ Foi ligado o cão de guarda.
+
 v1.0.3
  Placa Vacuo/Tensão com saidas invertidas (0=Tensao, 1=Vacuo)
 
