@@ -376,8 +376,7 @@ void Decodify_Command(void)
              //Comando geral para todas as placas, não há resposta.
              Save_Log((usart_protocol.value[0]<<8)+(usart_protocol.value[1]));
              Delay_Led_Tmr0=0;
-             milisegundo=0;
-             segundo=0;
+             milisegundo=0;             
              break;
         
         #ifdef NTC_BOARD     

@@ -6,7 +6,7 @@ Linker command line:
   -cs \
   -h+dist/default/production\Liofilizador_-_Placa_Filha.X.production.sym \
   --cmf=dist/default/production\Liofilizador_-_Placa_Filha.X.production.cmf \
-  -z -Q16F886 -oC:\Users\Home\AppData\Local\Temp\s33g.2 \
+  -z -Q16F886 -oC:\Users\Home\AppData\Local\Temp\s33g.3 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Liofilizador_-_Placa_Filha.X.production.map -E1 \
   -ver=XC8 --acfsm=1493 -ASTACK=01E3h-01EFh -pstack=STACK \
@@ -47,7 +47,7 @@ dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
                 text46                              492      492      141        8       0
                 text44                             1F01     1F01       7C     3E02       0
                 text33                             1DA7     1DA7       72     3B4E       0
-                text32                              80F      80F      7F1     101E       0
+                text32                              810      810      7F0     1020       0
                 text30                             1C4A     1C4A       13     3894       0
                 text25                               34       34      2BA        8       0
                 text24                             1CD9     1CD9       2D     39B2       0
@@ -65,7 +65,7 @@ dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
                 cstackCOMMON                         77       77        6       70       1
                 cstackBANK1                          A0       A0       50       A0       1
                 cstackBANK3                         1DE      1DE        3      190       1
-                clrtext                             807      807        8     100E       0
+                clrtext                             808      808        8     1010       0
                 bssBANK2                            110      110       59      110       1
                 dataBANK3                           1E1      1E1        2      190       1
                 bssBANK3                            190      190       4E      190       1
@@ -90,7 +90,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text46                              492      492      141         0
                 text44                             1F01     1F01       7C         0
                 text33                             1DA7     1DA7       72         0
-                text32                              80F      80F      7F1         0
+                text32                              810      810      7F0         0
                 text30                             1C4A     1C4A       13         0
                 text25                               34       34      2BA         0
                 text24                             1CD9     1CD9       2D         0
@@ -104,7 +104,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text2                              1012     1012      7EE         0
                 text1                              1D06     1D06       2D         0
                 maintext                            5D3      5D3       F8         0
-                clrtext                             807      807        8         0
+                clrtext                             808      808        8         0
 
         CLASS   STRCODE        
 
@@ -164,8 +164,8 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackBANK1                    0000A0  000050  0000F0        A0       1  BANK1       1
                 bssBANK2                       000110  000059  000169       110       1  BANK2       1
                 bssBANK3                       000190  000053  0001E3       190       1  BANK3       1
-                clrtext                        000807  000008  00080F      100E       0  CODE        2
-                text32                         00080F  0007F1  001000      101E       0  CODE        2
+                clrtext                        000808  000008  000810      1010       0  CODE        2
+                text32                         000810  0007F0  001000      1020       0  CODE        2
                 text2                          001012  0007EE  001800      2024       0  CODE        2
                 strings                        001800  00004A  00184A      3000       0  STRING      2
                 text30                         001C4A  000013  001C5D      3894       0  CODE        2
@@ -192,17 +192,17 @@ UNUSED ADDRESS RANGES
         BANK2            0169-016F              7           1
         BANK3            01E3-01EF              D           1
         CODE             0003-0003              1           2
-                         07FB-0806              5
+                         07FB-0807              5
                          1000-1011             12
                          184A-1C49            400
         COMMON           007D-007D              1           1
         CONST            0003-0003              1           2
-                         07FB-0806              5
+                         07FB-0807              5
                          1000-1011             12
                          184A-1C49            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         07FB-0806              5
+                         07FB-0807              5
                          1000-1011             12
                          184A-1C49            100
         IDLOC            2000-2003              4           2
@@ -214,11 +214,11 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            01E3-01EF              D           1
         STRCODE          0003-0003              1           2
-                         07FB-0806              C
+                         07FB-0807              D
                          1000-1011             12
                          184A-1C49            400
         STRING           0003-0003              1           2
-                         07FB-0806              5
+                         07FB-0807              5
                          1000-1011             12
                          184A-1C49            100
 
@@ -352,17 +352,17 @@ PL56                                      text32       0FDC
 PL58                                      text25       02E7
 PL6                                       text25       0272
 PL60                                      text2        17C3
-PL62                                      text32       0FE3
-PL64                                      text32       0FE8
-PL66                                      text32       0FEE
-PL68                                      text32       0FF4
-PL70                                      text32       0FFA
-PL72                                      text2        17C9
-PL74                                      text2        17CF
-PL76                                      text44       1F77
-PL78                                      text66       048C
+PL62                                      text2        17C9
+PL64                                      text44       1F77
+PL66                                      text66       048C
+PL68                                      text7        1FFA
+PL70                                      text32       0FE3
+PL72                                      text32       0FE8
+PL74                                      text32       0FEE
+PL76                                      text32       0FF4
+PL78                                      text32       0FFA
 PL8                                       text25       028C
-PL80                                      text7        1FFA
+PL80                                      text2        17CE
 PROCULUS_Buzzer@time_ms_x_10              cstackBANK1  00AF
 PROCULUS_Buzzer@vetor                     cstackBANK1  00B1
 PROCULUS_Control_Register_Write@i         cstackBANK1  00AE
@@ -410,7 +410,7 @@ _Auto_Relay1                              text66       0348
 _BAUDCTLbits                              (abs)        0187
 _Board_Number                             bssBANK3     01B4
 _CREN                                     (abs)        00C4
-_Decodify_Command                         text32       0844
+_Decodify_Command                         text32       0845
 _Delay_Led_Memory                         bssBANK3     01B0
 _Delay_Led_Tmr0                           bssBANK3     01AE
 _Delay_Led_Usart                          bssBANK3     01AC
@@ -460,7 +460,7 @@ _PROCULUS_Buzzer                          text33       1DB1
 _PROCULUS_Control_Register_Write          text33       1DD1
 _PROCULUS_Delay                           text33       1DFF
 _PROCULUS_Show_Screen                     text33       1DA7
-_PROCULUS_VP_Write                        text32       080F
+_PROCULUS_VP_Write                        text32       0810
 _PROCULUS_VP_Write_String                 text30       1C4A
 _Package_Usart_is_for_me                  text2        175F
 _RCEN                                     (abs)        048B
@@ -713,17 +713,17 @@ __end_ofPL56                              text32       0FE3
 __end_ofPL58                              text25       02EE
 __end_ofPL6                               text25       028C
 __end_ofPL60                              text2        17C9
-__end_ofPL62                              text32       0FE8
-__end_ofPL64                              text32       0FEE
-__end_ofPL66                              text32       0FF4
-__end_ofPL68                              text32       0FFA
-__end_ofPL70                              text32       1000
-__end_ofPL72                              text2        17CF
-__end_ofPL74                              text2        17D4
-__end_ofPL76                              text44       1F7D
-__end_ofPL78                              text66       0492
+__end_ofPL62                              text2        17CE
+__end_ofPL64                              text44       1F7D
+__end_ofPL66                              text66       0492
+__end_ofPL68                              text7        2000
+__end_ofPL70                              text32       0FE8
+__end_ofPL72                              text32       0FEE
+__end_ofPL74                              text32       0FF4
+__end_ofPL76                              text32       0FFA
+__end_ofPL78                              text32       1000
 __end_ofPL8                               text25       0295
-__end_ofPL80                              text7        2000
+__end_ofPL80                              text2        17D4
 __end_of_ADC_Read_NTC                     text2        14A9
 __end_of_ADC_init                         text72       07FB
 __end_of_Auto_Relay0                      text66       0348
@@ -758,7 +758,7 @@ __end_of_PROCULUS_Buzzer                  text33       1DD1
 __end_of_PROCULUS_Control_Register_Write  text33       1DFF
 __end_of_PROCULUS_Delay                   text33       1E19
 __end_of_PROCULUS_Show_Screen             text33       1DB1
-__end_of_PROCULUS_VP_Write                text32       0844
+__end_of_PROCULUS_VP_Write                text32       0845
 __end_of_PROCULUS_VP_Write_String         text30       1C5D
 __end_of_Package_Usart_is_for_me          text2        1775
 __end_of_Rele0Desligado                   text66       042D
@@ -821,7 +821,7 @@ __ptext10                                 text2        167E
 __ptext11                                 text11       1D33
 __ptext12                                 text12       1E8C
 __ptext13                                 text12       1EB9
-__ptext14                                 text32       0844
+__ptext14                                 text32       0845
 __ptext15                                 text15       1C72
 __ptext16                                 text32       0BBD
 __ptext17                                 text32       0F65
@@ -841,7 +841,7 @@ __ptext29                                 text25       01F9
 __ptext3                                  text2        17D4
 __ptext30                                 text30       1C4A
 __ptext31                                 text32       0F8D
-__ptext32                                 text32       080F
+__ptext32                                 text32       0810
 __ptext33                                 text33       1DA7
 __ptext34                                 text33       1DB1
 __ptext35                                 text2        1654
@@ -996,7 +996,7 @@ _usart_buffer                             bssBANK2     0150
 _usart_protocol                           bssBANK3     01CE
 _utoa                                     text18       1E19
 btemp                                     (abs)        007E
-clear_ram0                                clrtext      0807
+clear_ram0                                clrtext      0808
 end_of_initialization                     cinit        0030
 eval_poly@d                               cstackBANK1  00A4
 eval_poly@n                               cstackBANK1  00A5
@@ -1119,7 +1119,7 @@ Total ram usage:       10 bytes
 
  *************** function _mediatemperaturaNTC *****************
  Defined at:
-		line 675 in file "SlaveLiofilizadorVer1.c"
+		line 674 in file "SlaveLiofilizadorVer1.c"
  Parameters:    Size  Location     Type
   canal           1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1836,7 +1836,7 @@ Total ram usage:        7 bytes
 
  *************** function _Send_To_MB *****************
  Defined at:
-		line 642 in file "SlaveLiofilizadorVer1.c"
+		line 641 in file "SlaveLiofilizadorVer1.c"
  Parameters:    Size  Location     Type
   size            1    wreg     unsigned char 
  Auto vars:     Size  Location     Type
@@ -1866,7 +1866,7 @@ Total ram usage:        1 bytes
 
  *************** function _Send_Reply_OK *****************
  Defined at:
-		line 653 in file "SlaveLiofilizadorVer1.c"
+		line 652 in file "SlaveLiofilizadorVer1.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1929,7 +1929,7 @@ Total ram usage:        4 bytes
 
  *************** function _Save_Log *****************
  Defined at:
-		line 1000 in file "SlaveLiofilizadorVer1.c"
+		line 999 in file "SlaveLiofilizadorVer1.c"
  Parameters:    Size  Location     Type
   add_memory      4   17[BANK1 ] unsigned long 
  Auto vars:     Size  Location     Type
@@ -2436,7 +2436,7 @@ Total ram usage:        6 bytes
 
  *************** function _Load_Work *****************
  Defined at:
-		line 977 in file "SlaveLiofilizadorVer1.c"
+		line 976 in file "SlaveLiofilizadorVer1.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -3200,7 +3200,7 @@ Total ram usage:        0 bytes
 
  *************** function _Auto_Relay1 *****************
  Defined at:
-		line 888 in file "SlaveLiofilizadorVer1.c"
+		line 887 in file "SlaveLiofilizadorVer1.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -3271,7 +3271,7 @@ Total ram usage:       14 bytes
 
  *************** function _Rele1Ligado *****************
  Defined at:
-		line 953 in file "SlaveLiofilizadorVer1.c"
+		line 952 in file "SlaveLiofilizadorVer1.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -3302,7 +3302,7 @@ Total ram usage:        0 bytes
 
  *************** function _Rele1Desligado *****************
  Defined at:
-		line 927 in file "SlaveLiofilizadorVer1.c"
+		line 926 in file "SlaveLiofilizadorVer1.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -3332,7 +3332,7 @@ Total ram usage:        0 bytes
 
  *************** function _Auto_Relay0 *****************
  Defined at:
-		line 852 in file "SlaveLiofilizadorVer1.c"
+		line 851 in file "SlaveLiofilizadorVer1.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -3469,7 +3469,7 @@ Total ram usage:       12 bytes
 
  *************** function _Rele0Ligado *****************
  Defined at:
-		line 932 in file "SlaveLiofilizadorVer1.c"
+		line 931 in file "SlaveLiofilizadorVer1.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -3500,7 +3500,7 @@ Total ram usage:        0 bytes
 
  *************** function _Rele0Desligado *****************
  Defined at:
-		line 923 in file "SlaveLiofilizadorVer1.c"
+		line 922 in file "SlaveLiofilizadorVer1.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -3663,7 +3663,7 @@ proculus.c
 		_PROCULUS_Control_Register_Write		CODE           	1DD1	0000	47
 		_PROCULUS_Show_Screen		CODE           	1DA7	0000	11
 		_PROCULUS_VP_Write_String		CODE           	1C4A	0000	20
-		_PROCULUS_VP_Write		CODE           	080F	0000	54
+		_PROCULUS_VP_Write		CODE           	0810	0000	54
 		_PROCULUS_Delay		CODE           	1DFF	0000	27
 		_PROCULUS_Buzzer		CODE           	1DB1	0000	33
 
@@ -3707,7 +3707,7 @@ SlaveLiofilizadorVer1.c
 		_Rele0Ligado   		CODE           	10F0	0000	24
 		_Rele1Ligado   		CODE           	1107	0000	24
 		_main          		CODE           	05D3	0000	249
-		_Decodify_Command		CODE           	0844	0000	862
+		_Decodify_Command		CODE           	0845	0000	861
 		_mediatemperaturaNTC		CODE           	1012	0000	223
 		_Send_Reply_OK 		CODE           	0FA0	0000	10
 		_Save_Log      		CODE           	0034	0000	87
@@ -3716,7 +3716,7 @@ SlaveLiofilizadorVer1.c
 		_Auto_Relay0   		CODE           	02EE	0000	91
 		_Auto_Relay1   		CODE           	0348	0000	116
 
-SlaveLiofilizadorVer1.c estimated size: 1942
+SlaveLiofilizadorVer1.c estimated size: 1941
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c90\common\strcat.c
 		_strcat        		CODE           	0BBD	0000	33
@@ -3745,34 +3745,34 @@ shared
 		PL22           		CODE           	1785	0000	11
 		PL60           		CODE           	17C3	0000	7
 		PL32           		CODE           	0FA9	0000	10
-		PL70           		CODE           	0FFA	0000	7
+		PL70           		CODE           	0FE3	0000	6
 		PL42           		CODE           	0FBC	0000	11
-		PL80           		CODE           	1FFA	0000	7
+		PL80           		CODE           	17CE	0000	7
 		PL14           		CODE           	05BA	0000	26
 		PL52           		CODE           	0FD6	0000	7
 		PL24           		CODE           	02C5	0000	15
-		PL62           		CODE           	0FE3	0000	6
+		PL62           		CODE           	17C9	0000	6
 		__stringtab    		STRING         	1800	0000	17
 		PL34           		CODE           	0484	0000	9
-		PL72           		CODE           	17C9	0000	7
+		PL72           		CODE           	0FE8	0000	7
 		PL44           		CODE           	0FC6	0000	10
 		PL16           		CODE           	02A6	0000	16
 		PL54           		CODE           	17BC	0000	8
 		PL26           		CODE           	178F	0000	10
-		PL64           		CODE           	0FE8	0000	7
+		PL64           		CODE           	1F77	0000	7
 		PL36           		CODE           	0FB2	0000	11
-		PL74           		CODE           	17CF	0000	6
+		PL74           		CODE           	0FEE	0000	7
 		PL46           		CODE           	17AA	0000	10
 		PL18           		CODE           	1775	0000	17
 		PL56           		CODE           	0FDC	0000	8
 		PL28           		CODE           	1798	0000	10
-		PL66           		CODE           	0FEE	0000	7
+		PL66           		CODE           	048C	0000	7
 		PL38           		CODE           	02D3	0000	11
-		PL76           		CODE           	1F77	0000	7
+		PL76           		CODE           	0FF4	0000	7
 		PL48           		CODE           	17B3	0000	10
 		PL58           		CODE           	02E7	0000	8
-		PL68           		CODE           	0FF4	0000	7
-		PL78           		CODE           	048C	0000	7
+		PL68           		CODE           	1FFA	0000	7
+		PL78           		CODE           	0FFA	0000	7
 		_BETA          		STRING         	0000	0000	0
 		__initialization		CODE           	0015	0000	28
 		log@coeff      		STRING         	1810	0000	37

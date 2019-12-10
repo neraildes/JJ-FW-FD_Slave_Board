@@ -3107,7 +3107,6 @@ void Decodify_Command(void)
              Save_Log((usart_protocol.value[0]<<8)+(usart_protocol.value[1]));
              Delay_Led_Tmr0=0;
              milisegundo=0;
-             segundo=0;
              break;
 
 
@@ -3121,7 +3120,7 @@ void Decodify_Command(void)
 
         case 0x03:
              Send_To_MB(2);
-# 403 "SlaveLiofilizadorVer1.c"
+# 402 "SlaveLiofilizadorVer1.c"
              USART_put_int(3);
 
              break;
@@ -3376,7 +3375,7 @@ void Send_Reply_OK(void){
      USART_put_string("OK");
 
  }
-# 665 "SlaveLiofilizadorVer1.c"
+# 664 "SlaveLiofilizadorVer1.c"
 void DelayRele(char canal){
      my_delay_ms((canal+2*Board_Number-2)*10);
 }
@@ -3435,7 +3434,7 @@ void mediatemperaturaNTC(unsigned char canal)
         }
 
      }
-# 852 "SlaveLiofilizadorVer1.c"
+# 851 "SlaveLiofilizadorVer1.c"
 void Auto_Relay0(void){
              if(Status0==0)
                  {
