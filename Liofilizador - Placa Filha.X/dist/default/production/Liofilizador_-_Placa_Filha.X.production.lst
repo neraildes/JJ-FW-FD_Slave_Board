@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Wed Dec 11 08:00:16 2019
+                                                                                               Wed Dec 11 08:17:14 2019
 
 Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s 
      1                           	processor	16F886
@@ -2518,7 +2518,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2503 ;;
   2504 ;; *************** function _main *****************
   2505 ;; Defined at:
-  2506 ;;		line 143 in file "SlaveLiofilizadorVer1.c"
+  2506 ;;		line 145 in file "SlaveLiofilizadorVer1.c"
   2507 ;; Parameters:    Size  Location     Type
   2508 ;;		None
   2509 ;; Auto vars:     Size  Location     Type
@@ -2563,7 +2563,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2548                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
   2549                           
   2550                           
-  2551                           ;SlaveLiofilizadorVer1.c: 144:      _delay((unsigned long)((100)*(8000000/4000.0)));
+  2551                           ;SlaveLiofilizadorVer1.c: 146:      _delay((unsigned long)((100)*(8000000/4000.0)));
   2552  05D3  3002               	movlw	2
   2553  05D4  1683               	bsf	3,5	;RP0=1, select bank3
   2554  05D5  1703               	bsf	3,6	;RP1=1, select bank3
@@ -2581,74 +2581,74 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2566  05E0  2DDB               	goto	u6537
   2567  05E1  2DE2               	nop2
   2568                           
-  2569                           ;SlaveLiofilizadorVer1.c: 145:      OSCCONbits.IRCF0=1;
+  2569                           ;SlaveLiofilizadorVer1.c: 147:      OSCCONbits.IRCF0=1;
   2570  05E2  1683               	bsf	3,5	;RP0=1, select bank1
   2571  05E3  1303               	bcf	3,6	;RP1=0, select bank1
   2572  05E4  160F               	bsf	15,4	;volatile
   2573                           
-  2574                           ;SlaveLiofilizadorVer1.c: 146:      OSCCONbits.IRCF1=1;
+  2574                           ;SlaveLiofilizadorVer1.c: 148:      OSCCONbits.IRCF1=1;
   2575  05E5  168F               	bsf	15,5	;volatile
   2576                           
-  2577                           ;SlaveLiofilizadorVer1.c: 147:      OSCCONbits.IRCF2=1;
+  2577                           ;SlaveLiofilizadorVer1.c: 149:      OSCCONbits.IRCF2=1;
   2578  05E6  170F               	bsf	15,6	;volatile
   2579                           
-  2580                           ;SlaveLiofilizadorVer1.c: 149:      PORTA=0;
+  2580                           ;SlaveLiofilizadorVer1.c: 151:      PORTA=0;
   2581  05E7  1283               	bcf	3,5	;RP0=0, select bank0
   2582  05E8  0185               	clrf	5	;volatile
   2583                           
-  2584                           ;SlaveLiofilizadorVer1.c: 150:      PORTB=0;
+  2584                           ;SlaveLiofilizadorVer1.c: 152:      PORTB=0;
   2585  05E9  0186               	clrf	6	;volatile
   2586                           
-  2587                           ;SlaveLiofilizadorVer1.c: 151:      PORTC=0;
+  2587                           ;SlaveLiofilizadorVer1.c: 153:      PORTC=0;
   2588  05EA  0187               	clrf	7	;volatile
   2589                           
-  2590                           ;SlaveLiofilizadorVer1.c: 152:      PORTE=0;
+  2590                           ;SlaveLiofilizadorVer1.c: 154:      PORTE=0;
   2591  05EB  0189               	clrf	9	;volatile
   2592                           
-  2593                           ;SlaveLiofilizadorVer1.c: 153:      TRISA=0b11101111;
+  2593                           ;SlaveLiofilizadorVer1.c: 155:      TRISA=0b11101111;
   2594  05EC  30EF               	movlw	239
   2595  05ED  1683               	bsf	3,5	;RP0=1, select bank1
   2596  05EE  0085               	movwf	5	;volatile
   2597                           
-  2598                           ;SlaveLiofilizadorVer1.c: 154:      TRISB=0b00001111;
+  2598                           ;SlaveLiofilizadorVer1.c: 156:      TRISB=0b00001111;
   2599  05EF  300F               	movlw	15
   2600  05F0  0086               	movwf	6	;volatile
   2601                           
-  2602                           ;SlaveLiofilizadorVer1.c: 155:      TRISC=0xF0;
+  2602                           ;SlaveLiofilizadorVer1.c: 157:      TRISC=0xF0;
   2603  05F1  30F0               	movlw	240
   2604  05F2  0087               	movwf	7	;volatile
   2605                           
-  2606                           ;SlaveLiofilizadorVer1.c: 156:      TRISE=0xFF;
+  2606                           ;SlaveLiofilizadorVer1.c: 158:      TRISE=0xFF;
   2607  05F3  30FF               	movlw	255
   2608  05F4  0089               	movwf	9	;volatile
   2609                           
-  2610                           ;SlaveLiofilizadorVer1.c: 158:      ANSEL=0x00000011;
+  2610                           ;SlaveLiofilizadorVer1.c: 160:      ANSEL=0x00000011;
   2611  05F5  3011               	movlw	17
   2612  05F6  1703               	bsf	3,6	;RP1=1, select bank3
   2613  05F7  0088               	movwf	8	;volatile
   2614                           
-  2615                           ;SlaveLiofilizadorVer1.c: 159:      ANSELH=0x00000000;
+  2615                           ;SlaveLiofilizadorVer1.c: 161:      ANSELH=0x00000000;
   2616  05F8  0189               	clrf	9	;volatile
   2617                           
-  2618                           ;SlaveLiofilizadorVer1.c: 161:      OPTION_REGbits.nRBPU=0;
+  2618                           ;SlaveLiofilizadorVer1.c: 163:      OPTION_REGbits.nRBPU=0;
   2619  05F9  1303               	bcf	3,6	;RP1=0, select bank1
   2620  05FA  1381               	bcf	1,7	;volatile
   2621                           
-  2622                           ;SlaveLiofilizadorVer1.c: 162:      WPUB=0b00001111;
+  2622                           ;SlaveLiofilizadorVer1.c: 164:      WPUB=0b00001111;
   2623  05FB  300F               	movlw	15
   2624  05FC  0095               	movwf	21	;volatile
   2625                           
-  2626                           ;SlaveLiofilizadorVer1.c: 165:      PORTBbits.RB7 =1;
+  2626                           ;SlaveLiofilizadorVer1.c: 167:      PORTBbits.RB7 =1;
   2627  05FD  1283               	bcf	3,5	;RP0=0, select bank0
   2628  05FE  1786               	bsf	6,7	;volatile
   2629                           
-  2630                           ;SlaveLiofilizadorVer1.c: 166:      PORTBbits.RB6 =1;
+  2630                           ;SlaveLiofilizadorVer1.c: 168:      PORTBbits.RB6 =1;
   2631  05FF  1706               	bsf	6,6	;volatile
   2632                           
-  2633                           ;SlaveLiofilizadorVer1.c: 167:      PORTBbits.RB5=1;
+  2633                           ;SlaveLiofilizadorVer1.c: 169:      PORTBbits.RB5=1;
   2634  0600  1686               	bsf	6,5	;volatile
   2635                           
-  2636                           ;SlaveLiofilizadorVer1.c: 168:      my_delay_ms_WDT(1000);
+  2636                           ;SlaveLiofilizadorVer1.c: 170:      my_delay_ms_WDT(1000);
   2637  0601  3003               	movlw	3
   2638  0602  01A3               	clrf	my_delay_ms_WDT@time+3
   2639  0603  01A2               	clrf	my_delay_ms_WDT@time+2
@@ -2657,58 +2657,58 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2642  0606  00A0               	movwf	my_delay_ms_WDT@time
   2643  0607  160A  158A  2506  120A  118A  	fcall	_my_delay_ms_WDT
   2644                           
-  2645                           ;SlaveLiofilizadorVer1.c: 170:      OPTION_REGbits.T0CS=0;
+  2645                           ;SlaveLiofilizadorVer1.c: 172:      OPTION_REGbits.T0CS=0;
   2646  060C  1683               	bsf	3,5	;RP0=1, select bank1
   2647  060D  1281               	bcf	1,5	;volatile
   2648                           
-  2649                           ;SlaveLiofilizadorVer1.c: 171:      OPTION_REGbits.PSA =1;
+  2649                           ;SlaveLiofilizadorVer1.c: 173:      OPTION_REGbits.PSA =1;
   2650  060E  1581               	bsf	1,3	;volatile
   2651                           
-  2652                           ;SlaveLiofilizadorVer1.c: 172:      OPTION_REGbits.PS0 =1;
+  2652                           ;SlaveLiofilizadorVer1.c: 174:      OPTION_REGbits.PS0 =1;
   2653  060F  1401               	bsf	1,0	;volatile
   2654                           
-  2655                           ;SlaveLiofilizadorVer1.c: 173:      OPTION_REGbits.PS1 =1;
+  2655                           ;SlaveLiofilizadorVer1.c: 175:      OPTION_REGbits.PS1 =1;
   2656  0610  1481               	bsf	1,1	;volatile
   2657                           
-  2658                           ;SlaveLiofilizadorVer1.c: 174:      OPTION_REGbits.PS2 =1;
+  2658                           ;SlaveLiofilizadorVer1.c: 176:      OPTION_REGbits.PS2 =1;
   2659  0611  1501               	bsf	1,2	;volatile
   2660                           
-  2661                           ;SlaveLiofilizadorVer1.c: 175:      INTCONbits.T0IE =0;
+  2661                           ;SlaveLiofilizadorVer1.c: 177:      INTCONbits.T0IE =0;
   2662  0612  128B               	bcf	11,5	;volatile
   2663                           
-  2664                           ;SlaveLiofilizadorVer1.c: 176:      INTCONbits.INTE =0;
+  2664                           ;SlaveLiofilizadorVer1.c: 178:      INTCONbits.INTE =0;
   2665  0613  120B               	bcf	11,4	;volatile
   2666                           
-  2667                           ;SlaveLiofilizadorVer1.c: 177:      INTCONbits.GIE =1;
+  2667                           ;SlaveLiofilizadorVer1.c: 179:      INTCONbits.GIE =1;
   2668  0614  178B               	bsf	11,7	;volatile
   2669                           
-  2670                           ;SlaveLiofilizadorVer1.c: 180:      INTCONbits.PEIE = 1;
+  2670                           ;SlaveLiofilizadorVer1.c: 182:      INTCONbits.PEIE = 1;
   2671  0615  170B               	bsf	11,6	;volatile
   2672                           
-  2673                           ;SlaveLiofilizadorVer1.c: 181:      T1CKPS0=1;
+  2673                           ;SlaveLiofilizadorVer1.c: 183:      T1CKPS0=1;
   2674  0616  1283               	bcf	3,5	;RP0=0, select bank0
   2675  0617  1610               	bsf	16,4	;volatile
   2676                           
-  2677                           ;SlaveLiofilizadorVer1.c: 182:      T1CKPS1=1;
+  2677                           ;SlaveLiofilizadorVer1.c: 184:      T1CKPS1=1;
   2678  0618  1690               	bsf	16,5	;volatile
   2679                           
-  2680                           ;SlaveLiofilizadorVer1.c: 183:      TMR1CS=0;
+  2680                           ;SlaveLiofilizadorVer1.c: 185:      TMR1CS=0;
   2681  0619  1090               	bcf	16,1	;volatile
   2682                           
-  2683                           ;SlaveLiofilizadorVer1.c: 184:      TMR1IE=1;
+  2683                           ;SlaveLiofilizadorVer1.c: 186:      TMR1IE=1;
   2684  061A  1683               	bsf	3,5	;RP0=1, select bank1
   2685  061B  140C               	bsf	12,0	;volatile
   2686                           
-  2687                           ;SlaveLiofilizadorVer1.c: 185:      T1CON=1;
+  2687                           ;SlaveLiofilizadorVer1.c: 187:      T1CON=1;
   2688  061C  3001               	movlw	1
   2689  061D  1283               	bcf	3,5	;RP0=0, select bank0
   2690  061E  0090               	movwf	16	;volatile
   2691  061F  0064               	clrwdt	;# 
   2692                           
-  2693                           ;SlaveLiofilizadorVer1.c: 192:      ADC_init();
+  2693                           ;SlaveLiofilizadorVer1.c: 194:      ADC_init();
   2694  0620  120A  118A  27F0  120A  118A  	fcall	_ADC_init
   2695                           
-  2696                           ;SlaveLiofilizadorVer1.c: 193:      I2C_Master_Init(100000);
+  2696                           ;SlaveLiofilizadorVer1.c: 195:      I2C_Master_Init(100000);
   2697  0625  3001               	movlw	1
   2698  0626  01B0               	clrf	I2C_Master_Init@c+3
   2699  0627  00AF               	movwf	I2C_Master_Init@c+2
@@ -2718,7 +2718,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2703  062B  00AD               	movwf	I2C_Master_Init@c
   2704  062C  160A  158A  268C  120A  118A  	fcall	_I2C_Master_Init
   2705                           
-  2706                           ;SlaveLiofilizadorVer1.c: 194:      USART_init(115200);
+  2706                           ;SlaveLiofilizadorVer1.c: 196:      USART_init(115200);
   2707  0631  1283               	bcf	3,5	;RP0=0, select bank0
   2708  0632  3001               	movlw	1
   2709  0633  01A3               	clrf	USART_init@baudrate+3
@@ -2728,8 +2728,8 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2713  0637  01A0               	clrf	USART_init@baudrate
   2714  0638  160A  158A  2533  120A  118A  	fcall	_USART_init
   2715                           
-  2716                           ;SlaveLiofilizadorVer1.c: 200:      {;SlaveLiofilizadorVer1.c: 201:      unsigned int re
-      +                          set;;SlaveLiofilizadorVer1.c: 202:      reset=EEPROM_Read_Integer(0x10);
+  2716                           ;SlaveLiofilizadorVer1.c: 202:      {;SlaveLiofilizadorVer1.c: 203:      unsigned int re
+      +                          set;;SlaveLiofilizadorVer1.c: 204:      reset=EEPROM_Read_Integer(0x10);
   2717  063D  3010               	movlw	16
   2718  063E  120A  118A  259F  120A  118A  	fcall	_EEPROM_Read_Integer
   2719  0643  0824               	movf	?_EEPROM_Read_Integer+1,w
@@ -2740,7 +2740,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2724  0648  1683               	bsf	3,5	;RP0=1, select bank1
   2725  0649  00EE               	movwf	main@reset^(0+128)
   2726                           
-  2727                           ;SlaveLiofilizadorVer1.c: 203:      if(reset==0xFFFF) EEPROM_Write_Integer(0x10,0);
+  2727                           ;SlaveLiofilizadorVer1.c: 205:      if(reset==0xFFFF) EEPROM_Write_Integer(0x10,0);
   2728  064A  0F6E               	incfsz	main@reset^(0+128),w
   2729  064B  2E58               	goto	l7408
   2730  064C  0A6F               	incf	(main@reset+1)^(0+128),w
@@ -2753,14 +2753,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2737  0653  160A  158A  2701  120A  118A  	fcall	_EEPROM_Write_Integer
   2738  0658                     l7408:	
   2739                           
-  2740                           ;SlaveLiofilizadorVer1.c: 204:      reset++;
+  2740                           ;SlaveLiofilizadorVer1.c: 206:      reset++;
   2741  0658  1683               	bsf	3,5	;RP0=1, select bank1
   2742  0659  1303               	bcf	3,6	;RP1=0, select bank1
   2743  065A  0AEE               	incf	main@reset^(0+128),f
   2744  065B  1903               	skipnz
   2745  065C  0AEF               	incf	(main@reset+1)^(0+128),f
   2746                           
-  2747                           ;SlaveLiofilizadorVer1.c: 205:      EEPROM_Write_Integer(0x10,reset);
+  2747                           ;SlaveLiofilizadorVer1.c: 207:      EEPROM_Write_Integer(0x10,reset);
   2748  065D  086F               	movf	(main@reset+1)^(0+128),w
   2749  065E  1283               	bcf	3,5	;RP0=0, select bank0
   2750  065F  00A6               	movwf	EEPROM_Write_Integer@dado+1
@@ -2771,42 +2771,42 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2755  0664  3010               	movlw	16
   2756  0665  160A  158A  2701  120A  118A  	fcall	_EEPROM_Write_Integer
   2757                           
-  2758                           ;SlaveLiofilizadorVer1.c: 206:      };SlaveLiofilizadorVer1.c: 210:      Delay_Led_Tmr0 
+  2758                           ;SlaveLiofilizadorVer1.c: 208:      };SlaveLiofilizadorVer1.c: 212:      Delay_Led_Tmr0 
       +                          = 0;
   2759  066A  1683               	bsf	3,5	;RP0=1, select bank3
   2760  066B  1703               	bsf	3,6	;RP1=1, select bank3
   2761  066C  01AE               	clrf	_Delay_Led_Tmr0^(0+384)	;volatile
   2762  066D  01AF               	clrf	(_Delay_Led_Tmr0+1)^(0+384)	;volatile
   2763                           
-  2764                           ;SlaveLiofilizadorVer1.c: 211:      Delay_Led_Usart = 0;
+  2764                           ;SlaveLiofilizadorVer1.c: 213:      Delay_Led_Usart = 0;
   2765  066E  01AC               	clrf	_Delay_Led_Usart^(0+384)	;volatile
   2766  066F  01AD               	clrf	(_Delay_Led_Usart+1)^(0+384)	;volatile
   2767                           
-  2768                           ;SlaveLiofilizadorVer1.c: 212:      Delay_Led_Memory = 0;
+  2768                           ;SlaveLiofilizadorVer1.c: 214:      Delay_Led_Memory = 0;
   2769  0670  01B0               	clrf	_Delay_Led_Memory^(0+384)	;volatile
   2770  0671  01B1               	clrf	(_Delay_Led_Memory+1)^(0+384)	;volatile
   2771                           
-  2772                           ;SlaveLiofilizadorVer1.c: 214:      segundo=0;
+  2772                           ;SlaveLiofilizadorVer1.c: 216:      segundo=0;
   2773  0672  01BD               	clrf	_segundo^(0+384)	;volatile
   2774                           
-  2775                           ;SlaveLiofilizadorVer1.c: 215:      hora=0;
+  2775                           ;SlaveLiofilizadorVer1.c: 217:      hora=0;
   2776  0673  01BC               	clrf	_hora^(0+384)	;volatile
   2777                           
-  2778                           ;SlaveLiofilizadorVer1.c: 216:      PORTCbits.RC0=0;
+  2778                           ;SlaveLiofilizadorVer1.c: 218:      PORTCbits.RC0=0;
   2779  0674  1283               	bcf	3,5	;RP0=0, select bank0
   2780  0675  1303               	bcf	3,6	;RP1=0, select bank0
   2781  0676  1007               	bcf	7,0	;volatile
   2782                           
-  2783                           ;SlaveLiofilizadorVer1.c: 217:      PORTCbits.RC1=0;
+  2783                           ;SlaveLiofilizadorVer1.c: 219:      PORTCbits.RC1=0;
   2784  0677  1087               	bcf	7,1	;volatile
   2785                           
-  2786                           ;SlaveLiofilizadorVer1.c: 218:      PORTAbits.RA2=0;
+  2786                           ;SlaveLiofilizadorVer1.c: 220:      PORTAbits.RA2=0;
   2787  0678  1105               	bcf	5,2	;volatile
   2788                           
-  2789                           ;SlaveLiofilizadorVer1.c: 219:      PORTAbits.RA3=0;
+  2789                           ;SlaveLiofilizadorVer1.c: 221:      PORTAbits.RA3=0;
   2790  0679  1185               	bcf	5,3	;volatile
   2791                           
-  2792                           ;SlaveLiofilizadorVer1.c: 222:      Board_Number=(((0x0F)&(~PORTB)));
+  2792                           ;SlaveLiofilizadorVer1.c: 224:      Board_Number=(((0x0F)&(~PORTB)));
   2793  067A  0906               	comf	6,w	;volatile
   2794  067B  1683               	bsf	3,5	;RP0=1, select bank3
   2795  067C  1703               	bsf	3,6	;RP1=1, select bank3
@@ -2814,22 +2814,22 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2797  067E  300F               	movlw	15
   2798  067F  05B4               	andwf	_Board_Number^(0+384),f
   2799                           
-  2800                           ;SlaveLiofilizadorVer1.c: 223:      canal=1;
+  2800                           ;SlaveLiofilizadorVer1.c: 225:      canal=1;
   2801  0680  01B5               	clrf	_canal^(0+384)
   2802  0681  0AB5               	incf	_canal^(0+384),f
   2803                           
-  2804                           ;SlaveLiofilizadorVer1.c: 237:      Load_Work();
+  2804                           ;SlaveLiofilizadorVer1.c: 239:      Load_Work();
   2805  0682  120A  118A  24A6  120A  118A  	fcall	_Load_Work
   2806                           
-  2807                           ;SlaveLiofilizadorVer1.c: 238:      generic_status.flag_global_hot=0;
+  2807                           ;SlaveLiofilizadorVer1.c: 240:      generic_status.flag_global_hot=0;
   2808  0687  1376               	bcf	_generic_status,6
   2809  0688                     l7438:	
   2810                           
-  2811                           ;SlaveLiofilizadorVer1.c: 244:           {;SlaveLiofilizadorVer1.c: 246:          generi
+  2811                           ;SlaveLiofilizadorVer1.c: 246:           {;SlaveLiofilizadorVer1.c: 248:          generi
       +                          c_status.flag_main_loop_WDT=1;
   2812  0688  17F6               	bsf	_generic_status,7
   2813                           
-  2814                           ;SlaveLiofilizadorVer1.c: 250:          if(++canal==2) canal=0;
+  2814                           ;SlaveLiofilizadorVer1.c: 252:          if(++canal==2) canal=0;
   2815  0689  1683               	bsf	3,5	;RP0=1, select bank3
   2816  068A  1703               	bsf	3,6	;RP1=1, select bank3
   2817  068B  3002               	movlw	2
@@ -2838,44 +2838,44 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2820  068E  1903               	btfsc	3,2
   2821  068F  01B5               	clrf	_canal^(0+384)
   2822                           
-  2823                           ;SlaveLiofilizadorVer1.c: 251:          mediatemperaturaNTC(canal);
+  2823                           ;SlaveLiofilizadorVer1.c: 253:          mediatemperaturaNTC(canal);
   2824  0690  0835               	movf	_canal^(0+384),w
   2825  0691  160A  118A  2012  120A  118A  	fcall	_mediatemperaturaNTC
   2826                           
-  2827                           ;SlaveLiofilizadorVer1.c: 254:          if(generic_status.flag_global_hot)
+  2827                           ;SlaveLiofilizadorVer1.c: 256:          if(generic_status.flag_global_hot)
   2828  0696  1F76               	btfss	_generic_status,6
   2829  0697  2EA3               	goto	l287
   2830                           
-  2831                           ;SlaveLiofilizadorVer1.c: 255:             {;SlaveLiofilizadorVer1.c: 256:              
+  2831                           ;SlaveLiofilizadorVer1.c: 257:             {;SlaveLiofilizadorVer1.c: 258:              
       +                          Auto_Relay0();
   2832  0698  120A  118A  22EE  120A  118A  	fcall	_Auto_Relay0
   2833                           
-  2834                           ;SlaveLiofilizadorVer1.c: 257:              Auto_Relay1();
+  2834                           ;SlaveLiofilizadorVer1.c: 259:              Auto_Relay1();
   2835  069D  120A  118A  2348  120A  118A  	fcall	_Auto_Relay1
   2836                           
-  2837                           ;SlaveLiofilizadorVer1.c: 258:             }
+  2837                           ;SlaveLiofilizadorVer1.c: 260:             }
   2838  06A2  2EA7               	goto	l288
   2839  06A3                     l287:	
-  2840                           ;SlaveLiofilizadorVer1.c: 259:          else
+  2840                           ;SlaveLiofilizadorVer1.c: 261:          else
   2841                           
   2842                           
-  2843                           ;SlaveLiofilizadorVer1.c: 260:             {;SlaveLiofilizadorVer1.c: 261:             P
+  2843                           ;SlaveLiofilizadorVer1.c: 262:             {;SlaveLiofilizadorVer1.c: 263:             P
       +                          ORTCbits.RC0=0;
   2844  06A3  1283               	bcf	3,5	;RP0=0, select bank0
   2845  06A4  1303               	bcf	3,6	;RP1=0, select bank0
   2846  06A5  1007               	bcf	7,0	;volatile
   2847                           
-  2848                           ;SlaveLiofilizadorVer1.c: 262:             PORTCbits.RC1=0;
+  2848                           ;SlaveLiofilizadorVer1.c: 264:             PORTCbits.RC1=0;
   2849  06A6  1087               	bcf	7,1	;volatile
   2850  06A7                     l288:	
-  2851                           ;SlaveLiofilizadorVer1.c: 263:             }
+  2851                           ;SlaveLiofilizadorVer1.c: 265:             }
   2852                           
   2853                           
-  2854                           ;SlaveLiofilizadorVer1.c: 281:          if(generic_status.flag_usart_rx==1)
+  2854                           ;SlaveLiofilizadorVer1.c: 283:          if(generic_status.flag_usart_rx==1)
   2855  06A7  1C76               	btfss	_generic_status,0
   2856  06A8  2E88               	goto	l7438
   2857                           
-  2858                           ;SlaveLiofilizadorVer1.c: 282:             {;SlaveLiofilizadorVer1.c: 283:             h
+  2858                           ;SlaveLiofilizadorVer1.c: 284:             {;SlaveLiofilizadorVer1.c: 285:             h
       +                          eader =(((unsigned int)usart_buffer[0]<<8)+usart_buffer[1]);
   2859  06A9  1283               	bcf	3,5	;RP0=0, select bank2
   2860  06AA  1703               	bsf	3,6	;RP1=1, select bank2
@@ -2887,7 +2887,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2866  06B0  1683               	bsf	3,5	;RP0=1, select bank3
   2867  06B1  00A4               	movwf	_header^(0+384)
   2868                           
-  2869                           ;SlaveLiofilizadorVer1.c: 284:             if(header==0xAABB)
+  2869                           ;SlaveLiofilizadorVer1.c: 286:             if(header==0xAABB)
   2870  06B2  3ABB               	xorlw	187
   2871  06B3  30AA               	movlw	170
   2872  06B4  1903               	skipnz
@@ -2895,14 +2895,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2874  06B6  1D03               	btfss	3,2
   2875  06B7  2E88               	goto	l7438
   2876                           
-  2877                           ;SlaveLiofilizadorVer1.c: 285:                {;SlaveLiofilizadorVer1.c: 286:           
+  2877                           ;SlaveLiofilizadorVer1.c: 287:                {;SlaveLiofilizadorVer1.c: 288:           
       +                               destino =usart_buffer[3];
   2878  06B8  1283               	bcf	3,5	;RP0=0, select bank2
   2879  06B9  0853               	movf	(_usart_buffer^(0+256)+3),w	;volatile
   2880  06BA  1683               	bsf	3,5	;RP0=1, select bank3
   2881  06BB  00B3               	movwf	_destino^(0+384)
   2882                           
-  2883                           ;SlaveLiofilizadorVer1.c: 287:                if((destino==Board_Number)||(destino==0XFF
+  2883                           ;SlaveLiofilizadorVer1.c: 289:                if((destino==Board_Number)||(destino==0XFF
       +                          ))
   2884  06BC  0634               	xorwf	_Board_Number^(0+384),w
   2885  06BD  1903               	skipnz
@@ -2911,19 +2911,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   2888  06C0  2E88               	goto	l7438
   2889  06C1                     l7458:	
   2890                           
-  2891                           ;SlaveLiofilizadorVer1.c: 288:                       {;SlaveLiofilizadorVer1.c: 289:    
+  2891                           ;SlaveLiofilizadorVer1.c: 290:                       {;SlaveLiofilizadorVer1.c: 291:    
       +                                             Delay_Led_Usart=20;
   2892  06C1  3014               	movlw	20
   2893  06C2  00AC               	movwf	_Delay_Led_Usart^(0+384)	;volatile
   2894  06C3  01AD               	clrf	(_Delay_Led_Usart+1)^(0+384)	;volatile
   2895                           
-  2896                           ;SlaveLiofilizadorVer1.c: 290:                       Decodify_Command();
+  2896                           ;SlaveLiofilizadorVer1.c: 292:                       Decodify_Command();
   2897  06C4  120A  158A  2045  120A  118A  	fcall	_Decodify_Command
   2898                           
-  2899                           ;SlaveLiofilizadorVer1.c: 291:                       generic_status.flag_usart_rx=0;
+  2899                           ;SlaveLiofilizadorVer1.c: 293:                       generic_status.flag_usart_rx=0;
   2900  06C9  1076               	bcf	_generic_status,0
   2901                           
-  2902                           ;SlaveLiofilizadorVer1.c: 294:             }
+  2902                           ;SlaveLiofilizadorVer1.c: 296:             }
   2903  06CA  2E88               	goto	l7438
   2904  06CB                     __end_of_main:	
   2905                           
@@ -3025,7 +3025,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3001  1012                     __ptext2:	
   3002 ;; *************** function _mediatemperaturaNTC *****************
   3003 ;; Defined at:
-  3004 ;;		line 674 in file "SlaveLiofilizadorVer1.c"
+  3004 ;;		line 676 in file "SlaveLiofilizadorVer1.c"
   3005 ;; Parameters:    Size  Location     Type
   3006 ;;  canal           1    wreg     unsigned char 
   3007 ;; Auto vars:     Size  Location     Type
@@ -3073,9 +3073,9 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3048  1012  1303               	bcf	3,6	;RP1=0, select bank1
   3049  1013  00D4               	movwf	mediatemperaturaNTC@canal^(0+128)
   3050                           
-  3051                           ;SlaveLiofilizadorVer1.c: 674: void mediatemperaturaNTC(unsigned char canal);SlaveLiofil
-      +                          izadorVer1.c: 675:      {;SlaveLiofilizadorVer1.c: 676:      float Temp;;SlaveLiofilizad
-      +                          orVer1.c: 677:      char i;;SlaveLiofilizadorVer1.c: 679:      ADCON0bits.CHS=canal;
+  3051                           ;SlaveLiofilizadorVer1.c: 676: void mediatemperaturaNTC(unsigned char canal);SlaveLiofil
+      +                          izadorVer1.c: 677:      {;SlaveLiofilizadorVer1.c: 678:      float Temp;;SlaveLiofilizad
+      +                          orVer1.c: 679:      char i;;SlaveLiofilizadorVer1.c: 681:      ADCON0bits.CHS=canal;
   3052  1014  00CF               	movwf	??_mediatemperaturaNTC^(0+128)
   3053  1015  0DCF               	rlf	??_mediatemperaturaNTC^(0+128),f
   3054  1016  0DCF               	rlf	??_mediatemperaturaNTC^(0+128),f
@@ -3088,7 +3088,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3061  101D  1283               	bcf	3,5	;RP0=0, select bank0
   3062  101E  009F               	movwf	31	;volatile
   3063                           
-  3064                           ;SlaveLiofilizadorVer1.c: 680:      my_delay_ms(10);
+  3064                           ;SlaveLiofilizadorVer1.c: 682:      my_delay_ms(10);
   3065  101F  300A               	movlw	10
   3066  1020  00A0               	movwf	my_delay_ms@time
   3067  1021  01A1               	clrf	my_delay_ms@time+1
@@ -3096,19 +3096,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3069  1023  01A3               	clrf	my_delay_ms@time+3
   3070  1024  27D4  160A  118A   	fcall	_my_delay_ms
   3071                           
-  3072                           ;SlaveLiofilizadorVer1.c: 682:      Temp=0;
+  3072                           ;SlaveLiofilizadorVer1.c: 684:      Temp=0;
   3073  1027  1683               	bsf	3,5	;RP0=1, select bank1
   3074  1028  01D5               	clrf	mediatemperaturaNTC@Temp^(0+128)
   3075  1029  01D6               	clrf	(mediatemperaturaNTC@Temp+1)^(0+128)
   3076  102A  01D7               	clrf	(mediatemperaturaNTC@Temp+2)^(0+128)
   3077  102B  01D8               	clrf	(mediatemperaturaNTC@Temp+3)^(0+128)
   3078                           
-  3079                           ;SlaveLiofilizadorVer1.c: 684:      for(i=1;i<15;i++)
+  3079                           ;SlaveLiofilizadorVer1.c: 686:      for(i=1;i<15;i++)
   3080  102C  01D9               	clrf	mediatemperaturaNTC@i^(0+128)
   3081  102D  0AD9               	incf	mediatemperaturaNTC@i^(0+128),f
   3082  102E                     l7018:	
   3083                           
-  3084                           ;SlaveLiofilizadorVer1.c: 685:          {;SlaveLiofilizadorVer1.c: 686:          Temp+=A
+  3084                           ;SlaveLiofilizadorVer1.c: 687:          {;SlaveLiofilizadorVer1.c: 688:          Temp+=A
       +                          DC_Read_NTC(canal);
   3085  102E  2337  160A  118A   	fcall	_ADC_Read_NTC
   3086  1031  083C               	movf	(?_ADC_Read_NTC+3)^(0+128),w
@@ -3120,7 +3120,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3092  1037  0839               	movf	?_ADC_Read_NTC^(0+128),w
   3093  1038  00D0               	movwf	_mediatemperaturaNTC$2294^(0+128)
   3094                           
-  3095                           ;SlaveLiofilizadorVer1.c: 685:          {;SlaveLiofilizadorVer1.c: 686:          Temp+=A
+  3095                           ;SlaveLiofilizadorVer1.c: 687:          {;SlaveLiofilizadorVer1.c: 688:          Temp+=A
       +                          DC_Read_NTC(canal);
   3096  1039  0853               	movf	(_mediatemperaturaNTC$2294+3)^(0+128),w
   3097  103A  1283               	bcf	3,5	;RP0=0, select bank0
@@ -3170,17 +3170,17 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3141  1068  1683               	bsf	3,5	;RP0=1, select bank1
   3142  1069  00D5               	movwf	mediatemperaturaNTC@Temp^(0+128)
   3143                           
-  3144                           ;SlaveLiofilizadorVer1.c: 687:          if(Package_Usart_is_for_me()==1) break;
+  3144                           ;SlaveLiofilizadorVer1.c: 689:          if(Package_Usart_is_for_me()==1) break;
   3145  106A  275F  160A  118A   	fcall	_Package_Usart_is_for_me
   3146  106D  3A01               	xorlw	1
   3147  106E  1903               	btfsc	3,2
   3148  106F  2895               	goto	l7046
   3149                           
-  3150                           ;SlaveLiofilizadorVer1.c: 689:          if(generic_status.flag_global_hot)
+  3150                           ;SlaveLiofilizadorVer1.c: 691:          if(generic_status.flag_global_hot)
   3151  1070  1F76               	btfss	_generic_status,6
   3152  1071  288E               	goto	l7042
   3153                           
-  3154                           ;SlaveLiofilizadorVer1.c: 690:            {;SlaveLiofilizadorVer1.c: 692:            if(
+  3154                           ;SlaveLiofilizadorVer1.c: 692:            {;SlaveLiofilizadorVer1.c: 694:            if(
       +                          (TempoCNT_0==0)&&
   3155  1072  0875               	movf	_TempoCNT_0,w	;volatile
   3156  1073  1D03               	btfss	3,2
@@ -3194,11 +3194,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3164  107B  1D03               	btfss	3,2
   3165  107C  2880               	goto	l7034
   3166                           
-  3167                           ;SlaveLiofilizadorVer1.c: 694:               (Status0==1)) Rele0Ligado();
+  3167                           ;SlaveLiofilizadorVer1.c: 696:               (Status0==1)) Rele0Ligado();
   3168  107D  20F0  160A  118A   	fcall	_Rele0Ligado
   3169  1080                     l7034:	
   3170                           
-  3171                           ;SlaveLiofilizadorVer1.c: 696:            if((TempoCNT_1==0)&&
+  3171                           ;SlaveLiofilizadorVer1.c: 698:            if((TempoCNT_1==0)&&
   3172  1080  0874               	movf	_TempoCNT_1,w	;volatile
   3173  1081  1D03               	btfss	3,2
   3174  1082  288E               	goto	l7042
@@ -3211,11 +3211,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3181  1089  1D03               	btfss	3,2
   3182  108A  288E               	goto	l7042
   3183                           
-  3184                           ;SlaveLiofilizadorVer1.c: 698:               (Status1==1)) Rele1Ligado();
+  3184                           ;SlaveLiofilizadorVer1.c: 700:               (Status1==1)) Rele1Ligado();
   3185  108B  2107  160A  118A   	fcall	_Rele1Ligado
   3186  108E                     l7042:	
   3187                           
-  3188                           ;SlaveLiofilizadorVer1.c: 701:          }
+  3188                           ;SlaveLiofilizadorVer1.c: 703:          }
   3189  108E  1683               	bsf	3,5	;RP0=1, select bank1
   3190  108F  1303               	bcf	3,6	;RP1=0, select bank1
   3191  1090  300F               	movlw	15
@@ -3225,20 +3225,20 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3195  1094  282E               	goto	l7018
   3196  1095                     l7046:	
   3197                           
-  3198                           ;SlaveLiofilizadorVer1.c: 702:      if(i<10)
+  3198                           ;SlaveLiofilizadorVer1.c: 704:      if(i<10)
   3199  1095  300A               	movlw	10
   3200  1096  1683               	bsf	3,5	;RP0=1, select bank1
   3201  1097  0259               	subwf	mediatemperaturaNTC@i^(0+128),w
   3202  1098  1C03               	btfss	3,0
   3203  1099  0008               	return
   3204                           
-  3205                           ;SlaveLiofilizadorVer1.c: 707:      if(i==15)
+  3205                           ;SlaveLiofilizadorVer1.c: 709:      if(i==15)
   3206  109A  300F               	movlw	15
   3207  109B  0659               	xorwf	mediatemperaturaNTC@i^(0+128),w
   3208  109C  1D03               	btfss	3,2
   3209  109D  28AD               	goto	l7054
   3210                           
-  3211                           ;SlaveLiofilizadorVer1.c: 708:         Temp/=(i-1);
+  3211                           ;SlaveLiofilizadorVer1.c: 710:         Temp/=(i-1);
   3212  109E  0859               	movf	mediatemperaturaNTC@i^(0+128),w
   3213  109F  3EFF               	addlw	255
   3214  10A0  1283               	bcf	3,5	;RP0=0, select bank0
@@ -3256,7 +3256,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3226  10AC  28B4               	goto	L1
   3227  10AD                     l7054:	
   3228                           
-  3229                           ;SlaveLiofilizadorVer1.c: 710:         Temp/=(i);
+  3229                           ;SlaveLiofilizadorVer1.c: 712:         Temp/=(i);
   3230  10AD  0859               	movf	mediatemperaturaNTC@i^(0+128),w
   3231  10AE  1283               	bcf	3,5	;RP0=0, select bank0
   3232  10AF  120A  118A  248C  160A  118A  	fcall	PL66	;call to abstracted procedure
@@ -3281,12 +3281,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3251  10CB  0820               	movf	?___fldiv^(0+128),w
   3252  10CC  00D5               	movwf	mediatemperaturaNTC@Temp^(0+128)
   3253                           
-  3254                           ;SlaveLiofilizadorVer1.c: 712:      if(canal==0)
+  3254                           ;SlaveLiofilizadorVer1.c: 714:      if(canal==0)
   3255  10CD  0854               	movf	mediatemperaturaNTC@canal^(0+128),w
   3256  10CE  1D03               	btfss	3,2
   3257  10CF  28E0               	goto	l7060
   3258                           
-  3259                           ;SlaveLiofilizadorVer1.c: 713:         {;SlaveLiofilizadorVer1.c: 714:         Temperatu
+  3259                           ;SlaveLiofilizadorVer1.c: 715:         {;SlaveLiofilizadorVer1.c: 716:         Temperatu
       +                          ra0=Temp;
   3260  10D0  0858               	movf	(mediatemperaturaNTC@Temp+3)^(0+128),w
   3261  10D1  1703               	bsf	3,6	;RP1=1, select bank3
@@ -3304,11 +3304,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3273  10DD  1703               	bsf	3,6	;RP1=1, select bank3
   3274  10DE  0094               	movwf	_Temperatura0^(0+384)
   3275                           
-  3276                           ;SlaveLiofilizadorVer1.c: 715:         }
+  3276                           ;SlaveLiofilizadorVer1.c: 717:         }
   3277  10DF  0008               	return
   3278  10E0                     l7060:	
   3279                           
-  3280                           ;SlaveLiofilizadorVer1.c: 717:         {;SlaveLiofilizadorVer1.c: 718:         Temperatu
+  3280                           ;SlaveLiofilizadorVer1.c: 719:         {;SlaveLiofilizadorVer1.c: 720:         Temperatu
       +                          ra1=Temp;
   3281  10E0  0858               	movf	(mediatemperaturaNTC@Temp+3)^(0+128),w
   3282  10E1  1703               	bsf	3,6	;RP1=1, select bank3
@@ -3330,7 +3330,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3298  10F0                     __ptext70:	
   3299 ;; *************** function _Rele0Ligado *****************
   3300 ;; Defined at:
-  3301 ;;		line 931 in file "SlaveLiofilizadorVer1.c"
+  3301 ;;		line 933 in file "SlaveLiofilizadorVer1.c"
   3302 ;; Parameters:    Size  Location     Type
   3303 ;;		None
   3304 ;; Auto vars:     Size  Location     Type
@@ -3367,42 +3367,42 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3335                           ; Regs used in _Rele0Ligado: [wreg+status,2+status,0]
   3336                           
   3337                           
-  3338                           ;SlaveLiofilizadorVer1.c: 934:         if(TempoCNT_0==0)
+  3338                           ;SlaveLiofilizadorVer1.c: 936:         if(TempoCNT_0==0)
   3339  10F0  0875               	movf	_TempoCNT_0,w	;volatile
   3340  10F1  1D03               	btfss	3,2
   3341  10F2  0008               	return
   3342                           
-  3343                           ;SlaveLiofilizadorVer1.c: 935:             {;SlaveLiofilizadorVer1.c: 938:             i
+  3343                           ;SlaveLiofilizadorVer1.c: 937:             {;SlaveLiofilizadorVer1.c: 940:             i
       +                          f(PORTCbits.RC0==0)
   3344  10F3  1283               	bcf	3,5	;RP0=0, select bank0
   3345  10F4  1303               	bcf	3,6	;RP1=0, select bank0
   3346  10F5  1807               	btfsc	7,0	;volatile
   3347  10F6  28FF               	goto	l6890
   3348                           
-  3349                           ;SlaveLiofilizadorVer1.c: 939:               {;SlaveLiofilizadorVer1.c: 940:            
+  3349                           ;SlaveLiofilizadorVer1.c: 941:               {;SlaveLiofilizadorVer1.c: 942:            
       +                             TempoCNT_0=TempoON_0;
   3350  10F7  1683               	bsf	3,5	;RP0=1, select bank3
   3351  10F8  1703               	bsf	3,6	;RP1=1, select bank3
   3352  10F9  083A               	movf	_TempoON_0^(0+384),w
   3353  10FA  00F5               	movwf	_TempoCNT_0	;volatile
   3354                           
-  3355                           ;SlaveLiofilizadorVer1.c: 941:               PORTCbits.RC0=1;
+  3355                           ;SlaveLiofilizadorVer1.c: 943:               PORTCbits.RC0=1;
   3356  10FB  1283               	bcf	3,5	;RP0=0, select bank0
   3357  10FC  1303               	bcf	3,6	;RP1=0, select bank0
   3358  10FD  1407               	bsf	7,0	;volatile
   3359                           
-  3360                           ;SlaveLiofilizadorVer1.c: 942:               }
+  3360                           ;SlaveLiofilizadorVer1.c: 944:               }
   3361  10FE  0008               	return
   3362  10FF                     l6890:	
   3363                           
-  3364                           ;SlaveLiofilizadorVer1.c: 944:               {;SlaveLiofilizadorVer1.c: 945:            
+  3364                           ;SlaveLiofilizadorVer1.c: 946:               {;SlaveLiofilizadorVer1.c: 947:            
       +                             TempoCNT_0=TempoOFF_0;
   3365  10FF  1683               	bsf	3,5	;RP0=1, select bank3
   3366  1100  1703               	bsf	3,6	;RP1=1, select bank3
   3367  1101  0839               	movf	_TempoOFF_0^(0+384),w
   3368  1102  00F5               	movwf	_TempoCNT_0	;volatile
   3369                           
-  3370                           ;SlaveLiofilizadorVer1.c: 946:               PORTCbits.RC0=0;
+  3370                           ;SlaveLiofilizadorVer1.c: 948:               PORTCbits.RC0=0;
   3371  1103  1283               	bcf	3,5	;RP0=0, select bank0
   3372  1104  1303               	bcf	3,6	;RP1=0, select bank0
   3373  1105  1007               	bcf	7,0	;volatile
@@ -3411,7 +3411,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3376  1107                     __ptext64:	
   3377 ;; *************** function _Rele1Ligado *****************
   3378 ;; Defined at:
-  3379 ;;		line 952 in file "SlaveLiofilizadorVer1.c"
+  3379 ;;		line 954 in file "SlaveLiofilizadorVer1.c"
   3380 ;; Parameters:    Size  Location     Type
   3381 ;;		None
   3382 ;; Auto vars:     Size  Location     Type
@@ -3448,42 +3448,42 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   3413                           ; Regs used in _Rele1Ligado: [wreg+status,2+status,0]
   3414                           
   3415                           
-  3416                           ;SlaveLiofilizadorVer1.c: 955:         if(TempoCNT_1==0)
+  3416                           ;SlaveLiofilizadorVer1.c: 957:         if(TempoCNT_1==0)
   3417  1107  0874               	movf	_TempoCNT_1,w	;volatile
   3418  1108  1D03               	btfss	3,2
   3419  1109  0008               	return
   3420                           
-  3421                           ;SlaveLiofilizadorVer1.c: 956:             {;SlaveLiofilizadorVer1.c: 959:             i
+  3421                           ;SlaveLiofilizadorVer1.c: 958:             {;SlaveLiofilizadorVer1.c: 961:             i
       +                          f(PORTCbits.RC1==0)
   3422  110A  1283               	bcf	3,5	;RP0=0, select bank0
   3423  110B  1303               	bcf	3,6	;RP1=0, select bank0
   3424  110C  1887               	btfsc	7,1	;volatile
   3425  110D  2916               	goto	l6902
   3426                           
-  3427                           ;SlaveLiofilizadorVer1.c: 960:               {;SlaveLiofilizadorVer1.c: 961:            
+  3427                           ;SlaveLiofilizadorVer1.c: 962:               {;SlaveLiofilizadorVer1.c: 963:            
       +                             TempoCNT_1=TempoON_1;
   3428  110E  1683               	bsf	3,5	;RP0=1, select bank3
   3429  110F  1703               	bsf	3,6	;RP1=1, select bank3
   3430  1110  0837               	movf	_TempoON_1^(0+384),w
   3431  1111  00F4               	movwf	_TempoCNT_1	;volatile
   3432                           
-  3433                           ;SlaveLiofilizadorVer1.c: 962:               PORTCbits.RC1=1;
+  3433                           ;SlaveLiofilizadorVer1.c: 964:               PORTCbits.RC1=1;
   3434  1112  1283               	bcf	3,5	;RP0=0, select bank0
   3435  1113  1303               	bcf	3,6	;RP1=0, select bank0
   3436  1114  1487               	bsf	7,1	;volatile
   3437                           
-  3438                           ;SlaveLiofilizadorVer1.c: 963:               }
+  3438                           ;SlaveLiofilizadorVer1.c: 965:               }
   3439  1115  0008               	return
   3440  1116                     l6902:	
   3441                           
-  3442                           ;SlaveLiofilizadorVer1.c: 965:               {;SlaveLiofilizadorVer1.c: 966:            
+  3442                           ;SlaveLiofilizadorVer1.c: 967:               {;SlaveLiofilizadorVer1.c: 968:            
       +                             TempoCNT_1=TempoOFF_1;
   3443  1116  1683               	bsf	3,5	;RP0=1, select bank3
   3444  1117  1703               	bsf	3,6	;RP1=1, select bank3
   3445  1118  0836               	movf	_TempoOFF_1^(0+384),w
   3446  1119  00F4               	movwf	_TempoCNT_1	;volatile
   3447                           
-  3448                           ;SlaveLiofilizadorVer1.c: 967:               PORTCbits.RC1=0;
+  3448                           ;SlaveLiofilizadorVer1.c: 969:               PORTCbits.RC1=0;
   3449  111A  1283               	bcf	3,5	;RP0=0, select bank0
   3450  111B  1303               	bcf	3,6	;RP1=0, select bank0
   3451  111C  1087               	bcf	7,1	;volatile
@@ -6924,7 +6924,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   6877  0034                     __ptext25:	
   6878 ;; *************** function _Save_Log *****************
   6879 ;; Defined at:
-  6880 ;;		line 999 in file "SlaveLiofilizadorVer1.c"
+  6880 ;;		line 1001 in file "SlaveLiofilizadorVer1.c"
   6881 ;; Parameters:    Size  Location     Type
   6882 ;;  add_memory      4   17[BANK1 ] unsigned long 
   6883 ;; Auto vars:     Size  Location     Type
@@ -6958,7 +6958,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   6911                           ;psect for function _Save_Log
   6912  0034                     _Save_Log:	
   6913                           
-  6914                           ;SlaveLiofilizadorVer1.c: 1000:      EEPROM_24C1025_Write_Int(0x00, add_memory, Temperat
+  6914                           ;SlaveLiofilizadorVer1.c: 1002:      EEPROM_24C1025_Write_Int(0x00, add_memory, Temperat
       +                          ura0*10);
   6915                           
   6916                           ;incstack = 0
@@ -6995,7 +6995,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   6947  005B  3000               	movlw	0
   6948  005C  21F9  120A  118A   	fcall	_EEPROM_24C1025_Write_Int
   6949                           
-  6950                           ;SlaveLiofilizadorVer1.c: 1001:      EEPROM_24C1025_Write_Int(0x01, add_memory, Temperat
+  6950                           ;SlaveLiofilizadorVer1.c: 1003:      EEPROM_24C1025_Write_Int(0x01, add_memory, Temperat
       +                          ura1*10);
   6951  005F  1683               	bsf	3,5	;RP0=1, select bank1
   6952  0060  1303               	bcf	3,6	;RP1=0, select bank1
@@ -7985,7 +7985,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   7934  0845                     __ptext14:	
   7935 ;; *************** function _Decodify_Command *****************
   7936 ;; Defined at:
-  7937 ;;		line 302 in file "SlaveLiofilizadorVer1.c"
+  7937 ;;		line 304 in file "SlaveLiofilizadorVer1.c"
   7938 ;; Parameters:    Size  Location     Type
   7939 ;;		None
   7940 ;; Auto vars:     Size  Location     Type
@@ -8059,50 +8059,50 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8008                           ;psect for function _Decodify_Command
   8009  0845                     _Decodify_Command:	
   8010                           
-  8011                           ;SlaveLiofilizadorVer1.c: 304:     int dados;;SlaveLiofilizadorVer1.c: 305:     char tem
-      +                          pchar;;SlaveLiofilizadorVer1.c: 306:     int tempint;;SlaveLiofilizadorVer1.c: 307:     
-      +                          float OutPut;;SlaveLiofilizadorVer1.c: 308:     unsigned long add_24LCxxxx;;SlaveLiofili
-      +                          zadorVer1.c: 320:     USART_to_Protocol(&usart_protocol);
+  8011                           ;SlaveLiofilizadorVer1.c: 306:     int dados;;SlaveLiofilizadorVer1.c: 307:     char tem
+      +                          pchar;;SlaveLiofilizadorVer1.c: 308:     int tempint;;SlaveLiofilizadorVer1.c: 309:     
+      +                          float OutPut;;SlaveLiofilizadorVer1.c: 310:     unsigned long add_24LCxxxx;;SlaveLiofili
+      +                          zadorVer1.c: 322:     USART_to_Protocol(&usart_protocol);
   8012                           
   8013                           ;incstack = 0
   8014                           ; Regs used in _Decodify_Command: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
   8015  0845  30CE               	movlw	(low (_usart_protocol| (0+256)))& (0+255)
   8016  0846  120A  118A  27A5  120A  158A  	fcall	_USART_to_Protocol
   8017                           
-  8018                           ;SlaveLiofilizadorVer1.c: 322:     ((char *)&add_24LCxxxx)[3]=(usart_protocol.value[1]);
+  8018                           ;SlaveLiofilizadorVer1.c: 324:     ((char *)&add_24LCxxxx)[3]=(usart_protocol.value[1]);
   8019  084B  1683               	bsf	3,5	;RP0=1, select bank3
   8020  084C  1703               	bsf	3,6	;RP1=1, select bank3
   8021  084D  0855               	movf	(_usart_protocol^(0+384)+7),w
   8022  084E  1303               	bcf	3,6	;RP1=0, select bank1
   8023  084F  00ED               	movwf	(Decodify_Command@add_24LCxxxx^(0+128)+3)
   8024                           
-  8025                           ;SlaveLiofilizadorVer1.c: 323:     ((char *)&add_24LCxxxx)[2]=(usart_protocol.value[2]);
+  8025                           ;SlaveLiofilizadorVer1.c: 325:     ((char *)&add_24LCxxxx)[2]=(usart_protocol.value[2]);
   8026  0850  1703               	bsf	3,6	;RP1=1, select bank3
   8027  0851  0856               	movf	(_usart_protocol^(0+384)+8),w
   8028  0852  1303               	bcf	3,6	;RP1=0, select bank1
   8029  0853  00EC               	movwf	(Decodify_Command@add_24LCxxxx^(0+128)+2)
   8030                           
-  8031                           ;SlaveLiofilizadorVer1.c: 324:     ((char *)&add_24LCxxxx)[1]=(usart_protocol.value[3]);
+  8031                           ;SlaveLiofilizadorVer1.c: 326:     ((char *)&add_24LCxxxx)[1]=(usart_protocol.value[3]);
   8032  0854  1703               	bsf	3,6	;RP1=1, select bank3
   8033  0855  0857               	movf	(_usart_protocol^(0+384)+9),w
   8034  0856  1303               	bcf	3,6	;RP1=0, select bank1
   8035  0857  00EB               	movwf	(Decodify_Command@add_24LCxxxx^(0+128)+1)
   8036                           
-  8037                           ;SlaveLiofilizadorVer1.c: 325:     ((char *)&add_24LCxxxx)[0]=(usart_protocol.value[4]);
+  8037                           ;SlaveLiofilizadorVer1.c: 327:     ((char *)&add_24LCxxxx)[0]=(usart_protocol.value[4]);
   8038  0858  1703               	bsf	3,6	;RP1=1, select bank3
   8039  0859  0858               	movf	(_usart_protocol^(0+384)+10),w
   8040  085A  1303               	bcf	3,6	;RP1=0, select bank1
   8041  085B  00EA               	movwf	Decodify_Command@add_24LCxxxx^(0+128)
   8042                           
-  8043                           ;SlaveLiofilizadorVer1.c: 332:     switch(usart_protocol.command){
+  8043                           ;SlaveLiofilizadorVer1.c: 334:     switch(usart_protocol.command){
   8044  085C  2B43               	goto	l7330
   8045  085D                     l7120:	
   8046                           
-  8047                           ;SlaveLiofilizadorVer1.c: 341:              Send_To_MB(11);
+  8047                           ;SlaveLiofilizadorVer1.c: 343:              Send_To_MB(11);
   8048  085D  300B               	movlw	11
   8049  085E  23A1               	fcall	_Send_To_MB
   8050                           
-  8051                           ;SlaveLiofilizadorVer1.c: 342:              USART_put_string("v1.0.4");
+  8051                           ;SlaveLiofilizadorVer1.c: 344:              USART_put_string("v1.0.4");
   8052  085F  302D               	movlw	(low ((STR_1-__stringbase)| (0+32768)))& (0+255)
   8053  0860  1283               	bcf	3,5	;RP0=0, select bank0
   8054  0861  00A1               	movwf	USART_put_string@vetor
@@ -8110,16 +8110,16 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8056  0863  00A2               	movwf	USART_put_string@vetor+1
   8057  0864  160A  158A  2CD9   	ljmp	l6340
   8058  0867                     l7124:	
-  8059                           ;SlaveLiofilizadorVer1.c: 343:              break;
+  8059                           ;SlaveLiofilizadorVer1.c: 345:              break;
   8060                           
   8061                           
-  8062                           ;SlaveLiofilizadorVer1.c: 346:              if(usart_protocol.value[0]==0)
+  8062                           ;SlaveLiofilizadorVer1.c: 348:              if(usart_protocol.value[0]==0)
   8063  0867  1703               	bsf	3,6	;RP1=1, select bank3
   8064  0868  0854               	movf	(_usart_protocol^(0+384)+6),w
   8065  0869  1D03               	btfss	3,2
   8066  086A  2879               	goto	l7128
   8067                           
-  8068                           ;SlaveLiofilizadorVer1.c: 347:                 OutPut=Temperatura0;
+  8068                           ;SlaveLiofilizadorVer1.c: 349:                 OutPut=Temperatura0;
   8069  086B  0817               	movf	(_Temperatura0+3)^(0+384),w
   8070  086C  1303               	bcf	3,6	;RP1=0, select bank1
   8071  086D  00E5               	movwf	(Decodify_Command@OutPut+3)^(0+128)
@@ -8136,7 +8136,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8082  0878  2886               	goto	L8
   8083  0879                     l7128:	
   8084                           
-  8085                           ;SlaveLiofilizadorVer1.c: 349:                 OutPut=Temperatura1;
+  8085                           ;SlaveLiofilizadorVer1.c: 351:                 OutPut=Temperatura1;
   8086  0879  0813               	movf	(_Temperatura1+3)^(0+384),w
   8087  087A  1303               	bcf	3,6	;RP1=0, select bank1
   8088  087B  00E5               	movwf	(Decodify_Command@OutPut+3)^(0+128)
@@ -8154,7 +8154,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8100  0886  1303               	bcf	3,6	;RP1=0, select bank1
   8101  0887  00E2               	movwf	Decodify_Command@OutPut^(0+128)
   8102                           
-  8103                           ;SlaveLiofilizadorVer1.c: 366:              OutPut*=10.0;
+  8103                           ;SlaveLiofilizadorVer1.c: 368:              OutPut*=10.0;
   8104  0888  3041               	movlw	65
   8105  0889  1283               	bcf	3,5	;RP0=0, select bank0
   8106  088A  00D8               	movwf	___flmul@b+3
@@ -8195,14 +8195,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8141  08B1  1683               	bsf	3,5	;RP0=1, select bank1
   8142  08B2  00E2               	movwf	Decodify_Command@OutPut^(0+128)
   8143                           
-  8144                           ;SlaveLiofilizadorVer1.c: 368:              INTCONbits.GIE=0;
+  8144                           ;SlaveLiofilizadorVer1.c: 370:              INTCONbits.GIE=0;
   8145  08B3  138B               	bcf	11,7	;volatile
   8146                           
-  8147                           ;SlaveLiofilizadorVer1.c: 369:              Send_To_MB(2);
+  8147                           ;SlaveLiofilizadorVer1.c: 371:              Send_To_MB(2);
   8148  08B4  3002               	movlw	2
   8149  08B5  23A1               	fcall	_Send_To_MB
   8150                           
-  8151                           ;SlaveLiofilizadorVer1.c: 370:              USART_put_int(OutPut);
+  8151                           ;SlaveLiofilizadorVer1.c: 372:              USART_put_int(OutPut);
   8152  08B6  0865               	movf	(Decodify_Command@OutPut+3)^(0+128),w
   8153  08B7  00A3               	movwf	(___fltol@f1+3)^(0+128)
   8154  08B8  0864               	movf	(Decodify_Command@OutPut+2)^(0+128),w
@@ -8219,14 +8219,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8165  08C7  00A8               	movwf	USART_put_int@value^(0+128)
   8166  08C8  277F               	fcall	_USART_put_int
   8167                           
-  8168                           ;SlaveLiofilizadorVer1.c: 371:              INTCONbits.GIE=1;
+  8168                           ;SlaveLiofilizadorVer1.c: 373:              INTCONbits.GIE=1;
   8169  08C9  178B               	bsf	11,7	;volatile
   8170                           
-  8171                           ;SlaveLiofilizadorVer1.c: 372:              break;
+  8171                           ;SlaveLiofilizadorVer1.c: 374:              break;
   8172  08CA  0008               	return
   8173  08CB                     l7140:	
   8174                           
-  8175                           ;SlaveLiofilizadorVer1.c: 377:              Save_Log((usart_protocol.value[0]<<8)+(usart
+  8175                           ;SlaveLiofilizadorVer1.c: 379:              Save_Log((usart_protocol.value[0]<<8)+(usart
       +                          _protocol.value[1]));
   8176  08CB  1703               	bsf	3,6	;RP1=1, select bank3
   8177  08CC  0854               	movf	(_usart_protocol^(0+384)+6),w
@@ -8252,65 +8252,65 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8197  08E0  00B4               	movwf	(Save_Log@add_memory+3)^(0+128)
   8198  08E1  120A  118A  2034   	fcall	_Save_Log
   8199                           
-  8200                           ;SlaveLiofilizadorVer1.c: 378:              Delay_Led_Tmr0=0;
+  8200                           ;SlaveLiofilizadorVer1.c: 380:              Delay_Led_Tmr0=0;
   8201  08E4  1683               	bsf	3,5	;RP0=1, select bank3
   8202  08E5  1703               	bsf	3,6	;RP1=1, select bank3
   8203  08E6  01AE               	clrf	_Delay_Led_Tmr0^(0+384)	;volatile
   8204  08E7  01AF               	clrf	(_Delay_Led_Tmr0+1)^(0+384)	;volatile
   8205                           
-  8206                           ;SlaveLiofilizadorVer1.c: 379:              milisegundo=0;
+  8206                           ;SlaveLiofilizadorVer1.c: 381:              milisegundo=0;
   8207  08E8  01AA               	clrf	_milisegundo^(0+384)	;volatile
   8208  08E9  01AB               	clrf	(_milisegundo+1)^(0+384)	;volatile
   8209                           
-  8210                           ;SlaveLiofilizadorVer1.c: 380:              break;
+  8210                           ;SlaveLiofilizadorVer1.c: 382:              break;
   8211  08EA  0008               	return
   8212  08EB                     l7146:	
   8213                           
-  8214                           ;SlaveLiofilizadorVer1.c: 384:              if(usart_protocol.value[0]==0)
+  8214                           ;SlaveLiofilizadorVer1.c: 386:              if(usart_protocol.value[0]==0)
   8215  08EB  1703               	bsf	3,6	;RP1=1, select bank3
   8216  08EC  0854               	movf	(_usart_protocol^(0+384)+6),w
   8217  08ED  1D03               	btfss	3,2
   8218  08EE  28F1               	goto	l307
   8219                           
-  8220                           ;SlaveLiofilizadorVer1.c: 385:                 generic_status.flag_global_hot=0;
+  8220                           ;SlaveLiofilizadorVer1.c: 387:                 generic_status.flag_global_hot=0;
   8221  08EF  1376               	bcf	_generic_status,6
   8222  08F0  0008               	return
   8223  08F1                     l307:	
-  8224                           ;SlaveLiofilizadorVer1.c: 386:              else
+  8224                           ;SlaveLiofilizadorVer1.c: 388:              else
   8225                           
   8226                           
-  8227                           ;SlaveLiofilizadorVer1.c: 387:                 generic_status.flag_global_hot=1;
+  8227                           ;SlaveLiofilizadorVer1.c: 389:                 generic_status.flag_global_hot=1;
   8228  08F1  1776               	bsf	_generic_status,6
   8229  08F2  0008               	return
   8230  08F3                     l7150:	
   8231                           
-  8232                           ;SlaveLiofilizadorVer1.c: 392:              Send_To_MB(2);
+  8232                           ;SlaveLiofilizadorVer1.c: 394:              Send_To_MB(2);
   8233  08F3  3002               	movlw	2
   8234  08F4  23A1  120A  158A   	fcall	_Send_To_MB
   8235                           
-  8236                           ;SlaveLiofilizadorVer1.c: 402:              USART_put_int(3);
+  8236                           ;SlaveLiofilizadorVer1.c: 404:              USART_put_int(3);
   8237  08F7  3003               	movlw	3
   8238  08F8  00A8               	movwf	USART_put_int@value^(0+128)
   8239  08F9  01A9               	clrf	(USART_put_int@value+1)^(0+128)
   8240  08FA  2F7F               	ljmp	l6170
   8241  08FB                     l7154:	
-  8242                           ;SlaveLiofilizadorVer1.c: 404:              break;
+  8242                           ;SlaveLiofilizadorVer1.c: 406:              break;
   8243                           
   8244                           
-  8245                           ;SlaveLiofilizadorVer1.c: 413:              Send_To_MB(3);
+  8245                           ;SlaveLiofilizadorVer1.c: 415:              Send_To_MB(3);
   8246  08FB  3003               	movlw	3
   8247  08FC  23A1  120A  158A   	fcall	_Send_To_MB
   8248                           
-  8249                           ;SlaveLiofilizadorVer1.c: 414:              Send_Reply_OK();
+  8249                           ;SlaveLiofilizadorVer1.c: 416:              Send_Reply_OK();
   8250  08FF  27A0               	fcall	_Send_Reply_OK
   8251                           
-  8252                           ;SlaveLiofilizadorVer1.c: 415:              Load_Work();
+  8252                           ;SlaveLiofilizadorVer1.c: 417:              Load_Work();
   8253  0900  120A  118A  2CA6   	ljmp	l6550
   8254  0903                     l7160:	
-  8255                           ;SlaveLiofilizadorVer1.c: 416:              break;
+  8255                           ;SlaveLiofilizadorVer1.c: 418:              break;
   8256                           
   8257                           
-  8258                           ;SlaveLiofilizadorVer1.c: 421:              EEPROM_Write_Byte(usart_protocol.value[0],
+  8258                           ;SlaveLiofilizadorVer1.c: 423:              EEPROM_Write_Byte(usart_protocol.value[0],
   8259  0903  1703               	bsf	3,6	;RP1=1, select bank3
   8260  0904  0855               	movf	(_usart_protocol^(0+384)+7),w
   8261  0905  1283               	bcf	3,5	;RP0=0, select bank0
@@ -8322,17 +8322,17 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8267  090B  160A  158A  273C  120A  158A  	fcall	_EEPROM_Write_Byte
   8268  0910                     L9:	
   8269                           
-  8270                           ;SlaveLiofilizadorVer1.c: 423:              Send_To_MB(3);
+  8270                           ;SlaveLiofilizadorVer1.c: 425:              Send_To_MB(3);
   8271  0910  3003               	movlw	3
   8272  0911  23A1  120A  158A   	fcall	_Send_To_MB
   8273                           
-  8274                           ;SlaveLiofilizadorVer1.c: 424:              Send_Reply_OK();
+  8274                           ;SlaveLiofilizadorVer1.c: 426:              Send_Reply_OK();
   8275  0914  2FA0               	ljmp	l6580
   8276  0915                     l7164:	
-  8277                           ;SlaveLiofilizadorVer1.c: 425:              break;
+  8277                           ;SlaveLiofilizadorVer1.c: 427:              break;
   8278                           
   8279                           
-  8280                           ;SlaveLiofilizadorVer1.c: 427:              tempchar=EEPROM_Read_Byte(usart_protocol.val
+  8280                           ;SlaveLiofilizadorVer1.c: 429:              tempchar=EEPROM_Read_Byte(usart_protocol.val
       +                          ue[0]);
   8281  0915  1703               	bsf	3,6	;RP1=1, select bank3
   8282  0916  0854               	movf	(_usart_protocol^(0+384)+6),w
@@ -8341,26 +8341,26 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8285  091D  1303               	bcf	3,6	;RP1=0, select bank1
   8286  091E  00E6               	movwf	Decodify_Command@tempchar^(0+128)
   8287                           
-  8288                           ;SlaveLiofilizadorVer1.c: 428:              Send_To_MB(1);;
+  8288                           ;SlaveLiofilizadorVer1.c: 430:              Send_To_MB(1);;
   8289  091F  3001               	movlw	1
   8290  0920  23A1  120A  158A   	fcall	_Send_To_MB
   8291                           
-  8292                           ;SlaveLiofilizadorVer1.c: 429:              USART_putc(tempchar);
+  8292                           ;SlaveLiofilizadorVer1.c: 431:              USART_putc(tempchar);
   8293  0923  0866               	movf	Decodify_Command@tempchar^(0+128),w
   8294  0924  2BDD               	ljmp	_USART_putc
   8295  0925                     l7170:	
-  8296                           ;SlaveLiofilizadorVer1.c: 430:              break;
+  8296                           ;SlaveLiofilizadorVer1.c: 432:              break;
   8297                           
   8298                           
-  8299                           ;SlaveLiofilizadorVer1.c: 432:              {;SlaveLiofilizadorVer1.c: 433:             
-      +                           unsigned char add;;SlaveLiofilizadorVer1.c: 434:              add=usart_protocol.value[
+  8299                           ;SlaveLiofilizadorVer1.c: 434:              {;SlaveLiofilizadorVer1.c: 435:             
+      +                           unsigned char add;;SlaveLiofilizadorVer1.c: 436:              add=usart_protocol.value[
       +                          0];
   8300  0925  1703               	bsf	3,6	;RP1=1, select bank3
   8301  0926  0854               	movf	(_usart_protocol^(0+384)+6),w
   8302  0927  1303               	bcf	3,6	;RP1=0, select bank1
   8303  0928  00DF               	movwf	Decodify_Command@add^(0+128)
   8304                           
-  8305                           ;SlaveLiofilizadorVer1.c: 435:              dados=(usart_protocol.value[1]<<8)|usart_pro
+  8305                           ;SlaveLiofilizadorVer1.c: 437:              dados=(usart_protocol.value[1]<<8)|usart_pro
       +                          tocol.value[2];
   8306  0929  1703               	bsf	3,6	;RP1=1, select bank3
   8307  092A  0855               	movf	(_usart_protocol^(0+384)+7),w
@@ -8371,7 +8371,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8312  092F  1303               	bcf	3,6	;RP1=0, select bank1
   8313  0930  00DD               	movwf	Decodify_Command@dados^(0+128)
   8314                           
-  8315                           ;SlaveLiofilizadorVer1.c: 436:              EEPROM_Write_Integer(add,dados);
+  8315                           ;SlaveLiofilizadorVer1.c: 438:              EEPROM_Write_Integer(add,dados);
   8316  0931  085E               	movf	(Decodify_Command@dados+1)^(0+128),w
   8317  0932  1283               	bcf	3,5	;RP0=0, select bank0
   8318  0933  00A6               	movwf	EEPROM_Write_Integer@dado+1
@@ -8384,10 +8384,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8325  093A  160A  158A  2701  120A  158A  	fcall	_EEPROM_Write_Integer
   8326  093F  2910               	goto	L9
   8327  0940                     l7178:	
-  8328                           ;SlaveLiofilizadorVer1.c: 437:              Send_To_MB(3);
+  8328                           ;SlaveLiofilizadorVer1.c: 439:              Send_To_MB(3);
   8329                           
   8330                           
-  8331                           ;SlaveLiofilizadorVer1.c: 442:              tempint=EEPROM_Read_Integer(usart_protocol.v
+  8331                           ;SlaveLiofilizadorVer1.c: 444:              tempint=EEPROM_Read_Integer(usart_protocol.v
       +                          alue[0]);
   8332  0940  1703               	bsf	3,6	;RP1=1, select bank3
   8333  0941  0854               	movf	(_usart_protocol^(0+384)+6),w
@@ -8401,21 +8401,21 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8341  094C  1683               	bsf	3,5	;RP0=1, select bank1
   8342  094D  00E0               	movwf	Decodify_Command@tempint^(0+128)
   8343                           
-  8344                           ;SlaveLiofilizadorVer1.c: 443:              Send_To_MB(2);
+  8344                           ;SlaveLiofilizadorVer1.c: 445:              Send_To_MB(2);
   8345  094E  3002               	movlw	2
   8346  094F  23A1  120A  158A   	fcall	_Send_To_MB
   8347                           
-  8348                           ;SlaveLiofilizadorVer1.c: 444:              USART_put_int(tempint);
+  8348                           ;SlaveLiofilizadorVer1.c: 446:              USART_put_int(tempint);
   8349  0952  0861               	movf	(Decodify_Command@tempint+1)^(0+128),w
   8350  0953  00A9               	movwf	(USART_put_int@value+1)^(0+128)
   8351  0954  0860               	movf	Decodify_Command@tempint^(0+128),w
   8352  0955  00A8               	movwf	USART_put_int@value^(0+128)
   8353  0956  2F7F               	ljmp	l6170
   8354  0957                     l7184:	
-  8355                           ;SlaveLiofilizadorVer1.c: 445:              break;
+  8355                           ;SlaveLiofilizadorVer1.c: 447:              break;
   8356                           
   8357                           
-  8358                           ;SlaveLiofilizadorVer1.c: 448:              EEPROM_Write_String(usart_protocol.value[0],
+  8358                           ;SlaveLiofilizadorVer1.c: 450:              EEPROM_Write_String(usart_protocol.value[0],
   8359  0957  30D5               	movlw	(low ((_usart_protocol| (0+256)+7)))& (0+255)
   8360  0958  1283               	bcf	3,5	;RP0=0, select bank0
   8361  0959  00A5               	movwf	EEPROM_Write_String@dado
@@ -8425,10 +8425,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8365  095D  160A  158A  2724  120A  158A  	fcall	_EEPROM_Write_String
   8366  0962  2910               	goto	L9
   8367  0963                     l7190:	
-  8368                           ;SlaveLiofilizadorVer1.c: 450:              Send_To_MB(3);
+  8368                           ;SlaveLiofilizadorVer1.c: 452:              Send_To_MB(3);
   8369                           
   8370                           
-  8371                           ;SlaveLiofilizadorVer1.c: 454:              {;SlaveLiofilizadorVer1.c: 456:             
+  8371                           ;SlaveLiofilizadorVer1.c: 456:              {;SlaveLiofilizadorVer1.c: 458:             
       +                           EEPROM_Read_String(usart_protocol.value[0],texto);
   8372  0963  30BE               	movlw	(low (_texto| (0+256)))& (0+255)
   8373  0964  1283               	bcf	3,5	;RP0=0, select bank0
@@ -8438,19 +8438,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8377  0968  0854               	movf	(_usart_protocol^(0+384)+6),w
   8378  0969  120A  118A  2492  120A  158A  	fcall	_EEPROM_Read_String
   8379                           
-  8380                           ;SlaveLiofilizadorVer1.c: 457:              Send_To_MB(sizeof(texto));
+  8380                           ;SlaveLiofilizadorVer1.c: 459:              Send_To_MB(sizeof(texto));
   8381  096E  3010               	movlw	16
   8382  096F                     L11:	
   8383  096F  23A1  120A  158A   	fcall	_Send_To_MB
   8384                           
-  8385                           ;SlaveLiofilizadorVer1.c: 458:              USART_put_string(texto);
+  8385                           ;SlaveLiofilizadorVer1.c: 460:              USART_put_string(texto);
   8386  0972  27EE               	fcall	PL74	;call to abstracted procedure
   8387  0973  160A  158A  2CD9   	ljmp	l6340
   8388  0976                     l7196:	
-  8389                           ;SlaveLiofilizadorVer1.c: 459:              break;
+  8389                           ;SlaveLiofilizadorVer1.c: 461:              break;
   8390                           
   8391                           
-  8392                           ;SlaveLiofilizadorVer1.c: 464:              EEPROM_24C1025_Write_Byte(usart_protocol.val
+  8392                           ;SlaveLiofilizadorVer1.c: 466:              EEPROM_24C1025_Write_Byte(usart_protocol.val
       +                          ue[0],
   8393  0976  086D               	movf	(Decodify_Command@add_24LCxxxx+3)^(0+128),w
   8394  0977  1283               	bcf	3,5	;RP0=0, select bank0
@@ -8475,10 +8475,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8413  098A  160A  158A  245D  120A  158A  	fcall	_EEPROM_24C1025_Write_Byte
   8414  098F  2910               	goto	L9
   8415  0990                     l7202:	
-  8416                           ;SlaveLiofilizadorVer1.c: 467:              Send_To_MB(3);
+  8416                           ;SlaveLiofilizadorVer1.c: 469:              Send_To_MB(3);
   8417                           
   8418                           
-  8419                           ;SlaveLiofilizadorVer1.c: 471:              tempchar=EEPROM_24C1025_Read_Byte(usart_prot
+  8419                           ;SlaveLiofilizadorVer1.c: 473:              tempchar=EEPROM_24C1025_Read_Byte(usart_prot
       +                          ocol.value[0],
   8420  0990  086D               	movf	(Decodify_Command@add_24LCxxxx+3)^(0+128),w
   8421  0991  1283               	bcf	3,5	;RP0=0, select bank0
@@ -8502,33 +8502,33 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8439  09A7  1683               	bsf	3,5	;RP0=1, select bank1
   8440  09A8  00E6               	movwf	Decodify_Command@tempchar^(0+128)
   8441                           
-  8442                           ;SlaveLiofilizadorVer1.c: 475:              Send_To_MB(1);
+  8442                           ;SlaveLiofilizadorVer1.c: 477:              Send_To_MB(1);
   8443  09A9  3001               	movlw	1
   8444  09AA  23A1  120A  158A   	fcall	_Send_To_MB
   8445                           
-  8446                           ;SlaveLiofilizadorVer1.c: 476:              USART_putc(tempchar);
+  8446                           ;SlaveLiofilizadorVer1.c: 478:              USART_putc(tempchar);
   8447  09AD  0866               	movf	Decodify_Command@tempchar^(0+128),w
   8448  09AE  2BDD               	ljmp	_USART_putc
   8449  09AF                     l7208:	
-  8450                           ;SlaveLiofilizadorVer1.c: 477:              break;
+  8450                           ;SlaveLiofilizadorVer1.c: 479:              break;
   8451                           
   8452                           
-  8453                           ;SlaveLiofilizadorVer1.c: 479:              {;SlaveLiofilizadorVer1.c: 480:             
-      +                           int valor;;SlaveLiofilizadorVer1.c: 481:              ((char *)&valor)[1]=(usart_protoc
+  8453                           ;SlaveLiofilizadorVer1.c: 481:              {;SlaveLiofilizadorVer1.c: 482:             
+      +                           int valor;;SlaveLiofilizadorVer1.c: 483:              ((char *)&valor)[1]=(usart_protoc
       +                          ol.value[5]);
   8454  09AF  1703               	bsf	3,6	;RP1=1, select bank3
   8455  09B0  0859               	movf	(_usart_protocol^(0+384)+11),w
   8456  09B1  1303               	bcf	3,6	;RP1=0, select bank1
   8457  09B2  00E8               	movwf	(Decodify_Command@valor^(0+128)+1)
   8458                           
-  8459                           ;SlaveLiofilizadorVer1.c: 482:              ((char *)&valor)[0]=(usart_protocol.value[6]
+  8459                           ;SlaveLiofilizadorVer1.c: 484:              ((char *)&valor)[0]=(usart_protocol.value[6]
       +                          );
   8460  09B3  1703               	bsf	3,6	;RP1=1, select bank3
   8461  09B4  085A               	movf	(_usart_protocol^(0+384)+12),w
   8462  09B5  1303               	bcf	3,6	;RP1=0, select bank1
   8463  09B6  00E7               	movwf	Decodify_Command@valor^(0+128)
   8464                           
-  8465                           ;SlaveLiofilizadorVer1.c: 483:              EEPROM_24C1025_Write_Int(usart_protocol.valu
+  8465                           ;SlaveLiofilizadorVer1.c: 485:              EEPROM_24C1025_Write_Int(usart_protocol.valu
       +                          e[0],
   8466  09B7  086D               	movf	(Decodify_Command@add_24LCxxxx+3)^(0+128),w
   8467  09B8  00AB               	movwf	(EEPROM_24C1025_Write_Int@mem_add+3)^(0+128)
@@ -8547,10 +8547,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8480  09C5  120A  118A  21F9  120A  158A  	fcall	_EEPROM_24C1025_Write_Int
   8481  09CA  2910               	goto	L9
   8482  09CB                     l7216:	
-  8483                           ;SlaveLiofilizadorVer1.c: 486:              Send_To_MB(3);
+  8483                           ;SlaveLiofilizadorVer1.c: 488:              Send_To_MB(3);
   8484                           
   8485                           
-  8486                           ;SlaveLiofilizadorVer1.c: 491:              tempint=EEPROM_24C1025_Read_Int(usart_protoc
+  8486                           ;SlaveLiofilizadorVer1.c: 493:              tempint=EEPROM_24C1025_Read_Int(usart_protoc
       +                          ol.value[0],
   8487  09CB  086D               	movf	(Decodify_Command@add_24LCxxxx+3)^(0+128),w
   8488  09CC  1283               	bcf	3,5	;RP0=0, select bank0
@@ -8578,18 +8578,18 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8510  09E6  0831               	movf	?_EEPROM_24C1025_Read_Int,w
   8511  09E7  294C               	goto	L10
   8512  09E8                     l7222:	
-  8513                           ;SlaveLiofilizadorVer1.c: 493:              Send_To_MB(2);
+  8513                           ;SlaveLiofilizadorVer1.c: 495:              Send_To_MB(2);
   8514                           
   8515                           
-  8516                           ;SlaveLiofilizadorVer1.c: 499:              {;SlaveLiofilizadorVer1.c: 500:             
-      +                           char sizedata;;SlaveLiofilizadorVer1.c: 501:              sizedata=usart_protocol.value
+  8516                           ;SlaveLiofilizadorVer1.c: 501:              {;SlaveLiofilizadorVer1.c: 502:             
+      +                           char sizedata;;SlaveLiofilizadorVer1.c: 503:              sizedata=usart_protocol.value
       +                          [5];
   8517  09E8  1703               	bsf	3,6	;RP1=1, select bank3
   8518  09E9  0859               	movf	(_usart_protocol^(0+384)+11),w
   8519  09EA  1303               	bcf	3,6	;RP1=0, select bank1
   8520  09EB  00E9               	movwf	Decodify_Command@sizedata^(0+128)
   8521                           
-  8522                           ;SlaveLiofilizadorVer1.c: 502:              EEPROM_24C1025_Read_Buffer(usart_protocol.va
+  8522                           ;SlaveLiofilizadorVer1.c: 504:              EEPROM_24C1025_Read_Buffer(usart_protocol.va
       +                          lue[0],
   8523  09EC  086D               	movf	(Decodify_Command@add_24LCxxxx+3)^(0+128),w
   8524  09ED  1283               	bcf	3,5	;RP0=0, select bank0
@@ -8619,13 +8619,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8548  0A05  0854               	movf	(_usart_protocol^(0+384)+6),w
   8549  0A06  256F  120A  158A   	fcall	_EEPROM_24C1025_Read_Buffer
   8550                           
-  8551                           ;SlaveLiofilizadorVer1.c: 509:              Send_To_MB(sizedata);
+  8551                           ;SlaveLiofilizadorVer1.c: 511:              Send_To_MB(sizedata);
   8552  0A09  1683               	bsf	3,5	;RP0=1, select bank1
   8553  0A0A  1303               	bcf	3,6	;RP1=0, select bank1
   8554  0A0B  0869               	movf	Decodify_Command@sizedata^(0+128),w
   8555  0A0C  23A1               	fcall	_Send_To_MB
   8556                           
-  8557                           ;SlaveLiofilizadorVer1.c: 510:              USART_put_buffer(buffer,sizedata);
+  8557                           ;SlaveLiofilizadorVer1.c: 512:              USART_put_buffer(buffer,sizedata);
   8558  0A0D  0869               	movf	Decodify_Command@sizedata^(0+128),w
   8559  0A0E  1283               	bcf	3,5	;RP0=0, select bank0
   8560  0A0F  00A1               	movwf	USART_put_buffer@size
@@ -8633,11 +8633,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8562  0A11  01A2               	clrf	USART_put_buffer@size+1
   8563  0A12  160A  158A  2CBD   	ljmp	_USART_put_buffer
   8564  0A15                     l7230:	
-  8565                           ;SlaveLiofilizadorVer1.c: 511:              };SlaveLiofilizadorVer1.c: 512:             
+  8565                           ;SlaveLiofilizadorVer1.c: 513:              };SlaveLiofilizadorVer1.c: 514:             
       +                           break;
   8566                           
   8567                           
-  8568                           ;SlaveLiofilizadorVer1.c: 515:              EEPROM_24C1025_Write_Buffer(usart_protocol.v
+  8568                           ;SlaveLiofilizadorVer1.c: 517:              EEPROM_24C1025_Write_Buffer(usart_protocol.v
       +                          alue[0],
   8569  0A15  086D               	movf	(Decodify_Command@add_24LCxxxx+3)^(0+128),w
   8570  0A16  1283               	bcf	3,5	;RP0=0, select bank0
@@ -8670,10 +8670,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8597  0A31  264F  120A  158A   	fcall	_EEPROM_24C1025_Write_Buffer
   8598  0A34  2910               	goto	L9
   8599  0A35                     l7236:	
-  8600                           ;SlaveLiofilizadorVer1.c: 520:              Send_To_MB(3);
+  8600                           ;SlaveLiofilizadorVer1.c: 522:              Send_To_MB(3);
   8601                           
   8602                           
-  8603                           ;SlaveLiofilizadorVer1.c: 525:              EEPROM_24C1025_Write_Str(usart_protocol.valu
+  8603                           ;SlaveLiofilizadorVer1.c: 527:              EEPROM_24C1025_Write_Str(usart_protocol.valu
       +                          e[0],
   8604  0A35  086D               	movf	(Decodify_Command@add_24LCxxxx+3)^(0+128),w
   8605  0A36  1283               	bcf	3,5	;RP0=0, select bank0
@@ -8698,10 +8698,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8624  0A49  23EE  120A  158A   	fcall	_EEPROM_24C1025_Write_Str
   8625  0A4C  2910               	goto	L9
   8626  0A4D                     l7242:	
-  8627                           ;SlaveLiofilizadorVer1.c: 528:              Send_To_MB(3);
+  8627                           ;SlaveLiofilizadorVer1.c: 530:              Send_To_MB(3);
   8628                           
   8629                           
-  8630                           ;SlaveLiofilizadorVer1.c: 532:              {;SlaveLiofilizadorVer1.c: 533:             
+  8630                           ;SlaveLiofilizadorVer1.c: 534:              {;SlaveLiofilizadorVer1.c: 535:             
       +                           EEPROM_24C1025_Read_Str(usart_protocol.value[0],
   8631  0A4D  086D               	movf	(Decodify_Command@add_24LCxxxx+3)^(0+128),w
   8632  0A4E  1283               	bcf	3,5	;RP0=0, select bank0
@@ -8725,14 +8725,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8650  0A60  0854               	movf	(_usart_protocol^(0+384)+6),w
   8651  0A61  248A  120A  158A   	fcall	_EEPROM_24C1025_Read_Str
   8652                           
-  8653                           ;SlaveLiofilizadorVer1.c: 537:              Send_To_MB(strlen(texto));
+  8653                           ;SlaveLiofilizadorVer1.c: 539:              Send_To_MB(strlen(texto));
   8654  0A64  30BE               	movlw	(low (_texto| (0+256)))& (0+255)
   8655  0A65  278D  120A  158A   	fcall	_strlen
   8656  0A68  0820               	movf	?_strlen,w
   8657  0A69  296F               	goto	L11
   8658  0A6A                     l7246:	
   8659                           
-  8660                           ;SlaveLiofilizadorVer1.c: 543:              EEPROM_24C1025_Fill_All(usart_protocol.value
+  8660                           ;SlaveLiofilizadorVer1.c: 545:              EEPROM_24C1025_Fill_All(usart_protocol.value
       +                          [0],
   8661  0A6A  1703               	bsf	3,6	;RP1=1, select bank3
   8662  0A6B  0855               	movf	(_usart_protocol^(0+384)+7),w
@@ -8745,12 +8745,12 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8669  0A72  160A  158A  256C  120A  158A  	fcall	_EEPROM_24C1025_Fill_All
   8670  0A77  2910               	goto	L9
   8671  0A78                     l7252:	
-  8672                           ;SlaveLiofilizadorVer1.c: 545:              Send_To_MB(3);
+  8672                           ;SlaveLiofilizadorVer1.c: 547:              Send_To_MB(3);
   8673                           
   8674                           
-  8675                           ;SlaveLiofilizadorVer1.c: 550:              {;SlaveLiofilizadorVer1.c: 551:             
-      +                           char hh[10];;SlaveLiofilizadorVer1.c: 552:              char mm[10];;SlaveLiofilizadorV
-      +                          er1.c: 553:              char ss[10];;SlaveLiofilizadorVer1.c: 555:              itoa(hh
+  8675                           ;SlaveLiofilizadorVer1.c: 552:              {;SlaveLiofilizadorVer1.c: 553:             
+      +                           char hh[10];;SlaveLiofilizadorVer1.c: 554:              char mm[10];;SlaveLiofilizadorV
+      +                          er1.c: 555:              char ss[10];;SlaveLiofilizadorVer1.c: 557:              itoa(hh
       +                          ,hora,10);
   8676  0A78  1703               	bsf	3,6	;RP1=1, select bank3
   8677  0A79  083C               	movf	_hora^(0+384),w	;volatile
@@ -8759,7 +8759,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8680  0A7E  01B2               	clrf	itoa@base+1
   8681  0A7F  2765  120A  158A   	fcall	_itoa
   8682                           
-  8683                           ;SlaveLiofilizadorVer1.c: 556:              itoa(mm,minuto,10);
+  8683                           ;SlaveLiofilizadorVer1.c: 558:              itoa(mm,minuto,10);
   8684  0A82  1683               	bsf	3,5	;RP0=1, select bank3
   8685  0A83  1703               	bsf	3,6	;RP1=1, select bank3
   8686  0A84  083B               	movf	_minuto^(0+384),w	;volatile
@@ -8768,7 +8768,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8689  0A89  01B2               	clrf	itoa@base+1
   8690  0A8A  2765  120A  158A   	fcall	_itoa
   8691                           
-  8692                           ;SlaveLiofilizadorVer1.c: 557:              itoa(ss,segundo,10);
+  8692                           ;SlaveLiofilizadorVer1.c: 559:              itoa(ss,segundo,10);
   8693  0A8D  1683               	bsf	3,5	;RP0=1, select bank3
   8694  0A8E  1703               	bsf	3,6	;RP1=1, select bank3
   8695  0A8F  083D               	movf	_segundo^(0+384),w	;volatile
@@ -8777,29 +8777,29 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8698  0A94  01B2               	clrf	itoa@base+1
   8699  0A95  2765               	fcall	_itoa
   8700                           
-  8701                           ;SlaveLiofilizadorVer1.c: 560:              strcpy(texto,"");
+  8701                           ;SlaveLiofilizadorVer1.c: 562:              strcpy(texto,"");
   8702  0A96  3038               	movlw	(low (((STR_3+1)-__stringbase)| (0+32768)))& (0+255)
   8703  0A97  00A0               	movwf	strcpy@from
   8704  0A98  30BE               	movlw	(low (_texto| (0+256)))& (0+255)
   8705  0A99  160A  158A  2472  120A  158A  	fcall	_strcpy
   8706                           
-  8707                           ;SlaveLiofilizadorVer1.c: 561:              if (hh[1]==0)
+  8707                           ;SlaveLiofilizadorVer1.c: 563:              if (hh[1]==0)
   8708  0A9E  1683               	bsf	3,5	;RP0=1, select bank1
   8709  0A9F  0840               	movf	(Decodify_Command@hh^(0+128)+1),w
   8710  0AA0  1D03               	btfss	3,2
   8711  0AA1  2AAA               	goto	l7260
   8712                           
-  8713                           ;SlaveLiofilizadorVer1.c: 562:                 {;SlaveLiofilizadorVer1.c: 563:          
+  8713                           ;SlaveLiofilizadorVer1.c: 564:                 {;SlaveLiofilizadorVer1.c: 565:          
       +                                 strcat(texto,"0");
   8714  0AA2  27D6  120A  158A   	fcall	PL52	;call to abstracted procedure
   8715  0AA5  23BD  120A  158A   	fcall	_strcat
   8716                           
-  8717                           ;SlaveLiofilizadorVer1.c: 564:                 hh[2]=0;
+  8717                           ;SlaveLiofilizadorVer1.c: 566:                 hh[2]=0;
   8718  0AA8  1683               	bsf	3,5	;RP0=1, select bank1
   8719  0AA9  01C1               	clrf	(Decodify_Command@hh^(0+128)+2)
   8720  0AAA                     l7260:	
   8721                           
-  8722                           ;SlaveLiofilizadorVer1.c: 566:              strcat(texto,hh);
+  8722                           ;SlaveLiofilizadorVer1.c: 568:              strcat(texto,hh);
   8723  0AAA  30BF               	movlw	(low (Decodify_Command@hh| 0))& (0+255)
   8724  0AAB  1283               	bcf	3,5	;RP0=0, select bank0
   8725  0AAC  00A0               	movwf	strcat@from
@@ -8807,27 +8807,27 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8727  0AAE  01A1               	clrf	strcat@from+1
   8728  0AAF  23BD  120A  158A   	fcall	_strcat
   8729                           
-  8730                           ;SlaveLiofilizadorVer1.c: 567:              strcat(texto,":");
+  8730                           ;SlaveLiofilizadorVer1.c: 569:              strcat(texto,":");
   8731  0AB2  27E3  120A  158A   	fcall	PL70	;call to abstracted procedure
   8732  0AB5  23BD  120A  158A   	fcall	_strcat
   8733                           
-  8734                           ;SlaveLiofilizadorVer1.c: 568:              if(mm[1]==0)
+  8734                           ;SlaveLiofilizadorVer1.c: 570:              if(mm[1]==0)
   8735  0AB8  1683               	bsf	3,5	;RP0=1, select bank1
   8736  0AB9  084A               	movf	(Decodify_Command@mm^(0+128)+1),w
   8737  0ABA  1D03               	btfss	3,2
   8738  0ABB  2AC4               	goto	l7270
   8739                           
-  8740                           ;SlaveLiofilizadorVer1.c: 569:                 {;SlaveLiofilizadorVer1.c: 570:          
+  8740                           ;SlaveLiofilizadorVer1.c: 571:                 {;SlaveLiofilizadorVer1.c: 572:          
       +                                 strcat(texto,"0");
   8741  0ABC  27D6  120A  158A   	fcall	PL52	;call to abstracted procedure
   8742  0ABF  23BD  120A  158A   	fcall	_strcat
   8743                           
-  8744                           ;SlaveLiofilizadorVer1.c: 571:                 mm[2]=0;
+  8744                           ;SlaveLiofilizadorVer1.c: 573:                 mm[2]=0;
   8745  0AC2  1683               	bsf	3,5	;RP0=1, select bank1
   8746  0AC3  01CB               	clrf	(Decodify_Command@mm^(0+128)+2)
   8747  0AC4                     l7270:	
   8748                           
-  8749                           ;SlaveLiofilizadorVer1.c: 573:              strcat(texto,mm);
+  8749                           ;SlaveLiofilizadorVer1.c: 575:              strcat(texto,mm);
   8750  0AC4  30C9               	movlw	(low (Decodify_Command@mm| 0))& (0+255)
   8751  0AC5  1283               	bcf	3,5	;RP0=0, select bank0
   8752  0AC6  00A0               	movwf	strcat@from
@@ -8835,27 +8835,27 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8754  0AC8  01A1               	clrf	strcat@from+1
   8755  0AC9  23BD  120A  158A   	fcall	_strcat
   8756                           
-  8757                           ;SlaveLiofilizadorVer1.c: 574:              strcat(texto,":");
+  8757                           ;SlaveLiofilizadorVer1.c: 576:              strcat(texto,":");
   8758  0ACC  27E3  120A  158A   	fcall	PL70	;call to abstracted procedure
   8759  0ACF  23BD  120A  158A   	fcall	_strcat
   8760                           
-  8761                           ;SlaveLiofilizadorVer1.c: 575:              if(ss[1]==0)
+  8761                           ;SlaveLiofilizadorVer1.c: 577:              if(ss[1]==0)
   8762  0AD2  1683               	bsf	3,5	;RP0=1, select bank1
   8763  0AD3  0854               	movf	(Decodify_Command@ss^(0+128)+1),w
   8764  0AD4  1D03               	btfss	3,2
   8765  0AD5  2ADE               	goto	l7280
   8766                           
-  8767                           ;SlaveLiofilizadorVer1.c: 576:                 {;SlaveLiofilizadorVer1.c: 577:          
+  8767                           ;SlaveLiofilizadorVer1.c: 578:                 {;SlaveLiofilizadorVer1.c: 579:          
       +                                 strcat(texto,"0");
   8768  0AD6  27D6  120A  158A   	fcall	PL52	;call to abstracted procedure
   8769  0AD9  23BD  120A  158A   	fcall	_strcat
   8770                           
-  8771                           ;SlaveLiofilizadorVer1.c: 578:                 ss[2]=0;
+  8771                           ;SlaveLiofilizadorVer1.c: 580:                 ss[2]=0;
   8772  0ADC  1683               	bsf	3,5	;RP0=1, select bank1
   8773  0ADD  01D5               	clrf	(Decodify_Command@ss^(0+128)+2)
   8774  0ADE                     l7280:	
   8775                           
-  8776                           ;SlaveLiofilizadorVer1.c: 580:              strcat(texto,ss);
+  8776                           ;SlaveLiofilizadorVer1.c: 582:              strcat(texto,ss);
   8777  0ADE  30D3               	movlw	(low (Decodify_Command@ss| 0))& (0+255)
   8778  0ADF  1283               	bcf	3,5	;RP0=0, select bank0
   8779  0AE0  00A0               	movwf	strcat@from
@@ -8863,42 +8863,42 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8781  0AE2  01A1               	clrf	strcat@from+1
   8782  0AE3  23BD  120A  158A   	fcall	_strcat
   8783                           
-  8784                           ;SlaveLiofilizadorVer1.c: 581:              Send_To_MB(strlen(texto));
+  8784                           ;SlaveLiofilizadorVer1.c: 583:              Send_To_MB(strlen(texto));
   8785  0AE6  30BE               	movlw	(low (_texto| (0+256)))& (0+255)
   8786  0AE7  278D  120A  158A   	fcall	_strlen
   8787  0AEA  0820               	movf	?_strlen,w
   8788  0AEB  23A1  120A  158A   	fcall	_Send_To_MB
   8789                           
-  8790                           ;SlaveLiofilizadorVer1.c: 582:              USART_put_string(texto);
+  8790                           ;SlaveLiofilizadorVer1.c: 584:              USART_put_string(texto);
   8791  0AEE  27EE               	fcall	PL74	;call to abstracted procedure
   8792  0AEF  160A  158A  24D9  120A  158A  	fcall	_USART_put_string
   8793                           
-  8794                           ;SlaveLiofilizadorVer1.c: 583:              USART_putc(0);
+  8794                           ;SlaveLiofilizadorVer1.c: 585:              USART_putc(0);
   8795  0AF4  3000               	movlw	0
   8796  0AF5  2BDD               	ljmp	_USART_putc
   8797  0AF6                     l7288:	
-  8798                           ;SlaveLiofilizadorVer1.c: 584:              };SlaveLiofilizadorVer1.c: 585:             
+  8798                           ;SlaveLiofilizadorVer1.c: 586:              };SlaveLiofilizadorVer1.c: 587:             
       +                           break;
   8799                           
   8800                           
-  8801                           ;SlaveLiofilizadorVer1.c: 588:              hora=usart_protocol.value[0];
+  8801                           ;SlaveLiofilizadorVer1.c: 590:              hora=usart_protocol.value[0];
   8802  0AF6  1703               	bsf	3,6	;RP1=1, select bank3
   8803  0AF7  0854               	movf	(_usart_protocol^(0+384)+6),w
   8804  0AF8  00BC               	movwf	_hora^(0+384)	;volatile
   8805                           
-  8806                           ;SlaveLiofilizadorVer1.c: 589:              minuto=usart_protocol.value[1];
+  8806                           ;SlaveLiofilizadorVer1.c: 591:              minuto=usart_protocol.value[1];
   8807  0AF9  0855               	movf	(_usart_protocol^(0+384)+7),w
   8808  0AFA  00BB               	movwf	_minuto^(0+384)	;volatile
   8809                           
-  8810                           ;SlaveLiofilizadorVer1.c: 590:              segundo=usart_protocol.value[2];
+  8810                           ;SlaveLiofilizadorVer1.c: 592:              segundo=usart_protocol.value[2];
   8811  0AFB  0856               	movf	(_usart_protocol^(0+384)+8),w
   8812  0AFC  00BD               	movwf	_segundo^(0+384)	;volatile
   8813  0AFD  2910               	goto	L9
   8814  0AFE                     l7294:	
-  8815                           ;SlaveLiofilizadorVer1.c: 591:              Send_To_MB(3);
+  8815                           ;SlaveLiofilizadorVer1.c: 593:              Send_To_MB(3);
   8816                           
   8817                           
-  8818                           ;SlaveLiofilizadorVer1.c: 596:              PROCULUS_Show_Screen(usart_protocol.value[0]
+  8818                           ;SlaveLiofilizadorVer1.c: 598:              PROCULUS_Show_Screen(usart_protocol.value[0]
       +                          );
   8819  0AFE  1703               	bsf	3,6	;RP1=1, select bank3
   8820  0AFF  0854               	movf	(_usart_protocol^(0+384)+6),w
@@ -8908,10 +8908,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8824  0B03  160A  158A  25A7  120A  158A  	fcall	_PROCULUS_Show_Screen
   8825  0B08  2910               	goto	L9
   8826  0B09                     l7300:	
-  8827                           ;SlaveLiofilizadorVer1.c: 597:              Send_To_MB(3);
+  8827                           ;SlaveLiofilizadorVer1.c: 599:              Send_To_MB(3);
   8828                           
   8829                           
-  8830                           ;SlaveLiofilizadorVer1.c: 602:              PROCULUS_Buzzer((usart_protocol.value[0]<<8)
+  8830                           ;SlaveLiofilizadorVer1.c: 604:              PROCULUS_Buzzer((usart_protocol.value[0]<<8)
       +                          +
   8831  0B09  1703               	bsf	3,6	;RP1=1, select bank3
   8832  0B0A  0854               	movf	(_usart_protocol^(0+384)+6),w
@@ -8924,10 +8924,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8839  0B11  160A  158A  25B1  120A  158A  	fcall	_PROCULUS_Buzzer
   8840  0B16  2910               	goto	L9
   8841  0B17                     l7306:	
-  8842                           ;SlaveLiofilizadorVer1.c: 604:              Send_To_MB(3);
+  8842                           ;SlaveLiofilizadorVer1.c: 606:              Send_To_MB(3);
   8843                           
   8844                           
-  8845                           ;SlaveLiofilizadorVer1.c: 608:              PROCULUS_VP_Write_String((usart_protocol.val
+  8845                           ;SlaveLiofilizadorVer1.c: 610:              PROCULUS_VP_Write_String((usart_protocol.val
       +                          ue[0]<<8)+
   8846  0B17  1703               	bsf	3,6	;RP1=1, select bank3
   8847  0B18  0854               	movf	(_usart_protocol^(0+384)+6),w
@@ -8942,31 +8942,31 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8856  0B21  160A  158A  244A  120A  158A  	fcall	_PROCULUS_VP_Write_String
   8857  0B26  2910               	goto	L9
   8858  0B27                     l7312:	
-  8859                           ;SlaveLiofilizadorVer1.c: 611:              Send_To_MB(3);
+  8859                           ;SlaveLiofilizadorVer1.c: 613:              Send_To_MB(3);
   8860                           
   8861                           
-  8862                           ;SlaveLiofilizadorVer1.c: 617:              if(usart_protocol.value[0]==0)
+  8862                           ;SlaveLiofilizadorVer1.c: 619:              if(usart_protocol.value[0]==0)
   8863  0B27  1703               	bsf	3,6	;RP1=1, select bank3
   8864  0B28  0854               	movf	(_usart_protocol^(0+384)+6),w
   8865  0B29  1D03               	btfss	3,2
   8866  0B2A  2B36               	goto	l7318
   8867                           
-  8868                           ;SlaveLiofilizadorVer1.c: 618:                 {;SlaveLiofilizadorVer1.c: 619:          
+  8868                           ;SlaveLiofilizadorVer1.c: 620:                 {;SlaveLiofilizadorVer1.c: 621:          
       +                                 if(!usart_protocol.value[1])
   8869  0B2B  0855               	movf	(_usart_protocol^(0+384)+7),w
   8870  0B2C  1D03               	btfss	3,2
   8871  0B2D  2B32               	goto	l336
   8872                           
-  8873                           ;SlaveLiofilizadorVer1.c: 620:                    PORTCbits.RC0=0;
+  8873                           ;SlaveLiofilizadorVer1.c: 622:                    PORTCbits.RC0=0;
   8874  0B2E  1283               	bcf	3,5	;RP0=0, select bank0
   8875  0B2F  1303               	bcf	3,6	;RP1=0, select bank0
   8876  0B30  1007               	bcf	7,0	;volatile
   8877  0B31  2910               	goto	L9
   8878  0B32                     l336:	
-  8879                           ;SlaveLiofilizadorVer1.c: 621:                 else
+  8879                           ;SlaveLiofilizadorVer1.c: 623:                 else
   8880                           
   8881                           
-  8882                           ;SlaveLiofilizadorVer1.c: 622:                    PORTCbits.RC0=1;
+  8882                           ;SlaveLiofilizadorVer1.c: 624:                    PORTCbits.RC0=1;
   8883  0B32  1283               	bcf	3,5	;RP0=0, select bank0
   8884  0B33  1303               	bcf	3,6	;RP1=0, select bank0
   8885  0B34  1407               	bsf	7,0	;volatile
@@ -8975,28 +8975,28 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8888  0B36  0B54               	decfsz	(_usart_protocol^(0+384)+6),w
   8889  0B37  2910               	goto	L9
   8890                           
-  8891                           ;SlaveLiofilizadorVer1.c: 625:                      {;SlaveLiofilizadorVer1.c: 626:     
+  8891                           ;SlaveLiofilizadorVer1.c: 627:                      {;SlaveLiofilizadorVer1.c: 628:     
       +                                            if(!usart_protocol.value[1])
   8892  0B38  0855               	movf	(_usart_protocol^(0+384)+7),w
   8893  0B39  1D03               	btfss	3,2
   8894  0B3A  2B3F               	goto	l340
   8895                           
-  8896                           ;SlaveLiofilizadorVer1.c: 627:                          PORTCbits.RC1=0;
+  8896                           ;SlaveLiofilizadorVer1.c: 629:                          PORTCbits.RC1=0;
   8897  0B3B  1283               	bcf	3,5	;RP0=0, select bank0
   8898  0B3C  1303               	bcf	3,6	;RP1=0, select bank0
   8899  0B3D  1087               	bcf	7,1	;volatile
   8900  0B3E  2910               	goto	L9
   8901  0B3F                     l340:	
-  8902                           ;SlaveLiofilizadorVer1.c: 628:                       else
+  8902                           ;SlaveLiofilizadorVer1.c: 630:                       else
   8903                           
   8904                           
-  8905                           ;SlaveLiofilizadorVer1.c: 629:                          PORTCbits.RC1=1;
+  8905                           ;SlaveLiofilizadorVer1.c: 631:                          PORTCbits.RC1=1;
   8906  0B3F  1283               	bcf	3,5	;RP0=0, select bank0
   8907  0B40  1303               	bcf	3,6	;RP1=0, select bank0
   8908  0B41  1487               	bsf	7,1	;volatile
   8909  0B42  2910               	goto	L9
   8910  0B43                     l7330:	
-  8911                           ;SlaveLiofilizadorVer1.c: 631:              Send_To_MB(3);
+  8911                           ;SlaveLiofilizadorVer1.c: 633:              Send_To_MB(3);
   8912                           
   8913  0B43  1703               	bsf	3,6	;RP1=1, select bank3
   8914  0B44  0852               	movf	(_usart_protocol^(0+384)+4),w
@@ -9118,7 +9118,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   9029  0BA1                     __ptext22:	
   9030 ;; *************** function _Send_To_MB *****************
   9031 ;; Defined at:
-  9032 ;;		line 641 in file "SlaveLiofilizadorVer1.c"
+  9032 ;;		line 643 in file "SlaveLiofilizadorVer1.c"
   9033 ;; Parameters:    Size  Location     Type
   9034 ;;  size            1    wreg     unsigned char 
   9035 ;; Auto vars:     Size  Location     Type
@@ -9157,29 +9157,29 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   9068  0BA2  1303               	bcf	3,6	;RP1=0, select bank0
   9069  0BA3  00A1               	movwf	Send_To_MB@size
   9070                           
-  9071                           ;SlaveLiofilizadorVer1.c: 643:      USART_putc(0xAA);
+  9071                           ;SlaveLiofilizadorVer1.c: 645:      USART_putc(0xAA);
   9072  0BA4  30AA               	movlw	170
   9073  0BA5  23DD  120A  158A   	fcall	_USART_putc
   9074                           
-  9075                           ;SlaveLiofilizadorVer1.c: 644:      USART_putc(0xBB);
+  9075                           ;SlaveLiofilizadorVer1.c: 646:      USART_putc(0xBB);
   9076  0BA8  30BB               	movlw	187
   9077  0BA9  23DD  120A  158A   	fcall	_USART_putc
   9078                           
-  9079                           ;SlaveLiofilizadorVer1.c: 645:      USART_putc(Board_Number);
+  9079                           ;SlaveLiofilizadorVer1.c: 647:      USART_putc(Board_Number);
   9080  0BAC  1703               	bsf	3,6	;RP1=1, select bank3
   9081  0BAD  0834               	movf	_Board_Number^(0+384),w
   9082  0BAE  23DD  120A  158A   	fcall	_USART_putc
   9083                           
-  9084                           ;SlaveLiofilizadorVer1.c: 646:      USART_putc(0x00);
+  9084                           ;SlaveLiofilizadorVer1.c: 648:      USART_putc(0x00);
   9085  0BB1  3000               	movlw	0
   9086  0BB2  23DD  120A  158A   	fcall	_USART_putc
   9087                           
-  9088                           ;SlaveLiofilizadorVer1.c: 647:      USART_putc(usart_protocol.command);
+  9088                           ;SlaveLiofilizadorVer1.c: 649:      USART_putc(usart_protocol.command);
   9089  0BB5  1703               	bsf	3,6	;RP1=1, select bank3
   9090  0BB6  0852               	movf	(_usart_protocol^(0+384)+4),w
   9091  0BB7  23DD  120A  158A   	fcall	_USART_putc
   9092                           
-  9093                           ;SlaveLiofilizadorVer1.c: 648:      USART_putc(size);
+  9093                           ;SlaveLiofilizadorVer1.c: 650:      USART_putc(size);
   9094  0BBA  1283               	bcf	3,5	;RP0=0, select bank0
   9095  0BBB  0821               	movf	Send_To_MB@size,w
   9096  0BBC  2BDD               	ljmp	_USART_putc
@@ -11120,7 +11120,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  11012  0FA0                     __ptext23:	
  11013 ;; *************** function _Send_Reply_OK *****************
  11014 ;; Defined at:
- 11015 ;;		line 652 in file "SlaveLiofilizadorVer1.c"
+ 11015 ;;		line 654 in file "SlaveLiofilizadorVer1.c"
  11016 ;; Parameters:    Size  Location     Type
  11017 ;;		None
  11018 ;; Auto vars:     Size  Location     Type
@@ -11156,7 +11156,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  11048                           ; Regs used in _Send_Reply_OK: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
  11049                           
  11050                           
- 11051                           ;SlaveLiofilizadorVer1.c: 653:      USART_put_string("OK");
+ 11051                           ;SlaveLiofilizadorVer1.c: 655:      USART_put_string("OK");
  11052  0FA0  3034               	movlw	(low ((STR_8-__stringbase)| (0+32768)))& (0+255)
  11053  0FA1  1283               	bcf	3,5	;RP0=0, select bank0
  11054  0FA2  1303               	bcf	3,6	;RP1=0, select bank0
@@ -11970,7 +11970,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  11857  04A6                     __ptext40:	
  11858 ;; *************** function _Load_Work *****************
  11859 ;; Defined at:
- 11860 ;;		line 976 in file "SlaveLiofilizadorVer1.c"
+ 11860 ;;		line 978 in file "SlaveLiofilizadorVer1.c"
  11861 ;; Parameters:    Size  Location     Type
  11862 ;;		None
  11863 ;; Auto vars:     Size  Location     Type
@@ -12010,7 +12010,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  11897                           ; Regs used in _Load_Work: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
  11898                           
  11899                           
- 11900                           ;SlaveLiofilizadorVer1.c: 979:      SetPoint0 = EEPROM_Read_Integer(0);
+ 11900                           ;SlaveLiofilizadorVer1.c: 981:      SetPoint0 = EEPROM_Read_Integer(0);
  11901  04A6  3000               	movlw	0
  11902  04A7  259F  120A  118A   	fcall	_EEPROM_Read_Integer
  11903  04AA  25BA               	fcall	PL14	;call to abstracted procedure
@@ -12024,7 +12024,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  11911  04B6  082B               	movf	?___xxtofl,w
  11912  04B7  00F0               	movwf	_SetPoint0	;volatile
  11913                           
- 11914                           ;SlaveLiofilizadorVer1.c: 980:      SetPoint0/=10;
+ 11914                           ;SlaveLiofilizadorVer1.c: 982:      SetPoint0/=10;
  11915  04B8  3041               	movlw	65
  11916  04B9  1683               	bsf	3,5	;RP0=1, select bank1
  11917  04BA  00A3               	movwf	(___fldiv@a+3)^(0+128)
@@ -12050,19 +12050,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  11937  04D2  0820               	movf	?___fldiv^(0+128),w
  11938  04D3  00F0               	movwf	_SetPoint0	;volatile
  11939                           
- 11940                           ;SlaveLiofilizadorVer1.c: 981:      TempoON_0 = EEPROM_Read_Byte(2);
+ 11940                           ;SlaveLiofilizadorVer1.c: 983:      TempoON_0 = EEPROM_Read_Byte(2);
  11941  04D4  3002               	movlw	2
  11942  04D5  257E  120A  118A   	fcall	_EEPROM_Read_Byte
  11943  04D8  1683               	bsf	3,5	;RP0=1, select bank3
  11944  04D9  00BA               	movwf	_TempoON_0^(0+384)
  11945                           
- 11946                           ;SlaveLiofilizadorVer1.c: 982:      TempoOFF_0= EEPROM_Read_Byte(3);
+ 11946                           ;SlaveLiofilizadorVer1.c: 984:      TempoOFF_0= EEPROM_Read_Byte(3);
  11947  04DA  3003               	movlw	3
  11948  04DB  257E  120A  118A   	fcall	_EEPROM_Read_Byte
  11949  04DE  1683               	bsf	3,5	;RP0=1, select bank3
  11950  04DF  00B9               	movwf	_TempoOFF_0^(0+384)
  11951                           
- 11952                           ;SlaveLiofilizadorVer1.c: 983:      Histerese0= EEPROM_Read_Byte(4);
+ 11952                           ;SlaveLiofilizadorVer1.c: 985:      Histerese0= EEPROM_Read_Byte(4);
  11953  04E0  3004               	movlw	4
  11954  04E1  257E               	fcall	_EEPROM_Read_Byte
  11955  04E2  1303               	bcf	3,6	;RP1=0, select bank0
@@ -12095,7 +12095,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  11982  0501  1703               	bsf	3,6	;RP1=1, select bank3
  11983  0502  009C               	movwf	_Histerese0^(0+384)
  11984                           
- 11985                           ;SlaveLiofilizadorVer1.c: 984:      Status0 = EEPROM_Read_Integer(5);
+ 11985                           ;SlaveLiofilizadorVer1.c: 986:      Status0 = EEPROM_Read_Integer(5);
  11986  0503  3005               	movlw	5
  11987  0504  259F  120A  118A   	fcall	_EEPROM_Read_Integer
  11988  0507  0824               	movf	?_EEPROM_Read_Integer+1,w
@@ -12109,7 +12109,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  11996  050F  1703               	bsf	3,6	;RP1=1, select bank3
  11997  0510  00A8               	movwf	_Status0^(0+384)
  11998                           
- 11999                           ;SlaveLiofilizadorVer1.c: 986:      SetPoint1 = EEPROM_Read_Integer(7);
+ 11999                           ;SlaveLiofilizadorVer1.c: 988:      SetPoint1 = EEPROM_Read_Integer(7);
  12000  0511  3007               	movlw	7
  12001  0512  259F  120A  118A   	fcall	_EEPROM_Read_Integer
  12002  0515  25BA               	fcall	PL14	;call to abstracted procedure
@@ -12137,7 +12137,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12024  052F  1703               	bsf	3,6	;RP1=1, select bank3
  12025  0530  0098               	movwf	_SetPoint1^(0+384)	;volatile
  12026                           
- 12027                           ;SlaveLiofilizadorVer1.c: 987:      SetPoint1/=10;
+ 12027                           ;SlaveLiofilizadorVer1.c: 989:      SetPoint1/=10;
  12028  0531  3041               	movlw	65
  12029  0532  1303               	bcf	3,6	;RP1=0, select bank1
  12030  0533  00A3               	movwf	(___fldiv@a+3)^(0+128)
@@ -12178,25 +12178,25 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12065  055A  1703               	bsf	3,6	;RP1=1, select bank3
  12066  055B  0098               	movwf	_SetPoint1^(0+384)	;volatile
  12067                           
- 12068                           ;SlaveLiofilizadorVer1.c: 988:      TempoON_1 = EEPROM_Read_Byte(9);
+ 12068                           ;SlaveLiofilizadorVer1.c: 990:      TempoON_1 = EEPROM_Read_Byte(9);
  12069  055C  3009               	movlw	9
  12070  055D  257E  120A  118A   	fcall	_EEPROM_Read_Byte
  12071  0560  1683               	bsf	3,5	;RP0=1, select bank3
  12072  0561  00B7               	movwf	_TempoON_1^(0+384)
  12073                           
- 12074                           ;SlaveLiofilizadorVer1.c: 989:      TempoOFF_1= EEPROM_Read_Byte(10);
+ 12074                           ;SlaveLiofilizadorVer1.c: 991:      TempoOFF_1= EEPROM_Read_Byte(10);
  12075  0562  300A               	movlw	10
  12076  0563  257E  120A  118A   	fcall	_EEPROM_Read_Byte
  12077  0566  1683               	bsf	3,5	;RP0=1, select bank3
  12078  0567  00B6               	movwf	_TempoOFF_1^(0+384)
  12079                           
- 12080                           ;SlaveLiofilizadorVer1.c: 990:      Histerese1= EEPROM_Read_Byte(11);
+ 12080                           ;SlaveLiofilizadorVer1.c: 992:      Histerese1= EEPROM_Read_Byte(11);
  12081  0568  300B               	movlw	11
  12082  0569  257E  120A  118A   	fcall	_EEPROM_Read_Byte
  12083  056C  1683               	bsf	3,5	;RP0=1, select bank3
  12084  056D  00B8               	movwf	_Histerese1^(0+384)
  12085                           
- 12086                           ;SlaveLiofilizadorVer1.c: 991:      Status1 = EEPROM_Read_Integer(12);
+ 12086                           ;SlaveLiofilizadorVer1.c: 993:      Status1 = EEPROM_Read_Integer(12);
  12087  056E  300C               	movlw	12
  12088  056F  259F  120A  118A   	fcall	_EEPROM_Read_Integer
  12089  0572  0824               	movf	?_EEPROM_Read_Integer+1,w
@@ -12210,7 +12210,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12097  057A  1703               	bsf	3,6	;RP1=1, select bank3
  12098  057B  00A6               	movwf	_Status1^(0+384)
  12099                           
- 12100                           ;SlaveLiofilizadorVer1.c: 993:      statuspower.bits=EEPROM_Read_Byte(14);
+ 12100                           ;SlaveLiofilizadorVer1.c: 995:      statuspower.bits=EEPROM_Read_Byte(14);
  12101  057C  300E               	movlw	14
  12102  057D  2D7E               	ljmp	_EEPROM_Read_Byte
  12103  057E                     __end_of_Load_Work:	
@@ -12742,7 +12742,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12622  02EE                     __ptext66:	
  12623 ;; *************** function _Auto_Relay0 *****************
  12624 ;; Defined at:
- 12625 ;;		line 851 in file "SlaveLiofilizadorVer1.c"
+ 12625 ;;		line 853 in file "SlaveLiofilizadorVer1.c"
  12626 ;; Parameters:    Size  Location     Type
  12627 ;;		None
  12628 ;; Auto vars:     Size  Location     Type
@@ -12777,7 +12777,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12657                           ;psect for function _Auto_Relay0
  12658  02EE                     _Auto_Relay0:	
  12659                           
- 12660                           ;SlaveLiofilizadorVer1.c: 852:              if(Status0==0)
+ 12660                           ;SlaveLiofilizadorVer1.c: 854:              if(Status0==0)
  12661                           
  12662                           ;incstack = 0
  12663                           ; Regs used in _Auto_Relay0: [wreg+status,2+status,0+btemp+1+pclath+cstack]
@@ -12788,14 +12788,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12668  02F2  2AF4               	goto	l7066
  12669  02F3                     l7064:	
  12670                           
- 12671                           ;SlaveLiofilizadorVer1.c: 853:                  {;SlaveLiofilizadorVer1.c: 854:         
+ 12671                           ;SlaveLiofilizadorVer1.c: 855:                  {;SlaveLiofilizadorVer1.c: 856:         
       +                                   Rele0Desligado();
  12672  02F3  2C29               	ljmp	l6906
  12673  02F4                     l7066:	
- 12674                           ;SlaveLiofilizadorVer1.c: 855:                  }
+ 12674                           ;SlaveLiofilizadorVer1.c: 857:                  }
  12675                           
  12676                           
- 12677                           ;SlaveLiofilizadorVer1.c: 857:                  {;SlaveLiofilizadorVer1.c: 859:         
+ 12677                           ;SlaveLiofilizadorVer1.c: 859:                  {;SlaveLiofilizadorVer1.c: 861:         
       +                                   if (Temperatura0<=(SetPoint0-Histerese0))
  12678  02F4  081F               	movf	(_Histerese0+3)^(0+384),w
  12679  02F5  1283               	bcf	3,5	;RP0=0, select bank0
@@ -12834,7 +12834,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12712  0320  1C03               	btfss	3,0
  12713  0321  2B2E               	goto	l7072
  12714                           
- 12715                           ;SlaveLiofilizadorVer1.c: 860:                     {;SlaveLiofilizadorVer1.c: 861:      
+ 12715                           ;SlaveLiofilizadorVer1.c: 862:                     {;SlaveLiofilizadorVer1.c: 863:      
       +                                         RL0Status=1;
  12716  0322  1683               	bsf	3,5	;RP0=1, select bank3
  12717  0323  1703               	bsf	3,6	;RP1=1, select bank3
@@ -12843,7 +12843,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12720  0326  2B2B               	goto	l7070
  12721  0327                     l7074:	
  12722                           
- 12723                           ;SlaveLiofilizadorVer1.c: 865:                           {;SlaveLiofilizadorVer1.c: 866:
+ 12723                           ;SlaveLiofilizadorVer1.c: 867:                           {;SlaveLiofilizadorVer1.c: 868:
       +                                                     if(RL0Status==1)
  12724  0327  1683               	bsf	3,5	;RP0=1, select bank3
  12725  0328  1703               	bsf	3,6	;RP1=1, select bank3
@@ -12851,10 +12851,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12727  032A  2AF3               	goto	l7064
  12728  032B                     l7070:	
  12729                           
- 12730                           ;SlaveLiofilizadorVer1.c: 862:                     Rele0Ligado();
+ 12730                           ;SlaveLiofilizadorVer1.c: 864:                     Rele0Ligado();
  12731  032B  160A  118A  28F0   	ljmp	l6882
  12732  032E                     l7072:	
- 12733                           ;SlaveLiofilizadorVer1.c: 863:                     }
+ 12733                           ;SlaveLiofilizadorVer1.c: 865:                     }
  12734                           
  12735  032E  247C  120A  118A   	fcall	PL10	;call to abstracted procedure
  12736  0331  2462  120A  118A   	fcall	PL4	;call to abstracted procedure
@@ -12867,7 +12867,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12743  0342  1803               	btfsc	3,0
  12744  0343  0008               	return
  12745                           
- 12746                           ;SlaveLiofilizadorVer1.c: 876:                           {;SlaveLiofilizadorVer1.c: 877:
+ 12746                           ;SlaveLiofilizadorVer1.c: 878:                           {;SlaveLiofilizadorVer1.c: 879:
       +                                                     RL0Status=0;
  12747  0344  1683               	bsf	3,5	;RP0=1, select bank3
  12748  0345  1703               	bsf	3,6	;RP1=1, select bank3
@@ -12877,7 +12877,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12752  0348                     __ptext62:	
  12753 ;; *************** function _Auto_Relay1 *****************
  12754 ;; Defined at:
- 12755 ;;		line 887 in file "SlaveLiofilizadorVer1.c"
+ 12755 ;;		line 889 in file "SlaveLiofilizadorVer1.c"
  12756 ;; Parameters:    Size  Location     Type
  12757 ;;		None
  12758 ;; Auto vars:     Size  Location     Type
@@ -12913,7 +12913,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12788                           ;psect for function _Auto_Relay1
  12789  0348                     _Auto_Relay1:	
  12790                           
- 12791                           ;SlaveLiofilizadorVer1.c: 888:              if(Status1==0)
+ 12791                           ;SlaveLiofilizadorVer1.c: 890:              if(Status1==0)
  12792                           
  12793                           ;incstack = 0
  12794                           ; Regs used in _Auto_Relay1: [wreg+status,2+status,0+btemp+1+pclath+cstack]
@@ -12925,14 +12925,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12800  034D  2B4F               	goto	l7090
  12801  034E                     l7088:	
  12802                           
- 12803                           ;SlaveLiofilizadorVer1.c: 889:                  {;SlaveLiofilizadorVer1.c: 890:         
+ 12803                           ;SlaveLiofilizadorVer1.c: 891:                  {;SlaveLiofilizadorVer1.c: 892:         
       +                                   Rele1Desligado();
  12804  034E  2C2D               	ljmp	l6908
  12805  034F                     l7090:	
- 12806                           ;SlaveLiofilizadorVer1.c: 891:                  }
+ 12806                           ;SlaveLiofilizadorVer1.c: 893:                  }
  12807                           
  12808                           
- 12809                           ;SlaveLiofilizadorVer1.c: 893:                  {;SlaveLiofilizadorVer1.c: 895:         
+ 12809                           ;SlaveLiofilizadorVer1.c: 895:                  {;SlaveLiofilizadorVer1.c: 897:         
       +                                   if (Temperatura1<=(SetPoint1-Histerese1))
  12810  034F  0838               	movf	_Histerese1^(0+384),w
  12811  0350  1283               	bcf	3,5	;RP0=0, select bank0
@@ -12995,7 +12995,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12868  0399  1C03               	btfss	3,0
  12869  039A  2BA7               	goto	l7096
  12870                           
- 12871                           ;SlaveLiofilizadorVer1.c: 896:                     {;SlaveLiofilizadorVer1.c: 897:      
+ 12871                           ;SlaveLiofilizadorVer1.c: 898:                     {;SlaveLiofilizadorVer1.c: 899:      
       +                                         RL1Status=1;
  12872  039B  1683               	bsf	3,5	;RP0=1, select bank3
  12873  039C  1703               	bsf	3,6	;RP1=1, select bank3
@@ -13004,7 +13004,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12876  039F  2BA4               	goto	l7094
  12877  03A0                     l7098:	
  12878                           
- 12879                           ;SlaveLiofilizadorVer1.c: 901:                           {;SlaveLiofilizadorVer1.c: 902:
+ 12879                           ;SlaveLiofilizadorVer1.c: 903:                           {;SlaveLiofilizadorVer1.c: 904:
       +                                                     if(RL1Status==1)
  12880  03A0  1683               	bsf	3,5	;RP0=1, select bank3
  12881  03A1  1703               	bsf	3,6	;RP1=1, select bank3
@@ -13012,10 +13012,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12883  03A3  2B4E               	goto	l7088
  12884  03A4                     l7094:	
  12885                           
- 12886                           ;SlaveLiofilizadorVer1.c: 898:                     Rele1Ligado();
+ 12886                           ;SlaveLiofilizadorVer1.c: 900:                     Rele1Ligado();
  12887  03A4  160A  118A  2907   	ljmp	l6894
  12888  03A7                     l7096:	
- 12889                           ;SlaveLiofilizadorVer1.c: 899:                     }
+ 12889                           ;SlaveLiofilizadorVer1.c: 901:                     }
  12890                           
  12891  03A7  2431  120A  118A   	fcall	PL2	;call to abstracted procedure
  12892  03AA  23BB  120A  118A   	fcall	___flge
@@ -13026,7 +13026,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  12897  03B5  1803               	btfsc	3,0
  12898  03B6  0008               	return
  12899                           
- 12900                           ;SlaveLiofilizadorVer1.c: 912:                           {;SlaveLiofilizadorVer1.c: 913:
+ 12900                           ;SlaveLiofilizadorVer1.c: 914:                           {;SlaveLiofilizadorVer1.c: 915:
       +                                                     RL1Status=0;
  12901  03B7  1683               	bsf	3,5	;RP0=1, select bank3
  12902  03B8  1703               	bsf	3,6	;RP1=1, select bank3
@@ -13191,7 +13191,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  13061  0429                     __ptext71:	
  13062 ;; *************** function _Rele0Desligado *****************
  13063 ;; Defined at:
- 13064 ;;		line 922 in file "SlaveLiofilizadorVer1.c"
+ 13064 ;;		line 924 in file "SlaveLiofilizadorVer1.c"
  13065 ;; Parameters:    Size  Location     Type
  13066 ;;		None
  13067 ;; Auto vars:     Size  Location     Type
@@ -13227,7 +13227,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  13097                           ; Regs used in _Rele0Desligado: []
  13098                           
  13099                           
- 13100                           ;SlaveLiofilizadorVer1.c: 923:      PORTCbits.RC0=0;
+ 13100                           ;SlaveLiofilizadorVer1.c: 925:      PORTCbits.RC0=0;
  13101  0429  1283               	bcf	3,5	;RP0=0, select bank0
  13102  042A  1303               	bcf	3,6	;RP1=0, select bank0
  13103  042B  1007               	bcf	7,0	;volatile
@@ -13236,7 +13236,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  13106  042D                     __ptext65:	
  13107 ;; *************** function _Rele1Desligado *****************
  13108 ;; Defined at:
- 13109 ;;		line 926 in file "SlaveLiofilizadorVer1.c"
+ 13109 ;;		line 928 in file "SlaveLiofilizadorVer1.c"
  13110 ;; Parameters:    Size  Location     Type
  13111 ;;		None
  13112 ;; Auto vars:     Size  Location     Type
@@ -13272,7 +13272,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
  13142                           ; Regs used in _Rele1Desligado: []
  13143                           
  13144                           
- 13145                           ;SlaveLiofilizadorVer1.c: 927:      PORTCbits.RC1=0;
+ 13145                           ;SlaveLiofilizadorVer1.c: 929:      PORTCbits.RC1=0;
  13146  042D  1283               	bcf	3,5	;RP0=0, select bank0
  13147  042E  1303               	bcf	3,6	;RP1=0, select bank0
  13148  042F  1087               	bcf	7,1	;volatile
@@ -15417,7 +15417,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Wed Dec 11 08:00:16 2019
+Symbol Table                                                                                   Wed Dec 11 08:17:14 2019
 
                               _USART_putc 0BDD                                __CFG_CP$ON 0000  
                             ___fldiv@aexp 00B8                              ___fldiv@bexp 00B7  

@@ -7,7 +7,7 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "SlaveLiofilizadorVer1.c" 2
-# 23 "SlaveLiofilizadorVer1.c"
+# 25 "SlaveLiofilizadorVer1.c"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2372,7 +2372,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 23 "SlaveLiofilizadorVer1.c" 2
+# 25 "SlaveLiofilizadorVer1.c" 2
 
 # 1 "./global.h" 1
 # 32 "./global.h"
@@ -2691,10 +2691,10 @@ union {
              unsigned flag_global_vacuo : 1 ;
              };
       } statuspower;
-# 24 "SlaveLiofilizadorVer1.c" 2
+# 26 "SlaveLiofilizadorVer1.c" 2
 
 # 1 "./protocolo.h" 1
-# 25 "SlaveLiofilizadorVer1.c" 2
+# 27 "SlaveLiofilizadorVer1.c" 2
 
 # 1 "./proculus.h" 1
 # 52 "./proculus.h"
@@ -2750,7 +2750,7 @@ void PROCULUS_Reset(void);
 void PROCULUS_Buffer_to_Proculus(t_proculus *proculus);
 
 void PROCULUS_Delay(unsigned int tempo_ms);
-# 26 "SlaveLiofilizadorVer1.c" 2
+# 28 "SlaveLiofilizadorVer1.c" 2
 
 # 1 "./usart.h" 1
 # 30 "./usart.h"
@@ -2763,7 +2763,7 @@ void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
 void USART_put_buffer(char *vetor, unsigned int size);
 unsigned char USART_input_buffer(void);
-# 27 "SlaveLiofilizadorVer1.c" 2
+# 29 "SlaveLiofilizadorVer1.c" 2
 
 # 1 "./adc.h" 1
 # 15 "./adc.h"
@@ -2772,7 +2772,7 @@ unsigned int captura(void);
 float ADC_Read_NTC(char canal);
 float ADC_Media_10bits(char canal);
 unsigned int ADC_Max_10Bits(char canal);
-# 28 "SlaveLiofilizadorVer1.c" 2
+# 30 "SlaveLiofilizadorVer1.c" 2
 
 # 1 "./eeprom.h" 1
 # 14 "./eeprom.h"
@@ -2792,7 +2792,7 @@ long EEPROM_Read_Long32(unsigned char addr);
 
 void EEPROM_Write_String(unsigned char addr,char *dado);
 void EEPROM_Read_String(unsigned char addr,char *dado);
-# 29 "SlaveLiofilizadorVer1.c" 2
+# 31 "SlaveLiofilizadorVer1.c" 2
 
 # 1 "./I2C.h" 1
 # 11 "./I2C.h"
@@ -2804,7 +2804,7 @@ void I2C_Master_RepeatedStart();
 void I2C_Master_Stop();
 void I2C_Master_Write(unsigned d);
 unsigned short I2C_Master_Read(unsigned short a);
-# 30 "SlaveLiofilizadorVer1.c" 2
+# 32 "SlaveLiofilizadorVer1.c" 2
 
 # 1 "./EEPROM_24C1025.h" 1
 # 16 "./EEPROM_24C1025.h"
@@ -2828,7 +2828,7 @@ void EEPROM_24C1025_Write_Int(unsigned char chip_add, unsigned long mem_add, int
 unsigned int EEPROM_24C1025_Read_Int(unsigned char chip_add, unsigned long mem_add);
 
 void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned char value);
-# 31 "SlaveLiofilizadorVer1.c" 2
+# 33 "SlaveLiofilizadorVer1.c" 2
 
 # 1 "./my_delay.h" 1
 
@@ -2837,11 +2837,11 @@ void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned char value);
 
 void my_delay_ms(long time);
 void my_delay_ms_WDT(long time);
-# 32 "SlaveLiofilizadorVer1.c" 2
+# 34 "SlaveLiofilizadorVer1.c" 2
 
 # 1 "./versao.h" 1
-# 33 "SlaveLiofilizadorVer1.c" 2
-# 45 "SlaveLiofilizadorVer1.c"
+# 35 "SlaveLiofilizadorVer1.c" 2
+# 47 "SlaveLiofilizadorVer1.c"
 void Decodify_Command(void);
 void Send_To_MB(unsigned char size);
 void Send_Reply_OK(void);
@@ -2865,7 +2865,7 @@ void Rele0Desligado(void);
 void Rele1Desligado(void);
 
 void DelayRele(char canal);
-# 76 "SlaveLiofilizadorVer1.c"
+# 78 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_memory);
 
 extern volatile char usart_buffer[25];
@@ -2908,7 +2908,7 @@ volatile char TempoCNT_1;
 float Temperatura0,Temperatura1;
 unsigned char RL0Status=1;
 unsigned char RL1Status=1;
-# 129 "SlaveLiofilizadorVer1.c"
+# 131 "SlaveLiofilizadorVer1.c"
 t_usart_protocol usart_protocol;
 unsigned char canal;
 char Board_Number;
@@ -3004,7 +3004,7 @@ void main(void) {
 
      Board_Number=(((0x0F)&(~PORTB)));
      canal=1;
-# 237 "SlaveLiofilizadorVer1.c"
+# 239 "SlaveLiofilizadorVer1.c"
      Load_Work();
      generic_status.flag_global_hot=0;
 
@@ -3032,7 +3032,7 @@ void main(void) {
             PORTCbits.RC0=0;
             PORTCbits.RC1=0;
             }
-# 281 "SlaveLiofilizadorVer1.c"
+# 283 "SlaveLiofilizadorVer1.c"
          if(generic_status.flag_usart_rx==1)
             {
             header =(((unsigned int)usart_buffer[0]<<8)+usart_buffer[1]);
@@ -3061,7 +3061,7 @@ void Decodify_Command(void)
     int tempint;
     float OutPut;
     unsigned long add_24LCxxxx;
-# 320 "SlaveLiofilizadorVer1.c"
+# 322 "SlaveLiofilizadorVer1.c"
     USART_to_Protocol(&usart_protocol);
 
     ((char *)&add_24LCxxxx)[3]=(usart_protocol.value[1]);
@@ -3092,7 +3092,7 @@ void Decodify_Command(void)
                 OutPut=Temperatura0;
              else
                 OutPut=Temperatura1;
-# 366 "SlaveLiofilizadorVer1.c"
+# 368 "SlaveLiofilizadorVer1.c"
              OutPut*=10.0;
 
              INTCONbits.GIE=0;
@@ -3120,7 +3120,7 @@ void Decodify_Command(void)
 
         case 0x03:
              Send_To_MB(2);
-# 402 "SlaveLiofilizadorVer1.c"
+# 404 "SlaveLiofilizadorVer1.c"
              USART_put_int(3);
 
              break;
@@ -3375,7 +3375,7 @@ void Send_Reply_OK(void){
      USART_put_string("OK");
 
  }
-# 664 "SlaveLiofilizadorVer1.c"
+# 666 "SlaveLiofilizadorVer1.c"
 void DelayRele(char canal){
      my_delay_ms((canal+2*Board_Number-2)*10);
 }
@@ -3434,7 +3434,7 @@ void mediatemperaturaNTC(unsigned char canal)
         }
 
      }
-# 851 "SlaveLiofilizadorVer1.c"
+# 853 "SlaveLiofilizadorVer1.c"
 void Auto_Relay0(void){
              if(Status0==0)
                  {
