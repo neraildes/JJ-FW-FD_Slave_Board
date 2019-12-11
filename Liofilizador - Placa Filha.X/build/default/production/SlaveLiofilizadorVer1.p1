@@ -1007,7 +1007,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;SlaveLiofilizadorVer1.c: 343:              Send_To_MB(11);
 [e ( _Send_To_MB (1 -> -> 11 `i `uc ]
 "344
-[; ;SlaveLiofilizadorVer1.c: 344:              USART_put_string("v1.0.4");
+[; ;SlaveLiofilizadorVer1.c: 344:              USART_put_string("v1.0.5");
 [e ( _USART_put_string (1 :s 1C ]
 "345
 [; ;SlaveLiofilizadorVer1.c: 345:              break;
@@ -2258,7 +2258,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 8C 79 75 0 ]
 [a 4C 58 0 ]
 [a 6C 58 0 ]
-[a 1C 118 49 46 48 46 52 0 ]
+[a 1C 118 49 46 48 46 53 0 ]
 [a 3C 48 0 ]
 [a 5C 48 0 ]
 [a 7C 48 0 ]

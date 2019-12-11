@@ -3084,7 +3084,7 @@ void Decodify_Command(void)
 
         case 0X2B:
              Send_To_MB(11);
-             USART_put_string("v1.0.4");
+             USART_put_string("v1.0.5");
              break;
         case 0X1A:
 

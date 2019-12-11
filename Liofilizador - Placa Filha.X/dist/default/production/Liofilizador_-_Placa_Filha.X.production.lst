@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Wed Dec 11 08:37:20 2019
+                                                                                               Wed Dec 11 08:39:08 2019
 
 Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s 
      1                           	processor	16F886
@@ -1225,7 +1225,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   1210  183E  342E               	retlw	46	;'.'
   1211  183F  3430               	retlw	48	;'0'
   1212  1840  342E               	retlw	46	;'.'
-  1213  1841  3434               	retlw	52	;'4'
+  1213  1841  3435               	retlw	53	;'5'
   1214  1842  3400               	retlw	0
   1215  1843                     STR_8:	
   1216  1843  344F               	retlw	79	;'O'
@@ -8102,7 +8102,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Pro license) build 20190730164152 Og9s
   8048  085D  300B               	movlw	11
   8049  085E  23A1               	fcall	_Send_To_MB
   8050                           
-  8051                           ;SlaveLiofilizadorVer1.c: 344:              USART_put_string("v1.0.4");
+  8051                           ;SlaveLiofilizadorVer1.c: 344:              USART_put_string("v1.0.5");
   8052  085F  302D               	movlw	(low ((STR_1-__stringbase)| (0+32768)))& (0+255)
   8053  0860  1283               	bcf	3,5	;RP0=0, select bank0
   8054  0861  00A1               	movwf	USART_put_string@vetor
@@ -15417,7 +15417,7 @@ EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Wed Dec 11 08:37:20 2019
+Symbol Table                                                                                   Wed Dec 11 08:39:08 2019
 
                               _USART_putc 0BDD                                __CFG_CP$ON 0000  
                             ___fldiv@aexp 00B8                              ___fldiv@bexp 00B7  
