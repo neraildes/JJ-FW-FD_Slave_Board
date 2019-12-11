@@ -7,7 +7,7 @@
  *		SlaveLiofilizador versão 1.0
  *      Compilado com XC8 Pró.
  * 
- * ESTA VERSAO DEVE IR PARA O REPOSITORIO
+ * Esta É A VERSAO 1.0.5
  -----------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------
  To Do List 21/12/2019
