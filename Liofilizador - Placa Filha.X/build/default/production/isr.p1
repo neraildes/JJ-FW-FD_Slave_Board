@@ -56,13 +56,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "245
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 245: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
 [v _PORTBbits `VS8 ~T0 @X0 0 e@6 ]
-"23 isr.c
-[; ;isr.c: 23: extern volatile char TempoCNT_0;
-[v _TempoCNT_0 `Vuc ~T0 @X0 0 e ]
-"24
-[; ;isr.c: 24: extern volatile char TempoCNT_1;
-[v _TempoCNT_1 `Vuc ~T0 @X0 0 e ]
-"1061 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h
+"1061
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1061: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
 [v _RCREG `Vuc ~T0 @X0 0 e@26 ]
 "965
@@ -528,19 +522,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "81
 [; ;isr.c: 81:                    segundo++;
 [e ++ _segundo -> -> 1 `i `Vuc ]
-"84
-[; ;isr.c: 84:                    if(TempoCNT_0>0) TempoCNT_0--;
-[e $ ! > -> _TempoCNT_0 `i -> 0 `i 155  ]
-[e -- _TempoCNT_0 -> -> 1 `i `Vuc ]
-[e :U 155 ]
-"85
-[; ;isr.c: 85:                    if(TempoCNT_1>0) TempoCNT_1--;
-[e $ ! > -> _TempoCNT_1 `i -> 0 `i 156  ]
-[e -- _TempoCNT_1 -> -> 1 `i `Vuc ]
-[e :U 156 ]
 "88
 [; ;isr.c: 88:                    if(segundo==60){
-[e $ ! == -> _segundo `i -> 60 `i 157  ]
+[e $ ! == -> _segundo `i -> 60 `i 155  ]
 {
 "89
 [; ;isr.c: 89:                       segundo=0;
@@ -550,7 +534,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ _minuto -> -> 1 `i `Vuc ]
 "91
 [; ;isr.c: 91:                       if(minuto==60){
-[e $ ! == -> _minuto `i -> 60 `i 158  ]
+[e $ ! == -> _minuto `i -> 60 `i 156  ]
 {
 "92
 [; ;isr.c: 92:                          minuto=0;
@@ -560,7 +544,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ++ _hora -> -> 1 `i `Vuc ]
 "94
 [; ;isr.c: 94:                          if(hora==24){
-[e $ ! == -> _hora `i -> 24 `i 159  ]
+[e $ ! == -> _hora `i -> 24 `i 157  ]
 {
 "95
 [; ;isr.c: 95:                             hora=0;
@@ -568,15 +552,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "96
 [; ;isr.c: 96:                          }
 }
-[e :U 159 ]
+[e :U 157 ]
 "97
 [; ;isr.c: 97:                       }
 }
-[e :U 158 ]
+[e :U 156 ]
 "98
 [; ;isr.c: 98:                    }
 }
-[e :U 157 ]
+[e :U 155 ]
 "99
 [; ;isr.c: 99:                 }
 }
@@ -587,7 +571,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 145 ]
 "104
 [; ;isr.c: 104:     if(PIR1bits.RCIF)
-[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 160  ]
+[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 158  ]
 "105
 [; ;isr.c: 105:         {
 {
@@ -605,14 +589,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _pointer &U _usart_buffer ]
 "112
 [; ;isr.c: 112:         while(tempo)
-[e $U 161  ]
-[e :U 162 ]
+[e $U 159  ]
+[e :U 160 ]
 "113
 [; ;isr.c: 113:         {
 {
 "114
 [; ;isr.c: 114:             if (PIR1bits.RCIF)
-[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 164  ]
+[e $ ! != -> . . _PIR1bits 0 5 `i -> 0 `i 162  ]
 "115
 [; ;isr.c: 115:             {
 {
@@ -621,7 +605,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = *U _pointer _RCREG ]
 "118
 [; ;isr.c: 118:                 if(count<25 -1)
-[e $ ! < _count - -> 25 `i -> 1 `i 165  ]
+[e $ ! < _count - -> 25 `i -> 1 `i 163  ]
 "119
 [; ;isr.c: 119:                    {
 {
@@ -634,17 +618,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "122
 [; ;isr.c: 122:                    }
 }
-[e :U 165 ]
+[e :U 163 ]
 "123
 [; ;isr.c: 123:                 tempo=30;
 [e = _tempo -> -> 30 `i `ui ]
 "124
 [; ;isr.c: 124:             }
 }
-[e $U 166  ]
+[e $U 164  ]
 "125
 [; ;isr.c: 125:             else
-[e :U 164 ]
+[e :U 162 ]
 "126
 [; ;isr.c: 126:             {
 {
@@ -654,21 +638,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "128
 [; ;isr.c: 128:             }
 }
-[e :U 166 ]
+[e :U 164 ]
 "130
 [; ;isr.c: 130:         }
 }
-[e :U 161 ]
+[e :U 159 ]
 "112
 [; ;isr.c: 112:         while(tempo)
-[e $ != _tempo -> -> 0 `i `ui 162  ]
-[e :U 163 ]
+[e $ != _tempo -> -> 0 `i `ui 160  ]
+[e :U 161 ]
 "131
 [; ;isr.c: 131:         (*pointer)=0;
 [e = *U _pointer -> -> 0 `i `uc ]
 "133
 [; ;isr.c: 133:         if(RCSTAbits.OERR){
-[e $ ! != -> . . _RCSTAbits 0 1 `i -> 0 `i 167  ]
+[e $ ! != -> . . _RCSTAbits 0 1 `i -> 0 `i 165  ]
 {
 "134
 [; ;isr.c: 134:            CREN=0;
@@ -694,11 +678,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "141
 [; ;isr.c: 141:         }
 }
-[e :U 167 ]
+[e :U 165 ]
 "143
 [; ;isr.c: 143:     }
 }
-[e :U 160 ]
+[e :U 158 ]
 "144
 [; ;isr.c: 144: }
 [e :UE 143 ]

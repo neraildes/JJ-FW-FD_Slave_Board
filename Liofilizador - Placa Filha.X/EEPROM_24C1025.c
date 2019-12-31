@@ -4,6 +4,8 @@
 #include "I2C.h"
 #include "EEPROM_24C1025.h"
 
+extern volatile unsigned int Delay_Led_Memory; //Verde
+
 extern char buffer[64];
 //------------------------------------------------------------------------------
 
@@ -15,6 +17,8 @@ void EEPROM_24C1025_Write_Buffer(unsigned char chip_add,
      unsigned char range=0;
      unsigned char ctrl;
      unsigned char count;
+     
+     Delay_Led_Memory=DEFAULT_LEDS;
      
      if(mem_add>0x1FFFF) return;
      
@@ -74,6 +78,8 @@ void EEPROM_24C1025_Read_Buffer(unsigned char chip_add,
      unsigned char cnt=0;
      unsigned char range=0;
      unsigned char ctrl;
+     
+     Delay_Led_Memory=DEFAULT_LEDS;
      
      if(mem_add>0x1FFFF) return;
      

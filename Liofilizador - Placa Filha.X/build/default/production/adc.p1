@@ -54,9 +54,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16 ./adc.h
 [; ;./adc.h: 16: unsigned int captura(void);
 [v _captura `(ui ~T0 @X0 0 ef ]
-"43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\math.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\math.h: 43: extern double log(double);
-[v _log `(d ~T0 @X0 0 ef1`d ]
 "1159 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1159: extern volatile unsigned char ADRESH __attribute__((address(0x01E)));
 [v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
@@ -343,6 +340,53 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;adc.c: 15: }
 [e :UE 143 ]
 }
+"20
+[; ;adc.c: 20: float ADC_Media_10bits(char canal){
+[v _ADC_Media_10bits `(f ~T0 @X0 1 ef1`uc ]
+{
+[e :U _ADC_Media_10bits ]
+[v _canal `uc ~T0 @X0 1 r1 ]
+[f ]
+"21
+[; ;adc.c: 21:       unsigned int value;
+[v _value `ui ~T0 @X0 1 a ]
+"22
+[; ;adc.c: 22:       unsigned char i;
+[v _i `uc ~T0 @X0 1 a ]
+"23
+[; ;adc.c: 23:       ADCON0bits.CHS=canal;
+[e = . . _ADCON0bits 0 2 -> _canal `uc ]
+"24
+[; ;adc.c: 24:       my_delay_ms(10);
+[e ( _my_delay_ms (1 -> -> 10 `i `l ]
+"26
+[; ;adc.c: 26:       value=0;
+[e = _value -> -> 0 `i `ui ]
+"27
+[; ;adc.c: 27:       for(i=1;i<=50;i++)
+{
+[e = _i -> -> 1 `i `uc ]
+[e $ <= -> _i `i -> 50 `i 145  ]
+[e $U 146  ]
+[e :U 145 ]
+"28
+[; ;adc.c: 28:           value+=captura();
+[e =+ _value ( _captura ..  ]
+[e ++ _i -> -> 1 `i `uc ]
+[e $ <= -> _i `i -> 50 `i 145  ]
+[e :U 146 ]
+}
+"29
+[; ;adc.c: 29:       value/=(i-1);
+[e =/ _value -> - -> _i `i -> 1 `i `ui ]
+"30
+[; ;adc.c: 30:       return value;
+[e ) -> _value `f ]
+[e $UE 144  ]
+"31
+[; ;adc.c: 31: }
+[e :UE 144 ]
+}
 "34
 [; ;adc.c: 34: unsigned int ADC_Max_10Bits(char canal){
 [v _ADC_Max_10Bits `(ui ~T0 @X0 1 ef1`uc ]
@@ -375,9 +419,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;adc.c: 42:       for(i=1;i<=50;i++)
 {
 [e = _i -> -> 1 `i `uc ]
-[e $ <= -> _i `i -> 50 `i 145  ]
-[e $U 146  ]
-[e :U 145 ]
+[e $ <= -> _i `i -> 50 `i 149  ]
+[e $U 150  ]
+[e :U 149 ]
 "43
 [; ;adc.c: 43:           {
 {
@@ -386,104 +430,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _Temp ( _captura ..  ]
 "45
 [; ;adc.c: 45:           if (Temp>value) value=Temp;
-[e $ ! > _Temp _value 148  ]
+[e $ ! > _Temp _value 152  ]
 [e = _value _Temp ]
-[e :U 148 ]
+[e :U 152 ]
 "46
 [; ;adc.c: 46:           }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ <= -> _i `i -> 50 `i 145  ]
-[e :U 146 ]
+[e $ <= -> _i `i -> 50 `i 149  ]
+[e :U 150 ]
 }
 "47
 [; ;adc.c: 47:       return value;
 [e ) _value ]
-[e $UE 144  ]
+[e $UE 148  ]
 "48
 [; ;adc.c: 48: }
-[e :UE 144 ]
-}
-"56
-[; ;adc.c: 56: float ADC_Read_NTC(char canal){
-[v _ADC_Read_NTC `(f ~T0 @X0 1 ef1`uc ]
-{
-[e :U _ADC_Read_NTC ]
-[v _canal `uc ~T0 @X0 1 r1 ]
-[f ]
-"57
-[; ;adc.c: 57:     int B = 3975;
-[v _B `i ~T0 @X0 1 a ]
-[e = _B -> 3975 `i ]
-"58
-[; ;adc.c: 58:     float resistencia;
-[v _resistencia `f ~T0 @X0 1 a ]
-"59
-[; ;adc.c: 59:     float temperatura;
-[v _temperatura `f ~T0 @X0 1 a ]
-"60
-[; ;adc.c: 60:     float calc;
-[v _calc `f ~T0 @X0 1 a ]
-"61
-[; ;adc.c: 61:     unsigned int value;
-[v _value `ui ~T0 @X0 1 a ]
-"62
-[; ;adc.c: 62:     unsigned char i;
-[v _i `uc ~T0 @X0 1 a ]
-"64
-[; ;adc.c: 64:     value=0;
-[e = _value -> -> 0 `i `ui ]
-"65
-[; ;adc.c: 65:     for(i=1;i<=50;i++)
-{
-[e = _i -> -> 1 `i `uc ]
-[e $ <= -> _i `i -> 50 `i 150  ]
-[e $U 151  ]
-[e :U 150 ]
-"66
-[; ;adc.c: 66:         value+=captura();
-[e =+ _value ( _captura ..  ]
-[e ++ _i -> -> 1 `i `uc ]
-[e $ <= -> _i `i -> 50 `i 150  ]
-[e :U 151 ]
-}
-"67
-[; ;adc.c: 67:     value/=(i-1);
-[e =/ _value -> - -> _i `i -> 1 `i `ui ]
-"68
-[; ;adc.c: 68:     resistencia =(1023.0-value);
-[e = _resistencia -> - .1023.0 -> _value `d `f ]
-"69
-[; ;adc.c: 69:     resistencia*=(10000.0-value);
-[e =* _resistencia -> - .10000.0 -> _value `d `f ]
-"70
-[; ;adc.c: 70:     temperatura =value*10000.0/resistencia;
-[e = _temperatura -> / * -> _value `d .10000.0 -> _resistencia `d `f ]
-"71
-[; ;adc.c: 71:     calc=temperatura;
-[e = _calc _temperatura ]
-"72
-[; ;adc.c: 72:     temperatura =log(calc);
-[e = _temperatura -> ( _log (1 -> _calc `d `f ]
-"73
-[; ;adc.c: 73:     temperatura/=B;
-[e =/ _temperatura -> _B `f ]
-"74
-[; ;adc.c: 74:     temperatura+=1/(25+273.15);
-[e =+ _temperatura -> / -> -> 1 `i `d + -> -> 25 `i `d .273.15 `f ]
-"75
-[; ;adc.c: 75:     temperatura =1/temperatura;
-[e = _temperatura / -> -> 1 `i `f _temperatura ]
-"76
-[; ;adc.c: 76:     temperatura-=273.15;
-[e =- _temperatura -> .273.15 `f ]
-"78
-[; ;adc.c: 78:     return temperatura;
-[e ) _temperatura ]
-[e $UE 149  ]
-"79
-[; ;adc.c: 79: }
-[e :UE 149 ]
+[e :UE 148 ]
 }
 "123
 [; ;adc.c: 123: unsigned int captura(){

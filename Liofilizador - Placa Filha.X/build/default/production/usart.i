@@ -2693,11 +2693,9 @@ union {
              unsigned flag_global_vacuo : 1 ;
              };
       } statuspower;
-# 5 "usart.c" 2
-
-# 1 "./protocolo.h" 1
 # 6 "usart.c" 2
-
+# 1 "./protocolo.h" 1
+# 7 "usart.c" 2
 # 1 "./usart.h" 1
 # 30 "./usart.h"
 void USART_to_Protocol(t_usart_protocol *usart_protocol);
@@ -2709,8 +2707,7 @@ void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
 void USART_put_buffer(char *vetor, unsigned int size);
 unsigned char USART_input_buffer(void);
-# 7 "usart.c" 2
-
+# 8 "usart.c" 2
 
 
 volatile unsigned char usart_buffer[25];
@@ -2796,6 +2793,24 @@ void USART_put_buffer(char *vetor, unsigned int size)
         ptr++;
         loop++;
     }
+}
+
+
+
+unsigned char USART_input_buffer(void){
+    unsigned int time=0;
+    unsigned char result=0;
+
+    while(time<30){
+        if(generic_status.flag_usart_rx){
+           generic_status.flag_usart_rx=0;
+           result = 1;
+           break;
+           }
+        time++;
+        _delay((unsigned long)((1)*(8000000/4000.0)));
+    }
+    return result;
 }
 # 138 "usart.c"
 void USART_put_int(int value){
