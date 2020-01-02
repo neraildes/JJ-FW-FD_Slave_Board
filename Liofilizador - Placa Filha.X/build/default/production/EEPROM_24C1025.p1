@@ -1028,46 +1028,46 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;EEPROM_24C1025.c: 253: }
 [e :UE 181 ]
 }
-"267
-[; ;EEPROM_24C1025.c: 267: void EEPROM_24C1025_Write_Byte(unsigned char chip_add, unsigned long mem_add, char *data){
-[v _EEPROM_24C1025_Write_Byte `(v ~T0 @X0 1 ef3`uc`ul`*uc ]
+"261
+[; ;EEPROM_24C1025.c: 261: void EEPROM_24C1025_Write_Byte(unsigned char chip_add, unsigned long mem_add, char data){
+[v _EEPROM_24C1025_Write_Byte `(v ~T0 @X0 1 ef3`uc`ul`uc ]
 {
 [e :U _EEPROM_24C1025_Write_Byte ]
 [v _chip_add `uc ~T0 @X0 1 r1 ]
 [v _mem_add `ul ~T0 @X0 1 r2 ]
-[v _data `*uc ~T0 @X0 1 r3 ]
+[v _data `uc ~T0 @X0 1 r3 ]
 [f ]
-"268
-[; ;EEPROM_24C1025.c: 268:      EEPROM_24C1025_Write_Buffer(chip_add, mem_add, 1, data);
-[e ( _EEPROM_24C1025_Write_Buffer (4 , , , _chip_add _mem_add -> -> 1 `i `uc _data ]
-"269
-[; ;EEPROM_24C1025.c: 269: }
+"262
+[; ;EEPROM_24C1025.c: 262:      EEPROM_24C1025_Write_Buffer(chip_add, mem_add, 1, &data);
+[e ( _EEPROM_24C1025_Write_Buffer (4 , , , _chip_add _mem_add -> -> 1 `i `uc &U _data ]
+"263
+[; ;EEPROM_24C1025.c: 263: }
 [e :UE 194 ]
 }
-"272
-[; ;EEPROM_24C1025.c: 272: unsigned char EEPROM_24C1025_Read_Byte(unsigned char chip_add, unsigned long mem_add){
+"266
+[; ;EEPROM_24C1025.c: 266: unsigned char EEPROM_24C1025_Read_Byte(unsigned char chip_add, unsigned long mem_add){
 [v _EEPROM_24C1025_Read_Byte `(uc ~T0 @X0 1 ef2`uc`ul ]
 {
 [e :U _EEPROM_24C1025_Read_Byte ]
 [v _chip_add `uc ~T0 @X0 1 r1 ]
 [v _mem_add `ul ~T0 @X0 1 r2 ]
 [f ]
-"273
-[; ;EEPROM_24C1025.c: 273:     char *data;
-[v _data `*uc ~T0 @X0 1 a ]
-"274
-[; ;EEPROM_24C1025.c: 274:     EEPROM_24C1025_Read_Buffer(chip_add, mem_add, 1, data);
-[e ( _EEPROM_24C1025_Read_Buffer (4 , , , _chip_add _mem_add -> -> 1 `i `uc _data ]
-"275
-[; ;EEPROM_24C1025.c: 275:     return *data;
-[e ) -> *U _data `uc ]
+"267
+[; ;EEPROM_24C1025.c: 267:     char data;
+[v _data `uc ~T0 @X0 1 a ]
+"268
+[; ;EEPROM_24C1025.c: 268:     EEPROM_24C1025_Read_Buffer(chip_add, mem_add, 1, &data);
+[e ( _EEPROM_24C1025_Read_Buffer (4 , , , _chip_add _mem_add -> -> 1 `i `uc &U _data ]
+"269
+[; ;EEPROM_24C1025.c: 269:     return data;
+[e ) -> _data `uc ]
 [e $UE 195  ]
-"276
-[; ;EEPROM_24C1025.c: 276: }
+"270
+[; ;EEPROM_24C1025.c: 270: }
 [e :UE 195 ]
 }
-"278
-[; ;EEPROM_24C1025.c: 278: void EEPROM_24C1025_Write_Int(unsigned char chip_add, unsigned long mem_add, int data){
+"272
+[; ;EEPROM_24C1025.c: 272: void EEPROM_24C1025_Write_Int(unsigned char chip_add, unsigned long mem_add, int data){
 [v _EEPROM_24C1025_Write_Int `(v ~T0 @X0 1 ef3`uc`ul`i ]
 {
 [e :U _EEPROM_24C1025_Write_Int ]
@@ -1075,61 +1075,61 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _mem_add `ul ~T0 @X0 1 r2 ]
 [v _data `i ~T0 @X0 1 r3 ]
 [f ]
-"279
-[; ;EEPROM_24C1025.c: 279:      char local[2];
+"273
+[; ;EEPROM_24C1025.c: 273:      char local[2];
 [v _local `uc ~T0 @X0 -> 2 `i a ]
-"280
-[; ;EEPROM_24C1025.c: 280:      local[0]=((char *)&data)[1];
+"274
+[; ;EEPROM_24C1025.c: 274:      local[0]=((char *)&data)[1];
 [e = *U + &U _local * -> -> -> 0 `i `ui `ux -> -> # *U &U _local `ui `ux *U + -> &U _data `*uc * -> -> 1 `i `x -> -> # *U -> &U _data `*uc `i `x ]
-"281
-[; ;EEPROM_24C1025.c: 281:      local[1]=((char *)&data)[0];
+"275
+[; ;EEPROM_24C1025.c: 275:      local[1]=((char *)&data)[0];
 [e = *U + &U _local * -> -> -> 1 `i `ui `ux -> -> # *U &U _local `ui `ux *U + -> &U _data `*uc * -> -> 0 `i `x -> -> # *U -> &U _data `*uc `i `x ]
-"282
-[; ;EEPROM_24C1025.c: 282:      EEPROM_24C1025_Write_Buffer(chip_add, mem_add, 2, local);
+"276
+[; ;EEPROM_24C1025.c: 276:      EEPROM_24C1025_Write_Buffer(chip_add, mem_add, 2, local);
 [e ( _EEPROM_24C1025_Write_Buffer (4 , , , _chip_add _mem_add -> -> 2 `i `uc &U _local ]
-"283
-[; ;EEPROM_24C1025.c: 283: }
+"277
+[; ;EEPROM_24C1025.c: 277: }
 [e :UE 196 ]
 }
-"286
-[; ;EEPROM_24C1025.c: 286: unsigned int EEPROM_24C1025_Read_Int(unsigned char chip_add, unsigned long mem_add){
+"280
+[; ;EEPROM_24C1025.c: 280: unsigned int EEPROM_24C1025_Read_Int(unsigned char chip_add, unsigned long mem_add){
 [v _EEPROM_24C1025_Read_Int `(ui ~T0 @X0 1 ef2`uc`ul ]
 {
 [e :U _EEPROM_24C1025_Read_Int ]
 [v _chip_add `uc ~T0 @X0 1 r1 ]
 [v _mem_add `ul ~T0 @X0 1 r2 ]
 [f ]
-"287
-[; ;EEPROM_24C1025.c: 287:     char data[2];
+"281
+[; ;EEPROM_24C1025.c: 281:     char data[2];
 [v _data `uc ~T0 @X0 -> 2 `i a ]
-"288
-[; ;EEPROM_24C1025.c: 288:     EEPROM_24C1025_Read_Buffer(chip_add, mem_add, 2, data);
+"282
+[; ;EEPROM_24C1025.c: 282:     EEPROM_24C1025_Read_Buffer(chip_add, mem_add, 2, data);
 [e ( _EEPROM_24C1025_Read_Buffer (4 , , , _chip_add _mem_add -> -> 2 `i `uc &U _data ]
-"289
-[; ;EEPROM_24C1025.c: 289:     return (data[0]<<8)+data[1];
+"283
+[; ;EEPROM_24C1025.c: 283:     return (data[0]<<8)+data[1];
 [e ) -> + << -> *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux `i `ui ]
 [e $UE 197  ]
-"290
-[; ;EEPROM_24C1025.c: 290: }
+"284
+[; ;EEPROM_24C1025.c: 284: }
 [e :UE 197 ]
 }
-"293
-[; ;EEPROM_24C1025.c: 293: void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned char value){
+"287
+[; ;EEPROM_24C1025.c: 287: void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned char value){
 [v _EEPROM_24C1025_Fill_All `(v ~T0 @X0 1 ef2`uc`uc ]
 {
 [e :U _EEPROM_24C1025_Fill_All ]
 [v _chip_add `uc ~T0 @X0 1 r1 ]
 [v _value `uc ~T0 @X0 1 r2 ]
 [f ]
-"295
-[; ;EEPROM_24C1025.c: 295:      unsigned char i;
+"289
+[; ;EEPROM_24C1025.c: 289:      unsigned char i;
 [v _i `uc ~T0 @X0 1 a ]
-"296
-[; ;EEPROM_24C1025.c: 296:      unsigned int page=0;
+"290
+[; ;EEPROM_24C1025.c: 290:      unsigned int page=0;
 [v _page `ui ~T0 @X0 1 a ]
 [e = _page -> -> 0 `i `ui ]
-"297
-[; ;EEPROM_24C1025.c: 297:      for(i=0;i<128;i++) buffer[i]=value;
+"291
+[; ;EEPROM_24C1025.c: 291:      for(i=0;i<128;i++) buffer[i]=value;
 {
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> 128 `i 199  ]
@@ -1140,27 +1140,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ < -> _i `i -> 128 `i 199  ]
 [e :U 200 ]
 }
-"298
-[; ;EEPROM_24C1025.c: 298:      for(page=0;page<1024;page++)
+"292
+[; ;EEPROM_24C1025.c: 292:      for(page=0;page<1024;page++)
 {
 [e = _page -> -> 0 `i `ui ]
 [e $ < _page -> -> 1024 `i `ui 202  ]
 [e $U 203  ]
 [e :U 202 ]
-"299
-[; ;EEPROM_24C1025.c: 299:         {
+"293
+[; ;EEPROM_24C1025.c: 293:         {
 {
-"300
-[; ;EEPROM_24C1025.c: 300:         EEPROM_24C1025_Write_Buffer(chip_add, (page*128), 128, buffer);
+"294
+[; ;EEPROM_24C1025.c: 294:         EEPROM_24C1025_Write_Buffer(chip_add, (page*128), 128, buffer);
 [e ( _EEPROM_24C1025_Write_Buffer (4 , , , _chip_add -> * _page -> -> 128 `i `ui `ul -> -> 128 `i `uc &U _buffer ]
-"301
-[; ;EEPROM_24C1025.c: 301:         }
+"295
+[; ;EEPROM_24C1025.c: 295:         }
 }
 [e ++ _page -> -> 1 `i `ui ]
 [e $ < _page -> -> 1024 `i `ui 202  ]
 [e :U 203 ]
 }
-"302
-[; ;EEPROM_24C1025.c: 302: }
+"296
+[; ;EEPROM_24C1025.c: 296: }
 [e :UE 198 ]
 }

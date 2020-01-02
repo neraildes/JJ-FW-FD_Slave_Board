@@ -2721,7 +2721,7 @@ void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char 
 void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char *data);
 
 
-void EEPROM_24C1025_Write_Byte(unsigned char chip_add, unsigned long mem_add, char *data);
+void EEPROM_24C1025_Write_Byte(unsigned char chip_add, unsigned long mem_add, char data);
 unsigned char EEPROM_24C1025_Read_Byte(unsigned char chip_add, unsigned long mem_add);
 void EEPROM_24C1025_Write_Int(unsigned char chip_add, unsigned long mem_add, int data);
 unsigned int EEPROM_24C1025_Read_Int(unsigned char chip_add, unsigned long mem_add);
@@ -2977,16 +2977,22 @@ void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char 
      I2C_Master_Stop();
      _delay((unsigned long)((650)*(8000000/4000000.0)));
 }
-# 267 "EEPROM_24C1025.c"
-void EEPROM_24C1025_Write_Byte(unsigned char chip_add, unsigned long mem_add, char *data){
-     EEPROM_24C1025_Write_Buffer(chip_add, mem_add, 1, data);
+
+
+
+
+
+
+
+void EEPROM_24C1025_Write_Byte(unsigned char chip_add, unsigned long mem_add, char data){
+     EEPROM_24C1025_Write_Buffer(chip_add, mem_add, 1, &data);
 }
 
 
 unsigned char EEPROM_24C1025_Read_Byte(unsigned char chip_add, unsigned long mem_add){
-    char *data;
-    EEPROM_24C1025_Read_Buffer(chip_add, mem_add, 1, data);
-    return *data;
+    char data;
+    EEPROM_24C1025_Read_Buffer(chip_add, mem_add, 1, &data);
+    return data;
 }
 
 void EEPROM_24C1025_Write_Int(unsigned char chip_add, unsigned long mem_add, int data){

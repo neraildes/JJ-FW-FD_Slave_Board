@@ -239,7 +239,9 @@ void main(void) {
      Load_Work();
      flag_global_hot=0;
      #endif  
-     
+
+
+    
      
      while(1)
           {
@@ -468,7 +470,7 @@ void Decodify_Command(void)
         case COMMAND_EEE_W_BYTE:
              EEPROM_24C1025_Write_Byte(usart_protocol.value[0],      //CHIP NUMBER
                                                   add_24LCxxxx,      //ADD of Memory                                                  
-                                      &usart_protocol.value[5]);     //VALUE
+                                       usart_protocol.value[5]);     //VALUE
              Send_To_MB(3);
              Send_Reply_OK();
              break;
@@ -482,12 +484,11 @@ void Decodify_Command(void)
              break;
         case COMMAND_EEE_W_INT:
              {
-             int valor;
-             Hi(valor)=(usart_protocol.value[5]);
-             Lo(valor)=(usart_protocol.value[6]);
              EEPROM_24C1025_Write_Int(usart_protocol.value[0],  //CHIP NUMBER
                                                  add_24LCxxxx,  //Add of memory
-                                                       valor);  //
+                             (int)(usart_protocol.value[5]<<8) |
+                                    (usart_protocol.value[6]));                     
+                                                      
              Send_To_MB(3);
              Send_Reply_OK();
              break;
@@ -1002,8 +1003,8 @@ void Load_Work(void){
 
 #ifdef NTC_BOARD
 void Save_Log(unsigned long add_datalog){
-     EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura0*10);   
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, Temperatura1*10);  
+     EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) Temperatura0*10);   
+     EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) Temperatura1*10);  
 }
 #endif
 
@@ -1011,15 +1012,15 @@ void Save_Log(unsigned long add_datalog){
 
 #ifdef VACCUM_BOARD
 void Save_Log(unsigned long add_datalog){
-     EEPROM_24C1025_Write_Int(0x00, add_datalog, Tensao1*10);   
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, Vaccum0);  
+     EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) (Tensao1*10));   
+     EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) (Vaccum0*10));  
 }
 #endif
 
 
 #ifdef PT100_UMIDADE
 void Save_Log(unsigned long add_datalog){
-     EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura0*10);
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, Umidade1);  
+     EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) Temperatura0*10);
+     EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) Umidade1);  
 }
 #endif
