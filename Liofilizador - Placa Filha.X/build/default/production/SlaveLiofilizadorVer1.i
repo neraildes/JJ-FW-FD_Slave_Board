@@ -2851,7 +2851,7 @@ void MediaPlacaVaccum(unsigned char canal);
 
 void Save_Log(unsigned long add_datalog);
 
-extern volatile char usart_buffer[25];
+extern volatile char usart_buffer[32+10];
 extern volatile int count;
 extern volatile unsigned char *pointer;
 

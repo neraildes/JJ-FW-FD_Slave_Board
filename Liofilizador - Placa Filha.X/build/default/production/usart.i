@@ -2710,7 +2710,7 @@ unsigned char USART_input_buffer(void);
 # 8 "usart.c" 2
 
 
-volatile unsigned char usart_buffer[25];
+volatile unsigned char usart_buffer[32+10];
 
 extern volatile unsigned int tmr_led_usart;
 extern volatile unsigned int Delay_Led_Usart;

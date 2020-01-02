@@ -2761,7 +2761,7 @@ unsigned char USART_input_buffer(void);
 
 
 extern unsigned int tempodecorrido;
-volatile extern unsigned char usart_buffer[25];
+volatile extern unsigned char usart_buffer[32+10];
 
 
 
@@ -2782,7 +2782,7 @@ void PROCULUS_Control_Register_Read(unsigned char reg, unsigned char size, unsig
      USART_putc(size);
 
      if(USART_input_buffer()){
-        for(unsigned char i=0;i<25;i++)
+        for(unsigned char i=0;i<32+10;i++)
             retorno[i] = usart_buffer[(unsigned char)(6+i)];
      }
      PROCULUS_Delay(1);

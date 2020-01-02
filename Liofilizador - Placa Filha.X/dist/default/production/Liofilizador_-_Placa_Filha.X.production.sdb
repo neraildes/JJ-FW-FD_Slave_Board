@@ -490,7 +490,7 @@
 "141
 [v _destino destino `uc  1 e 1 0 ]
 "10 C:\Indka Ind. e Com. Ltda (externo)\JJCientifica\Liofilizador\Firmware\FD_Slave_Board\Liofilizador - Placa Filha.X\usart.c
-[v _usart_buffer usart_buffer `VE[25]uc  1 e 25 0 ]
+[v _usart_buffer usart_buffer `VE[42]uc  1 e 42 0 ]
 "145 C:\Indka Ind. e Com. Ltda (externo)\JJCientifica\Liofilizador\Firmware\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
 [v _main main `(v  1 e 1 0 ]
 {

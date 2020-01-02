@@ -11,7 +11,7 @@ __CFG_WRT$OFF 0 0 ABS 0
 __size_of__Umul8_16 0 0 ABS 0
 ___fldiv@rem 4E 0 BANK0 1
 __S0 2009 0 ABS 0
-__S1 1C9 0 ABS 0
+__S1 1DA 0 ABS 0
 __S2 0 0 ABS 0
 __S3 0 0 ABS 0
 _PROCULUS_Show_Screen 196F 0 CODE 0
@@ -100,7 +100,7 @@ strcat@to 24 0 BANK0 1
 ___flge@ff1 20 0 BANK0 1
 __size_of_isr 0 0 ABS 0
 strcpy@to 22 0 BANK0 1
-_texto 1A9 0 BANK3 1
+_texto 1BA 0 BANK3 1
 _count D9 0 BANK1 1
 EEPROM_Read_Integer@ptr 27 0 BANK0 1
 ___xxtofl 11CC 0 CODE 0
@@ -275,7 +275,7 @@ I2C_Master_Write@d 20 0 BANK0 1
 __size_of_Decodify_Command 0 0 ABS 0
 __size_of_strlen 0 0 ABS 0
 USART_put_string@vetor 21 0 BANK0 1
-_usart_protocol 1B9 0 BANK3 1
+_usart_protocol 1CA 0 BANK3 1
 __Hbank0 0 0 ABS 0
 __Lbank0 0 0 ABS 0
 _EEPROM_24C1025_Write_Buffer 1532 0 CODE 0
@@ -372,7 +372,7 @@ ___flsub 1A4B 0 CODE 0
 __Lspace_0 0 0 ABS 0
 __end_of_isr 1443 0 CODE 0
 __CFG_IESO$ON 0 0 ABS 0
-__Hspace_1 1C9 0 ABS 0
+__Hspace_1 1DA 0 ABS 0
 __Lspace_1 0 0 ABS 0
 ?_strlen 20 0 BANK0 1
 _segundo E7 0 BANK1 1
@@ -676,8 +676,8 @@ config 400E 4011 CONFIG 400E 0
 cstackCOMMON 70 7C COMMON 70 1
 cstackBANK0 20 6E BANK0 20 1
 cstackBANK1 A0 E9 BANK1 A0 1
+bssBANK3 190 1D9 BANK3 190 1
 bssBANK2 110 14F BANK2 110 1
-bssBANK3 190 1C8 BANK3 190 1
 text3 1AD2 201F CODE 1AD2 0
 text5 1678 1AD1 CODE 1678 0
 text7 1336 1677 CODE 1336 0
@@ -741,7 +741,7 @@ text54 326A 3273 CODE 326A 0
 text59 3260 3269 CODE 3260 0
 %locals
 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
-C:\Users\Dell\AppData\Local\Temp\s1cs.s
+C:\Users\Dell\AppData\Local\Temp\s31c.s
 2535 15 0 CODE 0
 2538 15 0 CODE 0
 2642 15 0 CODE 0

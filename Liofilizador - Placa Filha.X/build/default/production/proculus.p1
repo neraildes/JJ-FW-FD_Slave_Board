@@ -24,7 +24,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./usart.h: 38: unsigned char USART_input_buffer(void);
 [v _USART_input_buffer `(uc ~T0 @X0 0 ef ]
 "9 proculus.c
-[; ;proculus.c: 9: volatile extern unsigned char usart_buffer[25];
+[; ;proculus.c: 9: volatile extern unsigned char usart_buffer[32+10];
 [v _usart_buffer `Vuc ~T0 @X0 -> 0 `x e ]
 "56 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\string.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c90\string.h: 56: extern size_t strlen(const char *);
@@ -363,18 +363,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! != -> ( _USART_input_buffer ..  `i -> 0 `i 150  ]
 {
 "30
-[; ;proculus.c: 30:         for(unsigned char i=0;i<25;i++)
+[; ;proculus.c: 30:         for(unsigned char i=0;i<32+10;i++)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 25 `i 151  ]
+[e $ < -> _i `i + -> 32 `i -> 10 `i 151  ]
 [e $U 152  ]
 [e :U 151 ]
 "31
 [; ;proculus.c: 31:             retorno[i] = usart_buffer[(unsigned char)(6+i)];
 [e = *U + _retorno * -> _i `ux -> -> # *U _retorno `ui `ux *U + &U _usart_buffer * -> -> + -> 6 `i -> _i `i `uc `ux -> -> # *U &U _usart_buffer `ui `ux ]
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 25 `i 151  ]
+[e $ < -> _i `i + -> 32 `i -> 10 `i 151  ]
 [e :U 152 ]
 }
 "32

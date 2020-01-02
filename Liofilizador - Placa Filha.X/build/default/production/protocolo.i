@@ -2708,7 +2708,7 @@ unsigned char USART_input_buffer(void);
 # 3 "protocolo.c" 2
 
 
-extern volatile char usart_buffer[25];
+extern volatile char usart_buffer[32+10];
 extern char Board_Number;
 
 char Package_Usart_is_for_me(){

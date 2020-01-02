@@ -2706,7 +2706,7 @@ unsigned char USART_input_buffer(void);
 
 
 
-volatile unsigned char usart_buffer[25];
+volatile unsigned char usart_buffer[32+10];
 volatile int count;
 volatile unsigned char *pointer;
 
@@ -2809,7 +2809,7 @@ unsigned int tempo;
             {
                 (*pointer)=RCREG;
 
-                if(count<25 -1)
+                if(count<32+10 -1)
                    {
                    count++;
                    pointer++;

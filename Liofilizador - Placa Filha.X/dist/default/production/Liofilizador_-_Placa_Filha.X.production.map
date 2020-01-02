@@ -6,10 +6,10 @@ Linker command line:
   -cs \
   -h+dist/default/production\Liofilizador_-_Placa_Filha.X.production.sym \
   --cmf=dist/default/production\Liofilizador_-_Placa_Filha.X.production.cmf \
-  -z -Q16F886 -oC:\Users\Dell\AppData\Local\Temp\s1cs.2 \
+  -z -Q16F886 -oC:\Users\Dell\AppData\Local\Temp\s31c.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Liofilizador_-_Placa_Filha.X.production.map -E1 \
-  -ver=XC8 --acfsm=1493 -ASTACK=01C9h-01EFh -pstack=STACK \
+  -ver=XC8 --acfsm=1493 -ASTACK=0150h-016Fh -pstack=STACK \
   -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
   -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh \
   -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0110h-016Fh \
@@ -20,7 +20,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\Dell\AppData\Local\Temp\s1cs.o \
+  -DENTRY=2 -k C:\Users\Dell\AppData\Local\Temp\s31c.o \
   dist/default/production\Liofilizador_-_Placa_Filha.X.production.o 
 
 Object code version is 3.11
@@ -30,7 +30,7 @@ Machine type is 16F886
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Dell\AppData\Local\Temp\s1cs.o
+C:\Users\Dell\AppData\Local\Temp\s31c.o
                 end_init                             12       12        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2     400E       0
@@ -106,7 +106,7 @@ dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
                 cstackBANK1                          A0       A0       2D       A0       1
                 clrtext                            1942     1942        8     3284       0
                 bssBANK2                            110      110       40      110       1
-                bssBANK3                            190      190       39      190       1
+                bssBANK3                            190      190       4A      190       1
                 bssBANK1                             CD       CD       1D       A0       1
                 bssCOMMON                            78       78        5       70       1
                 strings                            1800     1800       5E     3000       0
@@ -209,7 +209,7 @@ TOTAL           Name                               Link     Load   Length     Sp
                 bssBANK2                            110      110       40         1
 
         CLASS   BANK3          
-                bssBANK3                            190      190       39         1
+                bssBANK3                            190      190       4A         1
 
         CLASS   RAM            
 
@@ -241,7 +241,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackCOMMON                   000070  00000D  00007D        70       1  COMMON      1
                 cstackBANK1                    0000A0  00004A  0000EA        A0       1  BANK1       1
                 bssBANK2                       000110  000040  000150       110       1  BANK2       1
-                bssBANK3                       000190  000039  0001C9       190       1  BANK3       1
+                bssBANK3                       000190  00004A  0001DA       190       1  BANK3       1
                 text24                         000800  000028  000828      1000       0  CODE        2
                 text53                         000828  000173  00099B      1050       0  CODE        2
                 text7                          00099B  0001A1  000B3C      1336       0  CODE        2
@@ -312,7 +312,7 @@ UNUSED ADDRESS RANGES
         BANK0            006F-006F              1           1
         BANK1            00EA-00EF              6           1
         BANK2            0150-016F             20           1
-        BANK3            01C9-01EF             27           1
+        BANK3            01DA-01EF             16           1
         CODE             0003-0003              1           2
                          185E-192F             D2
         COMMON           007D-007D              1           1
@@ -325,12 +325,12 @@ UNUSED ADDRESS RANGES
         RAM              006F-006F              1           1
                          00EA-00EF              6
                          0150-016F             20
-                         01C9-01EF             27
+                         01DA-01EF             16
         SFR0             0000-001F             20           1
         SFR1             0080-009F             20           1
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
-        STACK            01C9-01EF             27           1
+        STACK            0150-016F             20           1
         STRCODE          0003-0003              1           2
                          185E-192F             D2
         STRING           0003-0003              1           2
@@ -620,7 +620,7 @@ __Hsfr1                                   sfr1         0000
 __Hsfr2                                   sfr2         0000
 __Hsfr3                                   sfr3         0000
 __Hspace_0                                (abs)        2009
-__Hspace_1                                (abs)        01C9
+__Hspace_1                                (abs)        01DA
 __Hspace_2                                (abs)        0000
 __Hspace_3                                (abs)        0000
 __Hstack                                  stack        0000
@@ -665,7 +665,7 @@ __Lstack                                  stack        0000
 __Lstrings                                strings      0000
 __Ltext                                   text         0000
 __S0                                      (abs)        2009
-__S1                                      (abs)        01C9
+__S1                                      (abs)        01DA
 __S2                                      (abs)        0000
 __S3                                      (abs)        0000
 __Umul8_16                                text30       1B0D
@@ -968,9 +968,9 @@ _strcat                                   text18       1BD1
 _strcpy                                   text17       1A2D
 _strlen                                   text33       19F7
 _tempodecorrido                           bssBANK1     00D7
-_texto                                    bssBANK3     01A9
+_texto                                    bssBANK3     01BA
 _usart_buffer                             bssBANK3     0190
-_usart_protocol                           bssBANK3     01B9
+_usart_protocol                           bssBANK3     01CA
 _utoa                                     text20       1F9C
 btemp                                     (abs)        007E
 clear_ram0                                clrtext      1942

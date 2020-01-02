@@ -344,8 +344,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./global.h: 121:       } statuspower;
 [v _statuspower `S141 ~T0 @X0 1 e ]
 "8 isr.c
-[; ;isr.c: 8: volatile unsigned char usart_buffer[25];
-[v _usart_buffer `Vuc ~T0 @X0 -> 25 `i e ]
+[; ;isr.c: 8: volatile unsigned char usart_buffer[32+10];
+[v _usart_buffer `Vuc ~T0 @X0 -> 42 `i e ]
 "9
 [; ;isr.c: 9: volatile int count;
 [v _count `Vi ~T0 @X0 1 e ]
@@ -604,8 +604,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;isr.c: 116:                 (*pointer)=RCREG;
 [e = *U _pointer _RCREG ]
 "118
-[; ;isr.c: 118:                 if(count<25 -1)
-[e $ ! < _count - -> 25 `i -> 1 `i 163  ]
+[; ;isr.c: 118:                 if(count<32+10 -1)
+[e $ ! < _count - + -> 32 `i -> 10 `i -> 1 `i 163  ]
 "119
 [; ;isr.c: 119:                    {
 {

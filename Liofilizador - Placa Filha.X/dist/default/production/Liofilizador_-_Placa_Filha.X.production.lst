@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Thu Jan 02 06:54:25 2020
+                                                                                               Thu Jan 02 08:45:04 2020
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9 
      1                           	processor	16F886
@@ -1337,7 +1337,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   1317  0023  1783               	bsf	3,7	;select IRP bank2
   1318  0024  3090               	movlw	low __pbssBANK3
   1319  0025  0084               	movwf	4
-  1320  0026  30C9               	movlw	low (__pbssBANK3+57)
+  1320  0026  30DA               	movlw	low (__pbssBANK3+74)
   1321  0027  160A  158A  2142  120A  118A  	fcall	clear_ram0
   1322                           
   1323                           ; Clear objects allocated to BANK2
@@ -1401,11 +1401,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   1381                           	psect	bssBANK3
   1382  0190                     __pbssBANK3:	
   1383  0190                     _usart_buffer:	
-  1384  0190                     	ds	25
-  1385  01A9                     _texto:	
-  1386  01A9                     	ds	16
-  1387  01B9                     _usart_protocol:	
-  1388  01B9                     	ds	16
+  1384  0190                     	ds	42
+  1385  01BA                     _texto:	
+  1386  01BA                     	ds	16
+  1387  01CA                     _usart_protocol:	
+  1388  01CA                     	ds	16
   1389                           
   1390                           	psect	bssBANK2
   1391  0110                     __pbssBANK2:	
@@ -6288,13 +6288,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6247                           
   6248                           ;incstack = 0
   6249                           ; Regs used in _Decodify_Command: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
-  6250  0036  30B9               	movlw	(low (_usart_protocol| (0+256)))& (0+255)
+  6250  0036  30CA               	movlw	(low (_usart_protocol| (0+256)))& (0+255)
   6251  0037  160A  158A  26E1  120A  118A  	fcall	_USART_to_Protocol
   6252                           
   6253                           ;SlaveLiofilizadorVer1.c: 325:     ((char *)&add_24LCxxxx)[3]=(usart_protocol.value[1]);
   6254  003C  1683               	bsf	3,5	;RP0=1, select bank3
   6255  003D  1703               	bsf	3,6	;RP1=1, select bank3
-  6256  003E  0840               	movf	(_usart_protocol^(0+384)+7),w
+  6256  003E  0851               	movf	(_usart_protocol^(0+384)+7),w
   6257  003F  1283               	bcf	3,5	;RP0=0, select bank0
   6258  0040  1303               	bcf	3,6	;RP1=0, select bank0
   6259  0041  00DE               	movwf	??_Decodify_Command
@@ -6304,7 +6304,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6263                           
   6264                           ;SlaveLiofilizadorVer1.c: 326:     ((char *)&add_24LCxxxx)[2]=(usart_protocol.value[2]);
   6265  0045  1703               	bsf	3,6	;RP1=1, select bank3
-  6266  0046  0841               	movf	(_usart_protocol^(0+384)+8),w
+  6266  0046  0852               	movf	(_usart_protocol^(0+384)+8),w
   6267  0047  1283               	bcf	3,5	;RP0=0, select bank0
   6268  0048  1303               	bcf	3,6	;RP1=0, select bank0
   6269  0049  00DE               	movwf	??_Decodify_Command
@@ -6314,7 +6314,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6273                           
   6274                           ;SlaveLiofilizadorVer1.c: 327:     ((char *)&add_24LCxxxx)[1]=(usart_protocol.value[3]);
   6275  004D  1703               	bsf	3,6	;RP1=1, select bank3
-  6276  004E  0842               	movf	(_usart_protocol^(0+384)+9),w
+  6276  004E  0853               	movf	(_usart_protocol^(0+384)+9),w
   6277  004F  1283               	bcf	3,5	;RP0=0, select bank0
   6278  0050  1303               	bcf	3,6	;RP1=0, select bank0
   6279  0051  00DE               	movwf	??_Decodify_Command
@@ -6324,7 +6324,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6283                           
   6284                           ;SlaveLiofilizadorVer1.c: 328:     ((char *)&add_24LCxxxx)[0]=(usart_protocol.value[4]);
   6285  0055  1703               	bsf	3,6	;RP1=1, select bank3
-  6286  0056  0843               	movf	(_usart_protocol^(0+384)+10),w
+  6286  0056  0854               	movf	(_usart_protocol^(0+384)+10),w
   6287  0057  1283               	bcf	3,5	;RP0=0, select bank0
   6288  0058  1303               	bcf	3,6	;RP1=0, select bank0
   6289  0059  00DE               	movwf	??_Decodify_Command
@@ -6355,7 +6355,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6314                           ;SlaveLiofilizadorVer1.c: 363:              if(usart_protocol.value[0]==0)
   6315  006D  1683               	bsf	3,5	;RP0=1, select bank3
   6316  006E  1703               	bsf	3,6	;RP1=1, select bank3
-  6317  006F  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6317  006F  0850               	movf	(_usart_protocol^(0+384)+6),w
   6318  0070  1D03               	btfss	3,2
   6319  0071  287B               	goto	l7292
   6320                           
@@ -6467,7 +6467,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
       +                          value[0]);
   6426  00D5  1683               	bsf	3,5	;RP0=1, select bank3
   6427  00D6  1703               	bsf	3,6	;RP1=1, select bank3
-  6428  00D7  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6428  00D7  0850               	movf	(_usart_protocol^(0+384)+6),w
   6429  00D8  1283               	bcf	3,5	;RP0=0, select bank0
   6430  00D9  1303               	bcf	3,6	;RP1=0, select bank0
   6431  00DA  00DE               	movwf	??_Decodify_Command
@@ -6478,7 +6478,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6436                           ;SlaveLiofilizadorVer1.c: 381:              ((char *)&add_24LCxxxx)[2] =(usart_protocol.
       +                          value[1]);
   6437  00DE  1703               	bsf	3,6	;RP1=1, select bank3
-  6438  00DF  0840               	movf	(_usart_protocol^(0+384)+7),w
+  6438  00DF  0851               	movf	(_usart_protocol^(0+384)+7),w
   6439  00E0  1283               	bcf	3,5	;RP0=0, select bank0
   6440  00E1  1303               	bcf	3,6	;RP1=0, select bank0
   6441  00E2  00DE               	movwf	??_Decodify_Command
@@ -6489,7 +6489,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6446                           ;SlaveLiofilizadorVer1.c: 382:              ((char *)&add_24LCxxxx)[1] =(usart_protocol.
       +                          value[2]);
   6447  00E6  1703               	bsf	3,6	;RP1=1, select bank3
-  6448  00E7  0841               	movf	(_usart_protocol^(0+384)+8),w
+  6448  00E7  0852               	movf	(_usart_protocol^(0+384)+8),w
   6449  00E8  1283               	bcf	3,5	;RP0=0, select bank0
   6450  00E9  1303               	bcf	3,6	;RP1=0, select bank0
   6451  00EA  00DE               	movwf	??_Decodify_Command
@@ -6500,7 +6500,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6456                           ;SlaveLiofilizadorVer1.c: 383:              ((char *)&add_24LCxxxx)[0] =(usart_protocol.
       +                          value[3]);
   6457  00EE  1703               	bsf	3,6	;RP1=1, select bank3
-  6458  00EF  0842               	movf	(_usart_protocol^(0+384)+9),w
+  6458  00EF  0853               	movf	(_usart_protocol^(0+384)+9),w
   6459  00F0  1283               	bcf	3,5	;RP0=0, select bank0
   6460  00F1  1303               	bcf	3,6	;RP1=0, select bank0
   6461  00F2  00DE               	movwf	??_Decodify_Command
@@ -6559,7 +6559,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6514                           ;SlaveLiofilizadorVer1.c: 428:              EEPROM_Write_Byte(usart_protocol.value[0],
   6515  011E  1683               	bsf	3,5	;RP0=1, select bank3
   6516  011F  1703               	bsf	3,6	;RP1=1, select bank3
-  6517  0120  0840               	movf	(_usart_protocol^(0+384)+7),w
+  6517  0120  0851               	movf	(_usart_protocol^(0+384)+7),w
   6518  0121  1283               	bcf	3,5	;RP0=0, select bank0
   6519  0122  1303               	bcf	3,6	;RP1=0, select bank0
   6520  0123  00DE               	movwf	??_Decodify_Command
@@ -6567,7 +6567,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6522  0125  00A0               	movwf	EEPROM_Write_Byte@dado
   6523  0126  1683               	bsf	3,5	;RP0=1, select bank3
   6524  0127  1703               	bsf	3,6	;RP1=1, select bank3
-  6525  0128  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6525  0128  0850               	movf	(_usart_protocol^(0+384)+6),w
   6526  0129  160A  158A  2599  120A  118A  	fcall	_EEPROM_Write_Byte
   6527  012E                     L7:	
   6528                           
@@ -6586,7 +6586,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
       +                          ue[0]);
   6541  0138  1683               	bsf	3,5	;RP0=1, select bank3
   6542  0139  1703               	bsf	3,6	;RP1=1, select bank3
-  6543  013A  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6543  013A  0850               	movf	(_usart_protocol^(0+384)+6),w
   6544  013B  160A  158A  22C9  120A  118A  	fcall	_EEPROM_Read_Byte
   6545  0140  1303               	bcf	3,6	;RP1=0, select bank0
   6546  0141  00DE               	movwf	??_Decodify_Command
@@ -6611,7 +6611,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
       +                          0];
   6564  0150  1683               	bsf	3,5	;RP0=1, select bank3
   6565  0151  1703               	bsf	3,6	;RP1=1, select bank3
-  6566  0152  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6566  0152  0850               	movf	(_usart_protocol^(0+384)+6),w
   6567  0153  1283               	bcf	3,5	;RP0=0, select bank0
   6568  0154  1303               	bcf	3,6	;RP1=0, select bank0
   6569  0155  00DE               	movwf	??_Decodify_Command
@@ -6622,14 +6622,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6574                           ;SlaveLiofilizadorVer1.c: 442:              dados=(usart_protocol.value[1]<<8)|usart_pro
       +                          tocol.value[2];
   6575  0159  1703               	bsf	3,6	;RP1=1, select bank3
-  6576  015A  0841               	movf	(_usart_protocol^(0+384)+8),w
+  6576  015A  0852               	movf	(_usart_protocol^(0+384)+8),w
   6577  015B  1283               	bcf	3,5	;RP0=0, select bank0
   6578  015C  1303               	bcf	3,6	;RP1=0, select bank0
   6579  015D  00DE               	movwf	??_Decodify_Command
   6580  015E  01DF               	clrf	??_Decodify_Command+1
   6581  015F  1683               	bsf	3,5	;RP0=1, select bank3
   6582  0160  1703               	bsf	3,6	;RP1=1, select bank3
-  6583  0161  0840               	movf	(_usart_protocol^(0+384)+7),w
+  6583  0161  0851               	movf	(_usart_protocol^(0+384)+7),w
   6584  0162  1283               	bcf	3,5	;RP0=0, select bank0
   6585  0163  1303               	bcf	3,6	;RP1=0, select bank0
   6586  0164  00E0               	movwf	??_Decodify_Command+2
@@ -6667,7 +6667,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
       +                          alue[0]);
   6618  0181  1683               	bsf	3,5	;RP0=1, select bank3
   6619  0182  1703               	bsf	3,6	;RP1=1, select bank3
-  6620  0183  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6620  0183  0850               	movf	(_usart_protocol^(0+384)+6),w
   6621  0184  160A  158A  237C  120A  118A  	fcall	_EEPROM_Read_Integer
   6622  0189  0824               	movf	?_EEPROM_Read_Integer+1,w
   6623  018A  1683               	bsf	3,5	;RP0=1, select bank1
@@ -6697,13 +6697,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6647  01A1                     l7342:	
   6648                           
   6649                           ;SlaveLiofilizadorVer1.c: 455:              EEPROM_Write_String(usart_protocol.value[0],
-  6650  01A1  30C0               	movlw	(low ((_usart_protocol| (0+256)+7)))& (0+255)
+  6650  01A1  30D1               	movlw	(low ((_usart_protocol| (0+256)+7)))& (0+255)
   6651  01A2  00DE               	movwf	??_Decodify_Command
   6652  01A3  085E               	movf	??_Decodify_Command,w
   6653  01A4  00A5               	movwf	EEPROM_Write_String@dado
   6654  01A5  1683               	bsf	3,5	;RP0=1, select bank3
   6655  01A6  1703               	bsf	3,6	;RP1=1, select bank3
-  6656  01A7  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6656  01A7  0850               	movf	(_usart_protocol^(0+384)+6),w
   6657  01A8  160A  158A  23A6  120A  118A  	fcall	_EEPROM_Write_String
   6658  01AD  292E               	goto	L7
   6659  01AE                     l7348:	
@@ -6712,13 +6712,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6662                           
   6663                           ;SlaveLiofilizadorVer1.c: 461:              {;SlaveLiofilizadorVer1.c: 463:             
       +                           EEPROM_Read_String(usart_protocol.value[0],texto);
-  6664  01AE  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  6664  01AE  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   6665  01AF  00DE               	movwf	??_Decodify_Command
   6666  01B0  085E               	movf	??_Decodify_Command,w
   6667  01B1  00A3               	movwf	EEPROM_Read_String@dado
   6668  01B2  1683               	bsf	3,5	;RP0=1, select bank3
   6669  01B3  1703               	bsf	3,6	;RP1=1, select bank3
-  6670  01B4  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6670  01B4  0850               	movf	(_usart_protocol^(0+384)+6),w
   6671  01B5  160A  158A  2269  120A  118A  	fcall	_EEPROM_Read_String
   6672                           
   6673                           ;SlaveLiofilizadorVer1.c: 464:              Send_To_MB(sizeof(texto));
@@ -6727,7 +6727,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6676  01BB  120A  158A  2000  120A  118A  	fcall	_Send_To_MB
   6677                           
   6678                           ;SlaveLiofilizadorVer1.c: 465:              USART_put_string(texto);
-  6679  01C0  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  6679  01C0  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   6680  01C1  1283               	bcf	3,5	;RP0=0, select bank0
   6681  01C2  00A1               	movwf	USART_put_string@vetor
   6682  01C3  3001               	movlw	1
@@ -6758,7 +6758,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6706  01D8  00AF               	movwf	EEPROM_24C1025_Write_Byte@mem_add
   6707  01D9  1683               	bsf	3,5	;RP0=1, select bank3
   6708  01DA  1703               	bsf	3,6	;RP1=1, select bank3
-  6709  01DB  0844               	movf	(_usart_protocol^(0+384)+11),w
+  6709  01DB  0855               	movf	(_usart_protocol^(0+384)+11),w
   6710  01DC  1283               	bcf	3,5	;RP0=0, select bank0
   6711  01DD  1303               	bcf	3,6	;RP1=0, select bank0
   6712  01DE  00DE               	movwf	??_Decodify_Command
@@ -6766,7 +6766,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6714  01E0  00B3               	movwf	EEPROM_24C1025_Write_Byte@data
   6715  01E1  1683               	bsf	3,5	;RP0=1, select bank3
   6716  01E2  1703               	bsf	3,6	;RP1=1, select bank3
-  6717  01E3  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6717  01E3  0850               	movf	(_usart_protocol^(0+384)+6),w
   6718  01E4  160A  158A  2184  120A  118A  	fcall	_EEPROM_24C1025_Write_Byte
   6719  01E9  292E               	goto	L7
   6720  01EA                     l7360:	
@@ -6793,7 +6793,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6740  01F9  00B4               	movwf	EEPROM_24C1025_Read_Byte@mem_add
   6741  01FA  1683               	bsf	3,5	;RP0=1, select bank3
   6742  01FB  1703               	bsf	3,6	;RP1=1, select bank3
-  6743  01FC  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6743  01FC  0850               	movf	(_usart_protocol^(0+384)+6),w
   6744  01FD  160A  158A  21DE  120A  118A  	fcall	_EEPROM_24C1025_Read_Byte
   6745  0202  00DE               	movwf	??_Decodify_Command
   6746  0203  085E               	movf	??_Decodify_Command,w
@@ -6832,14 +6832,14 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6778  0220  00CE               	movwf	EEPROM_24C1025_Write_Int@mem_add
   6779  0221  1683               	bsf	3,5	;RP0=1, select bank3
   6780  0222  1703               	bsf	3,6	;RP1=1, select bank3
-  6781  0223  0845               	movf	(_usart_protocol^(0+384)+12),w
+  6781  0223  0856               	movf	(_usart_protocol^(0+384)+12),w
   6782  0224  1283               	bcf	3,5	;RP0=0, select bank0
   6783  0225  1303               	bcf	3,6	;RP1=0, select bank0
   6784  0226  00DE               	movwf	??_Decodify_Command
   6785  0227  01DF               	clrf	??_Decodify_Command+1
   6786  0228  1683               	bsf	3,5	;RP0=1, select bank3
   6787  0229  1703               	bsf	3,6	;RP1=1, select bank3
-  6788  022A  0844               	movf	(_usart_protocol^(0+384)+11),w
+  6788  022A  0855               	movf	(_usart_protocol^(0+384)+11),w
   6789  022B  1283               	bcf	3,5	;RP0=0, select bank0
   6790  022C  1303               	bcf	3,6	;RP1=0, select bank0
   6791  022D  00E0               	movwf	??_Decodify_Command+2
@@ -6855,7 +6855,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6801  0237  00D3               	movwf	EEPROM_24C1025_Write_Int@data+1
   6802  0238  1683               	bsf	3,5	;RP0=1, select bank3
   6803  0239  1703               	bsf	3,6	;RP1=1, select bank3
-  6804  023A  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6804  023A  0850               	movf	(_usart_protocol^(0+384)+6),w
   6805  023B  160A  158A  2289  120A  118A  	fcall	_EEPROM_24C1025_Write_Int
   6806  0240  292E               	goto	L7
   6807  0241                     l7372:	
@@ -6882,7 +6882,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6827  0250  00B4               	movwf	EEPROM_24C1025_Read_Int@mem_add
   6828  0251  1683               	bsf	3,5	;RP0=1, select bank3
   6829  0252  1703               	bsf	3,6	;RP1=1, select bank3
-  6830  0253  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6830  0253  0850               	movf	(_usart_protocol^(0+384)+6),w
   6831  0254  160A  158A  2354  120A  118A  	fcall	_EEPROM_24C1025_Read_Int
   6832  0259  0835               	movf	?_EEPROM_24C1025_Read_Int+1,w
   6833  025A  1683               	bsf	3,5	;RP0=1, select bank1
@@ -6899,7 +6899,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
       +                          [5];
   6843  025F  1683               	bsf	3,5	;RP0=1, select bank3
   6844  0260  1703               	bsf	3,6	;RP1=1, select bank3
-  6845  0261  0844               	movf	(_usart_protocol^(0+384)+11),w
+  6845  0261  0855               	movf	(_usart_protocol^(0+384)+11),w
   6846  0262  1283               	bcf	3,5	;RP0=0, select bank0
   6847  0263  1303               	bcf	3,6	;RP1=0, select bank0
   6848  0264  00DE               	movwf	??_Decodify_Command
@@ -6936,7 +6936,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6878  0280  00AC               	movwf	EEPROM_24C1025_Read_Buffer@data+1
   6879  0281  1683               	bsf	3,5	;RP0=1, select bank3
   6880  0282  1703               	bsf	3,6	;RP1=1, select bank3
-  6881  0283  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6881  0283  0850               	movf	(_usart_protocol^(0+384)+6),w
   6882  0284  120A  158A  2028  120A  118A  	fcall	_EEPROM_24C1025_Read_Buffer
   6883                           
   6884                           ;SlaveLiofilizadorVer1.c: 515:              Send_To_MB(sizedata);
@@ -6982,19 +6982,19 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6922  02AD  00A2               	movwf	EEPROM_24C1025_Write_Buffer@mem_add
   6923  02AE  1683               	bsf	3,5	;RP0=1, select bank3
   6924  02AF  1703               	bsf	3,6	;RP1=1, select bank3
-  6925  02B0  0844               	movf	(_usart_protocol^(0+384)+11),w
+  6925  02B0  0855               	movf	(_usart_protocol^(0+384)+11),w
   6926  02B1  1283               	bcf	3,5	;RP0=0, select bank0
   6927  02B2  1303               	bcf	3,6	;RP1=0, select bank0
   6928  02B3  00DE               	movwf	??_Decodify_Command
   6929  02B4  085E               	movf	??_Decodify_Command,w
   6930  02B5  00A6               	movwf	EEPROM_24C1025_Write_Buffer@sizedata
-  6931  02B6  30C5               	movlw	(low ((_usart_protocol| (0+256)+12)))& (0+255)
+  6931  02B6  30D6               	movlw	(low ((_usart_protocol| (0+256)+12)))& (0+255)
   6932  02B7  00A7               	movwf	EEPROM_24C1025_Write_Buffer@data
   6933  02B8  3001               	movlw	1
   6934  02B9  00A8               	movwf	EEPROM_24C1025_Write_Buffer@data+1
   6935  02BA  1683               	bsf	3,5	;RP0=1, select bank3
   6936  02BB  1703               	bsf	3,6	;RP1=1, select bank3
-  6937  02BC  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6937  02BC  0850               	movf	(_usart_protocol^(0+384)+6),w
   6938  02BD  160A  118A  2532  120A  118A  	fcall	_EEPROM_24C1025_Write_Buffer
   6939  02C2  292E               	goto	L7
   6940  02C3                     l7392:	
@@ -7019,13 +7019,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6958  02D0  0849               	movf	Decodify_Command@add_24LCxxxx^(0+128),w
   6959  02D1  1283               	bcf	3,5	;RP0=0, select bank0
   6960  02D2  00A2               	movwf	EEPROM_24C1025_Write_Str@mem_add
-  6961  02D3  30C4               	movlw	(low ((_usart_protocol| (0+256)+11)))& (0+255)
+  6961  02D3  30D5               	movlw	(low ((_usart_protocol| (0+256)+11)))& (0+255)
   6962  02D4  00DE               	movwf	??_Decodify_Command
   6963  02D5  085E               	movf	??_Decodify_Command,w
   6964  02D6  00A6               	movwf	EEPROM_24C1025_Write_Str@data
   6965  02D7  1683               	bsf	3,5	;RP0=1, select bank3
   6966  02D8  1703               	bsf	3,6	;RP1=1, select bank3
-  6967  02D9  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6967  02D9  0850               	movf	(_usart_protocol^(0+384)+6),w
   6968  02DA  160A  118A  226F  120A  118A  	fcall	_EEPROM_24C1025_Write_Str
   6969  02DF  292E               	goto	L7
   6970  02E0                     l7398:	
@@ -7050,17 +7050,17 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   6988  02ED  0849               	movf	Decodify_Command@add_24LCxxxx^(0+128),w
   6989  02EE  1283               	bcf	3,5	;RP0=0, select bank0
   6990  02EF  00A6               	movwf	EEPROM_24C1025_Read_Str@mem_add
-  6991  02F0  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  6991  02F0  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   6992  02F1  00DE               	movwf	??_Decodify_Command
   6993  02F2  085E               	movf	??_Decodify_Command,w
   6994  02F3  00AA               	movwf	EEPROM_24C1025_Read_Str@texto
   6995  02F4  1683               	bsf	3,5	;RP0=1, select bank3
   6996  02F5  1703               	bsf	3,6	;RP1=1, select bank3
-  6997  02F6  083F               	movf	(_usart_protocol^(0+384)+6),w
+  6997  02F6  0850               	movf	(_usart_protocol^(0+384)+6),w
   6998  02F7  160A  118A  2694  120A  118A  	fcall	_EEPROM_24C1025_Read_Str
   6999                           
   7000                           ;SlaveLiofilizadorVer1.c: 543:              Send_To_MB(strlen(texto));
-  7001  02FC  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  7001  02FC  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   7002  02FD  160A  158A  21F7  120A  118A  	fcall	_strlen
   7003  0302  0820               	movf	?_strlen,w
   7004  0303  29BB               	goto	L9
@@ -7070,7 +7070,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
       +                          [0],
   7008  0304  1683               	bsf	3,5	;RP0=1, select bank3
   7009  0305  1703               	bsf	3,6	;RP1=1, select bank3
-  7010  0306  0840               	movf	(_usart_protocol^(0+384)+7),w
+  7010  0306  0851               	movf	(_usart_protocol^(0+384)+7),w
   7011  0307  1283               	bcf	3,5	;RP0=0, select bank0
   7012  0308  1303               	bcf	3,6	;RP1=0, select bank0
   7013  0309  00DE               	movwf	??_Decodify_Command
@@ -7078,7 +7078,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7015  030B  00AF               	movwf	EEPROM_24C1025_Fill_All@value
   7016  030C  1683               	bsf	3,5	;RP0=1, select bank3
   7017  030D  1703               	bsf	3,6	;RP1=1, select bank3
-  7018  030E  083F               	movf	(_usart_protocol^(0+384)+6),w
+  7018  030E  0850               	movf	(_usart_protocol^(0+384)+6),w
   7019  030F  160A  118A  2010  120A  118A  	fcall	_EEPROM_24C1025_Fill_All
   7020  0314  292E               	goto	L7
   7021  0315                     l7408:	
@@ -7144,7 +7144,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7078  034F  00DE               	movwf	??_Decodify_Command
   7079  0350  085E               	movf	??_Decodify_Command,w
   7080  0351  00A0               	movwf	strcpy@from
-  7081  0352  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  7081  0352  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   7082  0353  160A  158A  222D  120A  118A  	fcall	_strcpy
   7083                           
   7084                           ;SlaveLiofilizadorVer1.c: 567:              if (hh[1]==0)
@@ -7160,7 +7160,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7093  035E  00A0               	movwf	strcat@from
   7094  035F  3080               	movlw	128
   7095  0360  00A1               	movwf	strcat@from+1
-  7096  0361  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  7096  0361  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   7097  0362  160A  158A  23D1  120A  118A  	fcall	_strcat
   7098                           
   7099                           ;SlaveLiofilizadorVer1.c: 570:                 hh[2]=0;
@@ -7174,7 +7174,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7107  036B  00A0               	movwf	strcat@from
   7108  036C  3000               	movlw	0
   7109  036D  00A1               	movwf	strcat@from+1
-  7110  036E  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  7110  036E  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   7111  036F  160A  158A  23D1  120A  118A  	fcall	_strcat
   7112                           
   7113                           ;SlaveLiofilizadorVer1.c: 573:              strcat(texto,":");
@@ -7182,7 +7182,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7115  0375  00A0               	movwf	strcat@from
   7116  0376  3080               	movlw	128
   7117  0377  00A1               	movwf	strcat@from+1
-  7118  0378  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  7118  0378  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   7119  0379  160A  158A  23D1  120A  118A  	fcall	_strcat
   7120                           
   7121                           ;SlaveLiofilizadorVer1.c: 574:              if(mm[1]==0)
@@ -7198,7 +7198,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7130  0384  00A0               	movwf	strcat@from
   7131  0385  3080               	movlw	128
   7132  0386  00A1               	movwf	strcat@from+1
-  7133  0387  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  7133  0387  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   7134  0388  160A  158A  23D1  120A  118A  	fcall	_strcat
   7135                           
   7136                           ;SlaveLiofilizadorVer1.c: 577:                 mm[2]=0;
@@ -7212,7 +7212,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7144  0391  00A0               	movwf	strcat@from
   7145  0392  3000               	movlw	0
   7146  0393  00A1               	movwf	strcat@from+1
-  7147  0394  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  7147  0394  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   7148  0395  160A  158A  23D1  120A  118A  	fcall	_strcat
   7149                           
   7150                           ;SlaveLiofilizadorVer1.c: 580:              strcat(texto,":");
@@ -7220,7 +7220,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7152  039B  00A0               	movwf	strcat@from
   7153  039C  3080               	movlw	128
   7154  039D  00A1               	movwf	strcat@from+1
-  7155  039E  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  7155  039E  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   7156  039F  160A  158A  23D1  120A  118A  	fcall	_strcat
   7157                           
   7158                           ;SlaveLiofilizadorVer1.c: 581:              if(ss[1]==0)
@@ -7236,7 +7236,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7167  03AA  00A0               	movwf	strcat@from
   7168  03AB  3080               	movlw	128
   7169  03AC  00A1               	movwf	strcat@from+1
-  7170  03AD  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  7170  03AD  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   7171  03AE  160A  158A  23D1  120A  118A  	fcall	_strcat
   7172                           
   7173                           ;SlaveLiofilizadorVer1.c: 584:                 ss[2]=0;
@@ -7250,17 +7250,17 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7181  03B7  00A0               	movwf	strcat@from
   7182  03B8  3000               	movlw	0
   7183  03B9  00A1               	movwf	strcat@from+1
-  7184  03BA  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  7184  03BA  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   7185  03BB  160A  158A  23D1  120A  118A  	fcall	_strcat
   7186                           
   7187                           ;SlaveLiofilizadorVer1.c: 587:              Send_To_MB(strlen(texto));
-  7188  03C0  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  7188  03C0  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   7189  03C1  160A  158A  21F7  120A  118A  	fcall	_strlen
   7190  03C6  0820               	movf	?_strlen,w
   7191  03C7  120A  158A  2000  120A  118A  	fcall	_Send_To_MB
   7192                           
   7193                           ;SlaveLiofilizadorVer1.c: 588:              USART_put_string(texto);
-  7194  03CC  30A9               	movlw	(low (_texto| (0+256)))& (0+255)
+  7194  03CC  30BA               	movlw	(low (_texto| (0+256)))& (0+255)
   7195  03CD  1283               	bcf	3,5	;RP0=0, select bank0
   7196  03CE  00A1               	movwf	USART_put_string@vetor
   7197  03CF  3001               	movlw	1
@@ -7279,7 +7279,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7209                           ;SlaveLiofilizadorVer1.c: 594:              hora=usart_protocol.value[0];
   7210  03DB  1683               	bsf	3,5	;RP0=1, select bank3
   7211  03DC  1703               	bsf	3,6	;RP1=1, select bank3
-  7212  03DD  083F               	movf	(_usart_protocol^(0+384)+6),w
+  7212  03DD  0850               	movf	(_usart_protocol^(0+384)+6),w
   7213  03DE  1283               	bcf	3,5	;RP0=0, select bank0
   7214  03DF  1303               	bcf	3,6	;RP1=0, select bank0
   7215  03E0  00DE               	movwf	??_Decodify_Command
@@ -7289,7 +7289,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7219                           
   7220                           ;SlaveLiofilizadorVer1.c: 595:              minuto=usart_protocol.value[1];
   7221  03E4  1703               	bsf	3,6	;RP1=1, select bank3
-  7222  03E5  0840               	movf	(_usart_protocol^(0+384)+7),w
+  7222  03E5  0851               	movf	(_usart_protocol^(0+384)+7),w
   7223  03E6  1283               	bcf	3,5	;RP0=0, select bank0
   7224  03E7  1303               	bcf	3,6	;RP1=0, select bank0
   7225  03E8  00DE               	movwf	??_Decodify_Command
@@ -7299,7 +7299,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7229                           
   7230                           ;SlaveLiofilizadorVer1.c: 596:              segundo=usart_protocol.value[2];
   7231  03EC  1703               	bsf	3,6	;RP1=1, select bank3
-  7232  03ED  0841               	movf	(_usart_protocol^(0+384)+8),w
+  7232  03ED  0852               	movf	(_usart_protocol^(0+384)+8),w
   7233  03EE  1283               	bcf	3,5	;RP0=0, select bank0
   7234  03EF  1303               	bcf	3,6	;RP1=0, select bank0
   7235  03F0  00DE               	movwf	??_Decodify_Command
@@ -7315,7 +7315,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
       +                          );
   7245  03F5  1683               	bsf	3,5	;RP0=1, select bank3
   7246  03F6  1703               	bsf	3,6	;RP1=1, select bank3
-  7247  03F7  083F               	movf	(_usart_protocol^(0+384)+6),w
+  7247  03F7  0850               	movf	(_usart_protocol^(0+384)+6),w
   7248  03F8  1283               	bcf	3,5	;RP0=0, select bank0
   7249  03F9  1303               	bcf	3,6	;RP1=0, select bank0
   7250  03FA  00DE               	movwf	??_Decodify_Command
@@ -7334,7 +7334,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
       +                          +
   7263  0406  1683               	bsf	3,5	;RP0=1, select bank3
   7264  0407  1703               	bsf	3,6	;RP1=1, select bank3
-  7265  0408  083F               	movf	(_usart_protocol^(0+384)+6),w
+  7265  0408  0850               	movf	(_usart_protocol^(0+384)+6),w
   7266  0409  1283               	bcf	3,5	;RP0=0, select bank0
   7267  040A  1303               	bcf	3,6	;RP1=0, select bank0
   7268  040B  00DE               	movwf	??_Decodify_Command
@@ -7344,7 +7344,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7272  040F  01DE               	clrf	??_Decodify_Command
   7273  0410  1683               	bsf	3,5	;RP0=1, select bank3
   7274  0411  1703               	bsf	3,6	;RP1=1, select bank3
-  7275  0412  0840               	movf	(_usart_protocol^(0+384)+7),w
+  7275  0412  0851               	movf	(_usart_protocol^(0+384)+7),w
   7276  0413  1283               	bcf	3,5	;RP0=0, select bank0
   7277  0414  1303               	bcf	3,6	;RP1=0, select bank0
   7278  0415  075E               	addwf	??_Decodify_Command,w
@@ -7364,7 +7364,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
       +                          ue[0]<<8)+
   7292  0422  1683               	bsf	3,5	;RP0=1, select bank3
   7293  0423  1703               	bsf	3,6	;RP1=1, select bank3
-  7294  0424  083F               	movf	(_usart_protocol^(0+384)+6),w
+  7294  0424  0850               	movf	(_usart_protocol^(0+384)+6),w
   7295  0425  1283               	bcf	3,5	;RP0=0, select bank0
   7296  0426  1303               	bcf	3,6	;RP1=0, select bank0
   7297  0427  00DE               	movwf	??_Decodify_Command
@@ -7374,7 +7374,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7301  042B  01DE               	clrf	??_Decodify_Command
   7302  042C  1683               	bsf	3,5	;RP0=1, select bank3
   7303  042D  1703               	bsf	3,6	;RP1=1, select bank3
-  7304  042E  0840               	movf	(_usart_protocol^(0+384)+7),w
+  7304  042E  0851               	movf	(_usart_protocol^(0+384)+7),w
   7305  042F  1283               	bcf	3,5	;RP0=0, select bank0
   7306  0430  1303               	bcf	3,6	;RP1=0, select bank0
   7307  0431  075E               	addwf	??_Decodify_Command,w
@@ -7384,7 +7384,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7311  0435  3001               	movlw	1
   7312  0436  075F               	addwf	??_Decodify_Command+1,w
   7313  0437  00DB               	movwf	PROCULUS_VP_Write_String@vp+1
-  7314  0438  30C1               	movlw	(low ((_usart_protocol| (0+256)+8)))& (0+255)
+  7314  0438  30D2               	movlw	(low ((_usart_protocol| (0+256)+8)))& (0+255)
   7315  0439  00E0               	movwf	??_Decodify_Command+2
   7316  043A  0860               	movf	??_Decodify_Command+2,w
   7317  043B  00DC               	movwf	PROCULUS_VP_Write_String@text
@@ -7397,13 +7397,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7324                           ;SlaveLiofilizadorVer1.c: 623:              if(usart_protocol.value[0]==0)
   7325  0442  1683               	bsf	3,5	;RP0=1, select bank3
   7326  0443  1703               	bsf	3,6	;RP1=1, select bank3
-  7327  0444  083F               	movf	(_usart_protocol^(0+384)+6),w
+  7327  0444  0850               	movf	(_usart_protocol^(0+384)+6),w
   7328  0445  1D03               	btfss	3,2
   7329  0446  2C52               	goto	l7474
   7330                           
   7331                           ;SlaveLiofilizadorVer1.c: 624:                 {;SlaveLiofilizadorVer1.c: 625:          
       +                                 if(!usart_protocol.value[1])
-  7332  0447  0840               	movf	(_usart_protocol^(0+384)+7),w
+  7332  0447  0851               	movf	(_usart_protocol^(0+384)+7),w
   7333  0448  1D03               	btfss	3,2
   7334  0449  2C4E               	goto	l288
   7335                           
@@ -7422,13 +7422,13 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7348  0450  1407               	bsf	7,0	;volatile
   7349  0451  292E               	goto	L7
   7350  0452                     l7474:	
-  7351  0452  033F               	decf	(_usart_protocol^(0+384)+6),w
+  7351  0452  0350               	decf	(_usart_protocol^(0+384)+6),w
   7352  0453  1D03               	btfss	3,2
   7353  0454  292E               	goto	L7
   7354                           
   7355                           ;SlaveLiofilizadorVer1.c: 631:                      {;SlaveLiofilizadorVer1.c: 632:     
       +                                            if(!usart_protocol.value[1])
-  7356  0455  0840               	movf	(_usart_protocol^(0+384)+7),w
+  7356  0455  0851               	movf	(_usart_protocol^(0+384)+7),w
   7357  0456  1D03               	btfss	3,2
   7358  0457  2C5C               	goto	l292
   7359                           
@@ -7450,7 +7450,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   7375                           ;SlaveLiofilizadorVer1.c: 637:              Send_To_MB(3);
   7376                           
   7377  0460  1703               	bsf	3,6	;RP1=1, select bank3
-  7378  0461  083D               	movf	(_usart_protocol^(0+384)+4),w
+  7378  0461  084E               	movf	(_usart_protocol^(0+384)+4),w
   7379  0462  1283               	bcf	3,5	;RP0=0, select bank0
   7380  0463  1303               	bcf	3,6	;RP1=0, select bank0
   7381  0464  00DE               	movwf	??_Decodify_Command
@@ -8355,7 +8355,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
   8277                           
   8278                           ;SlaveLiofilizadorVer1.c: 653:      USART_putc(usart_protocol.command);
   8279  081B  1703               	bsf	3,6	;RP1=1, select bank3
-  8280  081C  083D               	movf	(_usart_protocol^(0+384)+4),w
+  8280  081C  084E               	movf	(_usart_protocol^(0+384)+4),w
   8281  081D  160A  118A  2000  120A  158A  	fcall	_USART_putc
   8282                           
   8283                           ;SlaveLiofilizadorVer1.c: 654:      USART_putc(size);
@@ -13951,7 +13951,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
  13835  13ED  1783               	bsf	3,7	;select IRP bank2
  13836  13EE  0080               	movwf	0
  13837                           
- 13838                           ;isr.c: 118:                 if(count<25 -1)
+ 13838                           ;isr.c: 118:                 if(count<32+10 -1)
  13839  13EF  085A               	movf	(_count+1)^(0+128),w	;volatile
  13840  13F0  3A80               	xorlw	128
  13841  13F1  00FF               	movwf	127
@@ -13959,7 +13959,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og9
  13843  13F3  027F               	subwf	127,w
  13844  13F4  1D03               	skipz
  13845  13F5  2BF8               	goto	u538_25
- 13846  13F6  3018               	movlw	24
+ 13846  13F6  3029               	movlw	41
  13847  13F7  0259               	subwf	_count^(0+128),w	;volatile
  13848  13F8                     u538_25:	
  13849  13F8  1803               	skipnc
@@ -14098,7 +14098,7 @@ Data Sizes:
     Strings     14
     Constant    64
     Data        0
-    BSS         155
+    BSS         172
     Persistent  0
     Stack       0
 
@@ -14107,7 +14107,7 @@ Auto Spaces:
     COMMON           14      8      13
     BANK0            80     79      79
     BANK1            80     45      74
-    BANK3            96      0      57
+    BANK3            96      0      74
     BANK2            96      0      64
 
 Pointer List with Targets:
@@ -14190,8 +14190,8 @@ Pointer List with Targets:
     PROCULUS_Control_Register_Write@vetor	PTR unsigned char  size(1) Largest target is 3
 		 -> PROCULUS_Show_Screen@vetor(BANK0[3]), PROCULUS_Reset@vetor(COMMON[3]), PROCULUS_Buzzer@vetor(BANK0[2]), 
 
-    pointer	PTR volatile unsigned char  size(1) Largest target is 25
-		 -> NULL(NULL[0]), usart_buffer(BANK3[25]), 
+    pointer	PTR volatile unsigned char  size(1) Largest target is 42
+		 -> NULL(NULL[0]), usart_buffer(BANK3[42]), 
 
     EEPROM_Read_String@dado	PTR unsigned char  size(1) Largest target is 16
 		 -> texto(BANK3[16]), 
@@ -14860,7 +14860,7 @@ SFR0                 0      0       0       1        0.0%
 BITSFR1              0      0       0       2        0.0%
 SFR1                 0      0       0       2        0.0%
 STACK                0      0       0       2        0.0%
-ABS                  0      0     11F       3        0.0%
+ABS                  0      0     130       3        0.0%
 BITBANK0            50      0       0       4        0.0%
 BITSFR3              0      0       0       4        0.0%
 SFR3                 0      0       0       4        0.0%
@@ -14870,14 +14870,14 @@ SFR2                 0      0       0       5        0.0%
 BITBANK1            50      0       0       6        0.0%
 BANK1               50     2D      4A       7       92.5%
 BITBANK3            60      0       0       8        0.0%
-BANK3               60      0      39       9       59.4%
+BANK3               60      0      4A       9       77.1%
 BITBANK2            60      0       0      10        0.0%
 BANK2               60      0      40      11       66.7%
-DATA                 0      0     11F      12        0.0%
+DATA                 0      0     130      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Thu Jan 02 06:54:25 2020
+Symbol Table                                                                                   Thu Jan 02 08:45:04 2020
 
                               _USART_putc 1000                                __CFG_CP$ON 0000  
                             ___fldiv@aexp 005A                              ___fldiv@bexp 0059  
@@ -15112,7 +15112,7 @@ Symbol Table                                                                    
                                    _canal 00E4              __size_of_EEPROM_Read_Integer 002A  
                                    _count 00D9                                     _errno 00D5  
            ??_EEPROM_24C1025_Write_Buffer 0029        __size_of_EEPROM_24C1025_Write_Byte 0016  
-                                   _texto 01A9                ?_EEPROM_24C1025_Write_Byte 002F  
+                                   _texto 01BA                ?_EEPROM_24C1025_Write_Byte 002F  
                                    pclath 000A                                     utoa@c 002F  
                                    utoa@v 002D                                     status 0003  
                                    wtemp0 007E           EEPROM_24C1025_Read_Byte@mem_add 0034  
@@ -15226,7 +15226,7 @@ Symbol Table                                                                    
                             __size_of_isr 00EB                                ??___xxtofl 0037  
                       ??_EEPROM_Read_Byte 0020                                   _segundo 00E7  
                 __size_of_I2C_Master_Init 0031                  __size_of_I2C_Master_Read 002D  
-                          _usart_protocol 01B9                     ??_EEPROM_Read_Integer 0025  
+                          _usart_protocol 01CA                     ??_EEPROM_Read_Integer 0025  
                 __size_of_I2C_Master_Wait 0008                  __size_of_I2C_Master_Stop 0005  
            EEPROM_24C1025_Write_Int@local 0056                                   _pointer 00E1  
            EEPROM_24C1025_Write_Byte@data 0033                                   clrloop0 1943  

@@ -378,8 +378,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./global.h: 121:       } statuspower;
 [v _statuspower `S141 ~T0 @X0 1 e ]
 "10 usart.c
-[; ;usart.c: 10: volatile unsigned char usart_buffer[25];
-[v _usart_buffer `Vuc ~T0 @X0 -> 25 `i e ]
+[; ;usart.c: 10: volatile unsigned char usart_buffer[32+10];
+[v _usart_buffer `Vuc ~T0 @X0 -> 42 `i e ]
 "18
 [; ;usart.c: 18: void USART_init(unsigned long baudrate)
 [v _USART_init `(v ~T0 @X0 1 ef1`ul ]
