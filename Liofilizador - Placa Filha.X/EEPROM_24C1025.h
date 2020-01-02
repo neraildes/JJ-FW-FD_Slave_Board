@@ -32,7 +32,7 @@ unsigned char EEPROM_24C1025_Read_Byte(unsigned char chip_add, unsigned long mem
 void EEPROM_24C1025_Write_Int(unsigned char chip_add, unsigned long mem_add, int data);
 unsigned int EEPROM_24C1025_Read_Int(unsigned char chip_add, unsigned long mem_add);
 
-void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned char value);
+void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned int value);
 
 
 

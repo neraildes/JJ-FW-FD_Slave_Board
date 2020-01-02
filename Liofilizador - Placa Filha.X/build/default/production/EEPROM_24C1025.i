@@ -2726,8 +2726,9 @@ unsigned char EEPROM_24C1025_Read_Byte(unsigned char chip_add, unsigned long mem
 void EEPROM_24C1025_Write_Int(unsigned char chip_add, unsigned long mem_add, int data);
 unsigned int EEPROM_24C1025_Read_Int(unsigned char chip_add, unsigned long mem_add);
 
-void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned char value);
+void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned int value);
 # 5 "EEPROM_24C1025.c" 2
+
 
 
 extern volatile unsigned int Delay_Led_Memory;
@@ -3010,13 +3011,11 @@ unsigned int EEPROM_24C1025_Read_Int(unsigned char chip_add, unsigned long mem_a
 }
 
 
-void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned char value){
-
-     unsigned char i;
-     unsigned int page=0;
-     for(i=0;i<128;i++) buffer[i]=value;
-     for(page=0;page<1024;page++)
+void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned int value){
+     unsigned long mem_add;
+     for(mem_add=0;mem_add<=0x3FF;mem_add+=2)
         {
-        EEPROM_24C1025_Write_Buffer(chip_add, (page*128), 128, buffer);
+        EEPROM_24C1025_Write_Int(chip_add, mem_add, value);
+        __asm("CLRWDT");
         }
 }

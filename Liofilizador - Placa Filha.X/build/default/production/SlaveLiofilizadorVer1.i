@@ -2827,7 +2827,7 @@ unsigned char EEPROM_24C1025_Read_Byte(unsigned char chip_add, unsigned long mem
 void EEPROM_24C1025_Write_Int(unsigned char chip_add, unsigned long mem_add, int data);
 unsigned int EEPROM_24C1025_Read_Int(unsigned char chip_add, unsigned long mem_add);
 
-void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned char value);
+void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned int value);
 # 33 "SlaveLiofilizadorVer1.c" 2
 
 # 1 "./my_delay.h" 1
@@ -3381,4 +3381,7 @@ void MediaPlacaVaccum(unsigned char canal){
 void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) (Tensao1*10));
      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) (Vaccum0*10));
+     _delay((unsigned long)((5)*(8000000/4000.0)));
+     EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);
+     EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);
 }

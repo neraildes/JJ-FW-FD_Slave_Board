@@ -1,67 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="17">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="19">
         <file>
             <url>SlaveLiofilizadorVer1.c</url>
-            <bookmark id="13">
+            <bookmark id="19">
                 <name/>
-                <line>196</line>
-                <key/>
-            </bookmark>
-            <bookmark id="8">
-                <name/>
-                <line>256</line>
-                <key/>
-            </bookmark>
-            <bookmark id="10">
-                <name/>
-                <line>347</line>
-                <key/>
-            </bookmark>
-            <bookmark id="17">
-                <name/>
-                <line>362</line>
-                <key/>
-            </bookmark>
-            <bookmark id="15">
-                <name/>
-                <line>381</line>
+                <line>255</line>
                 <key/>
             </bookmark>
             <bookmark id="14">
                 <name/>
-                <line>495</line>
+                <line>559</line>
                 <key/>
             </bookmark>
             <bookmark id="12">
                 <name/>
-                <line>549</line>
+                <line>613</line>
                 <key/>
             </bookmark>
             <bookmark id="11">
                 <name/>
-                <line>981</line>
+                <line>1022</line>
+                <key/>
+            </bookmark>
+            <bookmark id="18">
+                <name/>
+                <line>1022</line>
                 <key/>
             </bookmark>
             <bookmark id="9">
                 <name/>
-                <line>988</line>
+                <line>1022</line>
                 <key/>
             </bookmark>
             <bookmark id="16">
                 <name/>
-                <line>1013</line>
+                <line>1022</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/SlaveLiofilizadorVer1.c</file>
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/global.h</file>
+            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/pt100.c</file>
+            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/SlaveLiofilizadorVer1.c</file>
+            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/I2C.c</file>
+            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/usart.c</file>
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/protocolo.c</file>
-            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/EEPROM_24C1025.c</file>
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/eeprom.c</file>
+            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/EEPROM_24C1025.c</file>
+            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/EEPROM_24C1025.h</file>
         </group>
     </open-files>
 </project-private>
