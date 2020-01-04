@@ -2249,11 +2249,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _add_datalog `ul ~T0 @X0 1 r1 ]
 [f ]
 "1006
-[; ;SlaveLiofilizadorVer1.c: 1006:      EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) Temperatura0*10);
-[e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 0 `i `uc _add_datalog * -> _Temperatura0 `i -> 10 `i ]
+[; ;SlaveLiofilizadorVer1.c: 1006:      EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) (Temperatura0*10.0));
+[e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 0 `i `uc _add_datalog -> * -> _Temperatura0 `d .10.0 `i ]
 "1007
-[; ;SlaveLiofilizadorVer1.c: 1007:      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) Temperatura1*10);
-[e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 1 `i `uc _add_datalog * -> _Temperatura1 `i -> 10 `i ]
+[; ;SlaveLiofilizadorVer1.c: 1007:      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) (Temperatura1*10.0));
+[e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 1 `i `uc _add_datalog -> * -> _Temperatura1 `d .10.0 `i ]
 "1008
 [; ;SlaveLiofilizadorVer1.c: 1008: }
 [e :UE 246 ]

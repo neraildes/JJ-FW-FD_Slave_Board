@@ -1,7 +1,8 @@
-PT100 BOARD
+﻿PT100 BOARD
 
 v1.0.7
    reduzido o tempo de captura para 10 segundos
+   DataLog salvando e fechando sessão com 0XFFFF
 
 
 v1.0.6

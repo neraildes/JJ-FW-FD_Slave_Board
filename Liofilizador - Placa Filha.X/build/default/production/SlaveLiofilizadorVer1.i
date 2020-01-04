@@ -3588,6 +3588,6 @@ void Load_Work(void){
 
 
 void Save_Log(unsigned long add_datalog){
-     EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) Temperatura0*10);
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) Temperatura1*10);
+     EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) (Temperatura0*10.0));
+     EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) (Temperatura1*10.0));
 }
