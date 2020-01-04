@@ -1007,7 +1007,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;SlaveLiofilizadorVer1.c: 344:              Send_To_MB(11);
 [e ( _Send_To_MB (1 -> -> 11 `i `uc ]
 "345
-[; ;SlaveLiofilizadorVer1.c: 345:              USART_put_string("v1.0.5");
+[; ;SlaveLiofilizadorVer1.c: 345:              USART_put_string("v1.0.7");
 [e ( _USART_put_string (1 :s 1C ]
 "346
 [; ;SlaveLiofilizadorVer1.c: 346:              break;
@@ -2254,14 +2254,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1007
 [; ;SlaveLiofilizadorVer1.c: 1007:      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) (Temperatura1*10.0));
 [e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 1 `i `uc _add_datalog -> * -> _Temperatura1 `d .10.0 `i ]
-"1008
-[; ;SlaveLiofilizadorVer1.c: 1008: }
+"1009
+[; ;SlaveLiofilizadorVer1.c: 1009:      EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);
+[e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 0 `i `uc + _add_datalog -> -> -> 2 `i `l `ul -> -> 65535 `ui `i ]
+"1010
+[; ;SlaveLiofilizadorVer1.c: 1010:      EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);
+[e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 1 `i `uc + _add_datalog -> -> -> 2 `i `l `ul -> -> 65535 `ui `i ]
+"1011
+[; ;SlaveLiofilizadorVer1.c: 1011: }
 [e :UE 246 ]
 }
 [a 8C 79 75 0 ]
 [a 4C 58 0 ]
 [a 6C 58 0 ]
-[a 1C 118 49 46 48 46 53 0 ]
+[a 1C 118 49 46 48 46 55 0 ]
 [a 3C 48 0 ]
 [a 5C 48 0 ]
 [a 7C 48 0 ]

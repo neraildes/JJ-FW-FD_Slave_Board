@@ -3085,7 +3085,7 @@ void Decodify_Command(void)
 
         case 0X2B:
              Send_To_MB(11);
-             USART_put_string("v1.0.5");
+             USART_put_string("v1.0.7");
              break;
         case 0X1A:
 
@@ -3590,4 +3590,7 @@ void Load_Work(void){
 void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) (Temperatura0*10.0));
      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) (Temperatura1*10.0));
+
+     EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);
+     EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);
 }
