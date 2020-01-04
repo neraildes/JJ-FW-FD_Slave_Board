@@ -7,7 +7,7 @@
 
 extern volatile unsigned int Delay_Led_Memory; //Verde
 
-extern char buffer[64];
+extern char buffer[32];
 //------------------------------------------------------------------------------
 
 void EEPROM_24C1025_Write_Buffer(unsigned char chip_add, 

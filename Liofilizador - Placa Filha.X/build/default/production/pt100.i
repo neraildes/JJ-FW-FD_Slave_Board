@@ -2709,11 +2709,3 @@ float ADC_Media_10bits(char canal);
 unsigned int ADC_Max_10Bits(char canal);
 # 3 "pt100.c" 2
 
-
-
-double PT100_Read_Temperature(unsigned char canal){
-
-
-
-       return 0;
-}

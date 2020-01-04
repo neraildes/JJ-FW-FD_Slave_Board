@@ -132,7 +132,7 @@ t_usart_protocol usart_protocol;
 unsigned char    canal;
 char             Board_Number;
 char             texto[16];
-char             buffer[64];
+char             buffer[32];
 
 unsigned char statuspower_memo;
 
