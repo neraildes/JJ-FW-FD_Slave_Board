@@ -20,7 +20,7 @@
 
 //#define PT100_UMIDADE
 
-#define NTC_BOARD  //Compilar na maquina virtual
+#define NTC_BOARD  //Retorno para maquina real
 
 //------------------------------------------------------------------------------
 
