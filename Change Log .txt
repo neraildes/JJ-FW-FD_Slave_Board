@@ -1,5 +1,15 @@
 PT100 BOARD
 
+v1.0.7
+   reduzido o tempo de captura para 10 segundos
+
+
+v1.0.6
+   (none)
+
+v1.0.5
+   (none)
+
 v1.0.4
  Foi ligado o cão de guarda.
 

@@ -357,8 +357,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;adc.c: 23:       ADCON0bits.CHS=canal;
 [e = . . _ADCON0bits 0 2 -> _canal `uc ]
 "24
-[; ;adc.c: 24:       my_delay_ms(10);
-[e ( _my_delay_ms (1 -> -> 10 `i `l ]
+[; ;adc.c: 24:       my_delay_ms(1);
+[e ( _my_delay_ms (1 -> -> 1 `i `l ]
 "26
 [; ;adc.c: 26:       value=0;
 [e = _value -> -> 0 `i `ui ]
@@ -407,8 +407,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;adc.c: 38:       ADCON0bits.CHS=canal;
 [e = . . _ADCON0bits 0 2 -> _canal `uc ]
 "39
-[; ;adc.c: 39:       my_delay_ms(10);
-[e ( _my_delay_ms (1 -> -> 10 `i `l ]
+[; ;adc.c: 39:       my_delay_ms(1);
+[e ( _my_delay_ms (1 -> -> 1 `i `l ]
 "40
 [; ;adc.c: 40:       Temp=0;
 [e = _Temp -> -> 0 `i `ui ]

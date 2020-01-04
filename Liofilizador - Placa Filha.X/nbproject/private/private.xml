@@ -10,45 +10,39 @@
             </bookmark>
             <bookmark id="14">
                 <name/>
-                <line>559</line>
+                <line>561</line>
                 <key/>
             </bookmark>
             <bookmark id="12">
                 <name/>
-                <line>613</line>
+                <line>615</line>
                 <key/>
             </bookmark>
             <bookmark id="11">
                 <name/>
-                <line>1022</line>
+                <line>1025</line>
                 <key/>
             </bookmark>
             <bookmark id="18">
                 <name/>
-                <line>1022</line>
+                <line>1025</line>
                 <key/>
             </bookmark>
             <bookmark id="9">
                 <name/>
-                <line>1022</line>
+                <line>1025</line>
                 <key/>
             </bookmark>
             <bookmark id="16">
                 <name/>
-                <line>1022</line>
+                <line>1025</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/global.h</file>
-            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/pt100.c</file>
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/SlaveLiofilizadorVer1.c</file>
-            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/I2C.c</file>
-            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/usart.c</file>
-            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/protocolo.c</file>
-            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/eeprom.c</file>
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/EEPROM_24C1025.c</file>
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/EEPROM_24C1025.h</file>
         </group>

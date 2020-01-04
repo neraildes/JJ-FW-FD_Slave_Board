@@ -2741,7 +2741,7 @@ float ADC_Media_10bits(char canal){
       unsigned int value;
       unsigned char i;
       ADCON0bits.CHS=canal;
-      my_delay_ms(10);
+      my_delay_ms(1);
 
       value=0;
       for(i=1;i<=50;i++)
@@ -2756,7 +2756,7 @@ unsigned int ADC_Max_10Bits(char canal){
       unsigned int value;
       unsigned char i;
       ADCON0bits.CHS=canal;
-      my_delay_ms(10);
+      my_delay_ms(1);
       Temp=0;
       value=0;
       for(i=1;i<=50;i++)

@@ -2790,7 +2790,7 @@ void EEPROM_24C1025_Write_Buffer(unsigned char chip_add,
      }
      I2C_Master_Write(*data);
      I2C_Master_Stop();
-     _delay((unsigned long)((650)*(8000000/4000000.0)));
+     _delay((unsigned long)((5)*(8000000/4000.0)));
 }
 
 
@@ -2912,7 +2912,7 @@ void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char
      }
      I2C_Master_Write(0);
      I2C_Master_Stop();
-     _delay((unsigned long)((650)*(8000000/4000000.0)));
+     _delay((unsigned long)((5)*(8000000/4000.0)));
 
 }
 

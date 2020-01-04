@@ -64,7 +64,7 @@ void EEPROM_24C1025_Write_Buffer(unsigned char chip_add,
      } 
      I2C_Master_Write(*data);
      I2C_Master_Stop();                // condição de stop na comunicação i2c           
-     __delay_us(650);     
+     __delay_ms(5);                   //__delay_us(650);
 }
 
 
@@ -186,7 +186,7 @@ void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char
      } 
      I2C_Master_Write(0);
      I2C_Master_Stop();                // condição de stop na comunicação i2c           
-     __delay_us(650);     
+     __delay_ms(5);     
      
 }
 

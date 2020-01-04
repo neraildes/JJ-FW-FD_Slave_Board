@@ -1601,8 +1601,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;SlaveLiofilizadorVer1.c: 799:        ADCON0bits.CHS=canal;
 [e = . . _ADCON0bits 0 2 _canal ]
 "800
-[; ;SlaveLiofilizadorVer1.c: 800:        my_delay_ms(10);
-[e ( _my_delay_ms (1 -> -> 10 `i `l ]
+[; ;SlaveLiofilizadorVer1.c: 800:        my_delay_ms(1);
+[e ( _my_delay_ms (1 -> -> 1 `i `l ]
 "801
 [; ;SlaveLiofilizadorVer1.c: 801:        Temp=0;
 [e = _Temp -> -> 0 `i `f ]
@@ -1695,8 +1695,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;SlaveLiofilizadorVer1.c: 831:        ADCON0bits.CHS=canal;
 [e = . . _ADCON0bits 0 2 _canal ]
 "832
-[; ;SlaveLiofilizadorVer1.c: 832:        my_delay_ms(10);
-[e ( _my_delay_ms (1 -> -> 10 `i `l ]
+[; ;SlaveLiofilizadorVer1.c: 832:        my_delay_ms(1);
+[e ( _my_delay_ms (1 -> -> 1 `i `l ]
 "833
 [; ;SlaveLiofilizadorVer1.c: 833:        Temp=0;
 [e = _Temp -> -> 0 `i `f ]
@@ -1772,9 +1772,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1016
 [; ;SlaveLiofilizadorVer1.c: 1016:      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) (Vaccum0*10));
 [e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 1 `i `uc _add_datalog -> * _Vaccum0 -> -> 10 `i `f `i ]
-"1017
-[; ;SlaveLiofilizadorVer1.c: 1017:      _delay((unsigned long)((5)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "1018
 [; ;SlaveLiofilizadorVer1.c: 1018:      EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);
 [e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 0 `i `uc + _add_datalog -> -> -> 2 `i `l `ul -> -> 65535 `ui `i ]

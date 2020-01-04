@@ -683,7 +683,7 @@ void mediatemperaturaNTC(unsigned char canal)
      char i; 
      
      ADCON0bits.CHS=canal;
-     my_delay_ms(10);     
+     my_delay_ms(1);     
      
      Temp=0;
      //flag_led_memory=1; //fix desativar
@@ -737,7 +737,7 @@ void mediaLeituraPt100Umidadde(unsigned char canal)
      char i;              
      
      ADCON0bits.CHS=canal;
-     my_delay_ms(10);
+     my_delay_ms(1);
      Temp=0;
      //flag_led_memory=1; //fix desativar
      for(i=1;i<15;i++)
@@ -797,7 +797,7 @@ void MediaPlacaVaccum(unsigned char canal){
        ADCON1bits.VCFG0=1; //Ref+
        ADCON1bits.VCFG1=1; //Ref-
        ADCON0bits.CHS=canal;
-       my_delay_ms(10);
+       my_delay_ms(1);
        Temp=0;
        //flag_led_memory=1; //fix apagar 
        for(i=1;i<15;i++)
@@ -829,7 +829,7 @@ void MediaPlacaVaccum(unsigned char canal){
        ADCON1bits.VCFG0=0; //Ref+
        ADCON1bits.VCFG1=0; //Ref-
        ADCON0bits.CHS=canal;
-       my_delay_ms(10);
+       my_delay_ms(1);
        Temp=0;
        //flag_led_memory=1; //fix apagar 
        for(i=1;i<15;i++)
@@ -1014,7 +1014,7 @@ void Save_Log(unsigned long add_datalog){
 void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) (Tensao1*10));   
      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) (Vaccum0*10));  
-     __delay_ms(5);
+     
      EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);   
      EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);      
 }
