@@ -2379,8 +2379,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 9 "eeprom.c" 2
-
+# 10 "eeprom.c" 2
 # 1 "./global.h" 1
 # 32 "./global.h"
 #pragma config FOSC = INTRC_NOCLKOUT
@@ -2698,8 +2697,7 @@ union {
              unsigned flag_global_vacuo : 1 ;
              };
       } statuspower;
-# 10 "eeprom.c" 2
-
+# 11 "eeprom.c" 2
 # 1 "./eeprom.h" 1
 # 14 "./eeprom.h"
 void EEPROM_Write_Byte(unsigned char addr, unsigned char dado);
@@ -2718,8 +2716,7 @@ long EEPROM_Read_Long32(unsigned char addr);
 
 void EEPROM_Write_String(unsigned char addr,char *dado);
 void EEPROM_Read_String(unsigned char addr,char *dado);
-# 11 "eeprom.c" 2
-
+# 12 "eeprom.c" 2
 
 
 
@@ -2825,4 +2822,112 @@ void EEPROM_Read_String(unsigned char addr,char *dado)
         *(dado++)=c;
 
       }while(c);
+}
+# 126 "eeprom.c"
+void EEPROM_Write_Float(unsigned char addr,float dado)
+{
+      unsigned char *ptr;
+      unsigned char i;
+      unsigned char addr_memo;
+      addr_memo=addr;
+      ptr=(unsigned char *)&dado;
+      for (i=0;i<3;i++)
+          EEPROM_Write_Byte(addr++,*(ptr++));
+}
+
+
+float EEPROM_Read_Float(unsigned char addr)
+{
+      float result;
+      unsigned char *ptr;
+      unsigned char i;
+      ptr=(unsigned char *)&result;
+      for (i=0;i<3;i++)
+          *(ptr++)=EEPROM_Read_Byte(addr++);
+      return result;
+}
+
+
+
+
+
+
+
+void EEPROM_Write_Double(unsigned char addr,double dado)
+{
+      unsigned char *ptr;
+      unsigned char i;
+      unsigned char addr_memo;
+      addr_memo=addr;
+      ptr=(unsigned char *)&dado;
+      for (i=0;i<4;i++)
+          EEPROM_Write_Byte(addr++,*(ptr++));
+}
+
+
+
+float EEPROM_Read_Double(unsigned char addr)
+{
+      float result;
+      unsigned char *ptr;
+      unsigned char i;
+      ptr=(unsigned char *)&result;
+      for (i=0;i<4;i++)
+          *(ptr++)=EEPROM_Read_Byte(addr++);
+      return result;
+}
+# 186 "eeprom.c"
+void EEPROM_Write_Long24(unsigned char addr,long dado)
+{
+      unsigned char *ptr;
+      unsigned char i;
+      unsigned char addr_memo;
+      addr_memo=addr;
+      ptr=(unsigned char *)&dado;
+      for (i=0;i<3;i++){
+          EEPROM_Write_Byte(addr,*ptr);
+          addr++;
+          ptr++;
+          }
+}
+
+
+unsigned long EEPROM_Read_ULong24(unsigned char addr)
+{
+      unsigned long result;
+      unsigned char *ptr;
+      unsigned char i;
+      ptr=(unsigned char *)&result;
+      for (i=0;i<3;i++)
+          *(ptr++)=EEPROM_Read_Byte(addr++);
+      return result;
+}
+
+
+
+
+
+void EEPROM_Write_Long32(unsigned char addr,long dado)
+{
+      unsigned char *ptr;
+      unsigned char i;
+      unsigned char addr_memo;
+      addr_memo=addr;
+      ptr=(unsigned char *)&dado;
+      for (i=0;i<4;i++)
+           EEPROM_Write_Byte(addr++,*(ptr++));
+}
+
+
+
+
+long EEPROM_Read_Long32(unsigned char addr)
+{
+      unsigned long result;
+      unsigned char *ptr;
+      unsigned char i;
+      ptr=(unsigned char *)&result;
+      for (i=0;i<4;i++)
+          *(ptr++)=EEPROM_Read_Byte(addr++);
+      return result;
 }

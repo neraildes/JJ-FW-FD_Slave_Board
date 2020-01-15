@@ -2,6 +2,8 @@ PT100 BOARD
 
 v1.0.7
    reduzido o tempo de captura para 10 segundos
+   Alteração nas gravações de byte e inteiro na memoria 24C1025.
+
 
 
 v1.0.6

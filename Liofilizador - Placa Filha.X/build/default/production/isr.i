@@ -11,8 +11,7 @@
 # 1 "./isr.h" 1
 # 13 "./isr.h"
 void __attribute__((picinterrupt(("")))) isr(void);
-# 2 "isr.c" 2
-
+# 3 "isr.c" 2
 # 1 "./global.h" 1
 # 32 "./global.h"
 #pragma config FOSC = INTRC_NOCLKOUT
@@ -2691,8 +2690,7 @@ union {
              unsigned flag_global_vacuo : 1 ;
              };
       } statuspower;
-# 3 "isr.c" 2
-
+# 4 "isr.c" 2
 # 1 "./usart.h" 1
 # 30 "./usart.h"
 void USART_to_Protocol(t_usart_protocol *usart_protocol);
@@ -2704,8 +2702,7 @@ void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
 void USART_put_buffer(char *vetor, unsigned int size);
 unsigned char USART_input_buffer(void);
-# 4 "isr.c" 2
-
+# 5 "isr.c" 2
 
 
 
@@ -2722,14 +2719,7 @@ volatile unsigned char hora;
 volatile unsigned int Delay_Led_Tmr0 ;
 volatile unsigned int Delay_Led_Usart ;
 volatile unsigned int Delay_Led_Memory ;
-
-
-extern volatile char TempoCNT_0;
-extern volatile char TempoCNT_1;
-
-
-
-
+# 29 "isr.c"
 void __attribute__((picinterrupt(("")))) isr(void)
 {
 unsigned int tempo;
@@ -2785,8 +2775,8 @@ unsigned int tempo;
                    segundo++;
 
 
-                   if(TempoCNT_0>0) TempoCNT_0--;
-                   if(TempoCNT_1>0) TempoCNT_1--;
+
+
 
 
                    if(segundo==60){
