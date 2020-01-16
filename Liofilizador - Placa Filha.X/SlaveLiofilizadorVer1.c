@@ -1006,8 +1006,8 @@ void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) Temperatura0*10);   
      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) Temperatura1*10);
  
-     EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);   
-     EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);     
+     //EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);   
+     //EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);     
 }
 #endif
 
@@ -1018,8 +1018,8 @@ void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) (Tensao1*10));   
      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) (Vaccum0*10));  
      
-     EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);   
-     EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);      
+     //EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);   
+     //EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);      
 }
 #endif
 
@@ -1029,8 +1029,8 @@ void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) Temperatura0*10);
      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) Umidade1);  
      
-     EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);   
-     EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);     
+     //EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);   
+     //EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);     
 }
 #endif
 
