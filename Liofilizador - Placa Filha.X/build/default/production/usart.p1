@@ -115,10 +115,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1054 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1054: extern volatile unsigned char TXREG __attribute__((address(0x019)));
 [v _TXREG `Vuc ~T0 @X0 0 e@25 ]
-[v F1206 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
-[v __delay `JF1206 ~T0 @X0 0 e ]
-[p i __delay ]
 "32 ./global.h
 [p x FOSC = INTRC_NOCLKOUT ]
 "33
@@ -625,64 +621,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;usart.c: 111: }
 [e :UE 159 ]
 }
-"115
-[; ;usart.c: 115: unsigned char USART_input_buffer(void){
-[v _USART_input_buffer `(uc ~T0 @X0 1 ef ]
-{
-[e :U _USART_input_buffer ]
-[f ]
-"116
-[; ;usart.c: 116:     unsigned int time=0;
-[v _time `ui ~T0 @X0 1 a ]
-[e = _time -> -> 0 `i `ui ]
-"117
-[; ;usart.c: 117:     unsigned char result=0;
-[v _result `uc ~T0 @X0 1 a ]
-[e = _result -> -> 0 `i `uc ]
-"119
-[; ;usart.c: 119:     while(time<30){
-[e $U 164  ]
-[e :U 165 ]
-{
-"120
-[; ;usart.c: 120:         if(generic_status.flag_usart_rx){
-[e $ ! != -> . _generic_status 0 `i -> 0 `i 167  ]
-{
-"121
-[; ;usart.c: 121:            generic_status.flag_usart_rx=0;
-[e = . _generic_status 0 -> -> 0 `i `uc ]
-"122
-[; ;usart.c: 122:            result = 1;
-[e = _result -> -> 1 `i `uc ]
-"123
-[; ;usart.c: 123:            break;
-[e $U 166  ]
-"124
-[; ;usart.c: 124:            }
-}
-[e :U 167 ]
-"125
-[; ;usart.c: 125:         time++;
-[e ++ _time -> -> 1 `i `ui ]
-"126
-[; ;usart.c: 126:         _delay((unsigned long)((1)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"127
-[; ;usart.c: 127:     }
-}
-[e :U 164 ]
-"119
-[; ;usart.c: 119:     while(time<30){
-[e $ < _time -> -> 30 `i `ui 165  ]
-[e :U 166 ]
-"128
-[; ;usart.c: 128:     return result;
-[e ) _result ]
-[e $UE 163  ]
-"129
-[; ;usart.c: 129: }
-[e :UE 163 ]
-}
 "138
 [; ;usart.c: 138: void USART_put_int(int value){
 [v _USART_put_int `(v ~T0 @X0 1 ef1`i ]
@@ -704,7 +642,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _USART_putc (1 *U _dado ]
 "143
 [; ;usart.c: 143: }
-[e :UE 168 ]
+[e :UE 163 ]
 }
 "151
 [; ;usart.c: 151: void USART_put_long(unsigned long value){
@@ -727,7 +665,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _USART_putc (1 -> _value `uc ]
 "156
 [; ;usart.c: 156: }
-[e :UE 169 ]
+[e :UE 164 ]
 }
 "159
 [; ;usart.c: 159: void USART_put_float24(float value){
@@ -753,7 +691,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _USART_putc (1 -> *U ++ _pt * -> -> 1 `i `x -> -> # *U _pt `i `x `uc ]
 "165
 [; ;usart.c: 165: }
-[e :UE 170 ]
+[e :UE 165 ]
 }
 "168
 [; ;usart.c: 168: void USART_put_string(char *vetor)
@@ -776,8 +714,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _ptr _vetor ]
 "172
 [; ;usart.c: 172:     while(*(ptr)){
-[e $U 172  ]
-[e :U 173 ]
+[e $U 167  ]
+[e :U 168 ]
 {
 "173
 [; ;usart.c: 173:         USART_putc(*(ptr));
@@ -788,15 +726,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "175
 [; ;usart.c: 175:     }
 }
-[e :U 172 ]
+[e :U 167 ]
 "172
 [; ;usart.c: 172:     while(*(ptr)){
-[e $ != -> *U _ptr `i -> 0 `i 173  ]
-[e :U 174 ]
+[e $ != -> *U _ptr `i -> 0 `i 168  ]
+[e :U 169 ]
 "176
 [; ;usart.c: 176:     USART_putc(*(ptr));
 [e ( _USART_putc (1 *U _ptr ]
 "177
 [; ;usart.c: 177: }
-[e :UE 171 ]
+[e :UE 166 ]
 }

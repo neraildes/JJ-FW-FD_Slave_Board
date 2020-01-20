@@ -2733,24 +2733,7 @@ void ADC_init(void){
      ADCON1bits.ADFM=1;
      ADCON0bits.ADON=1;
 }
-
-
-
-
-float ADC_Media_10bits(char canal){
-      unsigned int value;
-      unsigned char i;
-      ADCON0bits.CHS=canal;
-      my_delay_ms(1);
-
-      value=0;
-      for(i=1;i<=50;i++)
-          value+=captura();
-      value/=(i-1);
-      return value;
-}
-
-
+# 34 "adc.c"
 unsigned int ADC_Max_10Bits(char canal){
       unsigned int Temp;
       unsigned int value;
@@ -2765,6 +2748,37 @@ unsigned int ADC_Max_10Bits(char canal){
           if (Temp>value) value=Temp;
           }
       return value;
+}
+
+
+
+
+
+
+
+float ADC_Read_NTC(char canal){
+    int B = 3975;
+    float resistencia;
+    float temperatura;
+    float calc;
+    unsigned int value;
+    unsigned char i;
+
+    value=0;
+    for(i=1;i<=50;i++)
+        value+=captura();
+    value/=(i-1);
+    resistencia =(1023.0-value);
+    resistencia*=(10000.0-value);
+    temperatura =value*10000.0/resistencia;
+    calc=temperatura;
+    temperatura =log(calc);
+    temperatura/=B;
+    temperatura+=1/(25+273.15);
+    temperatura =1/temperatura;
+    temperatura-=273.15;
+
+    return temperatura;
 }
 # 123 "adc.c"
 unsigned int captura(){
