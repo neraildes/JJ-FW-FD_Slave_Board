@@ -4,6 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>EEPROM_24C1025.h</itemPath>
+      <itemPath>EEPROM_24C512.h</itemPath>
       <itemPath>I2C.h</itemPath>
       <itemPath>adc.h</itemPath>
       <itemPath>eeprom.h</itemPath>
@@ -15,7 +17,6 @@
       <itemPath>protocolo.h</itemPath>
       <itemPath>pt100.h</itemPath>
       <itemPath>usart.h</itemPath>
-      <itemPath>EEPROM_24C1025.h</itemPath>
       <itemPath>versao.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -25,6 +26,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>EEPROM_24C1025.c</itemPath>
+      <itemPath>EEPROM_24C512.c</itemPath>
       <itemPath>I2C.c</itemPath>
       <itemPath>SlaveLiofilizadorVer1.c</itemPath>
       <itemPath>adc.c</itemPath>
@@ -37,7 +40,6 @@
       <itemPath>protocolo.c</itemPath>
       <itemPath>pt100.c</itemPath>
       <itemPath>usart.c</itemPath>
-      <itemPath>EEPROM_24C1025.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -216,7 +218,7 @@
         <property key="advanced-elf" value="true"/>
         <property key="gcc-opt-driver-new" value="true"/>
         <property key="gcc-opt-std" value="-std=c99"/>
-        <property key="gcc-output-file-format" value="coff"/>
+        <property key="gcc-output-file-format" value="dwarf-3"/>
         <property key="omit-pack-options" value="false"/>
         <property key="output-file-format" value="-mcof,+elf"/>
         <property key="stack-size-high" value="auto"/>

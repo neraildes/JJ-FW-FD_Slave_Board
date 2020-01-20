@@ -1,4 +1,4 @@
-# 1 "proculus.c"
+# 1 "EEPROM_24C512.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,61 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "proculus.c" 2
+# 1 "EEPROM_24C512.c" 2
+# 1 "./global.h" 1
+# 32 "./global.h"
+#pragma config FOSC = INTRC_NOCLKOUT
+#pragma config WDTE = ON
+#pragma config PWRTE = ON
+#pragma config MCLRE = OFF
+#pragma config CP = ON
+#pragma config CPD = OFF
+#pragma config BOREN = ON
+#pragma config IESO = ON
+#pragma config FCMEN = ON
+#pragma config LVP = OFF
+
+
+#pragma config BOR4V = BOR40V
+#pragma config WRT = OFF
+
+
+
+
+
+
+
+# 1 "./isr.h" 1
+# 13 "./isr.h"
+void __attribute__((picinterrupt(("")))) isr(void);
+# 52 "./global.h" 2
+
+# 1 "./global.h" 1
+# 53 "./global.h" 2
+
+# 1 "./protocolo.h" 1
+
+
+
+
+
+
+
+# 1 "./global.h" 1
+# 8 "./protocolo.h" 2
+# 21 "./protocolo.h"
+typedef struct {
+        unsigned int header;
+        unsigned char origem;
+        unsigned char destino;
+        unsigned char command;
+        unsigned char size;
+        char value[10];
+} t_usart_protocol;
+# 89 "./protocolo.h"
+char Package_Usart_is_for_me();
+# 54 "./global.h" 2
+
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2371,61 +2425,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 2 "proculus.c" 2
-# 1 "./global.h" 1
-# 32 "./global.h"
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = ON
-#pragma config PWRTE = ON
-#pragma config MCLRE = OFF
-#pragma config CP = ON
-#pragma config CPD = OFF
-#pragma config BOREN = ON
-#pragma config IESO = ON
-#pragma config FCMEN = ON
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
-
-
-
-
-
-# 1 "./isr.h" 1
-# 13 "./isr.h"
-void __attribute__((picinterrupt(("")))) isr(void);
-# 52 "./global.h" 2
-
-# 1 "./global.h" 1
-# 53 "./global.h" 2
-
-# 1 "./protocolo.h" 1
-
-
-
-
-
-
-
-# 1 "./global.h" 1
-# 8 "./protocolo.h" 2
-# 21 "./protocolo.h"
-typedef struct {
-        unsigned int header;
-        unsigned char origem;
-        unsigned char destino;
-        unsigned char command;
-        unsigned char size;
-        char value[10];
-} t_usart_protocol;
-# 89 "./protocolo.h"
-char Package_Usart_is_for_me();
-# 54 "./global.h" 2
-
+# 55 "./global.h" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -2689,289 +2689,115 @@ union {
              unsigned flag_global_vacuo : 1 ;
              };
       } statuspower;
-# 3 "proculus.c" 2
-# 1 "./proculus.h" 1
-# 52 "./proculus.h"
-typedef struct {
-    unsigned int header;
-    unsigned char size;
-    unsigned char function;
-    unsigned int VP;
-    unsigned char length;
-    unsigned int data[20];
-    }t_proculus;
+# 1 "EEPROM_24C512.c" 2
 
+# 1 "./I2C.h" 1
+# 11 "./I2C.h"
+void I2C_Master_Init(const unsigned long c);
+void I2C_Slave_Init(short address);
+void I2C_Master_Wait();
+void I2C_Master_Start();
+void I2C_Master_RepeatedStart();
+void I2C_Master_Stop();
+void I2C_Master_Write(unsigned d);
+unsigned short I2C_Master_Read(unsigned short a);
+# 2 "EEPROM_24C512.c" 2
 
-void PROCULUS_Control_Register_Write(unsigned char *vetor, unsigned char size);
-void PROCULUS_Control_Register_Read(unsigned char reg, unsigned char size, unsigned char *retorno);
+# 1 "./EEPROM_24C512.h" 1
+# 14 "./EEPROM_24C512.h"
+void EEPROM_24C512_Write_Byte(unsigned char dev_add, unsigned int mem_add, unsigned char data);
+unsigned char EEPROM_24C512_Read_Byte(unsigned char dev_add, unsigned int mem_add);
 
-void PROCULUS_VP_Write(unsigned int vp,char *vetor,char size);
-void PROCULUS_VP_Read(unsigned int vp,char *vetor,char size);
+void EEPROM_24C512_Write_Int(unsigned char dev_add, unsigned int mem_add, unsigned int data);
+unsigned int EEPROM_24C512_Read_Int(unsigned char dev_add, unsigned int mem_add);
 
-
-
-
-
-void PROCULUS_VP_Write_Byte(unsigned int vp, unsigned char value);
-unsigned char PROCULUS_VP_Read_Byte(unsigned int vp);
-
-
-
-void PROCULUS_VP_Write_UInt16(unsigned int vp, unsigned int value);
-unsigned int PROCULUS_VP_Read_UInt16(unsigned int vp);
+void EEPROM_24C512_Write_Str(unsigned char dev_add, unsigned int mem_add,char *data);
+void EEPROM_24C512_Read_Str(unsigned char dev_add, unsigned int mem_add,char *texto);
+# 3 "EEPROM_24C512.c" 2
 
 
 
-long PROCULUS_VP_Read_Long32(unsigned int vp);
-void PROCULUS_VP_Write_Long32(unsigned int vp,long value);
-# 97 "./proculus.h"
-void PROCULUS_VP_Write_Double24(unsigned int vp, double value);
-double PROCULUS_VP_Read_Double24(unsigned int vp);
-
-void PROCULUS_VP_Write_Double32(unsigned int vp, double value);
-double PROCULUS_VP_Read_Double32(unsigned int vp);
-
-
-void PROCULUS_VP_Write_String(unsigned int vp,char *text);
-void PROCULUS_VP_Read_String(unsigned int vp,char *text);
-
-
-unsigned char PROCULUS_Read_Version(void);
-void PROCULUS_Buzzer(unsigned int time_ms_x_10);
-void PROCULUS_Show_Screen(unsigned int screen);
-void PROCULUS_Reset(void);
-
-void PROCULUS_Buffer_to_Proculus(t_proculus *proculus);
-
-void PROCULUS_Delay(unsigned int tempo_ms);
-# 4 "proculus.c" 2
-
-# 1 "./usart.h" 1
-# 30 "./usart.h"
-void USART_to_Protocol(t_usart_protocol *usart_protocol);
-void USART_init(unsigned long baudrate);
-void USART_putc(char value);
-void USART_put_int(int value);
-void USART_put_float24(float value);
-void USART_put_long(unsigned long value);
-void USART_put_string(char *vetor);
-void USART_put_buffer(char *vetor, unsigned int size);
-unsigned char USART_input_buffer(void);
-# 6 "proculus.c" 2
-
-
-extern unsigned int tempodecorrido;
-volatile extern unsigned char usart_buffer[32+10];
-
-
-
-void PROCULUS_Control_Register_Write(unsigned char *vetor, unsigned char size){
-     USART_put_int(0x5AA5);
-     USART_putc((unsigned char)(1+size));
-     USART_putc(0x80);
-     for(unsigned char i=0;i<size;i++)
-         USART_putc(vetor[i]);
-     PROCULUS_Delay(1);
+void EEPROM_24C512_Write_Byte(unsigned char chip_add, unsigned int mem_add, unsigned char data){
+     I2C_Master_Start();
+     I2C_Master_Write(0xA0|(chip_add<<1));
+     I2C_Master_Write(((char *)&mem_add)[1]);
+     I2C_Master_Write(((char *)&mem_add)[0]);
+     I2C_Master_Write(data);
+     I2C_Master_Stop();
+     _delay((unsigned long)((5)*(8000000/4000.0)));
 }
 
-void PROCULUS_Control_Register_Read(unsigned char reg, unsigned char size, unsigned char *retorno){
-     USART_put_int(0x5AA5);
-     USART_putc((unsigned char)(3+size));
-     USART_putc(0x81);
-     USART_putc(reg);
-     USART_putc(size);
 
-     if(USART_input_buffer()){
-        for(unsigned char i=0;i<32+10;i++)
-            retorno[i] = usart_buffer[(unsigned char)(6+i)];
-     }
-     PROCULUS_Delay(1);
+unsigned char EEPROM_24C512_Read_Byte(unsigned char chip_add, unsigned int mem_add){
+ unsigned char retorno;
+ I2C_Master_Start();
+ I2C_Master_Write(0xA0|(chip_add<<1));
+ I2C_Master_Write(((char *)&mem_add)[1]);
+ I2C_Master_Write(((char *)&mem_add)[0]);
+ I2C_Master_RepeatedStart();
+ I2C_Master_Write(0xA1|(chip_add<<1));
+ retorno = I2C_Master_Read(0);
+ I2C_Master_Stop();
+ return retorno;
+}
+
+
+void EEPROM_24C512_Write_Int(unsigned char chip_add, unsigned int mem_add, unsigned int data){
+     I2C_Master_Start();
+     I2C_Master_Write(0xA0|(chip_add<<1));
+     I2C_Master_Write(((char *)&mem_add)[1]);
+     I2C_Master_Write(((char *)&mem_add)[0]);
+     I2C_Master_Write(((char *)&data)[1]);
+     I2C_Master_Write(((char *)&data)[0]);
+     I2C_Master_Stop();
+     _delay((unsigned long)((5)*(8000000/4000.0)));
+}
+
+unsigned int EEPROM_24C512_Read_Int(unsigned char chip_add, unsigned int mem_add){
+     unsigned int retorno=0;
+     I2C_Master_Start();
+     I2C_Master_Write(0xA0|(chip_add<<1));
+     I2C_Master_Write(((char *)&mem_add)[1]);
+     I2C_Master_Write(((char *)&mem_add)[0]);
+     I2C_Master_RepeatedStart();
+     I2C_Master_Write(0xA1|(chip_add<<1));
+     retorno =(I2C_Master_Read(1)<<8);
+     retorno+= I2C_Master_Read(0);
+     I2C_Master_Stop();
+     return retorno ;
 }
 
 
 
-
-
-void PROCULUS_VP_Write(unsigned int vp, char *vetor, char size){
-     USART_put_int(0x5AA5);
-     USART_putc((unsigned char)(3+size));
-     USART_putc(0x82);
-     USART_put_int(vp);
-     for(unsigned char i=0;i<size;i++)
-         USART_putc(vetor[i]);
-
-     PROCULUS_Delay(1);
-}
-
-
-void PROCULUS_VP_Read(unsigned int vp, char *vetor, char size){
-     USART_put_int(0x5AA5);
-     USART_putc(4);
-     USART_putc(0x83);
-     USART_put_int(vp);
-     USART_putc((unsigned char)(size>>1));
-
-     if(USART_input_buffer()){
-        for(unsigned char i=0;i<size;i++)
-            (vetor[i]) = usart_buffer[(unsigned char)(7+i)];
-        }
-     PROCULUS_Delay(1);
+void EEPROM_24C512_Write_Str(unsigned char chip_add, unsigned int mem_add,char *data){
+     I2C_Master_Start();
+     I2C_Master_Write(0xA0|(chip_add<<1));
+     I2C_Master_Write(((char *)&mem_add)[1]);
+     I2C_Master_Write(((char *)&mem_add)[0]);
+     while(*data){
+          I2C_Master_Write(*data);
+          data++;
+          }
+     I2C_Master_Write(0);
+     I2C_Master_Stop();
+     _delay((unsigned long)((5)*(8000000/4000.0)));
 }
 
 
 
-
-
-
-void PROCULUS_VP_Write_Byte(unsigned int vp, unsigned char value){
-     char vetor[1];
-     vetor[0]=value;
-     PROCULUS_VP_Write(vp,vetor,1);
-}
-unsigned char PROCULUS_VP_Read_Byte(unsigned int vp){
-     char vetor[1];
-     PROCULUS_VP_Read(vp,vetor,1);
-     return vetor[0];
-}
-
-
-
-
-void PROCULUS_VP_Write_UInt16(unsigned int vp, unsigned int value){
-     char vetor[2];
-     unsigned char *pt;
-     pt=(unsigned char *)(&value);
-     vetor[1]=(char)(value>>8);
-     vetor[0]=(char)(value);
-     PROCULUS_VP_Write(vp,vetor,2);
-}
-unsigned int PROCULUS_VP_Read_UInt16(unsigned int vp){
-     char vetor[2];
-     PROCULUS_VP_Read(vp,vetor,2);
-     return (unsigned int)((vetor[0]<<8)+vetor[1]);
-}
-
-
-
-
-void PROCULUS_VP_Write_Long32(unsigned int vp,long value){
-     char vetor[4];
-     unsigned char *pt;
-     pt=(unsigned char *)(&value);
-     vetor[3]=(char)(*(pt++));
-     vetor[2]=(char)(*(pt++));
-     vetor[1]=(char)(*(pt++));
-     vetor[0]=(char)(*(pt++));
-     PROCULUS_VP_Write(vp,vetor,4);
-}
-long PROCULUS_VP_Read_Long32(unsigned int vp){
-     char vetor[4];
-     PROCULUS_VP_Read(vp,vetor,4);
-     return ((long)*(vetor+0)<<24)|
-            ((long)*(vetor+1)<<16)|
-            ((long)*(vetor+2)<<8) |
-             (long)*(vetor+3);
-}
-# 147 "proculus.c"
-void PROCULUS_VP_Write_Float32(unsigned int vp, float value){
-     char vetor[4];
-     unsigned char *pt;
-     pt=(unsigned char *)(&value);
-     vetor[3]=(char)(*(pt++));
-     vetor[2]=(char)(*(pt++));
-     vetor[1]=(char)(*(pt++));
-     vetor[0]=(char)(*(pt++));
-     PROCULUS_VP_Write(vp,vetor,4);
-}
- float PROCULUS_VP_Read_Float32(unsigned int vp){
-     char vetor[4];
-     PROCULUS_VP_Read(vp,vetor,4);
-     return 0;
-}
-# 186 "proculus.c"
-void PROCULUS_VP_Write_Double32(unsigned int vp, double value){
-     char vetor[4];
-
-
-
-
-
-
-     PROCULUS_VP_Write(vp,vetor,4);
-}
-double PROCULUS_VP_Read_Double32(unsigned int vp){
-     char vetor[4];
-     PROCULUS_VP_Read(vp,vetor,4);
-     return 0;
-}
-
-
-
-
-void PROCULUS_VP_Write_String(unsigned int vp, char *text){
-     PROCULUS_VP_Write(vp, text, strlen(text)+1);
-}
-void PROCULUS_VP_Read_String(unsigned int vp, char *text){
-     PROCULUS_VP_Read(vp, text, 0x0A);
-}
-
-
-
-
-
-
-unsigned char PROCULUS_Read_Version(void){
-    unsigned char retorno[2];
-    PROCULUS_Control_Register_Read(0x00,2,retorno);
-    return retorno[0];
-}
-
-void PROCULUS_Buzzer(unsigned int time_ms_x_10){
-     unsigned char vetor[2];
-     time_ms_x_10 /= 10.0;
-     vetor[0]=0x02;
-     vetor[1]=(unsigned char) time_ms_x_10;
-     PROCULUS_Control_Register_Write(vetor,2);
-}
-
-void PROCULUS_Reset(void){
-     unsigned char vetor[3];
-     vetor[0]=0xEE;
-     vetor[1]=0x5A;
-     vetor[2]=0xA5;
-     PROCULUS_Control_Register_Write(vetor,3);
-}
-
-
-
-
-
-void PROCULUS_Show_Screen(unsigned int screen){
-     unsigned char vetor[3];
-     vetor[0] = 0x03;
-     vetor[1] = (char)(screen>>8);
-     vetor[2] = (char) screen;
-     PROCULUS_Control_Register_Write(vetor,3);
-}
-
-
-
-
-void PROCULUS_Buffer_to_Proculus(t_proculus *proculus){
-     proculus->header =(*(usart_buffer+0)<<8)+*(usart_buffer+1);
-     proculus->size = *(usart_buffer+2);
-     proculus->function = *(usart_buffer+3);
-     proculus->VP =(*(usart_buffer+4)<<8)+*(usart_buffer+5);
-     proculus->length = *(usart_buffer+6);
-     for(unsigned char i=0;i<20;i++)
-         proculus->data[i] = usart_buffer[7+i];
-}
-
-
-
-
-void PROCULUS_Delay(unsigned int tempo_ms){
-    for(unsigned int i=0;i<tempo_ms;i++){
-        _delay((unsigned long)((1)*(8000000/4000.0)));
-    }
+void EEPROM_24C512_Read_Str(unsigned char chip_add, unsigned int mem_add,char *texto){
+ I2C_Master_Start();
+ I2C_Master_Write(0xA0|(chip_add<<1));
+ I2C_Master_Write(((char *)&mem_add)[1]);
+ I2C_Master_Write(((char *)&mem_add)[0]);
+ I2C_Master_RepeatedStart();
+ I2C_Master_Write(0xA1|(chip_add<<1));
+ while((*texto)!=0)
+      {
+      *texto=I2C_Master_Read(1);
+      texto++;
+      }
+ (*texto)=I2C_Master_Read(0);
+ I2C_Master_Stop();
+ _delay((unsigned long)((5)*(8000000/4000.0)));
 }

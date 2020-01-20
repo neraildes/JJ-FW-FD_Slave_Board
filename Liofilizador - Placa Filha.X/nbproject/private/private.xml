@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+<<<<<<< HEAD
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="19">
         <file>
             <url>SlaveLiofilizadorVer1.c</url>
@@ -40,13 +41,20 @@
             </bookmark>
         </file>
     </editor-bookmarks>
+=======
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+>>>>>>> 7841aa4e8ca7bc004c2a57b291c87741ad59dafb
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/global.h</file>
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/SlaveLiofilizadorVer1.c</file>
+<<<<<<< HEAD
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/versao.h</file>
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/EEPROM_24C1025.c</file>
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/EEPROM_24C1025.h</file>
+=======
+            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/global.h</file>
+>>>>>>> 7841aa4e8ca7bc004c2a57b291c87741ad59dafb
         </group>
     </open-files>
 </project-private>

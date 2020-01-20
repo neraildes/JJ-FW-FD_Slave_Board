@@ -2,7 +2,12 @@
 
 v1.0.7
    reduzido o tempo de captura para 10 segundos
+<<<<<<< HEAD
    DataLog salvando e fechando sessão com 0XFFFF
+=======
+   Alteração nas gravações de byte e inteiro na memoria 24C1025.
+
+>>>>>>> 7841aa4e8ca7bc004c2a57b291c87741ad59dafb
 
 
 v1.0.6
