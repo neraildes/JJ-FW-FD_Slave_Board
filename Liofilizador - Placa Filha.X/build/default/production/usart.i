@@ -2693,9 +2693,11 @@ union {
              unsigned flag_global_vacuo : 1 ;
              };
       } statuspower;
-# 6 "usart.c" 2
+# 5 "usart.c" 2
+
 # 1 "./protocolo.h" 1
-# 7 "usart.c" 2
+# 6 "usart.c" 2
+
 # 1 "./usart.h" 1
 # 30 "./usart.h"
 void USART_to_Protocol(t_usart_protocol *usart_protocol);
@@ -2707,7 +2709,8 @@ void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
 void USART_put_buffer(char *vetor, unsigned int size);
 unsigned char USART_input_buffer(void);
-# 8 "usart.c" 2
+# 7 "usart.c" 2
+
 
 
 volatile unsigned char usart_buffer[32+10];
