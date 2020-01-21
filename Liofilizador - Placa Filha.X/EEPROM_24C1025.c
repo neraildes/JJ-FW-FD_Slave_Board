@@ -228,7 +228,7 @@ void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char 
              (*texto)=I2C_Master_Read(0);
              I2C_Master_Stop(); 
              
-             my_delay_ms_WDT(5);
+             my_delay_ms_WDT(5); 
              mem_add++;
              texto++;             
              if(mem_add>0xFFFF) range=0x08; else range=0x00;
