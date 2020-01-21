@@ -3028,7 +3028,7 @@ void Decodify_Command(void)
 
         case 0X2B:
              Send_To_MB(11);
-             USART_put_string("v1.0.10");
+             USART_put_string("v1.0.11");
              break;
         case 0X1A:
 # 356 "SlaveLiofilizadorVer1.c"
@@ -3355,9 +3355,9 @@ void mediaLeituraPt100Umidadde(unsigned char canal)
         }
 
      }
-# 1028 "SlaveLiofilizadorVer1.c"
+# 1029 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog){
-     EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) Temperatura0*10);
+     EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) (Temperatura0*10.0));
      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) Umidade1);
 
 
