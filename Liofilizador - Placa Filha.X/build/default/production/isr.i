@@ -2722,14 +2722,7 @@ volatile unsigned char hora;
 volatile unsigned int Delay_Led_Tmr0 ;
 volatile unsigned int Delay_Led_Usart ;
 volatile unsigned int Delay_Led_Memory ;
-
-
-extern volatile char TempoCNT_0;
-extern volatile char TempoCNT_1;
-
-
-
-
+# 29 "isr.c"
 void __attribute__((picinterrupt(("")))) isr(void)
 {
 unsigned int tempo;
@@ -2785,8 +2778,8 @@ unsigned int tempo;
                    segundo++;
 
 
-                   if(TempoCNT_0>0) TempoCNT_0--;
-                   if(TempoCNT_1>0) TempoCNT_1--;
+
+
 
 
                    if(segundo==60){

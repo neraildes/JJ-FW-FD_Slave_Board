@@ -2847,24 +2847,7 @@ void Send_To_MB(unsigned char size);
 void Send_Reply_OK(void);
 
 
-
-
-
-
-void mediatemperaturaNTC(unsigned char canal);
-void Load_Work(void);
-
-void Auto_Relay0(void);
-void Auto_Relay1(void);
-
-void Rele0Ligado(void);
-void Rele1Ligado(void);
-
-
-void Rele0Desligado(void);
-void Rele1Desligado(void);
-
-void DelayRele(char canal);
+void mediaLeituraPt100Umidadde(unsigned char canal);
 # 78 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog);
 
@@ -2882,33 +2865,10 @@ extern volatile unsigned char hora;
 extern volatile unsigned int Delay_Led_Tmr0 ;
 extern volatile unsigned int Delay_Led_Usart ;
 extern volatile unsigned int Delay_Led_Memory;
+# 128 "SlaveLiofilizadorVer1.c"
+float Temperatura0,Umidade1;
 
 
-
-
-
-
-int Status0;
-volatile float SetPoint0;
-float Histerese0;
-char TempoON_0;
-char TempoOFF_0;
-char IndexLeitura_0;
-volatile char TempoCNT_0;
-
-int Status1;
-volatile float SetPoint1;
-char Histerese1;
-char TempoON_1;
-char TempoOFF_1;
-char IndexLeitura_1;
-volatile char TempoCNT_1;
-
-
-float Temperatura0,Temperatura1;
-unsigned char RL0Status=1;
-unsigned char RL1Status=1;
-# 131 "SlaveLiofilizadorVer1.c"
 t_usart_protocol usart_protocol;
 unsigned char canal;
 char Board_Number;
@@ -3004,35 +2964,18 @@ void main(void) {
 
      Board_Number=(((0x0F)&(~PORTB)));
      canal=1;
-# 239 "SlaveLiofilizadorVer1.c"
-     Load_Work();
-     generic_status.flag_global_hot=0;
 
 
 
-
-
+     statuspower.flag_global_condensador=0;
+# 246 "SlaveLiofilizadorVer1.c"
      while(1)
           {
 
          generic_status.flag_main_loop_WDT=1;
-
-
-
+# 270 "SlaveLiofilizadorVer1.c"
          if(++canal==2) canal=0;
-         mediatemperaturaNTC(canal);
-
-
-         if(generic_status.flag_global_hot)
-            {
-             Auto_Relay0();
-             Auto_Relay1();
-            }
-         else
-            {
-            PORTCbits.RC0=0;
-            PORTCbits.RC1=0;
-            }
+         mediaLeituraPt100Umidadde(canal);
 # 284 "SlaveLiofilizadorVer1.c"
          if(generic_status.flag_usart_rx==1)
             {
@@ -3088,11 +3031,11 @@ void Decodify_Command(void)
              USART_put_string("v1.0.10");
              break;
         case 0X1A:
-
+# 356 "SlaveLiofilizadorVer1.c"
              if(usart_protocol.value[0]==0)
                 OutPut=Temperatura0;
              else
-                OutPut=Temperatura1;
+                OutPut=Umidade1;
 # 369 "SlaveLiofilizadorVer1.c"
              OutPut*=10.0;
 
@@ -3113,37 +3056,22 @@ void Decodify_Command(void)
              Delay_Led_Tmr0=0;
              milisegundo=0;
              break;
-
-
-        case 0x2A:
-             if(usart_protocol.value[0]==0)
-                generic_status.flag_global_hot=0;
-             else
-                generic_status.flag_global_hot=1;
-             break;
-
-
+# 398 "SlaveLiofilizadorVer1.c"
         case 0x03:
              Send_To_MB(2);
-# 409 "SlaveLiofilizadorVer1.c"
-             USART_put_int(3);
+
+
+
+
+
+             USART_put_int(2);
+
+
+
+
 
              break;
-
-
-
-
-
-
-
-        case 0x01:
-             Send_To_MB(3);
-             Send_Reply_OK();
-             Load_Work();
-             break;
-
-
-
+# 427 "SlaveLiofilizadorVer1.c"
         case 0x08:
              EEPROM_Write_Byte(usart_protocol.value[0],
                                usart_protocol.value[1]);
@@ -3379,54 +3307,43 @@ void Send_Reply_OK(void){
      USART_put_string("OK");
 
  }
-# 670 "SlaveLiofilizadorVer1.c"
-void DelayRele(char canal){
-     my_delay_ms((canal+2*Board_Number-2)*10);
-}
-
-
-
-
-
-
-
-void mediatemperaturaNTC(unsigned char canal)
+# 733 "SlaveLiofilizadorVer1.c"
+void mediaLeituraPt100Umidadde(unsigned char canal)
      {
      float Temp;
+     float tensao;
      char i;
 
      ADCON0bits.CHS=canal;
      my_delay_ms(1);
-
      Temp=0;
 
      for(i=1;i<15;i++)
-         {
-         Temp+=ADC_Read_NTC(canal);
-         if(Package_Usart_is_for_me()==1) break;
-
-         if(generic_status.flag_global_hot)
-           {
-
-           if((TempoCNT_0==0)&&
-              (RL0Status==1)&&
-              (Status0==1)) Rele0Ligado();
-
-           if((TempoCNT_1==0)&&
-              (RL1Status==1)&&
-              (Status1==1)) Rele1Ligado();
-
-           }
-         }
+        {
+        Temp+=ADC_Media_10bits(canal);
+        if(Package_Usart_is_for_me()==1) break;
+        }
      if(i<10)
-       {
+        {
 
-       return;
-       }
+        return;
+        }
+
+
      if(i==15)
-        Temp/=(i-1);
+       Temp/=(i-1);
      else
-        Temp/=(i);
+       Temp/=(i);
+
+
+
+
+
+     tensao=(5.0/1023.0);
+     Temp*=tensao;
+     Temp*=40.0;
+     Temp-=110.0;
+
 
      if(canal==0)
         {
@@ -3434,162 +3351,14 @@ void mediatemperaturaNTC(unsigned char canal)
         }
      else
         {
-        Temperatura1=Temp;
+        Umidade1=Temp;
         }
 
      }
-# 857 "SlaveLiofilizadorVer1.c"
-void Auto_Relay0(void){
-             if(Status0==0)
-                 {
-                 Rele0Desligado();
-                 }
-             else
-                 {
-
-                 if (Temperatura0<=(SetPoint0-Histerese0))
-                    {
-                    RL0Status=1;
-                    Rele0Ligado();
-                    }
-                 else if (Temperatura0<=SetPoint0)
-                          {
-                          if(RL0Status==1)
-                              {
-                              Rele0Ligado();
-                              }
-                          else
-                              {
-                              Rele0Desligado();
-                              }
-                          }
-                 else if (Temperatura0>SetPoint0)
-                          {
-                          RL0Status=0;
-                          Rele0Desligado();
-                          }
-                 }
-
-
-}
-
-
-
-void Auto_Relay1(void){
-             if(Status1==0)
-                 {
-                 Rele1Desligado();
-                 }
-             else
-                 {
-
-                 if (Temperatura1<=(SetPoint1-Histerese1))
-                    {
-                    RL1Status=1;
-                    Rele1Ligado();
-                    }
-                 else if (Temperatura1<=SetPoint1)
-                          {
-                          if(RL1Status==1)
-                              {
-                              Rele1Ligado();
-                              }
-                          else
-                              {
-                              Rele1Desligado();
-                              }
-                          }
-                 else if (Temperatura1>SetPoint1)
-                          {
-                          RL1Status=0;
-                          Rele1Desligado();
-                          }
-                 }
-
-
-}
-
-
-void Rele0Desligado(void){
-     PORTCbits.RC0=0;
-}
-
-void Rele1Desligado(void){
-     PORTCbits.RC1=0;
-}
-
-
-void Rele0Ligado(void){
-
-
-        if(TempoCNT_0==0)
-            {
-
-
-            if(PORTCbits.RC0==0)
-              {
-              TempoCNT_0=TempoON_0;
-              PORTCbits.RC0=1;
-              }
-            else
-              {
-              TempoCNT_0=TempoOFF_0;
-              PORTCbits.RC0=0;
-              }
-            }
-}
-
-
-void Rele1Ligado(void){
-
-
-        if(TempoCNT_1==0)
-            {
-
-
-            if(PORTCbits.RC1==0)
-              {
-              TempoCNT_1=TempoON_1;
-              PORTCbits.RC1=1;
-              }
-            else
-              {
-              TempoCNT_1=TempoOFF_1;
-              PORTCbits.RC1=0;
-              }
-            }
-}
-
-
-
-
-
-void Load_Work(void){
-
-
-     SetPoint0 = EEPROM_Read_Integer(0);
-     SetPoint0/=10;
-     TempoON_0 = EEPROM_Read_Byte(2);
-     TempoOFF_0= EEPROM_Read_Byte(3);
-     Histerese0= EEPROM_Read_Byte(4);
-     Status0 = EEPROM_Read_Integer(5);
-
-     SetPoint1 = EEPROM_Read_Integer(7);
-     SetPoint1/=10;
-     TempoON_1 = EEPROM_Read_Byte(9);
-     TempoOFF_1= EEPROM_Read_Byte(10);
-     Histerese1= EEPROM_Read_Byte(11);
-     Status1 = EEPROM_Read_Integer(12);
-
-     statuspower.bits=EEPROM_Read_Byte(14);
-}
-
-
-
-
+# 1028 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) Temperatura0*10);
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) Temperatura1*10);
+     EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) Umidade1);
 
 
 

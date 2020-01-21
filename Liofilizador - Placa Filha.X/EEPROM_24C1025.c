@@ -3,6 +3,7 @@
 #include "global.h"
 #include "I2C.h"
 #include "EEPROM_24C1025.h"
+#include "my_delay.h"
 
 
 extern volatile unsigned int Delay_Led_Memory; //Verde
@@ -35,13 +36,14 @@ void EEPROM_24C1025_Write_Buffer(unsigned char chip_add,
      I2C_Master_Write(Lo(mem_add));   // endereço da eerprom onde será salvo o dado Low     
      for(count=0;count<(sizedata-1);count++) 
           {
+          asm("CLRWDT");
           if(mem_add>0x1FFFF) return;
           if((mem_add+1)%128==0)
             {
             I2C_Master_Write(*data);
             I2C_Master_Stop();
 
-            __delay_ms(5);
+            my_delay_ms_WDT(5);
             mem_add++;
             data++;
             if(mem_add>0xFFFF) range=0x08; else range=0x00;
@@ -64,7 +66,8 @@ void EEPROM_24C1025_Write_Buffer(unsigned char chip_add,
      } 
      I2C_Master_Write(*data);
      I2C_Master_Stop();                // condição de stop na comunicação i2c           
-     __delay_ms(5);                   //__delay_us(650);
+     //__delay_ms(5);                   //__delay_us(650);
+     my_delay_ms_WDT(5);
 }
 
 
@@ -100,13 +103,14 @@ void EEPROM_24C1025_Read_Buffer(unsigned char chip_add,
      
      for(char cnt=0;cnt<(sizedata);cnt++)
         {
+           asm("CLRWDT");         
            if(mem_add>0x1FFFF) break;
            if((mem_add+1)%128==0)
              {
              (*data)=I2C_Master_Read(0);
              I2C_Master_Stop(); 
              
-             __delay_ms(5);
+             my_delay_ms_WDT(5);
              mem_add++;
              data++;             
              if(mem_add>0xFFFF) range=0x08; else range=0x00;
@@ -157,13 +161,14 @@ void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char
      I2C_Master_Write(Lo(mem_add));   // endereço da eerprom onde será salvo o dado Low     
      while(*data)
           {
+          asm("CLRWDT");
           if(mem_add>0x1FFFF) return;
           if((mem_add+1)%128==0)
             {
             I2C_Master_Write(*data);
             I2C_Master_Stop();
 
-            __delay_ms(5);
+            my_delay_ms_WDT(5);
             mem_add++;
             data++;
             if(mem_add>0xFFFF) range=0x08; else range=0x00;
@@ -186,7 +191,7 @@ void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char
      } 
      I2C_Master_Write(0);
      I2C_Master_Stop();                // condição de stop na comunicação i2c           
-     __delay_ms(5);     
+     my_delay_ms_WDT(5);     
      
 }
 
@@ -216,13 +221,14 @@ void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char 
      
      cnt=0;
      do{
+           asm("CLRWDT");
            if(mem_add>0x1FFFF) break;
            if((mem_add+1)%128==0)
              {
              (*texto)=I2C_Master_Read(0);
              I2C_Master_Stop(); 
              
-             __delay_ms(5);
+             my_delay_ms_WDT(5);
              mem_add++;
              texto++;             
              if(mem_add>0xFFFF) range=0x08; else range=0x00;
