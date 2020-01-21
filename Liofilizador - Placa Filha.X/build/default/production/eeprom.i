@@ -2379,7 +2379,8 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 10 "eeprom.c" 2
+# 9 "eeprom.c" 2
+
 # 1 "./global.h" 1
 # 32 "./global.h"
 #pragma config FOSC = INTRC_NOCLKOUT
@@ -2697,7 +2698,8 @@ union {
              unsigned flag_global_vacuo : 1 ;
              };
       } statuspower;
-# 11 "eeprom.c" 2
+# 10 "eeprom.c" 2
+
 # 1 "./eeprom.h" 1
 # 14 "./eeprom.h"
 void EEPROM_Write_Byte(unsigned char addr, unsigned char dado);
@@ -2716,7 +2718,8 @@ long EEPROM_Read_Long32(unsigned char addr);
 
 void EEPROM_Write_String(unsigned char addr,char *dado);
 void EEPROM_Read_String(unsigned char addr,char *dado);
-# 12 "eeprom.c" 2
+# 11 "eeprom.c" 2
+
 
 
 
