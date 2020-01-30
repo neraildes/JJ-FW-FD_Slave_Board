@@ -2431,7 +2431,7 @@ typedef struct {
         unsigned char size;
         char value[10];
 } t_usart_protocol;
-# 89 "./protocolo.h"
+# 90 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2825,112 +2825,4 @@ void EEPROM_Read_String(unsigned char addr,char *dado)
         *(dado++)=c;
 
       }while(c);
-}
-# 126 "eeprom.c"
-void EEPROM_Write_Float(unsigned char addr,float dado)
-{
-      unsigned char *ptr;
-      unsigned char i;
-      unsigned char addr_memo;
-      addr_memo=addr;
-      ptr=(unsigned char *)&dado;
-      for (i=0;i<3;i++)
-          EEPROM_Write_Byte(addr++,*(ptr++));
-}
-
-
-float EEPROM_Read_Float(unsigned char addr)
-{
-      float result;
-      unsigned char *ptr;
-      unsigned char i;
-      ptr=(unsigned char *)&result;
-      for (i=0;i<3;i++)
-          *(ptr++)=EEPROM_Read_Byte(addr++);
-      return result;
-}
-
-
-
-
-
-
-
-void EEPROM_Write_Double(unsigned char addr,double dado)
-{
-      unsigned char *ptr;
-      unsigned char i;
-      unsigned char addr_memo;
-      addr_memo=addr;
-      ptr=(unsigned char *)&dado;
-      for (i=0;i<4;i++)
-          EEPROM_Write_Byte(addr++,*(ptr++));
-}
-
-
-
-float EEPROM_Read_Double(unsigned char addr)
-{
-      float result;
-      unsigned char *ptr;
-      unsigned char i;
-      ptr=(unsigned char *)&result;
-      for (i=0;i<4;i++)
-          *(ptr++)=EEPROM_Read_Byte(addr++);
-      return result;
-}
-# 186 "eeprom.c"
-void EEPROM_Write_Long24(unsigned char addr,long dado)
-{
-      unsigned char *ptr;
-      unsigned char i;
-      unsigned char addr_memo;
-      addr_memo=addr;
-      ptr=(unsigned char *)&dado;
-      for (i=0;i<3;i++){
-          EEPROM_Write_Byte(addr,*ptr);
-          addr++;
-          ptr++;
-          }
-}
-
-
-unsigned long EEPROM_Read_ULong24(unsigned char addr)
-{
-      unsigned long result;
-      unsigned char *ptr;
-      unsigned char i;
-      ptr=(unsigned char *)&result;
-      for (i=0;i<3;i++)
-          *(ptr++)=EEPROM_Read_Byte(addr++);
-      return result;
-}
-
-
-
-
-
-void EEPROM_Write_Long32(unsigned char addr,long dado)
-{
-      unsigned char *ptr;
-      unsigned char i;
-      unsigned char addr_memo;
-      addr_memo=addr;
-      ptr=(unsigned char *)&dado;
-      for (i=0;i<4;i++)
-           EEPROM_Write_Byte(addr++,*(ptr++));
-}
-
-
-
-
-long EEPROM_Read_Long32(unsigned char addr)
-{
-      unsigned long result;
-      unsigned char *ptr;
-      unsigned char i;
-      ptr=(unsigned char *)&result;
-      for (i=0;i<4;i++)
-          *(ptr++)=EEPROM_Read_Byte(addr++);
-      return result;
 }

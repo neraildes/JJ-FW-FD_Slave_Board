@@ -2423,7 +2423,7 @@ typedef struct {
         unsigned char size;
         char value[10];
 } t_usart_protocol;
-# 89 "./protocolo.h"
+# 90 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 

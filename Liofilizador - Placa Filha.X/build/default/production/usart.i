@@ -61,7 +61,7 @@ typedef struct {
         unsigned char size;
         char value[10];
 } t_usart_protocol;
-# 89 "./protocolo.h"
+# 90 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2796,24 +2796,6 @@ void USART_put_buffer(char *vetor, unsigned int size)
         ptr++;
         loop++;
     }
-}
-
-
-
-unsigned char USART_input_buffer(void){
-    unsigned int time=0;
-    unsigned char result=0;
-
-    while(time<30){
-        if(generic_status.flag_usart_rx){
-           generic_status.flag_usart_rx=0;
-           result = 1;
-           break;
-           }
-        time++;
-        _delay((unsigned long)((1)*(8000000/4000.0)));
-    }
-    return result;
 }
 # 138 "usart.c"
 void USART_put_int(int value){

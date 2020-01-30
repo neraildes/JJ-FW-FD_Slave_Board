@@ -18,9 +18,9 @@
 
 //#define VACCUM_BOARD
 
-#define PT100_UMIDADE
+//#define PT100_UMIDADE
 
-//#define NTC_BOARD  //Retorno para maquina real
+#define NTC_BOARD  //Retorno para maquina real
 
 //------------------------------------------------------------------------------
 

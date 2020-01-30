@@ -59,7 +59,7 @@ typedef struct {
         unsigned char size;
         char value[10];
 } t_usart_protocol;
-# 89 "./protocolo.h"
+# 90 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2722,7 +2722,14 @@ volatile unsigned char hora;
 volatile unsigned int Delay_Led_Tmr0 ;
 volatile unsigned int Delay_Led_Usart ;
 volatile unsigned int Delay_Led_Memory ;
-# 29 "isr.c"
+
+
+extern volatile char TempoCNT_0;
+extern volatile char TempoCNT_1;
+
+
+
+
 void __attribute__((picinterrupt(("")))) isr(void)
 {
 unsigned int tempo;
@@ -2778,8 +2785,8 @@ unsigned int tempo;
                    segundo++;
 
 
-
-
+                   if(TempoCNT_0>0) TempoCNT_0--;
+                   if(TempoCNT_1>0) TempoCNT_1--;
 
 
                    if(segundo==60){

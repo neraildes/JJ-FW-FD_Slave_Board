@@ -57,7 +57,7 @@ typedef struct {
         unsigned char size;
         char value[10];
 } t_usart_protocol;
-# 89 "./protocolo.h"
+# 90 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2709,11 +2709,3 @@ float ADC_Media_10bits(char canal);
 unsigned int ADC_Max_10Bits(char canal);
 # 3 "pt100.c" 2
 
-
-
-double PT100_Read_Temperature(unsigned char canal){
-
-
-
-       return 0;
-}

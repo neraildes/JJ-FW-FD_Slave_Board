@@ -64,25 +64,26 @@ typedef struct {
 #define COMMAND_SCHD_ANALOG     0X1B
 #define COMMAND_SCHD_START      0X1C
 #define COMMAND_SCHD_STOP       0X1D
-//----------- OUTROS ---------------
-#define COMMAND_CLK_PIC_W       0X1E
-#define COMMAND_CLK_PIC_R       0X1F
-#define COMMAND_LDC_PAGE        0X20
-#define COMMAND_PROCULUS_Buzzer 0X21
-#define COMMAND_LCD_W_VP_INT    0X22
-#define COMMAND_LCD_R_VP_INT    0X23
-#define COMMAND_LCD_W_VP_STR    0X24
-#define COMMAND_LCD_R_VP_STR    0X25
+//----------- PROCULUS -------------
+#define COMMAND_LCD_W_VP_INT    0X20
+#define COMMAND_LCD_R_VP_INT    0X21
+#define COMMAND_LCD_W_VP_STR    0X22
+#define COMMAND_LCD_R_VP_STR    0X23
+#define COMMAND_PROCULUS_Buzzer 0X24
+#define COMMAND_LDC_PAGE        0X25
+#define COMMAND_CONTROL_ACTIVE  0X26
+//...
+#define COMMAND_CLK_PIC_W       0X2E
+#define COMMAND_CLK_PIC_R       0X2F
 //---------------SLAVE--------------
-#define COMMAND_RELAY           0x26
-#define COMMAND_INPUT_LED       0X27
+#define COMMAND_RELAY           0x30
+#define COMMAND_INPUT_LED       0X31
+//...
 //----------------------------------
-#define COMMAND_READ_GRAUS_TEXT 0x28
-#define COMMAND_READ_GRAUS_REAL 0x29
+#define COMMAND_GLOBAL_HOT      0x40
+#define COMMAND_VERSION         0x41
+//...
 //----------------------------------
-#define COMMAND_GLOBAL_HOT      0x2A
-//----------------------------------
-#define COMMAND_VERSION         0X2B
 
 
 
