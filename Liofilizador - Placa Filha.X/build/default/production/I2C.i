@@ -7,60 +7,6 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "I2C.c" 2
-# 1 "./global.h" 1
-# 32 "./global.h"
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = ON
-#pragma config PWRTE = ON
-#pragma config MCLRE = OFF
-#pragma config CP = ON
-#pragma config CPD = OFF
-#pragma config BOREN = ON
-#pragma config IESO = ON
-#pragma config FCMEN = ON
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
-
-
-
-
-
-# 1 "./isr.h" 1
-# 13 "./isr.h"
-void __attribute__((picinterrupt(("")))) isr(void);
-# 52 "./global.h" 2
-
-# 1 "./global.h" 1
-# 53 "./global.h" 2
-
-# 1 "./protocolo.h" 1
-
-
-
-
-
-
-
-# 1 "./global.h" 1
-# 8 "./protocolo.h" 2
-# 21 "./protocolo.h"
-typedef struct {
-        unsigned int header;
-        unsigned char origem;
-        unsigned char destino;
-        unsigned char command;
-        unsigned char size;
-        char value[10];
-} t_usart_protocol;
-# 89 "./protocolo.h"
-char Package_Usart_is_for_me();
-# 54 "./global.h" 2
-
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2425,7 +2371,62 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 55 "./global.h" 2
+# 1 "I2C.c" 2
+
+# 1 "./global.h" 1
+# 32 "./global.h"
+#pragma config FOSC = INTRC_NOCLKOUT
+#pragma config WDTE = ON
+#pragma config PWRTE = ON
+#pragma config MCLRE = OFF
+#pragma config CP = ON
+#pragma config CPD = OFF
+#pragma config BOREN = ON
+#pragma config IESO = ON
+#pragma config FCMEN = ON
+#pragma config LVP = OFF
+
+
+#pragma config BOR4V = BOR40V
+#pragma config WRT = OFF
+
+
+
+
+
+
+
+# 1 "./isr.h" 1
+# 13 "./isr.h"
+void __attribute__((picinterrupt(("")))) isr(void);
+# 52 "./global.h" 2
+
+# 1 "./global.h" 1
+# 53 "./global.h" 2
+
+# 1 "./protocolo.h" 1
+
+
+
+
+
+
+
+# 1 "./global.h" 1
+# 8 "./protocolo.h" 2
+# 21 "./protocolo.h"
+typedef struct {
+        unsigned int header;
+        unsigned char origem;
+        unsigned char destino;
+        unsigned char command;
+        unsigned char size;
+        char value[10];
+} t_usart_protocol;
+# 90 "./protocolo.h"
+char Package_Usart_is_for_me();
+# 54 "./global.h" 2
+
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -2689,50 +2690,50 @@ union {
              unsigned flag_global_vacuo : 1 ;
              };
       } statuspower;
-# 1 "I2C.c" 2
+# 2 "I2C.c" 2
 
 # 1 "./I2C.h" 1
 # 11 "./I2C.h"
 void I2C_Master_Init(const unsigned long c);
 void I2C_Slave_Init(short address);
-void I2C_Master_Wait();
-void I2C_Master_Start();
-void I2C_Master_RepeatedStart();
-void I2C_Master_Stop();
+char I2C_Master_Wait(void);
+void I2C_Master_Start(void);
+void I2C_Master_RepeatedStart(void);
+void I2C_Master_Stop(void);
 void I2C_Master_Write(unsigned d);
 unsigned short I2C_Master_Read(unsigned short a);
-# 2 "I2C.c" 2
+# 3 "I2C.c" 2
 
 
 
-extern volatile unsigned int Delay_Led_Memory;
+extern unsigned int Delay_Led_Memory;
 
 void I2C_Master_Init(const unsigned long c)
 {
 
-  SSPCON = 0b00101000;
+
+
   SSPCON2 = 0;
-  SSPADD = ( 8000000 /(4*c))-1;
+  SSPADD = (8000000 /(4*c))-1;
   SSPSTAT = 0;
-  TRISC3 = 1;
-  TRISC4 = 1;
-
+  TRISCbits.TRISC3 = 1;
+  TRISCbits.TRISC4 = 1;
 }
-
-
 
 void I2C_Slave_Init(short address)
 {
   SSPSTAT = 0x80;
   SSPADD = address;
-  SSPCON = 0x36;
+
+
+
   SSPCON2 = 0x01;
-  TRISC3 = 1;
-  TRISC4 = 1;
-  GIE = 1;
-  PEIE = 1;
-  SSPIF = 0;
-  SSPIE = 1;
+  TRISCbits.TRISC3 = 1;
+  TRISCbits.TRISC4 = 1;
+  INTCONbits.GIE = 1;
+  INTCONbits.PEIE = 1;
+  PIR1bits.SSPIF = 0;
+  PIE1bits.SSPIE = 1;
 }
 
 
@@ -2740,47 +2741,69 @@ void I2C_Slave_Init(short address)
 
 
 
-void I2C_Master_Wait()
+char I2C_Master_Wait(void)
 {
-  while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
+  char tempo;
+  tempo=200;
+  while ((SSPSTAT & 0b00000100) || (SSPCON2 & 0b00011111))
+      {
+      if(tempo)
+         tempo--;
+      else
+         break;
+      _delay((unsigned long)((1)*(8000000/4000.0)));
+      }
+  return tempo ;
 }
 
-void I2C_Master_Start()
+void I2C_Master_Start(void)
 {
+  INTCONbits.GIE=0;
   Delay_Led_Memory=20;
-  I2C_Master_Wait();
-  SEN = 1;
+  if(I2C_Master_Wait())
+    {
+    SSPCON2bits.SEN = 1;
+    }
 }
 
-void I2C_Master_RepeatedStart()
+void I2C_Master_RepeatedStart(void)
 {
-  I2C_Master_Wait();
-  RSEN = 1;
+  if(I2C_Master_Wait())
+    {
+    SSPCON2bits.RSEN = 1;
+    }
 }
 
-void I2C_Master_Stop()
+void I2C_Master_Stop(void)
 {
-  I2C_Master_Wait();
-  PEN = 1;
+  if(I2C_Master_Wait())
+    {
+    SSPCON2bits.PEN = 1;
+    }
+  INTCONbits.GIE=1;
 }
 
 void I2C_Master_Write(unsigned d)
 {
-  generic_status.flag_main_loop_WDT=1;
-  I2C_Master_Wait();
-  SSPBUF = d;
+  if(I2C_Master_Wait())
+    {
+    SSPBUF = d;
+    }
 }
 
 unsigned short I2C_Master_Read(unsigned short a)
 {
   unsigned short temp;
-  generic_status.flag_main_loop_WDT=1;
-  I2C_Master_Wait();
-  RCEN = 1;
-  I2C_Master_Wait();
-  temp = SSPBUF;
-  I2C_Master_Wait();
-  ACKDT = (a)?0:1;
-  ACKEN = 1;
-  return temp;
+  if(I2C_Master_Wait())SSPCON2bits.RCEN = 1;
+  if(I2C_Master_Wait())temp = SSPBUF;
+  if(I2C_Master_Wait())
+    {
+    SSPCON2bits.ACKDT = (a)?0:1;
+    SSPCON2bits.ACKEN = 1;
+    return temp;
+    }
+  else
+    {
+    return 0x00;
+    }
 }

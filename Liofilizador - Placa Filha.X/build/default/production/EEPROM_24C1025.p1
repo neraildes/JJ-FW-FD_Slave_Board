@@ -15,20 +15,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;EEPROM_24C1025.c: 9: extern volatile unsigned int Delay_Led_Memory;
 [v _Delay_Led_Memory `Vui ~T0 @X0 0 e ]
 "14 ./I2C.h
-[; ;./I2C.h: 14: void I2C_Master_Start();
-[v _I2C_Master_Start `(v ~T0 @X0 0 e? ]
+[; ;./I2C.h: 14: void I2C_Master_Start(void);
+[v _I2C_Master_Start `(v ~T0 @X0 0 ef ]
 "17
 [; ;./I2C.h: 17: void I2C_Master_Write(unsigned d);
 [v _I2C_Master_Write `(v ~T0 @X0 0 ef1`ui ]
 "16
-[; ;./I2C.h: 16: void I2C_Master_Stop();
-[v _I2C_Master_Stop `(v ~T0 @X0 0 e? ]
+[; ;./I2C.h: 16: void I2C_Master_Stop(void);
+[v _I2C_Master_Stop `(v ~T0 @X0 0 ef ]
 "6 ./my_delay.h
 [; ;./my_delay.h: 6: void my_delay_ms_WDT(long time);
 [v _my_delay_ms_WDT `(v ~T0 @X0 0 ef1`l ]
 "15 ./I2C.h
-[; ;./I2C.h: 15: void I2C_Master_RepeatedStart();
-[v _I2C_Master_RepeatedStart `(v ~T0 @X0 0 e? ]
+[; ;./I2C.h: 15: void I2C_Master_RepeatedStart(void);
+[v _I2C_Master_RepeatedStart `(v ~T0 @X0 0 ef ]
 "18
 [; ;./I2C.h: 18: unsigned short I2C_Master_Read(unsigned short a);
 [v _I2C_Master_Read `(us ~T0 @X0 0 ef1`us ]

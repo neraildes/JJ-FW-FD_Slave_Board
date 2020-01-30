@@ -2371,8 +2371,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 1 "proculus.c" 2
-
+# 2 "proculus.c" 2
 # 1 "./global.h" 1
 # 32 "./global.h"
 #pragma config FOSC = INTRC_NOCLKOUT
@@ -2423,7 +2422,7 @@ typedef struct {
         unsigned char size;
         char value[10];
 } t_usart_protocol;
-# 89 "./protocolo.h"
+# 90 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2690,8 +2689,7 @@ union {
              unsigned flag_global_vacuo : 1 ;
              };
       } statuspower;
-# 2 "proculus.c" 2
-
+# 3 "proculus.c" 2
 # 1 "./proculus.h" 1
 # 52 "./proculus.h"
 typedef struct {
@@ -2746,8 +2744,7 @@ void PROCULUS_Reset(void);
 void PROCULUS_Buffer_to_Proculus(t_proculus *proculus);
 
 void PROCULUS_Delay(unsigned int tempo_ms);
-# 3 "proculus.c" 2
-
+# 4 "proculus.c" 2
 
 # 1 "./usart.h" 1
 # 30 "./usart.h"
@@ -2760,8 +2757,7 @@ void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
 void USART_put_buffer(char *vetor, unsigned int size);
 unsigned char USART_input_buffer(void);
-# 5 "proculus.c" 2
-
+# 6 "proculus.c" 2
 
 
 extern unsigned int tempodecorrido;

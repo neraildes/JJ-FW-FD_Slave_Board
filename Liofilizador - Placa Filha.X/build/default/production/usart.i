@@ -61,7 +61,7 @@ typedef struct {
         unsigned char size;
         char value[10];
 } t_usart_protocol;
-# 89 "./protocolo.h"
+# 90 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2693,11 +2693,9 @@ union {
              unsigned flag_global_vacuo : 1 ;
              };
       } statuspower;
-# 5 "usart.c" 2
-
-# 1 "./protocolo.h" 1
 # 6 "usart.c" 2
-
+# 1 "./protocolo.h" 1
+# 7 "usart.c" 2
 # 1 "./usart.h" 1
 # 30 "./usart.h"
 void USART_to_Protocol(t_usart_protocol *usart_protocol);
@@ -2709,8 +2707,7 @@ void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
 void USART_put_buffer(char *vetor, unsigned int size);
 unsigned char USART_input_buffer(void);
-# 7 "usart.c" 2
-
+# 8 "usart.c" 2
 
 
 volatile unsigned char usart_buffer[32+10];

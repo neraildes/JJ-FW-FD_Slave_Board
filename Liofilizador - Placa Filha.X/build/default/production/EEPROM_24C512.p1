@@ -12,21 +12,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [u S141 `uc 1 `S142 1 ]
 [n S141 . bits . ]
 "14 ./I2C.h
-[; ;./I2C.h: 14: void I2C_Master_Start();
-[v _I2C_Master_Start `(v ~T0 @X0 0 e? ]
+[; ;./I2C.h: 14: void I2C_Master_Start(void);
+[v _I2C_Master_Start `(v ~T0 @X0 0 ef ]
 "17
 [; ;./I2C.h: 17: void I2C_Master_Write(unsigned d);
 [v _I2C_Master_Write `(v ~T0 @X0 0 ef1`ui ]
 "16
-[; ;./I2C.h: 16: void I2C_Master_Stop();
-[v _I2C_Master_Stop `(v ~T0 @X0 0 e? ]
+[; ;./I2C.h: 16: void I2C_Master_Stop(void);
+[v _I2C_Master_Stop `(v ~T0 @X0 0 ef ]
 [v F1206 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
 [v __delay `JF1206 ~T0 @X0 0 e ]
 [p i __delay ]
 "15 ./I2C.h
-[; ;./I2C.h: 15: void I2C_Master_RepeatedStart();
-[v _I2C_Master_RepeatedStart `(v ~T0 @X0 0 e? ]
+[; ;./I2C.h: 15: void I2C_Master_RepeatedStart(void);
+[v _I2C_Master_RepeatedStart `(v ~T0 @X0 0 ef ]
 "18
 [; ;./I2C.h: 18: unsigned short I2C_Master_Read(unsigned short a);
 [v _I2C_Master_Read `(us ~T0 @X0 0 ef1`us ]

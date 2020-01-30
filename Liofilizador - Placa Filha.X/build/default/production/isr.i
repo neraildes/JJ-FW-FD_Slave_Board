@@ -11,8 +11,7 @@
 # 1 "./isr.h" 1
 # 13 "./isr.h"
 void __attribute__((picinterrupt(("")))) isr(void);
-# 2 "isr.c" 2
-
+# 3 "isr.c" 2
 # 1 "./global.h" 1
 # 32 "./global.h"
 #pragma config FOSC = INTRC_NOCLKOUT
@@ -59,7 +58,7 @@ typedef struct {
         unsigned char size;
         char value[10];
 } t_usart_protocol;
-# 89 "./protocolo.h"
+# 90 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2691,8 +2690,7 @@ union {
              unsigned flag_global_vacuo : 1 ;
              };
       } statuspower;
-# 3 "isr.c" 2
-
+# 4 "isr.c" 2
 # 1 "./usart.h" 1
 # 30 "./usart.h"
 void USART_to_Protocol(t_usart_protocol *usart_protocol);
@@ -2704,8 +2702,7 @@ void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
 void USART_put_buffer(char *vetor, unsigned int size);
 unsigned char USART_input_buffer(void);
-# 4 "isr.c" 2
-
+# 5 "isr.c" 2
 
 
 
