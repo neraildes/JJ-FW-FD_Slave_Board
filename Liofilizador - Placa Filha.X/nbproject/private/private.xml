@@ -12,12 +12,9 @@
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/proculus.c</file>
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/versao.h</file>
             <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/protocolo.h</file>
-<<<<<<< HEAD
-=======
-            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/EEPROM_24C1025.c</file>
-            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/proculus.h</file>
-            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/EEPROM_24C1025.h</file>
->>>>>>> a348c507365696cf2e7222086f2640fa26b505b7
+            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/I2C.h</file>
+            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/I2C.c</file>
+            <file>file:/C:/Indka%20Ind.%20e%20Com.%20Ltda%20(externo)/JJCientifica/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/isr.c</file>
         </group>
     </open-files>
 </project-private>
