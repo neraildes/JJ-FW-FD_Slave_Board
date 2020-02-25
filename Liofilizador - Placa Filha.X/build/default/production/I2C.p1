@@ -41,30 +41,42 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4056
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 4056: extern volatile __bit SSPIE __attribute__((address(0x463)));
 [v _SSPIE `Vb ~T0 @X0 0 e@1123 ]
+[v F1206 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
+[v __delay `JF1206 ~T0 @X0 0 e ]
+[p i __delay ]
+"386 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 386:     struct {
+[s S15 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S15 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
+"396
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 396:     struct {
+[s S16 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S16 . . TMR0IF . TMR0IE ]
+"385
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 385: typedef union {
+[u S14 `S15 1 `S16 1 ]
+[n S14 . . . ]
+"403
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 403: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS14 ~T0 @X0 0 e@11 ]
 "5 I2C.c
 [; ;I2C.c: 5: extern volatile unsigned int Delay_Led_Memory;
 [v _Delay_Led_Memory `Vui ~T0 @X0 0 e ]
-"4032 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 4032: extern volatile __bit SEN __attribute__((address(0x488)));
-[v _SEN `Vb ~T0 @X0 0 e@1160 ]
-"4008
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 4008: extern volatile __bit RSEN __attribute__((address(0x489)));
-[v _RSEN `Vb ~T0 @X0 0 e@1161 ]
-"3858
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3858: extern volatile __bit PEN __attribute__((address(0x48A)));
-[v _PEN `Vb ~T0 @X0 0 e@1162 ]
+"1827 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1827:     struct {
+[s S73 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S73 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
+"1826
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1826: typedef union {
+[u S72 `S73 1 ]
+[n S72 . . ]
+"1838
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 1838: extern volatile SSPCON2bits_t SSPCON2bits __attribute__((address(0x091)));
+[v _SSPCON2bits `VS72 ~T0 @X0 0 e@145 ]
 "764
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 764: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
 [v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
-"3981
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3981: extern volatile __bit RCEN __attribute__((address(0x48B)));
-[v _RCEN `Vb ~T0 @X0 0 e@1163 ]
-"3387
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3387: extern volatile __bit ACKDT __attribute__((address(0x48D)));
-[v _ACKDT `Vb ~T0 @X0 0 e@1165 ]
-"3390
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f886.h: 3390: extern volatile __bit ACKEN __attribute__((address(0x48C)));
-[v _ACKEN `Vb ~T0 @X0 0 e@1164 ]
 "32 ./global.h
 [p x FOSC = INTRC_NOCLKOUT ]
 "33
@@ -405,153 +417,235 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;I2C.c: 33: }
 [e :UE 144 ]
 }
-"40
-[; ;I2C.c: 40: void I2C_Master_Wait()
-[v _I2C_Master_Wait `(v ~T0 @X0 1 ef ]
-"41
-[; ;I2C.c: 41: {
+"37
+[; ;I2C.c: 37: char I2C_Master_Wait(void)
+[v _I2C_Master_Wait `(uc ~T0 @X0 1 ef ]
+"38
+[; ;I2C.c: 38: {
 {
 [e :U _I2C_Master_Wait ]
 [f ]
-"42
-[; ;I2C.c: 42:   while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
+"39
+[; ;I2C.c: 39:   char tempo;
+[v _tempo `uc ~T0 @X0 1 a ]
+"40
+[; ;I2C.c: 40:   tempo=200;
+[e = _tempo -> -> 200 `i `uc ]
+"41
+[; ;I2C.c: 41:   while ((SSPSTAT & 0b00000100) || (SSPCON2 & 0b00011111))
 [e $U 146  ]
 [e :U 147 ]
+"42
+[; ;I2C.c: 42:       {
+{
+"43
+[; ;I2C.c: 43:       if(tempo)
+[e $ ! != -> _tempo `i -> 0 `i 149  ]
+"44
+[; ;I2C.c: 44:          tempo--;
+[e -- _tempo -> -> 1 `i `uc ]
+[e $U 150  ]
+"45
+[; ;I2C.c: 45:       else
+[e :U 149 ]
+"46
+[; ;I2C.c: 46:          break;
+[e $U 148  ]
+[e :U 150 ]
+"47
+[; ;I2C.c: 47:       _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"48
+[; ;I2C.c: 48:       }
+}
 [e :U 146 ]
+"41
+[; ;I2C.c: 41:   while ((SSPSTAT & 0b00000100) || (SSPCON2 & 0b00011111))
 [e $ || != & -> _SSPSTAT `i -> 4 `i -> 0 `i != & -> _SSPCON2 `i -> 31 `i -> 0 `i 147  ]
 [e :U 148 ]
-"43
-[; ;I2C.c: 43: }
-[e :UE 145 ]
-}
-"45
-[; ;I2C.c: 45: void I2C_Master_Start()
-[v _I2C_Master_Start `(v ~T0 @X0 1 ef ]
-"46
-[; ;I2C.c: 46: {
-{
-[e :U _I2C_Master_Start ]
-[f ]
-"47
-[; ;I2C.c: 47:   Delay_Led_Memory=20;
-[e = _Delay_Led_Memory -> -> 20 `i `ui ]
-"48
-[; ;I2C.c: 48:   I2C_Master_Wait();
-[e ( _I2C_Master_Wait ..  ]
 "49
-[; ;I2C.c: 49:   SEN = 1;
-[e = _SEN -> -> 1 `i `b ]
+[; ;I2C.c: 49:   return tempo ;
+[e ) _tempo ]
+[e $UE 145  ]
 "50
 [; ;I2C.c: 50: }
-[e :UE 149 ]
+[e :UE 145 ]
 }
 "52
-[; ;I2C.c: 52: void I2C_Master_RepeatedStart()
-[v _I2C_Master_RepeatedStart `(v ~T0 @X0 1 ef ]
+[; ;I2C.c: 52: void I2C_Master_Start(void)
+[v _I2C_Master_Start `(v ~T0 @X0 1 ef ]
 "53
 [; ;I2C.c: 53: {
 {
-[e :U _I2C_Master_RepeatedStart ]
+[e :U _I2C_Master_Start ]
 [f ]
 "54
-[; ;I2C.c: 54:   I2C_Master_Wait();
-[e ( _I2C_Master_Wait ..  ]
+[; ;I2C.c: 54:   INTCONbits.GIE=0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
 "55
-[; ;I2C.c: 55:   RSEN = 1;
-[e = _RSEN -> -> 1 `i `b ]
+[; ;I2C.c: 55:   Delay_Led_Memory=20;
+[e = _Delay_Led_Memory -> -> 20 `i `ui ]
 "56
-[; ;I2C.c: 56: }
-[e :UE 150 ]
-}
+[; ;I2C.c: 56:   if(I2C_Master_Wait())
+[e $ ! != -> ( _I2C_Master_Wait ..  `i -> 0 `i 152  ]
+"57
+[; ;I2C.c: 57:     {
+{
 "58
-[; ;I2C.c: 58: void I2C_Master_Stop()
-[v _I2C_Master_Stop `(v ~T0 @X0 1 ef ]
+[; ;I2C.c: 58:     SSPCON2bits.SEN = 1;
+[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
 "59
-[; ;I2C.c: 59: {
+[; ;I2C.c: 59:     }
+}
+[e :U 152 ]
+"60
+[; ;I2C.c: 60: }
+[e :UE 151 ]
+}
+"62
+[; ;I2C.c: 62: void I2C_Master_RepeatedStart(void)
+[v _I2C_Master_RepeatedStart `(v ~T0 @X0 1 ef ]
+"63
+[; ;I2C.c: 63: {
+{
+[e :U _I2C_Master_RepeatedStart ]
+[f ]
+"64
+[; ;I2C.c: 64:   if(I2C_Master_Wait())
+[e $ ! != -> ( _I2C_Master_Wait ..  `i -> 0 `i 154  ]
+"65
+[; ;I2C.c: 65:     {
+{
+"66
+[; ;I2C.c: 66:     SSPCON2bits.RSEN = 1;
+[e = . . _SSPCON2bits 0 1 -> -> 1 `i `uc ]
+"67
+[; ;I2C.c: 67:     }
+}
+[e :U 154 ]
+"68
+[; ;I2C.c: 68: }
+[e :UE 153 ]
+}
+"70
+[; ;I2C.c: 70: void I2C_Master_Stop(void)
+[v _I2C_Master_Stop `(v ~T0 @X0 1 ef ]
+"71
+[; ;I2C.c: 71: {
 {
 [e :U _I2C_Master_Stop ]
 [f ]
-"60
-[; ;I2C.c: 60:   I2C_Master_Wait();
-[e ( _I2C_Master_Wait ..  ]
-"61
-[; ;I2C.c: 61:   PEN = 1;
-[e = _PEN -> -> 1 `i `b ]
-"62
-[; ;I2C.c: 62: }
-[e :UE 151 ]
+"72
+[; ;I2C.c: 72:   if(I2C_Master_Wait())
+[e $ ! != -> ( _I2C_Master_Wait ..  `i -> 0 `i 156  ]
+"73
+[; ;I2C.c: 73:     {
+{
+"74
+[; ;I2C.c: 74:     SSPCON2bits.PEN = 1;
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+"75
+[; ;I2C.c: 75:     }
 }
-"64
-[; ;I2C.c: 64: void I2C_Master_Write(unsigned d)
+[e :U 156 ]
+"76
+[; ;I2C.c: 76:   INTCONbits.GIE=1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"77
+[; ;I2C.c: 77: }
+[e :UE 155 ]
+}
+"79
+[; ;I2C.c: 79: void I2C_Master_Write(unsigned d)
 [v _I2C_Master_Write `(v ~T0 @X0 1 ef1`ui ]
-"65
-[; ;I2C.c: 65: {
+"80
+[; ;I2C.c: 80: {
 {
 [e :U _I2C_Master_Write ]
-"64
-[; ;I2C.c: 64: void I2C_Master_Write(unsigned d)
+"79
+[; ;I2C.c: 79: void I2C_Master_Write(unsigned d)
 [v _d `ui ~T0 @X0 1 r1 ]
-"65
-[; ;I2C.c: 65: {
+"80
+[; ;I2C.c: 80: {
 [f ]
-"66
-[; ;I2C.c: 66:   generic_status.flag_main_loop_WDT=1;
-[e = . _generic_status 7 -> -> 1 `i `uc ]
-"67
-[; ;I2C.c: 67:   I2C_Master_Wait();
-[e ( _I2C_Master_Wait ..  ]
-"68
-[; ;I2C.c: 68:   SSPBUF = d;
+"81
+[; ;I2C.c: 81:   if(I2C_Master_Wait())
+[e $ ! != -> ( _I2C_Master_Wait ..  `i -> 0 `i 158  ]
+"82
+[; ;I2C.c: 82:     {
+{
+"83
+[; ;I2C.c: 83:     SSPBUF = d;
 [e = _SSPBUF -> _d `uc ]
-"69
-[; ;I2C.c: 69: }
-[e :UE 152 ]
+"84
+[; ;I2C.c: 84:     }
 }
-"71
-[; ;I2C.c: 71: unsigned short I2C_Master_Read(unsigned short a)
+[e :U 158 ]
+"85
+[; ;I2C.c: 85: }
+[e :UE 157 ]
+}
+"87
+[; ;I2C.c: 87: unsigned short I2C_Master_Read(unsigned short a)
 [v _I2C_Master_Read `(us ~T0 @X0 1 ef1`us ]
-"72
-[; ;I2C.c: 72: {
+"88
+[; ;I2C.c: 88: {
 {
 [e :U _I2C_Master_Read ]
-"71
-[; ;I2C.c: 71: unsigned short I2C_Master_Read(unsigned short a)
+"87
+[; ;I2C.c: 87: unsigned short I2C_Master_Read(unsigned short a)
 [v _a `us ~T0 @X0 1 r1 ]
-"72
-[; ;I2C.c: 72: {
+"88
+[; ;I2C.c: 88: {
 [f ]
-"73
-[; ;I2C.c: 73:   unsigned short temp;
+"89
+[; ;I2C.c: 89:   unsigned short temp;
 [v _temp `us ~T0 @X0 1 a ]
-"74
-[; ;I2C.c: 74:   generic_status.flag_main_loop_WDT=1;
-[e = . _generic_status 7 -> -> 1 `i `uc ]
-"75
-[; ;I2C.c: 75:   I2C_Master_Wait();
-[e ( _I2C_Master_Wait ..  ]
-"76
-[; ;I2C.c: 76:   RCEN = 1;
-[e = _RCEN -> -> 1 `i `b ]
-"77
-[; ;I2C.c: 77:   I2C_Master_Wait();
-[e ( _I2C_Master_Wait ..  ]
-"78
-[; ;I2C.c: 78:   temp = SSPBUF;
+"90
+[; ;I2C.c: 90:   if(I2C_Master_Wait())SSPCON2bits.RCEN = 1;
+[e $ ! != -> ( _I2C_Master_Wait ..  `i -> 0 `i 160  ]
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+[e :U 160 ]
+"91
+[; ;I2C.c: 91:   if(I2C_Master_Wait())temp = SSPBUF;
+[e $ ! != -> ( _I2C_Master_Wait ..  `i -> 0 `i 161  ]
 [e = _temp -> _SSPBUF `us ]
-"79
-[; ;I2C.c: 79:   I2C_Master_Wait();
-[e ( _I2C_Master_Wait ..  ]
-"80
-[; ;I2C.c: 80:   ACKDT = (a)?0:1;
-[e = _ACKDT -> ? != -> _a `ui -> -> 0 `i `ui : -> 0 `i -> 1 `i `b ]
-"81
-[; ;I2C.c: 81:   ACKEN = 1;
-[e = _ACKEN -> -> 1 `i `b ]
-"82
-[; ;I2C.c: 82:   return temp;
+[e :U 161 ]
+"92
+[; ;I2C.c: 92:   if(I2C_Master_Wait())
+[e $ ! != -> ( _I2C_Master_Wait ..  `i -> 0 `i 162  ]
+"93
+[; ;I2C.c: 93:     {
+{
+"94
+[; ;I2C.c: 94:     SSPCON2bits.ACKDT = (a)?0:1;
+[e = . . _SSPCON2bits 0 5 -> ? != -> _a `ui -> -> 0 `i `ui : -> 0 `i -> 1 `i `uc ]
+"95
+[; ;I2C.c: 95:     SSPCON2bits.ACKEN = 1;
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+"96
+[; ;I2C.c: 96:     return temp;
 [e ) _temp ]
-[e $UE 153  ]
-"83
-[; ;I2C.c: 83: }
-[e :UE 153 ]
+[e $UE 159  ]
+"97
+[; ;I2C.c: 97:     }
+}
+[e $U 163  ]
+"98
+[; ;I2C.c: 98:   else
+[e :U 162 ]
+"99
+[; ;I2C.c: 99:     {
+{
+"100
+[; ;I2C.c: 100:     return 0x00;
+[e ) -> -> 0 `i `us ]
+[e $UE 159  ]
+"101
+[; ;I2C.c: 101:     }
+}
+[e :U 163 ]
+"104
+[; ;I2C.c: 104: }
+[e :UE 159 ]
 }

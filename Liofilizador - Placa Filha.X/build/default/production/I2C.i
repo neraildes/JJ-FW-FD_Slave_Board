@@ -2695,10 +2695,10 @@ union {
 # 11 "./I2C.h"
 void I2C_Master_Init(const unsigned long c);
 void I2C_Slave_Init(short address);
-void I2C_Master_Wait();
-void I2C_Master_Start();
-void I2C_Master_RepeatedStart();
-void I2C_Master_Stop();
+char I2C_Master_Wait(void);
+void I2C_Master_Start(void);
+void I2C_Master_RepeatedStart(void);
+void I2C_Master_Stop(void);
 void I2C_Master_Write(unsigned d);
 unsigned short I2C_Master_Read(unsigned short a);
 # 2 "I2C.c" 2
@@ -2737,50 +2737,71 @@ void I2C_Slave_Init(short address)
 
 
 
-
-
-
-void I2C_Master_Wait()
+char I2C_Master_Wait(void)
 {
-  while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
+  char tempo;
+  tempo=200;
+  while ((SSPSTAT & 0b00000100) || (SSPCON2 & 0b00011111))
+      {
+      if(tempo)
+         tempo--;
+      else
+         break;
+      _delay((unsigned long)((1)*(8000000/4000.0)));
+      }
+  return tempo ;
 }
 
-void I2C_Master_Start()
+void I2C_Master_Start(void)
 {
+  INTCONbits.GIE=0;
   Delay_Led_Memory=20;
-  I2C_Master_Wait();
-  SEN = 1;
+  if(I2C_Master_Wait())
+    {
+    SSPCON2bits.SEN = 1;
+    }
 }
 
-void I2C_Master_RepeatedStart()
+void I2C_Master_RepeatedStart(void)
 {
-  I2C_Master_Wait();
-  RSEN = 1;
+  if(I2C_Master_Wait())
+    {
+    SSPCON2bits.RSEN = 1;
+    }
 }
 
-void I2C_Master_Stop()
+void I2C_Master_Stop(void)
 {
-  I2C_Master_Wait();
-  PEN = 1;
+  if(I2C_Master_Wait())
+    {
+    SSPCON2bits.PEN = 1;
+    }
+  INTCONbits.GIE=1;
 }
 
 void I2C_Master_Write(unsigned d)
 {
-  generic_status.flag_main_loop_WDT=1;
-  I2C_Master_Wait();
-  SSPBUF = d;
+  if(I2C_Master_Wait())
+    {
+    SSPBUF = d;
+    }
 }
 
 unsigned short I2C_Master_Read(unsigned short a)
 {
   unsigned short temp;
-  generic_status.flag_main_loop_WDT=1;
-  I2C_Master_Wait();
-  RCEN = 1;
-  I2C_Master_Wait();
-  temp = SSPBUF;
-  I2C_Master_Wait();
-  ACKDT = (a)?0:1;
-  ACKEN = 1;
-  return temp;
+  if(I2C_Master_Wait())SSPCON2bits.RCEN = 1;
+  if(I2C_Master_Wait())temp = SSPBUF;
+  if(I2C_Master_Wait())
+    {
+    SSPCON2bits.ACKDT = (a)?0:1;
+    SSPCON2bits.ACKEN = 1;
+    return temp;
+    }
+  else
+    {
+    return 0x00;
+    }
+
+
 }

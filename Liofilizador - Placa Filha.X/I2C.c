@@ -34,51 +34,72 @@ void I2C_Slave_Init(short address)
 
 
 
-
-
-
-void I2C_Master_Wait()
-{
-  while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F)); //Transmit is in progress
+char I2C_Master_Wait(void)
+{  
+  char tempo;
+  tempo=200;  
+  while ((SSPSTAT & 0b00000100) || (SSPCON2 & 0b00011111)) //Transmit is in progress
+      {
+      if(tempo) 
+         tempo--;
+      else
+         break;
+      __delay_ms(1);
+      }    
+  return tempo ;
 }
 
-void I2C_Master_Start()
-{ 
-  Delay_Led_Memory=DEFAULT_LEDS;
-  I2C_Master_Wait();    
-  SEN = 1;             //Initiate start condition
+void I2C_Master_Start(void)
+{  
+  INTCONbits.GIE=0;
+  Delay_Led_Memory=DEFAULT_LEDS;  
+  if(I2C_Master_Wait())
+    {  
+    SSPCON2bits.SEN = 1;             //Initiate start condition
+    }
 }
 
-void I2C_Master_RepeatedStart()
+void I2C_Master_RepeatedStart(void)
 {
-  I2C_Master_Wait();
-  RSEN = 1;           //Initiate repeated start condition
+  if(I2C_Master_Wait())
+    {  
+    SSPCON2bits.RSEN = 1;           //Initiate repeated start condition
+    }
 }
 
-void I2C_Master_Stop()
+void I2C_Master_Stop(void)
 {
-  I2C_Master_Wait();
-  PEN = 1;           //Initiate stop condition
+  if(I2C_Master_Wait())
+    {  
+    SSPCON2bits.PEN = 1;           //Initiate stop condition
+    }
+  INTCONbits.GIE=1;
 }
 
 void I2C_Master_Write(unsigned d)
 {
-  flag_main_loop_WDT=TRUE;  
-  I2C_Master_Wait();
-  SSPBUF = d;         //Write data to SSPBUF
+  if(I2C_Master_Wait())
+    {  
+    SSPBUF = d;         //Write data to SSPBUF
+    }
 }
 
 unsigned short I2C_Master_Read(unsigned short a)
 {
-  unsigned short temp;
-  flag_main_loop_WDT=TRUE;
-  I2C_Master_Wait();
-  RCEN = 1;
-  I2C_Master_Wait();
-  temp = SSPBUF;      //Read data from SSPBUF
-  I2C_Master_Wait();
-  ACKDT = (a)?0:1;    //Acknowledge bit
-  ACKEN = 1;          //Acknowledge sequence
-  return temp;
+  unsigned short temp;  
+  if(I2C_Master_Wait())SSPCON2bits.RCEN = 1;
+  if(I2C_Master_Wait())temp = SSPBUF;      //Read data from SSPBUF
+  if(I2C_Master_Wait())
+    {  
+    SSPCON2bits.ACKDT = (a)?0:1;    //Acknowledge bit
+    SSPCON2bits.ACKEN = 1;          //Acknowledge sequence  
+    return temp;
+    }
+  else
+    {  
+    return 0x00;  
+    }
 }
+
+
 
