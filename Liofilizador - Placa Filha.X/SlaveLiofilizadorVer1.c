@@ -551,7 +551,7 @@ void Decodify_Command(void)
              Send_To_MB(3);
              Send_Reply_OK();            
              break;   
-             
+        /*     
         case COMMAND_CLK_PIC_R: 
              {
              char hh[10];
@@ -597,7 +597,7 @@ void Decodify_Command(void)
              Send_To_MB(3);
              Send_Reply_OK();             
              break; 
-             
+        */     
         case COMMAND_LDC_PAGE:
              PROCULUS_Show_Screen(usart_protocol.value[0]);
              Send_To_MB(3);
