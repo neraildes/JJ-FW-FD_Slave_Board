@@ -340,8 +340,9 @@ void Decodify_Command(void)
              break;
         */  
         case COMMAND_VERSION:
-             Send_To_MB(11);             
-             USART_put_string("FVERSION");           
+             strcpy(buffer,FVERSION); 
+             Send_To_MB(11);              
+             USART_put_string(buffer);           
              break;            
         case COMMAND_READ_ANALOG:                       
              #ifdef NTC_BOARD

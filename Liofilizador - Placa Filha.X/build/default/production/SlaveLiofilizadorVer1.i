@@ -3041,11 +3041,12 @@ void Decodify_Command(void)
 
 
         case 0x41:
+             strcpy(buffer,"v1.0.14");
              Send_To_MB(11);
-             USART_put_string("FVERSION");
+             USART_put_string(buffer);
              break;
         case 0X1A:
-# 362 "SlaveLiofilizadorVer1.c"
+# 363 "SlaveLiofilizadorVer1.c"
              if(usart_protocol.value[0]==0)
                 OutPut=Tensao1;
              else
@@ -3071,14 +3072,14 @@ void Decodify_Command(void)
              Delay_Led_Tmr0=0;
              milisegundo=0;
              break;
-# 397 "SlaveLiofilizadorVer1.c"
+# 398 "SlaveLiofilizadorVer1.c"
         case 0x03:
              Send_To_MB(2);
 
              USART_put_int(1);
-# 410 "SlaveLiofilizadorVer1.c"
+# 411 "SlaveLiofilizadorVer1.c"
              break;
-# 426 "SlaveLiofilizadorVer1.c"
+# 427 "SlaveLiofilizadorVer1.c"
         case 0x08:
              EEPROM_Write_Byte(usart_protocol.value[0],
                                usart_protocol.value[1]);
@@ -3265,7 +3266,7 @@ void Send_Reply_OK(void){
      USART_put_string("OK");
 
  }
-# 740 "SlaveLiofilizadorVer1.c"
+# 741 "SlaveLiofilizadorVer1.c"
 void MediaPlacaVaccum(unsigned char canal){
      float Temp,Valor;
      unsigned int i;
@@ -3328,7 +3329,7 @@ void MediaPlacaVaccum(unsigned char canal){
 
        }
 }
-# 968 "SlaveLiofilizadorVer1.c"
+# 969 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) (Tensao1*10));
      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) (Vaccum0*10));
