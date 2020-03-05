@@ -640,8 +640,8 @@ void mediatemperaturaNTC(unsigned char canal)
      //flag_led_memory=1; //fix desativar
      for(i=1;i<15;i++)
          {   
-         //Temp+=ADC_Read_NTC(canal);         
-         Temp+=ADC_Read(canal);
+         Temp+=ADC_Read_NTC(canal);         
+         //Temp+=ADC_Read(canal);
          if(Package_Usart_is_for_me()==TRUE) break;  
          
          if(flag_global_hot)
@@ -955,8 +955,8 @@ void Load_Work(void){
 
 #ifdef NTC_BOARD
 void Save_Log(unsigned long add_datalog){
-     EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) Temperatura0*10);   
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) Temperatura1*10);
+     EEPROM_24C1025_Write_Int(0x00, add_datalog,  Temperatura0*10.0);   
+     EEPROM_24C1025_Write_Int(0x01, add_datalog,  Temperatura1*10.0);
  
      //EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);   
      //EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);     
@@ -967,8 +967,8 @@ void Save_Log(unsigned long add_datalog){
 
 #ifdef VACCUM_BOARD
 void Save_Log(unsigned long add_datalog){
-     EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) (Tensao1*10));   
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) (Vaccum0*10));  
+     EEPROM_24C1025_Write_Int(0x00, add_datalog, (Tensao1*10.0));   
+     EEPROM_24C1025_Write_Int(0x01, add_datalog, (Vaccum0*10.0));  
      
      //EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);   
      //EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);      
@@ -978,8 +978,8 @@ void Save_Log(unsigned long add_datalog){
 
 #ifdef PT100_UMIDADE
 void Save_Log(unsigned long add_datalog){
-     EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) Temperatura0*10);
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) Umidade1);  
+     EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura0*10.0);
+     EEPROM_24C1025_Write_Int(0x01, add_datalog, Umidade1);  
      
      //EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);   
      //EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);     
