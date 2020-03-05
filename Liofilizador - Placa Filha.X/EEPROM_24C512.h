@@ -18,7 +18,7 @@ void EEPROM_24C512_Write_Int(unsigned char dev_add, unsigned int mem_add, unsign
 unsigned int EEPROM_24C512_Read_Int(unsigned char dev_add, unsigned int mem_add);
 
 void EEPROM_24C512_Write_Str(unsigned char dev_add, unsigned int mem_add,char *data);
-void EEPROM_24C512_Read_Str(unsigned char dev_add, unsigned int mem_add,char *texto);
+void EEPROM_24C512_Read_Str(unsigned char dev_add, unsigned int mem_add,char *buffer);
 
 #endif	/* 24C512_H */
 

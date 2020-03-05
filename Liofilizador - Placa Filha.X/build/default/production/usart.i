@@ -59,9 +59,9 @@ typedef struct {
         unsigned char destino;
         unsigned char command;
         unsigned char size;
-        char value[10];
+        char value[52];
 } t_usart_protocol;
-# 152 "./protocolo.h"
+# 154 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2705,12 +2705,12 @@ void USART_put_int(int value);
 void USART_put_float24(float value);
 void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
-void USART_put_buffer(char *vetor, unsigned int size);
+void USART_put_buffer(char *vetor, char size);
 unsigned char USART_input_buffer(void);
 # 8 "usart.c" 2
 
 
-volatile unsigned char usart_buffer[32+10];
+volatile unsigned char usart_buffer[32+20];
 
 extern volatile unsigned int tmr_led_usart;
 extern volatile unsigned int Delay_Led_Usart;
@@ -2781,15 +2781,14 @@ void USART_putc(char value)
 }
 
 
-void USART_put_buffer(char *vetor, unsigned int size)
-{
-    unsigned char loop=0;
-    unsigned char *ptr;
-    ptr =(unsigned char *) &vetor;
+void USART_put_buffer(char *vetor, char size){
+    char loop=0;
+    char *ptr;
+    ptr = vetor;
 
     while(loop<size)
     {
-        USART_putc(*(ptr));
+        USART_putc(*ptr);
         ptr++;
         loop++;
     }
@@ -2812,7 +2811,7 @@ unsigned char USART_input_buffer(void){
     }
     return result;
 }
-# 138 "usart.c"
+# 137 "usart.c"
 void USART_put_int(int value){
      char *dado;
      dado=(char*)&value;
@@ -2847,9 +2846,9 @@ void USART_put_string(char *vetor)
 {
     char *ptr;
     ptr=vetor;
-    while(*(ptr)){
-        USART_putc(*(ptr));
+    while(*ptr){
+        USART_putc(*ptr);
         ptr++;
     }
-    USART_putc(*(ptr));
+    USART_putc(*ptr);
 }

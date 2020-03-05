@@ -2514,9 +2514,9 @@ typedef struct {
         unsigned char destino;
         unsigned char command;
         unsigned char size;
-        char value[10];
+        char value[52];
 } t_usart_protocol;
-# 152 "./protocolo.h"
+# 154 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2717,7 +2717,7 @@ void EEPROM_24C1025_Read_Buffer(unsigned char chip_add,
                                 unsigned char sizedata,
                                            char *data);
 
-void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char *texto);
+void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char *buffer);
 void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char *data);
 
 
@@ -2737,6 +2737,19 @@ void EEPROM_24C1025_Fill_All(unsigned char chip_add, unsigned int value);
 void my_delay_ms(long time);
 void my_delay_ms_WDT(long time);
 # 6 "EEPROM_24C1025.c" 2
+
+# 1 "./usart.h" 1
+# 30 "./usart.h"
+void USART_to_Protocol(t_usart_protocol *usart_protocol);
+void USART_init(unsigned long baudrate);
+void USART_putc(char value);
+void USART_put_int(int value);
+void USART_put_float24(float value);
+void USART_put_long(unsigned long value);
+void USART_put_string(char *vetor);
+void USART_put_buffer(char *vetor, char size);
+unsigned char USART_input_buffer(void);
+# 7 "EEPROM_24C1025.c" 2
 
 
 
@@ -2807,7 +2820,6 @@ void EEPROM_24C1025_Write_Buffer(unsigned char chip_add,
 
 
 
-
 void EEPROM_24C1025_Read_Buffer(unsigned char chip_add,
                                 unsigned long mem_add,
                                 unsigned char sizedata,
@@ -2871,6 +2883,7 @@ void EEPROM_24C1025_Read_Buffer(unsigned char chip_add,
         I2C_Master_Read(0);
         I2C_Master_Stop();
         _delay((unsigned long)((650)*(8000000/4000000.0)));
+
 }
 
 
@@ -2932,7 +2945,7 @@ void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char
 
 
 
-void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char *texto){
+void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char *buffer){
      unsigned char cnt=0;
      unsigned char range=0;
      unsigned char ctrl;
@@ -2955,16 +2968,15 @@ void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char 
 
      cnt=0;
      do{
-           __asm("CLRWDT");
            if(mem_add>0x1FFFF) break;
            if((mem_add+1)%128==0)
              {
-             (*texto)=I2C_Master_Read(0);
+             (*buffer)=I2C_Master_Read(0);
              I2C_Master_Stop();
 
-             my_delay_ms_WDT(5);
+             _delay((unsigned long)((5)*(8000000/4000.0)));
              mem_add++;
-             texto++;
+             buffer++;
              if(mem_add>0xFFFF) range=0x08; else range=0x00;
              ctrl=chip_add;
              ctrl<<=1;
@@ -2981,9 +2993,9 @@ void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char 
              }
            else
              {
-             (*texto)=I2C_Master_Read(1);
-             if((*texto)==0)break;
-             texto++;
+             (*buffer)=I2C_Master_Read(1);
+             if((*buffer)==0)break;
+             buffer++;
              mem_add++;
              }
        }while((cnt++)<64);

@@ -55,9 +55,9 @@ typedef struct {
         unsigned char destino;
         unsigned char command;
         unsigned char size;
-        char value[10];
+        char value[52];
 } t_usart_protocol;
-# 152 "./protocolo.h"
+# 154 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2712,7 +2712,7 @@ void EEPROM_24C512_Write_Int(unsigned char dev_add, unsigned int mem_add, unsign
 unsigned int EEPROM_24C512_Read_Int(unsigned char dev_add, unsigned int mem_add);
 
 void EEPROM_24C512_Write_Str(unsigned char dev_add, unsigned int mem_add,char *data);
-void EEPROM_24C512_Read_Str(unsigned char dev_add, unsigned int mem_add,char *texto);
+void EEPROM_24C512_Read_Str(unsigned char dev_add, unsigned int mem_add,char *buffer);
 # 3 "EEPROM_24C512.c" 2
 
 
@@ -2785,19 +2785,19 @@ void EEPROM_24C512_Write_Str(unsigned char chip_add, unsigned int mem_add,char *
 
 
 
-void EEPROM_24C512_Read_Str(unsigned char chip_add, unsigned int mem_add,char *texto){
+void EEPROM_24C512_Read_Str(unsigned char chip_add, unsigned int mem_add,char *buffer){
  I2C_Master_Start();
  I2C_Master_Write(0xA0|(chip_add<<1));
  I2C_Master_Write(((char *)&mem_add)[1]);
  I2C_Master_Write(((char *)&mem_add)[0]);
  I2C_Master_RepeatedStart();
  I2C_Master_Write(0xA1|(chip_add<<1));
- while((*texto)!=0)
+ while((*buffer)!=0)
       {
-      *texto=I2C_Master_Read(1);
-      texto++;
+      *buffer=I2C_Master_Read(1);
+      buffer++;
       }
- (*texto)=I2C_Master_Read(0);
+ (*buffer)=I2C_Master_Read(0);
  I2C_Master_Stop();
  _delay((unsigned long)((5)*(8000000/4000.0)));
 }

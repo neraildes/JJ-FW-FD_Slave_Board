@@ -503,13 +503,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 147 ]
 }
 "74
-[; ;EEPROM_24C512.c: 74: void EEPROM_24C512_Read_Str(unsigned char chip_add, unsigned int mem_add,char *texto){
+[; ;EEPROM_24C512.c: 74: void EEPROM_24C512_Read_Str(unsigned char chip_add, unsigned int mem_add,char *buffer){
 [v _EEPROM_24C512_Read_Str `(v ~T0 @X0 1 ef3`uc`ui`*uc ]
 {
 [e :U _EEPROM_24C512_Read_Str ]
 [v _chip_add `uc ~T0 @X0 1 r1 ]
 [v _mem_add `ui ~T0 @X0 1 r2 ]
-[v _texto `*uc ~T0 @X0 1 r3 ]
+[v _buffer `*uc ~T0 @X0 1 r3 ]
 [f ]
 "75
 [; ;EEPROM_24C512.c: 75:  I2C_Master_Start();
@@ -530,29 +530,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;EEPROM_24C512.c: 80:  I2C_Master_Write(0xA1|(chip_add<<1));
 [e ( _I2C_Master_Write (1 -> | -> 161 `i << -> _chip_add `i -> 1 `i `ui ]
 "81
-[; ;EEPROM_24C512.c: 81:  while((*texto)!=0)
+[; ;EEPROM_24C512.c: 81:  while((*buffer)!=0)
 [e $U 152  ]
 [e :U 153 ]
 "82
 [; ;EEPROM_24C512.c: 82:       {
 {
 "83
-[; ;EEPROM_24C512.c: 83:       *texto=I2C_Master_Read(1);
-[e = *U _texto -> ( _I2C_Master_Read (1 -> -> 1 `i `us `uc ]
+[; ;EEPROM_24C512.c: 83:       *buffer=I2C_Master_Read(1);
+[e = *U _buffer -> ( _I2C_Master_Read (1 -> -> 1 `i `us `uc ]
 "84
-[; ;EEPROM_24C512.c: 84:       texto++;
-[e ++ _texto * -> -> 1 `i `x -> -> # *U _texto `i `x ]
+[; ;EEPROM_24C512.c: 84:       buffer++;
+[e ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x ]
 "85
 [; ;EEPROM_24C512.c: 85:       }
 }
 [e :U 152 ]
 "81
-[; ;EEPROM_24C512.c: 81:  while((*texto)!=0)
-[e $ != -> *U _texto `i -> 0 `i 153  ]
+[; ;EEPROM_24C512.c: 81:  while((*buffer)!=0)
+[e $ != -> *U _buffer `i -> 0 `i 153  ]
 [e :U 154 ]
 "86
-[; ;EEPROM_24C512.c: 86:  (*texto)=I2C_Master_Read(0);
-[e = *U _texto -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
+[; ;EEPROM_24C512.c: 86:  (*buffer)=I2C_Master_Read(0);
+[e = *U _buffer -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
 "87
 [; ;EEPROM_24C512.c: 87:  I2C_Master_Stop();
 [e ( _I2C_Master_Stop ..  ]

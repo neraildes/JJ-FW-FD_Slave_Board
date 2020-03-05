@@ -55,9 +55,9 @@ typedef struct {
         unsigned char destino;
         unsigned char command;
         unsigned char size;
-        char value[10];
+        char value[52];
 } t_usart_protocol;
-# 152 "./protocolo.h"
+# 154 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2695,6 +2695,7 @@ union {
 # 15 "./adc.h"
 void ADC_init(void);
 unsigned int captura(void);
+float ADC_Read(char canal);
 float ADC_Read_NTC(char canal);
 float ADC_Media_10bits(char canal);
 unsigned int ADC_Max_10Bits(char canal);

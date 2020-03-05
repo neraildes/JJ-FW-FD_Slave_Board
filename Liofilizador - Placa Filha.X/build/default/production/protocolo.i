@@ -55,9 +55,9 @@ typedef struct {
         unsigned char destino;
         unsigned char command;
         unsigned char size;
-        char value[10];
+        char value[52];
 } t_usart_protocol;
-# 152 "./protocolo.h"
+# 154 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2700,7 +2700,7 @@ void USART_put_int(int value);
 void USART_put_float24(float value);
 void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
-void USART_put_buffer(char *vetor, unsigned int size);
+void USART_put_buffer(char *vetor, char size);
 unsigned char USART_input_buffer(void);
 # 2 "protocolo.c" 2
 
@@ -2708,7 +2708,7 @@ unsigned char USART_input_buffer(void);
 # 3 "protocolo.c" 2
 
 
-extern volatile char usart_buffer[32+10];
+extern volatile char usart_buffer[32+20];
 extern char Board_Number;
 
 char Package_Usart_is_for_me(){

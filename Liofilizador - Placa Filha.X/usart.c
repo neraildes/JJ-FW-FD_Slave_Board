@@ -96,15 +96,14 @@ void USART_putc(char value)
 }
 
 
-void USART_put_buffer(char *vetor, unsigned int size)
-{       
-    unsigned char loop=0;
-    unsigned char *ptr;
-    ptr =(unsigned char *) &vetor;
+void USART_put_buffer(char *vetor, char size){       
+    char loop=0;
+    char *ptr;
+    ptr = vetor;
     
     while(loop<size)
     {
-        USART_putc(*(ptr));        
+        USART_putc(*ptr);        
         ptr++;
         loop++;
     }
@@ -169,9 +168,9 @@ void USART_put_string(char *vetor)
 {       
     char *ptr;
     ptr=vetor;
-    while(*(ptr)){ 
-        USART_putc(*(ptr));
+    while(*ptr){ 
+        USART_putc(*ptr);
         ptr++;
     }
-    USART_putc(*(ptr));    
+    USART_putc(*ptr);    
 }

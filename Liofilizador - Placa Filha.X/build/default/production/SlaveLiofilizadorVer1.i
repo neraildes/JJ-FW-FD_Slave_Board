@@ -2422,9 +2422,9 @@ typedef struct {
         unsigned char destino;
         unsigned char command;
         unsigned char size;
-        char value[10];
+        char value[52];
 } t_usart_protocol;
-# 152 "./protocolo.h"
+# 154 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2761,7 +2761,7 @@ void USART_put_int(int value);
 void USART_put_float24(float value);
 void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
-void USART_put_buffer(char *vetor, unsigned int size);
+void USART_put_buffer(char *vetor, char size);
 unsigned char USART_input_buffer(void);
 # 29 "SlaveLiofilizadorVer1.c" 2
 
@@ -2769,6 +2769,7 @@ unsigned char USART_input_buffer(void);
 # 15 "./adc.h"
 void ADC_init(void);
 unsigned int captura(void);
+float ADC_Read(char canal);
 float ADC_Read_NTC(char canal);
 float ADC_Media_10bits(char canal);
 unsigned int ADC_Max_10Bits(char canal);
@@ -2818,7 +2819,7 @@ void EEPROM_24C1025_Read_Buffer(unsigned char chip_add,
                                 unsigned char sizedata,
                                            char *data);
 
-void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char *texto);
+void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char *buffer);
 void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char *data);
 
 
@@ -2851,7 +2852,7 @@ void MediaPlacaVaccum(unsigned char canal);
 
 void Save_Log(unsigned long add_datalog);
 
-extern volatile char usart_buffer[32+10];
+extern volatile char usart_buffer[32+20];
 extern volatile int count;
 extern volatile unsigned char *pointer;
 
@@ -2876,8 +2877,7 @@ float Vaccum0, Tensao1;
 t_usart_protocol usart_protocol;
 unsigned char canal;
 char Board_Number;
-char texto[16];
-char buffer[32];
+char buffer[33];
 
 unsigned char statuspower_memo;
 
@@ -2976,12 +2976,12 @@ void main(void) {
 
 
      statuspower.flag_global_vacuo=0;
-# 246 "SlaveLiofilizadorVer1.c"
+# 245 "SlaveLiofilizadorVer1.c"
      while(1)
           {
 
          generic_status.flag_main_loop_WDT=1;
-# 275 "SlaveLiofilizadorVer1.c"
+# 274 "SlaveLiofilizadorVer1.c"
          if(++canal==2) canal=0;
          MediaPlacaVaccum(canal);
 
@@ -3019,7 +3019,7 @@ void Decodify_Command(void)
     int tempint;
     float OutPut;
     unsigned long add_24LCxxxx;
-# 323 "SlaveLiofilizadorVer1.c"
+# 322 "SlaveLiofilizadorVer1.c"
     USART_to_Protocol(&usart_protocol);
 
     ((char *)&add_24LCxxxx)[3]=(usart_protocol.value[1]);
@@ -3042,10 +3042,10 @@ void Decodify_Command(void)
 
         case 0x41:
              Send_To_MB(11);
-             USART_put_string("v1.0.12");
+             USART_put_string("FVERSION");
              break;
         case 0X1A:
-# 363 "SlaveLiofilizadorVer1.c"
+# 362 "SlaveLiofilizadorVer1.c"
              if(usart_protocol.value[0]==0)
                 OutPut=Tensao1;
              else
@@ -3071,14 +3071,14 @@ void Decodify_Command(void)
              Delay_Led_Tmr0=0;
              milisegundo=0;
              break;
-# 398 "SlaveLiofilizadorVer1.c"
+# 397 "SlaveLiofilizadorVer1.c"
         case 0x03:
              Send_To_MB(2);
 
              USART_put_int(1);
-# 411 "SlaveLiofilizadorVer1.c"
+# 410 "SlaveLiofilizadorVer1.c"
              break;
-# 427 "SlaveLiofilizadorVer1.c"
+# 426 "SlaveLiofilizadorVer1.c"
         case 0x08:
              EEPROM_Write_Byte(usart_protocol.value[0],
                                usart_protocol.value[1]);
@@ -3114,10 +3114,9 @@ void Decodify_Command(void)
              break;
         case 0x0D:
              {
-
-             EEPROM_Read_String(usart_protocol.value[0],texto);
-             Send_To_MB(sizeof(texto));
-             USART_put_string(texto);
+             EEPROM_Read_String(usart_protocol.value[0],buffer);
+             Send_To_MB(sizeof(buffer));
+             USART_put_string(buffer);
              break;
              }
 
@@ -3165,9 +3164,7 @@ void Decodify_Command(void)
                                         sizedata,
                                         buffer);
 
-
-
-             Send_To_MB(sizedata);
+             Send_To_MB(5);
              USART_put_buffer(buffer,sizedata);
              }
              break;
@@ -3193,10 +3190,10 @@ void Decodify_Command(void)
              {
              EEPROM_24C1025_Read_Str(usart_protocol.value[0],
                                                 add_24LCxxxx,
-                                                      texto);
+                                                     buffer);
 
-             Send_To_MB(strlen(texto));
-             USART_put_string(texto);
+             Send_To_MB(strlen(buffer)+1);
+             USART_put_string(buffer);
              break;
              }
 
@@ -3206,7 +3203,7 @@ void Decodify_Command(void)
              Send_To_MB(3);
              Send_Reply_OK();
              break;
-# 601 "SlaveLiofilizadorVer1.c"
+
         case 0X25:
              PROCULUS_Show_Screen(usart_protocol.value[0]);
              Send_To_MB(3);
@@ -3268,7 +3265,7 @@ void Send_Reply_OK(void){
      USART_put_string("OK");
 
  }
-# 789 "SlaveLiofilizadorVer1.c"
+# 740 "SlaveLiofilizadorVer1.c"
 void MediaPlacaVaccum(unsigned char canal){
      float Temp,Valor;
      unsigned int i;
@@ -3331,7 +3328,7 @@ void MediaPlacaVaccum(unsigned char canal){
 
        }
 }
-# 1017 "SlaveLiofilizadorVer1.c"
+# 968 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, (int) (Tensao1*10));
      EEPROM_24C1025_Write_Int(0x01, add_datalog, (int) (Vaccum0*10));

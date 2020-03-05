@@ -71,19 +71,19 @@ void EEPROM_24C512_Write_Str(unsigned char chip_add, unsigned int mem_add,char *
 
 
 
-void EEPROM_24C512_Read_Str(unsigned char chip_add, unsigned int mem_add,char *texto){
+void EEPROM_24C512_Read_Str(unsigned char chip_add, unsigned int mem_add,char *buffer){
  I2C_Master_Start();                   // start no barramento i2c 
  I2C_Master_Write(0xA0|(chip_add<<1));
  I2C_Master_Write(Hi(mem_add));        // endereço da eeprom onde será lido o byte h
  I2C_Master_Write(Lo(mem_add));        // endereço da eeprom onde será lido o byte l 
  I2C_Master_RepeatedStart();           // re-start no barramento  
  I2C_Master_Write(0xA1|(chip_add<<1));
- while((*texto)!=0)
+ while((*buffer)!=0)
       {
-      *texto=I2C_Master_Read(1);
-      texto++;
+      *buffer=I2C_Master_Read(1);
+      buffer++;
       }
- (*texto)=I2C_Master_Read(0);
+ (*buffer)=I2C_Master_Read(0);
  I2C_Master_Stop();                // finaliza a comunicação i2c
  __delay_ms(5); 
 }

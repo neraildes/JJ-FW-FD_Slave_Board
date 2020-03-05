@@ -16,7 +16,7 @@
 
 
 
-#define SIZE_VETOR_PROTOCOL 10
+#define SIZE_VETOR_PROTOCOL 52
 
 typedef struct {
         unsigned int  header;

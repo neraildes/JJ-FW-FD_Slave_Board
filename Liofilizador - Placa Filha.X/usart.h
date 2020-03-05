@@ -34,7 +34,7 @@ void USART_put_int(int value);
 void USART_put_float24(float value);
 void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
-void USART_put_buffer(char *vetor, unsigned int size);
+void USART_put_buffer(char *vetor, char size);
 unsigned char USART_input_buffer(void);
 
 

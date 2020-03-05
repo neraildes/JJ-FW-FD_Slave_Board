@@ -53,6 +53,23 @@ unsigned int ADC_Max_10Bits(char canal){
 
 //------------------------------------------------------------------------------
 #ifdef NTC_BOARD
+
+float ADC_Read(char canal){
+      unsigned int value;
+      unsigned char i;
+      value=0;
+      for(i=1;i<=50;i++)
+          value+=captura();//ADC_Media_Filtro3_Read(canal);    
+      return value;
+}
+    
+    
+                               
+
+
+
+
+
 float ADC_Read_NTC(char canal){
     int B = 3975;
     float resistencia;

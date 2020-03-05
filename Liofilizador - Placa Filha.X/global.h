@@ -86,7 +86,7 @@
 #define IN_2   PORTAbits.RA3
 
 
-#define USART_BUFFER_SIZE   32+10
+#define USART_BUFFER_SIZE   32+20
 
 #define DEFAULT_LEDS 20 //multiplos de 10
 

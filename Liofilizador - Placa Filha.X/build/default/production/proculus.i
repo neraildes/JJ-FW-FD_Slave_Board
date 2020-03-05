@@ -2420,9 +2420,9 @@ typedef struct {
         unsigned char destino;
         unsigned char command;
         unsigned char size;
-        char value[10];
+        char value[52];
 } t_usart_protocol;
-# 152 "./protocolo.h"
+# 154 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2755,13 +2755,13 @@ void USART_put_int(int value);
 void USART_put_float24(float value);
 void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
-void USART_put_buffer(char *vetor, unsigned int size);
+void USART_put_buffer(char *vetor, char size);
 unsigned char USART_input_buffer(void);
 # 6 "proculus.c" 2
 
 
 extern unsigned int tempodecorrido;
-volatile extern unsigned char usart_buffer[32+10];
+volatile extern unsigned char usart_buffer[32+20];
 
 
 
@@ -2782,7 +2782,7 @@ void PROCULUS_Control_Register_Read(unsigned char reg, unsigned char size, unsig
      USART_putc(size);
 
      if(USART_input_buffer()){
-        for(unsigned char i=0;i<32+10;i++)
+        for(unsigned char i=0;i<32+20;i++)
             retorno[i] = usart_buffer[(unsigned char)(6+i)];
      }
      PROCULUS_Delay(1);

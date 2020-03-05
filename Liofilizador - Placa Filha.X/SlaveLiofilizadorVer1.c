@@ -131,8 +131,7 @@ float Temperatura0,Umidade1;
 t_usart_protocol usart_protocol;
 unsigned char    canal;
 char             Board_Number;
-char             texto[16];
-char             buffer[32];
+char             buffer[33];
 
 unsigned char statuspower_memo;
 
@@ -342,7 +341,7 @@ void Decodify_Command(void)
         */  
         case COMMAND_VERSION:
              Send_To_MB(11);             
-             USART_put_string(FVERSION);            
+             USART_put_string("FVERSION");           
              break;            
         case COMMAND_READ_ANALOG:                       
              #ifdef NTC_BOARD
@@ -459,10 +458,9 @@ void Decodify_Command(void)
              break;
         case COMMAND_IEE_R_STR:
              {
-             //unsigned char texto[20];
-             EEPROM_Read_String(usart_protocol.value[0],texto);
-             Send_To_MB(sizeof(texto));
-             USART_put_string(texto);
+             EEPROM_Read_String(usart_protocol.value[0],buffer);
+             Send_To_MB(sizeof(buffer));
+             USART_put_string(buffer);
              break;
              }
 
@@ -504,15 +502,13 @@ void Decodify_Command(void)
         case COMMAND_EEE_R_BUF:
              {                 
              char sizedata;
-             sizedata=usart_protocol.value[5];             
+             sizedata=usart_protocol.value[5]; 
              EEPROM_24C1025_Read_Buffer(usart_protocol.value[0],  //CHIP NUMBER
                                         add_24LCxxxx,  //Add of memory
                                         sizedata,  //SIZEDATA
-                                        buffer);  //Buffer of data 
+                                        buffer);  //Buffer of data   
              
-            
-             
-             Send_To_MB(sizedata);
+             Send_To_MB(5);
              USART_put_buffer(buffer,sizedata); 
              }
              break;
@@ -538,10 +534,10 @@ void Decodify_Command(void)
              {
              EEPROM_24C1025_Read_Str(usart_protocol.value[0],       //CHIP NUMBER
                                                 add_24LCxxxx,   //ENDERECO 24LCXXXX
-                                                      texto);
-                      
-             Send_To_MB(strlen(texto));
-             USART_put_string(texto);
+                                                     buffer);
+             
+             Send_To_MB(strlen(buffer)+1);
+             USART_put_string(buffer);
              break;
              }
         
@@ -551,53 +547,7 @@ void Decodify_Command(void)
              Send_To_MB(3);
              Send_Reply_OK();            
              break;   
-        /*     
-        case COMMAND_CLK_PIC_R: 
-             {
-             char hh[10];
-             char mm[10];
-             char ss[10];             
-        
-             itoa(hh,hora,10);
-             itoa(mm,minuto,10);
-             itoa(ss,segundo,10);
-            
-            
-             strcpy(texto,"");             
-             if (hh[1]==0) 
-                {
-                strcat(texto,"0");
-                hh[2]=0;
-                }
-             strcat(texto,hh);             
-             strcat(texto,":");
-             if(mm[1]==0) 
-                {
-                strcat(texto,"0");
-                mm[2]=0;
-                }
-             strcat(texto,mm);
-             strcat(texto,":");
-             if(ss[1]==0) 
-                { 
-                strcat(texto,"0");
-                ss[2]=0;
-                }
-             strcat(texto,ss);
-             Send_To_MB(strlen(texto)); 
-             USART_put_string(texto);
-             USART_putc(0);
-             }
-             break;    
-             
-        case COMMAND_CLK_PIC_W: 
-             hora=usart_protocol.value[0];
-             minuto=usart_protocol.value[1];
-             segundo=usart_protocol.value[2];
-             Send_To_MB(3);
-             Send_Reply_OK();             
-             break; 
-        */     
+
         case COMMAND_LDC_PAGE:
              PROCULUS_Show_Screen(usart_protocol.value[0]);
              Send_To_MB(3);
@@ -689,7 +639,8 @@ void mediatemperaturaNTC(unsigned char canal)
      //flag_led_memory=1; //fix desativar
      for(i=1;i<15;i++)
          {   
-         Temp+=ADC_Read_NTC(canal);         
+         //Temp+=ADC_Read_NTC(canal);         
+         Temp+=ADC_Read(canal);
          if(Package_Usart_is_for_me()==TRUE) break;  
          
          if(flag_global_hot)

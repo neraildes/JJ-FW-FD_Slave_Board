@@ -55,9 +55,9 @@ typedef struct {
         unsigned char destino;
         unsigned char command;
         unsigned char size;
-        char value[10];
+        char value[52];
 } t_usart_protocol;
-# 152 "./protocolo.h"
+# 154 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2695,6 +2695,7 @@ union {
 # 15 "./adc.h"
 void ADC_init(void);
 unsigned int captura(void);
+float ADC_Read(char canal);
 float ADC_Read_NTC(char canal);
 float ADC_Media_10bits(char canal);
 unsigned int ADC_Max_10Bits(char canal);
@@ -2709,7 +2710,7 @@ void USART_put_int(int value);
 void USART_put_float24(float value);
 void USART_put_long(unsigned long value);
 void USART_put_string(char *vetor);
-void USART_put_buffer(char *vetor, unsigned int size);
+void USART_put_buffer(char *vetor, char size);
 unsigned char USART_input_buffer(void);
 # 3 "adc.c" 2
 
@@ -2766,7 +2767,7 @@ unsigned int ADC_Max_10Bits(char canal){
           }
       return value;
 }
-# 123 "adc.c"
+# 140 "adc.c"
 unsigned int captura(){
     ADCON0bits.GO=1;
     while(ADCON0bits.GO)

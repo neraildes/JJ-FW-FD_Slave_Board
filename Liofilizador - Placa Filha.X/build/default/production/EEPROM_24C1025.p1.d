@@ -5,4 +5,5 @@ isr.h  \
 protocolo.h  \
 I2C.h  \
 EEPROM_24C1025.h  \
-my_delay.h 
+my_delay.h  \
+usart.h 

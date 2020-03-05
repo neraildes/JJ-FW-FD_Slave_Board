@@ -4,6 +4,7 @@
 #include "I2C.h"
 #include "EEPROM_24C1025.h"
 #include "my_delay.h"
+#include "usart.h"
 
 
 extern volatile unsigned int Delay_Led_Memory; //Verde
@@ -72,7 +73,6 @@ void EEPROM_24C1025_Write_Buffer(unsigned char chip_add,
 
 
 
-
 //------------------------------------------------------------------------------
 void EEPROM_24C1025_Read_Buffer(unsigned char chip_add, 
                                 unsigned long mem_add,
@@ -136,7 +136,8 @@ void EEPROM_24C1025_Read_Buffer(unsigned char chip_add,
         }       
         I2C_Master_Read(0);
         I2C_Master_Stop();                // finaliza a comunicação i2c
-        __delay_us(650); 
+        __delay_us(650);
+        
 }
 
 
@@ -198,7 +199,7 @@ void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char
 
 
 
-void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char *texto){
+void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char *buffer){
      unsigned char cnt=0;
      unsigned char range=0;
      unsigned char ctrl;
@@ -221,16 +222,15 @@ void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char 
      
      cnt=0;
      do{
-           asm("CLRWDT");
            if(mem_add>0x1FFFF) break;
            if((mem_add+1)%128==0)
              {
-             (*texto)=I2C_Master_Read(0);
+             (*buffer)=I2C_Master_Read(0);
              I2C_Master_Stop(); 
              
-             my_delay_ms_WDT(5);
+             __delay_ms(5);
              mem_add++;
-             texto++;             
+             buffer++;             
              if(mem_add>0xFFFF) range=0x08; else range=0x00;
              ctrl=chip_add;
              ctrl<<=1;
@@ -247,9 +247,9 @@ void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char 
              }  
            else
              {
-             (*texto)=I2C_Master_Read(1);
-             if((*texto)==0)break;
-             texto++;
+             (*buffer)=I2C_Master_Read(1);
+             if((*buffer)==0)break;
+             buffer++;
              mem_add++;
              }           
        }while((cnt++)<64);

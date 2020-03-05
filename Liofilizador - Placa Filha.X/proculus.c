@@ -356,18 +356,18 @@ void PROCULUS_Send_Char(unsigned char caracter, unsigned char size, unsigned int
 
 
 //--------------------------------------------------------------------
-void PROCULUS_Write_VP_String(unsigned char *texto, unsigned int vp){
+void PROCULUS_Write_VP_String(unsigned char *buffer, unsigned int vp){
      unsigned char byte_count; 
     
-     byte_count=3+(strlen(texto)+1); 
+     byte_count=3+(strlen(buffer)+1); 
     
      USART_put_int(PROCULUS_Header);
      USART_putc(byte_count);
      USART_put_int(PROCULUS_VP_Write);
      USART_putc((char)(vp>>8)); 
      USART_putc((char)vp); 
-     for(unsigned char i=0;i<strlen(texto);i++)
-         USART_putc(*(texto+i));  
+     for(unsigned char i=0;i<strlen(buffer);i++)
+         USART_putc(*(buffer+i));  
      USART_putc(0);
      
      PROCULUS_Delay_Tx(TIME_AFTER_SEND_PROCULUS_COMMAND);
