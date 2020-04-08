@@ -144,6 +144,79 @@ void EEPROM_24C1025_Read_Buffer(unsigned char chip_add,
 
 
 
+//------------------------------------------------------------------------------
+void EEPROM_24C1025_Read_Buffer_USART(unsigned char chip_add, 
+                                      unsigned long mem_add,
+                                      unsigned char sizedata,
+                                      char *data)
+     {
+     unsigned char cnt=0;
+     unsigned char range=0;
+     unsigned char ctrl;
+     
+     Delay_Led_Memory=DEFAULT_LEDS;
+     
+     if(mem_add>0x1FFFF) return;
+     
+     if(mem_add>0xFFFF) range=0x08; else range=0x00;
+     ctrl=chip_add;
+     ctrl<<=1;
+     ctrl |= 0xA0;
+     ctrl |= 0b00000001;//Fazer Leitura
+     ctrl |= range;     
+     
+     I2C_Master_Start();                   // start no barramento i2c 
+     I2C_Master_Write(ctrl & 0xFE);
+     I2C_Master_Write(Hi(mem_add));        // endereço da eeprom onde será lido o byte h
+     I2C_Master_Write(Lo(mem_add));        // endereço da eeprom onde será lido o byte l 
+     I2C_Master_RepeatedStart();           // re-start no barramento  
+     I2C_Master_Write(ctrl);
+     
+     for(char cnt=0;cnt<(sizedata);cnt++)
+        {
+           asm("CLRWDT");         
+           if(mem_add>0x1FFFF) break;
+           if((mem_add+1)%128==0)
+             {
+             (*data)=I2C_Master_Read(0);             
+             I2C_Master_Stop(); 
+             USART_putc(*data);
+             
+             //my_delay_ms_WDT(5);
+             mem_add++;
+             //data++;             
+             if(mem_add>0xFFFF) range=0x08; else range=0x00;
+             ctrl=chip_add;
+             ctrl<<=1;
+             ctrl |= 0xA0;
+             ctrl |= 0b00000001;//Fazer Leitura
+             ctrl |= range;              
+                         
+             I2C_Master_Start();                   // start no barramento i2c 
+             I2C_Master_Write(ctrl & 0xFE);
+             I2C_Master_Write(Hi(mem_add));        // endereço da eeprom onde será lido o byte h
+             I2C_Master_Write(Lo(mem_add));        // endereço da eeprom onde será lido o byte l 
+             I2C_Master_RepeatedStart();           // re-start no barramento  
+             I2C_Master_Write(ctrl);       
+             }  
+           else
+             {
+             (*data)=I2C_Master_Read(1); 
+             USART_putc(*data);
+             //data++;
+             mem_add++;
+             }           
+        }       
+        I2C_Master_Read(0);
+        I2C_Master_Stop();                // finaliza a comunicação i2c
+        __delay_us(650);
+        
+}
+
+
+
+
+
 void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char *data){
      unsigned char range=0;
      unsigned char ctrl;

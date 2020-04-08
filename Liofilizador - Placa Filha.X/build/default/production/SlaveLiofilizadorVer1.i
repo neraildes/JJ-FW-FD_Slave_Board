@@ -2424,7 +2424,7 @@ typedef struct {
         unsigned char size;
         char value[52];
 } t_usart_protocol;
-# 154 "./protocolo.h"
+# 155 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2819,6 +2819,11 @@ void EEPROM_24C1025_Read_Buffer(unsigned char chip_add,
                                 unsigned char sizedata,
                                            char *data);
 
+void EEPROM_24C1025_Read_Buffer_USART(unsigned char chip_add,
+                                      unsigned long mem_add,
+                                      unsigned char sizedata,
+                                      char *data);
+
 void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char *buffer);
 void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char *data);
 
@@ -2846,10 +2851,10 @@ void my_delay_ms_WDT(long time);
 void Decodify_Command(void);
 void Send_To_MB(unsigned char size);
 void Send_Reply_OK(void);
+# 75 "SlaveLiofilizadorVer1.c"
+void MediaPlacaVaccum(unsigned char canal);
 
 
-void mediaLeituraPt100Umidadde(unsigned char canal);
-# 78 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog);
 
 extern volatile char usart_buffer[32+20];
@@ -2866,8 +2871,12 @@ extern volatile unsigned char hora;
 extern volatile unsigned int Delay_Led_Tmr0 ;
 extern volatile unsigned int Delay_Led_Usart ;
 extern volatile unsigned int Delay_Led_Memory;
-# 128 "SlaveLiofilizadorVer1.c"
-float Temperatura0,Umidade1;
+# 124 "SlaveLiofilizadorVer1.c"
+float Vaccum0, Tensao1;
+
+
+
+
 
 
 t_usart_protocol usart_protocol;
@@ -2967,16 +2976,26 @@ void main(void) {
 
 
 
-     statuspower.flag_global_condensador=0;
+
+
+
+
+     statuspower.flag_global_vacuo=0;
 # 245 "SlaveLiofilizadorVer1.c"
      while(1)
           {
 
          generic_status.flag_main_loop_WDT=1;
-# 269 "SlaveLiofilizadorVer1.c"
+# 274 "SlaveLiofilizadorVer1.c"
          if(++canal==2) canal=0;
-         mediaLeituraPt100Umidadde(canal);
-# 283 "SlaveLiofilizadorVer1.c"
+         MediaPlacaVaccum(canal);
+
+
+
+
+
+
+
          if(generic_status.flag_usart_rx==1)
             {
             header =(((unsigned int)usart_buffer[0]<<8)+usart_buffer[1]);
@@ -3032,12 +3051,13 @@ void Decodify_Command(void)
              USART_put_string(buffer);
              break;
         case 0X1A:
-# 356 "SlaveLiofilizadorVer1.c"
+# 363 "SlaveLiofilizadorVer1.c"
              if(usart_protocol.value[0]==0)
-                OutPut=Temperatura0;
+                OutPut=Tensao1;
              else
-                OutPut=Umidade1;
-# 369 "SlaveLiofilizadorVer1.c"
+                OutPut=Vaccum0;
+
+
              OutPut*=10.0;
 
              INTCONbits.GIE=0;
@@ -3061,16 +3081,8 @@ void Decodify_Command(void)
         case 0x03:
              Send_To_MB(2);
 
-
-
-
-
-             USART_put_int(2);
-
-
-
-
-
+             USART_put_int(1);
+# 411 "SlaveLiofilizadorVer1.c"
              break;
 # 427 "SlaveLiofilizadorVer1.c"
         case 0x08:
@@ -3153,13 +3165,12 @@ void Decodify_Command(void)
              {
              char sizedata;
              sizedata=usart_protocol.value[5];
-             EEPROM_24C1025_Read_Buffer(usart_protocol.value[0],
-                                        add_24LCxxxx,
-                                        sizedata,
-                                        buffer);
+             Send_To_MB(sizedata);
+             EEPROM_24C1025_Read_Buffer_USART(usart_protocol.value[0],
+                                              add_24LCxxxx,
+                                              sizedata,
+                                              buffer);
 
-             Send_To_MB(5);
-             USART_put_buffer(buffer,sizedata);
              }
              break;
 
@@ -3259,58 +3270,73 @@ void Send_Reply_OK(void){
      USART_put_string("OK");
 
  }
-# 685 "SlaveLiofilizadorVer1.c"
-void mediaLeituraPt100Umidadde(unsigned char canal)
-     {
-     float Temp;
-     float tensao;
-     char i;
+# 740 "SlaveLiofilizadorVer1.c"
+void MediaPlacaVaccum(unsigned char canal){
+     float Temp,Valor;
+     unsigned int i;
 
-     ADCON0bits.CHS=canal;
-     my_delay_ms(1);
-     Temp=0;
-
-     for(i=1;i<15;i++)
-        {
-        Temp+=ADC_Media_10bits(canal);
-        if(Package_Usart_is_for_me()==1) break;
-        }
-     if(i<10)
-        {
-
-        return;
-        }
-
-
-     if(i==15)
-       Temp/=(i-1);
-     else
-       Temp/=(i);
-
-
-
-
-
-     tensao=(5.0/1023.0);
-     Temp*=tensao;
-     Temp*=40.0;
-     Temp-=110.0;
 
 
      if(canal==0)
-        {
-        Temperatura0=Temp;
-        }
-     else
-        {
-        Umidade1=Temp;
-        }
+       {
+       ADCON1bits.VCFG0=1;
+       ADCON1bits.VCFG1=1;
+       ADCON0bits.CHS=canal;
+       my_delay_ms(1);
+       Temp=0;
 
-     }
-# 980 "SlaveLiofilizadorVer1.c"
+       for(i=1;i<15;i++)
+           {
+           Temp+=ADC_Media_10bits(canal);
+           if(Package_Usart_is_for_me()==1) break;
+           }
+       if(i<10)
+         {
+
+         return;
+         }
+
+       if(i==15)
+         Temp/=(i-1);
+       else
+         Temp/=(i);
+
+       Vaccum0 =1023.0-Temp;
+       Vaccum0*=Vaccum0;
+       Vaccum0*=0.00222;
+       Vaccum0+=150;
+
+       if(Vaccum0>2000)Vaccum0=2000;
+
+       }
+     else
+       {
+       ADCON1bits.VCFG0=0;
+       ADCON1bits.VCFG1=0;
+       ADCON0bits.CHS=canal;
+       my_delay_ms(1);
+       Temp=0;
+
+       for(i=1;i<15;i++)
+           {
+           Valor=ADC_Max_10Bits(canal);
+           if(Valor>Temp) Temp=Valor;
+           if(Package_Usart_is_for_me()==1) break;
+           }
+        if(i<10)
+          {
+
+          return;
+          }
+        Tensao1 =Temp*0.318296;
+        if(Tensao1<15) Tensao1=0;
+
+       }
+}
+# 968 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog){
-     EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura0*10.0);
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, Umidade1);
+     EEPROM_24C1025_Write_Int(0x00, add_datalog, (Tensao1*10.0));
+     EEPROM_24C1025_Write_Int(0x01, add_datalog, (Vaccum0*10.0));
 
 
 

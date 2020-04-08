@@ -503,14 +503,13 @@ void Decodify_Command(void)
         case COMMAND_EEE_R_BUF:
              {                 
              char sizedata;
-             sizedata=usart_protocol.value[5]; 
-             EEPROM_24C1025_Read_Buffer(usart_protocol.value[0],  //CHIP NUMBER
-                                        add_24LCxxxx,  //Add of memory
-                                        sizedata,  //SIZEDATA
-                                        buffer);  //Buffer of data   
-             
-             Send_To_MB(5);
-             USART_put_buffer(buffer,sizedata); 
+             sizedata=usart_protocol.value[5];
+             Send_To_MB(sizedata);
+             EEPROM_24C1025_Read_Buffer_USART(usart_protocol.value[0],  //CHIP NUMBER
+                                              add_24LCxxxx,  //Add of memory
+                                              sizedata,  //SIZEDATA
+                                              buffer);  //Buffer of data                           
+             //USART_put_buffer(buffer,sizedata); 
              }
              break;
              

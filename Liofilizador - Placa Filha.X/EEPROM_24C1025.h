@@ -23,6 +23,11 @@ void EEPROM_24C1025_Read_Buffer(unsigned char chip_add,
                                 unsigned char sizedata,
                                            char *data);
 
+void EEPROM_24C1025_Read_Buffer_USART(unsigned char chip_add, 
+                                      unsigned long mem_add,
+                                      unsigned char sizedata,
+                                      char *data);
+
 void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char *buffer);
 void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char *data);
 

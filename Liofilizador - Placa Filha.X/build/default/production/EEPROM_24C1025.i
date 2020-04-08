@@ -2516,7 +2516,7 @@ typedef struct {
         unsigned char size;
         char value[52];
 } t_usart_protocol;
-# 154 "./protocolo.h"
+# 155 "./protocolo.h"
 char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
@@ -2717,6 +2717,11 @@ void EEPROM_24C1025_Read_Buffer(unsigned char chip_add,
                                 unsigned char sizedata,
                                            char *data);
 
+void EEPROM_24C1025_Read_Buffer_USART(unsigned char chip_add,
+                                      unsigned long mem_add,
+                                      unsigned char sizedata,
+                                      char *data);
+
 void EEPROM_24C1025_Read_Str(unsigned char chip_add, unsigned long mem_add,char *buffer);
 void EEPROM_24C1025_Write_Str(unsigned char chip_add, unsigned long mem_add,char *data);
 
@@ -2877,6 +2882,79 @@ void EEPROM_24C1025_Read_Buffer(unsigned char chip_add,
              {
              (*data)=I2C_Master_Read(1);
              data++;
+             mem_add++;
+             }
+        }
+        I2C_Master_Read(0);
+        I2C_Master_Stop();
+        _delay((unsigned long)((650)*(8000000/4000000.0)));
+
+}
+
+
+
+
+
+
+void EEPROM_24C1025_Read_Buffer_USART(unsigned char chip_add,
+                                      unsigned long mem_add,
+                                      unsigned char sizedata,
+                                      char *data)
+     {
+     unsigned char cnt=0;
+     unsigned char range=0;
+     unsigned char ctrl;
+
+     Delay_Led_Memory=20;
+
+     if(mem_add>0x1FFFF) return;
+
+     if(mem_add>0xFFFF) range=0x08; else range=0x00;
+     ctrl=chip_add;
+     ctrl<<=1;
+     ctrl |= 0xA0;
+     ctrl |= 0b00000001;
+     ctrl |= range;
+
+     I2C_Master_Start();
+     I2C_Master_Write(ctrl & 0xFE);
+     I2C_Master_Write(((char *)&mem_add)[1]);
+     I2C_Master_Write(((char *)&mem_add)[0]);
+     I2C_Master_RepeatedStart();
+     I2C_Master_Write(ctrl);
+
+     for(char cnt=0;cnt<(sizedata);cnt++)
+        {
+           __asm("CLRWDT");
+           if(mem_add>0x1FFFF) break;
+           if((mem_add+1)%128==0)
+             {
+             (*data)=I2C_Master_Read(0);
+             I2C_Master_Stop();
+             USART_putc(*data);
+
+
+             mem_add++;
+
+             if(mem_add>0xFFFF) range=0x08; else range=0x00;
+             ctrl=chip_add;
+             ctrl<<=1;
+             ctrl |= 0xA0;
+             ctrl |= 0b00000001;
+             ctrl |= range;
+
+             I2C_Master_Start();
+             I2C_Master_Write(ctrl & 0xFE);
+             I2C_Master_Write(((char *)&mem_add)[1]);
+             I2C_Master_Write(((char *)&mem_add)[0]);
+             I2C_Master_RepeatedStart();
+             I2C_Master_Write(ctrl);
+             }
+           else
+             {
+             (*data)=I2C_Master_Read(1);
+             USART_putc(*data);
+
              mem_add++;
              }
         }

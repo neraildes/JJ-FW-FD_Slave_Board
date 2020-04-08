@@ -72,6 +72,7 @@ typedef struct {
 #define COMMAND_PROCULUS_Buzzer 0X24
 #define COMMAND_LDC_PAGE        0X25
 #define COMMAND_CONTROL_ACTIVE  0X26
+#define COMMAND_READ_TOTALBOARD 0X27
 //...
 #define COMMAND_PROC_CLOCK_R    0X2D
 #define COMMAND_CLK_RTC_R       0X2E
