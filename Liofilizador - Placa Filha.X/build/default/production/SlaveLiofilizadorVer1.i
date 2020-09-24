@@ -3046,7 +3046,7 @@ void Decodify_Command(void)
 
 
         case 0x41:
-             strcpy(buffer,"v1.0.16");
+             strcpy(buffer,"v1.0.17");
              Send_To_MB(11);
              USART_put_string(buffer);
              break;
@@ -3319,8 +3319,9 @@ void MediaPlacaVaccum(unsigned char canal){
 
        for(i=1;i<15;i++)
            {
-           Valor=ADC_Max_10Bits(canal);
-           if(Valor>Temp) Temp=Valor;
+
+
+           Temp+=ADC_Media_10bits(canal);
            if(Package_Usart_is_for_me()==1) break;
            }
         if(i<10)
@@ -3328,12 +3329,18 @@ void MediaPlacaVaccum(unsigned char canal){
 
           return;
           }
-        Tensao1 =Temp*0.318296;
+
+       if(i==15)
+         Temp/=(i-1);
+       else
+         Temp/=(i);
+
+        Tensao1 =Temp*0.558296;
         if(Tensao1<15) Tensao1=0;
 
        }
 }
-# 968 "SlaveLiofilizadorVer1.c"
+# 975 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, (Tensao1*10.0));
      EEPROM_24C1025_Write_Int(0x01, add_datalog, (Vaccum0*10.0));

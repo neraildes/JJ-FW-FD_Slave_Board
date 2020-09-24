@@ -785,8 +785,9 @@ void MediaPlacaVaccum(unsigned char canal){
        //flag_led_memory=1; //fix apagar 
        for(i=1;i<15;i++)
            {  
-           Valor=ADC_Max_10Bits(canal);
-           if(Valor>Temp) Temp=Valor; 
+           //Valor=ADC_Max_10Bits(canal);
+           //if(Valor>Temp) Temp=Valor; 
+           Temp+=ADC_Media_10bits(canal);
            if(Package_Usart_is_for_me()==TRUE) break;        
            }  
         if(i<10)
@@ -794,7 +795,13 @@ void MediaPlacaVaccum(unsigned char canal){
           //flag_led_memory=0; //fix apagar   
           return;
           }
-        Tensao1 =Temp*0.318296;
+       
+       if(i==15)
+         Temp/=(i-1);
+       else
+         Temp/=(i);       
+       
+        Tensao1 =Temp*0.558296;
         if(Tensao1<15) Tensao1=0;
         //flag_led_memory=0; //fix apagar 
        }
