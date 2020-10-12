@@ -766,13 +766,30 @@ void MediaPlacaVaccum(unsigned char canal){
          Temp/=(i-1);
        else
          Temp/=(i);       
-             
-       Vaccum0 =1023.0-Temp; 
-       Vaccum0*=Vaccum0;
-       Vaccum0*=0.00222;
-       Vaccum0+=150;
        
-       if(Vaccum0>2000)Vaccum0=2000;          
+       if(Temp<615)
+          { 
+          Vaccum0 =1023.0-(Temp-454.0);        
+          Vaccum0*=1.9550342131;
+          Vaccum0-=((Temp-454.0)*5.2);
+          }
+       else
+          {           
+          Vaccum0 =1023.0-(Temp-616.0);        
+          Vaccum0*=0.828934506;
+          Vaccum0-=((Temp-616.0)*2.34);           
+          } 
+       
+       
+       if(Vaccum0>2000)Vaccum0=2000;
+       
+       
+       //Vaccum0=1023.0-(Temp-327.0);
+       
+       
+       
+       
+                 
        //flag_led_memory=0; //fix apagar 
        }     
      else //------------------ SENSOR DE TENSÃO---------------------------------
