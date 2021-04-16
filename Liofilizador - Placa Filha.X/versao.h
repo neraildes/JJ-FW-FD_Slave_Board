@@ -1,5 +1,5 @@
 // arquivo criado pelo script versionar.h
 #ifndef VERSAO_H
 #define	VERSAO_H
-#define FVERSION "v1.0.20"
+#define FVERSION "v1.0.21"
 #endif
