@@ -16,8 +16,8 @@ extern double __fpnormalize(double);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\xc8debug.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\xc8debug.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\xc8debug.h" 1 3
+# 13 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\xc8debug.h" 3
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 # 24 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
@@ -2425,7 +2425,7 @@ char Package_Usart_is_for_me();
 # 54 "./global.h" 2
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 1 3
 
 
 
@@ -2435,10 +2435,10 @@ char Package_Usart_is_for_me();
 
 
 typedef unsigned size_t;
-# 5 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 2 3
+# 5 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 2 3
 
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\__null.h" 1 3
-# 6 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 2 3
+# 6 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 2 3
 
 typedef unsigned short wchar_t;
 
@@ -2464,7 +2464,7 @@ typedef struct {
  unsigned long quot;
  unsigned long rem;
 } uldiv_t;
-# 65 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 3
+# 65 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 3
 extern double atof(const char *);
 extern double strtod(const char *, const char **);
 extern int atoi(const char *);
@@ -2496,7 +2496,7 @@ extern unsigned int _rotr(unsigned int value, unsigned int shift);
 extern void * malloc(size_t);
 extern void free(void *);
 extern void * realloc(void *, size_t);
-# 104 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdlib.h" 3
+# 104 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 3
 extern int atexit(void (*)(void));
 extern char * getenv(const char *);
 extern char ** environ;
@@ -2518,9 +2518,9 @@ extern char * ultoa(char * buf, unsigned long val, int base);
 extern char * ftoa(float f, int * status);
 # 56 "./global.h" 2
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
-# 11 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdarg.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 1 3
+# 11 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdarg.h" 1 3
 
 
 
@@ -2534,15 +2534,15 @@ extern void * __va_start(void);
 
 #pragma intrinsic(__va_arg)
 extern void * __va_arg(void *, ...);
-# 11 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
-# 43 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
+# 11 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 2 3
+# 43 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
 struct __prbuf
 {
  char * ptr;
  void (* func)(char);
 };
-# 85 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\conio.h" 1 3
+# 85 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\conio.h" 1 3
 
 
 
@@ -2550,10 +2550,10 @@ struct __prbuf
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\errno.h" 1 3
-# 29 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\errno.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\errno.h" 1 3
+# 29 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\errno.h" 3
 extern int errno;
-# 8 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\conio.h" 2 3
+# 8 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\conio.h" 2 3
 
 
 
@@ -2571,7 +2571,7 @@ extern __bit kbhit(void);
 
 extern char * cgets(char *);
 extern void cputs(const char *);
-# 85 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 2 3
+# 85 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 2 3
 
 
 
@@ -2581,7 +2581,7 @@ extern int cprintf(char *, ...);
 
 
 extern int _doprnt(struct __prbuf *, const register char *, register va_list);
-# 180 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 3
+# 180 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
 #pragma printf_check(vprintf) const
 #pragma printf_check(vsprintf) const
 
@@ -2600,12 +2600,12 @@ extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
 # 57 "./global.h" 2
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 1 3
-# 14 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
+# 14 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
 extern void * memcpy(void *, const void *, size_t);
 extern void * memmove(void *, const void *, size_t);
 extern void * memset(void *, int, size_t);
-# 36 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\string.h" 3
+# 36 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
 extern char * strcat(char *, const char *);
 extern char * strcpy(char *, const char *);
 extern char * strncat(char *, const char *, size_t);
@@ -2633,13 +2633,13 @@ extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 # 58 "./global.h" 2
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\math.h" 1 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\math.h" 1 3
 
 
 
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\__unsupported.h" 1 3
-# 4 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\math.h" 2 3
-# 30 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\math.h" 3
+# 4 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\math.h" 2 3
+# 30 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\math.h" 3
 extern double fabs(double);
 extern double floor(double);
 extern double ceil(double);
@@ -2847,10 +2847,10 @@ void my_delay_ms_WDT(long time);
 void Decodify_Command(void);
 void Send_To_MB(unsigned char size);
 void Send_Reply_OK(void);
-# 75 "SlaveLiofilizadorVer1.c"
-void MediaPlacaVaccum(unsigned char canal);
 
 
+void mediaLeituraPt100Umidadde(unsigned char canal);
+# 78 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog);
 
 extern volatile char usart_buffer[32+20];
@@ -2867,12 +2867,8 @@ extern volatile unsigned char hora;
 extern volatile unsigned int Delay_Led_Tmr0 ;
 extern volatile unsigned int Delay_Led_Usart ;
 extern volatile unsigned int Delay_Led_Memory;
-# 124 "SlaveLiofilizadorVer1.c"
-float Vaccum0, Tensao1;
-
-
-
-
+# 128 "SlaveLiofilizadorVer1.c"
+float Temperatura0,Umidade1;
 
 
 t_usart_protocol usart_protocol;
@@ -2972,26 +2968,16 @@ void main(void) {
 
 
 
-
-
-
-
-     statuspower.flag_global_vacuo=0;
+     statuspower.flag_global_condensador=0;
 # 245 "SlaveLiofilizadorVer1.c"
      while(1)
           {
 
          generic_status.flag_main_loop_WDT=1;
-# 274 "SlaveLiofilizadorVer1.c"
+# 269 "SlaveLiofilizadorVer1.c"
          if(++canal==2) canal=0;
-         MediaPlacaVaccum(canal);
-
-
-
-
-
-
-
+         mediaLeituraPt100Umidadde(canal);
+# 283 "SlaveLiofilizadorVer1.c"
          if(generic_status.flag_usart_rx==1)
             {
             header =(((unsigned int)usart_buffer[0]<<8)+usart_buffer[1]);
@@ -3042,18 +3028,17 @@ void Decodify_Command(void)
 
 
         case 0x41:
-             strcpy(buffer,"v1.0.20");
+             strcpy(buffer,"v1.0.21");
              Send_To_MB(11);
              USART_put_string(buffer);
              break;
         case 0X1A:
-# 363 "SlaveLiofilizadorVer1.c"
+# 356 "SlaveLiofilizadorVer1.c"
              if(usart_protocol.value[0]==0)
-                OutPut=Tensao1;
+                OutPut=Temperatura0;
              else
-                OutPut=Vaccum0;
-
-
+                OutPut=Umidade1;
+# 369 "SlaveLiofilizadorVer1.c"
              OutPut*=10.0;
 
              INTCONbits.GIE=0;
@@ -3077,8 +3062,16 @@ void Decodify_Command(void)
         case 0x03:
              Send_To_MB(2);
 
-             USART_put_int(1);
-# 411 "SlaveLiofilizadorVer1.c"
+
+
+
+
+             USART_put_int(2);
+
+
+
+
+
              break;
 # 427 "SlaveLiofilizadorVer1.c"
         case 0x08:
@@ -3266,89 +3259,48 @@ void Send_Reply_OK(void){
      USART_put_string("OK");
 
  }
-# 740 "SlaveLiofilizadorVer1.c"
-void MediaPlacaVaccum(unsigned char canal){
-     float Temp,Valor;
-     unsigned int i;
+# 684 "SlaveLiofilizadorVer1.c"
+void mediaLeituraPt100Umidadde(unsigned char canal)
+     {
+     float Temp;
+     float tensao;
+     char i;
+
+     ADCON0bits.CHS=canal;
+     my_delay_ms(1);
+     Temp=0;
+
+     for(i=1;i<15;i++)
+        {
+        Temp+=ADC_Media_10bits(canal);
+        if(Package_Usart_is_for_me()==1) break;
+        }
+     if(i<10)
+        {
+
+        return;
+        }
 
 
-
-     if(canal==0)
-       {
-       ADCON1bits.VCFG0=1;
-       ADCON1bits.VCFG1=1;
-       ADCON0bits.CHS=canal;
-       my_delay_ms(1);
-       Temp=0;
-
-       for(i=1;i<15;i++)
-           {
-           Temp+=ADC_Media_10bits(canal);
-           if(Package_Usart_is_for_me()==1) break;
-           }
-       if(i<10)
-         {
-
-         return;
-         }
-
-       if(i==15)
-         Temp/=(i-1);
-       else
-         Temp/=(i);
-
-       if(Temp<615)
-          {
-          Vaccum0 =1023.0-(Temp-454.0);
-          Vaccum0*=1.9550342131;
-          Vaccum0-=((Temp-454.0)*5.2);
-          }
-       else
-          {
-          Vaccum0 =1023.0-(Temp-616.0);
-          Vaccum0*=0.828934506;
-          Vaccum0-=((Temp-616.0)*2.34);
-          }
-
-
-       if(Vaccum0>2000)Vaccum0=2000;
-# 794 "SlaveLiofilizadorVer1.c"
-       }
+     if(i==15)
+       Temp/=(i-1);
      else
-       {
-       ADCON1bits.VCFG0=0;
-       ADCON1bits.VCFG1=0;
-       ADCON0bits.CHS=canal;
-       my_delay_ms(1);
-       Temp=0;
+       Temp/=(i);
+# 721 "SlaveLiofilizadorVer1.c"
+     if(canal==0)
+        {
+        Temperatura0=((200.0 * Temp) / 1023.0) - 100.0;
+        }
+     else
+        {
+        Umidade1=Temp;
+        }
 
-       for(i=1;i<15;i++)
-           {
-
-
-           Temp+=ADC_Media_10bits(canal);
-           if(Package_Usart_is_for_me()==1) break;
-           }
-        if(i<10)
-          {
-
-          return;
-          }
-
-       if(i==15)
-         Temp/=(i-1);
-       else
-         Temp/=(i);
-
-        Tensao1 =Temp*0.558296;
-        if(Tensao1<15) Tensao1=0;
-
-       }
-}
-# 992 "SlaveLiofilizadorVer1.c"
+     }
+# 1003 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog){
-     EEPROM_24C1025_Write_Int(0x00, add_datalog, (Tensao1*10.0));
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, (Vaccum0*10.0));
+     EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura0*10.0);
+     EEPROM_24C1025_Write_Int(0x01, add_datalog, Umidade1);
 
 
 

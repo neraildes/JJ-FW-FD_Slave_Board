@@ -712,15 +712,15 @@ void mediaLeituraPt100Umidadde(unsigned char canal)
      
      //Este calculo antes da selecão de canais permite escolher entre canal 0
      //e canal 1 e ter a mesma leitura apesar da variavel se chamar Umidade1.
-     tensao=(5.0/1023.0);
-     Temp*=tensao; 
-     Temp*=40.0;
-     Temp-=110.0;
+     //tensao=(5.0/1023.0);
+     //Temp*=tensao; 
+     //Temp*=40.0;
+     //Temp-=110.0;
 
 
      if(canal==0)
         {
-        Temperatura0=Temp;                 
+        Temperatura0=((200.0 * Temp) / 1023.0) - 100.0;                 
         }
      else
         {
