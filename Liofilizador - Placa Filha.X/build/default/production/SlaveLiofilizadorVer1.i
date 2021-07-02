@@ -2847,10 +2847,10 @@ void my_delay_ms_WDT(long time);
 void Decodify_Command(void);
 void Send_To_MB(unsigned char size);
 void Send_Reply_OK(void);
-# 75 "SlaveLiofilizadorVer1.c"
-void MediaPlacaVaccum(unsigned char canal);
 
 
+void mediaLeituraPt100Umidadde(unsigned char canal);
+# 78 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog);
 
 extern volatile char usart_buffer[32+20];
@@ -2867,12 +2867,8 @@ extern volatile unsigned char hora;
 extern volatile unsigned int Delay_Led_Tmr0 ;
 extern volatile unsigned int Delay_Led_Usart ;
 extern volatile unsigned int Delay_Led_Memory;
-# 124 "SlaveLiofilizadorVer1.c"
-float Vaccum0, Tensao1;
-
-
-
-
+# 128 "SlaveLiofilizadorVer1.c"
+float Temperatura0,Umidade1;
 
 
 t_usart_protocol usart_protocol;
@@ -2972,26 +2968,16 @@ void main(void) {
 
 
 
-
-
-
-
-     statuspower.flag_global_vacuo=0;
+     statuspower.flag_global_condensador=0;
 # 245 "SlaveLiofilizadorVer1.c"
      while(1)
           {
 
          generic_status.flag_main_loop_WDT=1;
-# 274 "SlaveLiofilizadorVer1.c"
+# 269 "SlaveLiofilizadorVer1.c"
          if(++canal==2) canal=0;
-         MediaPlacaVaccum(canal);
-
-
-
-
-
-
-
+         mediaLeituraPt100Umidadde(canal);
+# 283 "SlaveLiofilizadorVer1.c"
          if(generic_status.flag_usart_rx==1)
             {
             header =(((unsigned int)usart_buffer[0]<<8)+usart_buffer[1]);
@@ -3042,18 +3028,17 @@ void Decodify_Command(void)
 
 
         case 0x41:
-             strcpy(buffer,"v1.0.21");
+             strcpy(buffer,"LJB-105K");
              Send_To_MB(11);
              USART_put_string(buffer);
              break;
         case 0X1A:
-# 363 "SlaveLiofilizadorVer1.c"
+# 356 "SlaveLiofilizadorVer1.c"
              if(usart_protocol.value[0]==0)
-                OutPut=Tensao1;
+                OutPut=Temperatura0;
              else
-                OutPut=Vaccum0;
-
-
+                OutPut=Umidade1;
+# 369 "SlaveLiofilizadorVer1.c"
              OutPut*=10.0;
 
              INTCONbits.GIE=0;
@@ -3077,8 +3062,16 @@ void Decodify_Command(void)
         case 0x03:
              Send_To_MB(2);
 
-             USART_put_int(1);
-# 411 "SlaveLiofilizadorVer1.c"
+
+
+
+
+             USART_put_int(2);
+
+
+
+
+
              break;
 # 427 "SlaveLiofilizadorVer1.c"
         case 0x08:
@@ -3266,89 +3259,54 @@ void Send_Reply_OK(void){
      USART_put_string("OK");
 
  }
-# 740 "SlaveLiofilizadorVer1.c"
-void MediaPlacaVaccum(unsigned char canal){
-     float Temp,Valor;
-     unsigned int i;
+# 684 "SlaveLiofilizadorVer1.c"
+void mediaLeituraPt100Umidadde(unsigned char canal)
+     {
+     float Temp;
+     float tensao;
+     char i;
+
+     ADCON0bits.CHS=canal;
+     my_delay_ms(1);
+     Temp=0;
+
+     for(i=1;i<15;i++)
+        {
+        Temp+=ADC_Media_10bits(canal);
+        if(Package_Usart_is_for_me()==1) break;
+        }
+     if(i<10)
+        {
+
+        return;
+        }
 
 
-
-     if(canal==0)
-       {
-       ADCON1bits.VCFG0=1;
-       ADCON1bits.VCFG1=1;
-       ADCON0bits.CHS=canal;
-       my_delay_ms(1);
-       Temp=0;
-
-       for(i=1;i<15;i++)
-           {
-           Temp+=ADC_Media_10bits(canal);
-           if(Package_Usart_is_for_me()==1) break;
-           }
-       if(i<10)
-         {
-
-         return;
-         }
-
-       if(i==15)
-         Temp/=(i-1);
-       else
-         Temp/=(i);
-
-       if(Temp<615)
-          {
-          Vaccum0 =1023.0-(Temp-454.0);
-          Vaccum0*=1.9550342131;
-          Vaccum0-=((Temp-454.0)*5.2);
-          }
-       else
-          {
-          Vaccum0 =1023.0-(Temp-616.0);
-          Vaccum0*=0.828934506;
-          Vaccum0-=((Temp-616.0)*2.34);
-          }
-
-
-       if(Vaccum0>2000)Vaccum0=2000;
-# 794 "SlaveLiofilizadorVer1.c"
-       }
+     if(i==15)
+       Temp/=(i-1);
      else
-       {
-       ADCON1bits.VCFG0=0;
-       ADCON1bits.VCFG1=0;
-       ADCON0bits.CHS=canal;
-       my_delay_ms(1);
-       Temp=0;
+       Temp/=(i);
+# 721 "SlaveLiofilizadorVer1.c"
+     if(canal==0)
+        {
+        Temperatura0=((200.0 * Temp) / 1023.0) - 100.0;
 
-       for(i=1;i<15;i++)
-           {
-
-
-           Temp+=ADC_Media_10bits(canal);
-           if(Package_Usart_is_for_me()==1) break;
-           }
-        if(i<10)
+        if(Temperatura0<=-45.0)
           {
 
-          return;
+          Temperatura0=Temperatura0-(((Temperatura0+45.0)*(Temperatura0+45.0))*0.013);
           }
+        }
+     else
+        {
+        Umidade1=Temp;
+        }
 
-       if(i==15)
-         Temp/=(i-1);
-       else
-         Temp/=(i);
-
-        Tensao1 =Temp*0.558296;
-        if(Tensao1<15) Tensao1=0;
-
-       }
-}
-# 992 "SlaveLiofilizadorVer1.c"
+     }
+# 1009 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog){
-     EEPROM_24C1025_Write_Int(0x00, add_datalog, (Tensao1*10.0));
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, (Vaccum0*10.0));
+     EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura0*10.0);
+     EEPROM_24C1025_Write_Int(0x01, add_datalog, Umidade1);
 
 
 

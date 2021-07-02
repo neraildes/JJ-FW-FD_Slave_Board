@@ -721,6 +721,12 @@ void mediaLeituraPt100Umidadde(unsigned char canal)
      if(canal==0)
         {
         Temperatura0=((200.0 * Temp) / 1023.0) - 100.0;                 
+        
+        if(Temperatura0<=-45.0)
+          { 
+          //Temperatura0=1111;
+          Temperatura0=Temperatura0-(((Temperatura0+45.0)*(Temperatura0+45.0))*0.013);
+          }  
         }
      else
         {
