@@ -1,4 +1,7 @@
-PT100 BOARD
+﻿PT100 BOARD
+
+LJB-105K
+   Forçar atingir -105°C quando na verdade é -68°C.
 
 v1.0.7
    reduzido o tempo de captura para 10 segundos
