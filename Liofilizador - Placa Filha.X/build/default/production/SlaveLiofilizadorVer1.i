@@ -3028,7 +3028,7 @@ void Decodify_Command(void)
 
 
         case 0x41:
-             strcpy(buffer,"LJB-105K");
+             strcpy(buffer,"v1.0.22");
              Send_To_MB(11);
              USART_put_string(buffer);
              break;
@@ -3290,12 +3290,6 @@ void mediaLeituraPt100Umidadde(unsigned char canal)
      if(canal==0)
         {
         Temperatura0=((200.0 * Temp) / 1023.0) - 100.0;
-
-        if(Temperatura0<=-45.0)
-          {
-
-          Temperatura0=Temperatura0-(((Temperatura0+45.0)*(Temperatura0+45.0))*0.013);
-          }
         }
      else
         {
@@ -3303,7 +3297,7 @@ void mediaLeituraPt100Umidadde(unsigned char canal)
         }
 
      }
-# 1009 "SlaveLiofilizadorVer1.c"
+# 1003 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura0*10.0);
      EEPROM_24C1025_Write_Int(0x01, add_datalog, Umidade1);
