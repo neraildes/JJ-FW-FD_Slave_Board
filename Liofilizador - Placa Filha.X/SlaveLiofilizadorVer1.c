@@ -125,7 +125,7 @@ float Vaccum0, Tensao1;
 #endif
 
 #ifdef PT100_UMIDADE
-float Temperatura0,Umidade1;
+float Temperatura0,Temperatura1;//,Umidade1;
 #endif
 
 t_usart_protocol usart_protocol;
@@ -356,7 +356,8 @@ void Decodify_Command(void)
              if(usart_protocol.value[0]==0)
                 OutPut=Temperatura0;
              else
-                OutPut=Umidade1;
+                OutPut=Temperatura1; 
+                //OutPut=Umidade1;
              #endif                  
              
              #ifdef VACCUM_BOARD
@@ -684,7 +685,7 @@ void mediatemperaturaNTC(unsigned char canal)
 void mediaLeituraPt100Umidadde(unsigned char canal)
      {  
      float Temp;
-     float tensao;
+     //float tensao;
      char i;              
      
      ADCON0bits.CHS=canal;
@@ -720,11 +721,12 @@ void mediaLeituraPt100Umidadde(unsigned char canal)
 
      if(canal==0)
         {
-        Temperatura0=((200.0 * Temp) / 1023.0) - 100.0;                   
+        Temperatura0=((200.0 * Temp) / 1023.0) - 110.0;                   
         }
      else
         {
-        Umidade1=Temp;
+        Temperatura1=((200.0 * Temp) / 1023.0) - 110.0; 
+        //Umidade1=Temp;
         }
      //flag_led_memory=0; //fix desativar
      }  
@@ -1002,7 +1004,8 @@ void Save_Log(unsigned long add_datalog){
 #ifdef PT100_UMIDADE
 void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura0*10.0);
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, Umidade1);  
+     EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura1*10.0);
+     //EEPROM_24C1025_Write_Int(0x01, add_datalog, Umidade1);  
      
      //EEPROM_24C1025_Write_Int(0x00, add_datalog+2, 0xFFFF);   
      //EEPROM_24C1025_Write_Int(0x01, add_datalog+2, 0xFFFF);     

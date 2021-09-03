@@ -2868,7 +2868,7 @@ extern volatile unsigned int Delay_Led_Tmr0 ;
 extern volatile unsigned int Delay_Led_Usart ;
 extern volatile unsigned int Delay_Led_Memory;
 # 128 "SlaveLiofilizadorVer1.c"
-float Temperatura0,Umidade1;
+float Temperatura0,Temperatura1;
 
 
 t_usart_protocol usart_protocol;
@@ -3037,8 +3037,8 @@ void Decodify_Command(void)
              if(usart_protocol.value[0]==0)
                 OutPut=Temperatura0;
              else
-                OutPut=Umidade1;
-# 369 "SlaveLiofilizadorVer1.c"
+                OutPut=Temperatura1;
+# 370 "SlaveLiofilizadorVer1.c"
              OutPut*=10.0;
 
              INTCONbits.GIE=0;
@@ -3058,7 +3058,7 @@ void Decodify_Command(void)
              Delay_Led_Tmr0=0;
              milisegundo=0;
              break;
-# 398 "SlaveLiofilizadorVer1.c"
+# 399 "SlaveLiofilizadorVer1.c"
         case 0x03:
              Send_To_MB(2);
 
@@ -3073,7 +3073,7 @@ void Decodify_Command(void)
 
 
              break;
-# 427 "SlaveLiofilizadorVer1.c"
+# 428 "SlaveLiofilizadorVer1.c"
         case 0x08:
              EEPROM_Write_Byte(usart_protocol.value[0],
                                usart_protocol.value[1]);
@@ -3259,11 +3259,11 @@ void Send_Reply_OK(void){
      USART_put_string("OK");
 
  }
-# 684 "SlaveLiofilizadorVer1.c"
+# 685 "SlaveLiofilizadorVer1.c"
 void mediaLeituraPt100Umidadde(unsigned char canal)
      {
      float Temp;
-     float tensao;
+
      char i;
 
      ADCON0bits.CHS=canal;
@@ -3286,21 +3286,23 @@ void mediaLeituraPt100Umidadde(unsigned char canal)
        Temp/=(i-1);
      else
        Temp/=(i);
-# 721 "SlaveLiofilizadorVer1.c"
+# 722 "SlaveLiofilizadorVer1.c"
      if(canal==0)
         {
-        Temperatura0=((200.0 * Temp) / 1023.0) - 100.0;
+        Temperatura0=((200.0 * Temp) / 1023.0) - 110.0;
         }
      else
         {
-        Umidade1=Temp;
+        Temperatura1=((200.0 * Temp) / 1023.0) - 110.0;
+
         }
 
      }
-# 1003 "SlaveLiofilizadorVer1.c"
+# 1005 "SlaveLiofilizadorVer1.c"
 void Save_Log(unsigned long add_datalog){
      EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura0*10.0);
-     EEPROM_24C1025_Write_Int(0x01, add_datalog, Umidade1);
+     EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura1*10.0);
+
 
 
 
