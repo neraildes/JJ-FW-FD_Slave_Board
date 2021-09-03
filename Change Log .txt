@@ -1,4 +1,10 @@
-﻿PT100 BOARD
+﻿PT100 NTC BOARD 4 EM 1
+
+v1.0.23
+   PLACA VÁCUO
+         Nenhuma alteração
+   PLACA PT100-NTC
+         Faz leitura dos dois PT100. (Ulitizado em liofilizador a gel).
 
 LJB-105K
    Forçar atingir -105°C quando na verdade é -68°C.
