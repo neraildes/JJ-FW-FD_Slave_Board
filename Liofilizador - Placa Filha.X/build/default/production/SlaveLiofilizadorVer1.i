@@ -3028,7 +3028,7 @@ void Decodify_Command(void)
 
 
         case 0x41:
-             strcpy(buffer,"v1.0.22");
+             strcpy(buffer,"v1.0.23");
              Send_To_MB(11);
              USART_put_string(buffer);
              break;

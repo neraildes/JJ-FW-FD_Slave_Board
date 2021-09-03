@@ -879,7 +879,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;SlaveLiofilizadorVer1.c: 342:         case 0x41:
 [e :U 156 ]
 "343
-[; ;SlaveLiofilizadorVer1.c: 343:              strcpy(buffer,"v1.0.22");
+[; ;SlaveLiofilizadorVer1.c: 343:              strcpy(buffer,"v1.0.23");
 [e ( _strcpy (2 , &U _buffer :s 1C ]
 "344
 [; ;SlaveLiofilizadorVer1.c: 344:              Send_To_MB(11);
@@ -1542,4 +1542,4 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 200 ]
 }
 [a 2C 79 75 0 ]
-[a 1C 118 49 46 48 46 50 50 0 ]
+[a 1C 118 49 46 48 46 50 51 0 ]
