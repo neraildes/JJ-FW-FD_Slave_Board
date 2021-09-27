@@ -1,5 +1,15 @@
 ﻿PT100 NTC BOARD 4 EM 1
 
+v1.0.24
+   PLACA VACUO
+         Destravamento automatico no RX
+   PLACA PT100
+         Destravamento automatico no RX
+   PLACA NTC
+	 Destravamento automatico no RX
+	 Valor de 0 em T<on> ou T<off> segundos nem clica.
+
+
 v1.0.23
    PLACA VÁCUO
          Nenhuma alteração
