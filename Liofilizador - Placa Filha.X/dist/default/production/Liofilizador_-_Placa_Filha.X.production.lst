@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
-                                                                                               Fri Sep 03 11:25:14 2021
+                                                                                               Mon Sep 27 11:34:23 2021
 
 Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og9 
      1                           	processor	16F886
@@ -1367,7 +1367,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og9
   1347  1053  3430               	retlw	48	;'0'
   1348  1054  342E               	retlw	46	;'.'
   1349  1055  3432               	retlw	50	;'2'
-  1350  1056  3433               	retlw	51	;'3'
+  1350  1056  3434               	retlw	52	;'4'
   1351  1057  3400               	retlw	0
   1352  1058                     STR_2:
   1353  1058  344F               	retlw	79	;'O'
@@ -5595,7 +5595,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og9
   5553  0061  2B75               	goto	l5693
   5554  0062                     l5533:
   5555                           
-  5556                           ;SlaveLiofilizadorVer1.c: 343:              strcpy(buffer,"v1.0.23");
+  5556                           ;SlaveLiofilizadorVer1.c: 343:              strcpy(buffer,"v1.0.24");
   5557  0062  3041               	movlw	(low ((STR_1-__stringbase)| (0+32768)))& (0+255)
   5558  0063  00DF               	movwf	??_Decodify_Command
   5559  0064  085F               	movf	??_Decodify_Command,w
@@ -13927,7 +13927,7 @@ DATA                 0      0     11A      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.32 build 20210201212658 
-Symbol Table                                                                                   Fri Sep 03 11:25:14 2021
+Symbol Table                                                                                   Mon Sep 27 11:34:23 2021
 
                                _USART_putc 1AC6                               ___fldiv@aexp 005C  
                              ___fldiv@bexp 005B                                          pc 0002  
