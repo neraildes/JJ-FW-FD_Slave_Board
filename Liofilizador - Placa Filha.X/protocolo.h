@@ -92,6 +92,7 @@ typedef struct {
 #define COMMAND_EEE_R_BUF_DIR   0x47  //Ler    Buvffer Direto
 #define COMMAND_EEE_W_BUF_DIR   0x48  //Gravar Buffer Direto
 //...
+#define COMMAND_FLUIDO_TERMICO  0x50  //Comando para placa aquecedora de fluido térmico 
 //----------------------------------
 
 

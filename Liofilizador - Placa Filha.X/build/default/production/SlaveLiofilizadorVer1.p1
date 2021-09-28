@@ -17,115 +17,115 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S134 . header origem destino command size value ]
 [p mainexit ]
 [v F1196 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
+"92 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF1196 ~T0 @X0 0 e ]
 [p i __delay ]
-"1710 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1710:     struct {
+"1710 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1710:     struct {
 [s S66 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 ]
 [n S66 . SCS LTS HTS OSTS IRCF ]
 "1717
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1717:     struct {
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1717:     struct {
 [s S67 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S67 . . IRCF0 IRCF1 IRCF2 ]
 "1709
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1709: typedef union {
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1709: typedef union {
 [u S65 `S66 1 `S67 1 ]
 [n S65 . . . ]
 "1724
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1724: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0x08F)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1724: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0x08F)));
 [v _OSCCONbits `VS65 ~T0 @X0 0 e@143 ]
 "166
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
 [v _PORTA `Vuc ~T0 @X0 0 e@5 ]
 "228
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
 [v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 "290
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 290: extern volatile unsigned char PORTC __attribute__((address(0x007)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 290: extern volatile unsigned char PORTC __attribute__((address(0x007)));
 [v _PORTC `Vuc ~T0 @X0 0 e@7 ]
 "352
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 352: extern volatile unsigned char PORTE __attribute__((address(0x009)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 352: extern volatile unsigned char PORTE __attribute__((address(0x009)));
 [v _PORTE `Vuc ~T0 @X0 0 e@9 ]
 "1337
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1337: extern volatile unsigned char TRISA __attribute__((address(0x085)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1337: extern volatile unsigned char TRISA __attribute__((address(0x085)));
 [v _TRISA `Vuc ~T0 @X0 0 e@133 ]
 "1399
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1399: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1399: extern volatile unsigned char TRISB __attribute__((address(0x086)));
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
 "1461
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1461: extern volatile unsigned char TRISC __attribute__((address(0x087)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1461: extern volatile unsigned char TRISC __attribute__((address(0x087)));
 [v _TRISC `Vuc ~T0 @X0 0 e@135 ]
 "1523
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1523: extern volatile unsigned char TRISE __attribute__((address(0x089)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1523: extern volatile unsigned char TRISE __attribute__((address(0x089)));
 [v _TRISE `Vuc ~T0 @X0 0 e@137 ]
 "3229
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3229: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3229: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
 "3273
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3273: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3273: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
 "1273
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1273:     struct {
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1273:     struct {
 [s S48 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S48 . PS PSA T0SE T0CS INTEDG nRBPU ]
 "1281
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1281:     struct {
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1281:     struct {
 [s S49 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S49 . PS0 PS1 PS2 ]
 "1272
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1272: typedef union {
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1272: typedef union {
 [u S47 `S48 1 `S49 1 ]
 [n S47 . . . ]
 "1287
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1287: extern volatile OPTION_REGbits_t OPTION_REGbits __attribute__((address(0x081)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1287: extern volatile OPTION_REGbits_t OPTION_REGbits __attribute__((address(0x081)));
 [v _OPTION_REGbits `VS47 ~T0 @X0 0 e@129 ]
 "2188
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2188: extern volatile unsigned char WPUB __attribute__((address(0x095)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2188: extern volatile unsigned char WPUB __attribute__((address(0x095)));
 [v _WPUB `Vuc ~T0 @X0 0 e@149 ]
 "234
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 234:     struct {
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 234:     struct {
 [s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S8 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
 "233
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 233: typedef union {
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 233: typedef union {
 [u S7 `S8 1 ]
 [n S7 . . ]
 "245
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 245: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 245: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
 [v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
 "6 ./my_delay.h
 [; ;./my_delay.h: 6: void my_delay_ms_WDT(long time);
 [v _my_delay_ms_WDT `(v ~T0 @X0 0 ef1`l ]
-"386 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 386:     struct {
+"386 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 386:     struct {
 [s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S14 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
 "396
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 396:     struct {
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 396:     struct {
 [s S15 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
 [n S15 . . TMR0IF . TMR0IE ]
 "385
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 385: typedef union {
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 385: typedef union {
 [u S13 `S14 1 `S15 1 ]
 [n S13 . . . ]
 "403
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 403: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 403: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS13 ~T0 @X0 0 e@11 ]
 "4110
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 4110: extern volatile __bit T1CKPS0 __attribute__((address(0x84)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 4110: extern volatile __bit T1CKPS0 __attribute__((address(0x84)));
 [v _T1CKPS0 `Vb ~T0 @X0 0 e@132 ]
 "4113
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 4113: extern volatile __bit T1CKPS1 __attribute__((address(0x85)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 4113: extern volatile __bit T1CKPS1 __attribute__((address(0x85)));
 [v _T1CKPS1 `Vb ~T0 @X0 0 e@133 ]
 "4146
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 4146: extern volatile __bit TMR1CS __attribute__((address(0x81)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 4146: extern volatile __bit TMR1CS __attribute__((address(0x81)));
 [v _TMR1CS `Vb ~T0 @X0 0 e@129 ]
 "4152
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 4152: extern volatile __bit TMR1IE __attribute__((address(0x460)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 4152: extern volatile __bit TMR1IE __attribute__((address(0x460)));
 [v _TMR1IE `Vb ~T0 @X0 0 e@1120 ]
 "592
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 592: extern volatile unsigned char T1CON __attribute__((address(0x010)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 592: extern volatile unsigned char T1CON __attribute__((address(0x010)));
 [v _T1CON `Vuc ~T0 @X0 0 e@16 ]
 "15 ./adc.h
 [; ;./adc.h: 15: void ADC_init(void);
@@ -157,31 +157,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 "89
 [; ;SlaveLiofilizadorVer1.c: 89: extern volatile unsigned char hora;
 [v _hora `Vuc ~T0 @X0 0 e ]
-"296 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 296:     struct {
+"296 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 296:     struct {
 [s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S10 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
 "295
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 295: typedef union {
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 295: typedef union {
 [u S9 `S10 1 ]
 [n S9 . . ]
 "307
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 307: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 307: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
 [v _PORTCbits `VS9 ~T0 @X0 0 e@7 ]
 "172
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 172:     struct {
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 172:     struct {
 [s S6 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S6 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
 "171
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 171: typedef union {
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 171: typedef union {
 [u S5 `S6 1 ]
 [n S5 . . ]
 "183
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 183: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 183: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
 [v _PORTAbits `VS5 ~T0 @X0 0 e@5 ]
-"52 SlaveLiofilizadorVer1.c
-[; ;SlaveLiofilizadorVer1.c: 52: void mediaLeituraPt100Umidadde(unsigned char canal);
-[v _mediaLeituraPt100Umidadde `(v ~T0 @X0 0 ef1`uc ]
+"57 SlaveLiofilizadorVer1.c
+[; ;SlaveLiofilizadorVer1.c: 57: void Load_Work(void);
+[v _Load_Work `(v ~T0 @X0 0 ef ]
+"56
+[; ;SlaveLiofilizadorVer1.c: 56: void mediatemperaturaNTC(unsigned char canal);
+[v _mediatemperaturaNTC `(v ~T0 @X0 0 ef1`uc ]
+"59
+[; ;SlaveLiofilizadorVer1.c: 59: void Auto_Relay0(void);
+[v _Auto_Relay0 `(v ~T0 @X0 0 ef ]
+"60
+[; ;SlaveLiofilizadorVer1.c: 60: void Auto_Relay1(void);
+[v _Auto_Relay1 `(v ~T0 @X0 0 ef ]
 "80
 [; ;SlaveLiofilizadorVer1.c: 80: extern volatile char usart_buffer[32+20];
 [v _usart_buffer `Vuc ~T0 @X0 -> 0 `x e ]
@@ -209,13 +218,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "86
 [; ;SlaveLiofilizadorVer1.c: 86: extern volatile unsigned int milisegundo;
 [v _milisegundo `Vui ~T0 @X0 0 e ]
+"49
+[; ;SlaveLiofilizadorVer1.c: 49: void Send_Reply_OK(void);
+[v _Send_Reply_OK `(v ~T0 @X0 0 ef ]
 "14 ./eeprom.h
 [; ;./eeprom.h: 14: void EEPROM_Write_Byte(unsigned char addr, unsigned char dado);
 [v _EEPROM_Write_Byte `(v ~T0 @X0 0 ef2`uc`uc ]
-"49 SlaveLiofilizadorVer1.c
-[; ;SlaveLiofilizadorVer1.c: 49: void Send_Reply_OK(void);
-[v _Send_Reply_OK `(v ~T0 @X0 0 ef ]
-"15 ./eeprom.h
+"15
 [; ;./eeprom.h: 15: unsigned char EEPROM_Read_Byte(unsigned char addr);
 [v _EEPROM_Read_Byte `(uc ~T0 @X0 0 ef1`uc ]
 "32 ./usart.h
@@ -266,265 +275,277 @@ Version 4.0 HI-TECH Software Intermediate Code
 "104
 [; ;./proculus.h: 104: void PROCULUS_VP_Write_String(unsigned int vp,char *text);
 [v _PROCULUS_VP_Write_String `(v ~T0 @X0 0 ef2`ui`*uc ]
-"1172 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1172:     struct {
-[s S43 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
-[n S43 . ADON GO_nDONE CHS ADCS ]
-"1178
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1178:     struct {
-[s S44 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S44 . . GO CHS0 CHS1 CHS2 CHS3 ADCS0 ADCS1 ]
-"1188
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1188:     struct {
-[s S45 :1 `uc 1 :1 `uc 1 ]
-[n S45 . . nDONE ]
-"1192
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1192:     struct {
-[s S46 :1 `uc 1 :1 `uc 1 ]
-[n S46 . . GO_DONE ]
-"1171
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1171: typedef union {
-[u S42 `S43 1 `S44 1 `S45 1 `S46 1 ]
-[n S42 . . . . . ]
-"1197
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1197: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x01F)));
-[v _ADCON0bits `VS42 ~T0 @X0 0 e@31 ]
 "5 ./my_delay.h
 [; ;./my_delay.h: 5: void my_delay_ms(long time);
 [v _my_delay_ms `(v ~T0 @X0 0 ef1`l ]
-"19 ./adc.h
-[; ;./adc.h: 19: float ADC_Media_10bits(char canal);
-[v _ADC_Media_10bits `(f ~T0 @X0 0 ef1`uc ]
-"155 ./protocolo.h
-[; ;./protocolo.h: 155: char Package_Usart_is_for_me();
+"1172 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1172:     struct {
+[s S43 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
+[n S43 . ADON GO_nDONE CHS ADCS ]
+"1178
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1178:     struct {
+[s S44 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S44 . . GO CHS0 CHS1 CHS2 CHS3 ADCS0 ADCS1 ]
+"1188
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1188:     struct {
+[s S45 :1 `uc 1 :1 `uc 1 ]
+[n S45 . . nDONE ]
+"1192
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1192:     struct {
+[s S46 :1 `uc 1 :1 `uc 1 ]
+[n S46 . . GO_DONE ]
+"1171
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1171: typedef union {
+[u S42 `S43 1 `S44 1 `S45 1 `S46 1 ]
+[n S42 . . . . . ]
+"1197
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1197: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x01F)));
+[v _ADCON0bits `VS42 ~T0 @X0 0 e@31 ]
+"18 ./adc.h
+[; ;./adc.h: 18: float ADC_Read_NTC(char canal);
+[v _ADC_Read_NTC `(f ~T0 @X0 0 ef1`uc ]
+"156 ./protocolo.h
+[; ;./protocolo.h: 156: char Package_Usart_is_for_me();
 [v _Package_Usart_is_for_me `(uc ~T0 @X0 0 e? ]
-"54 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 54: __asm("INDF equ 00h");
+"62 SlaveLiofilizadorVer1.c
+[; ;SlaveLiofilizadorVer1.c: 62: void Rele0Ligado(void);
+[v _Rele0Ligado `(v ~T0 @X0 0 ef ]
+"63
+[; ;SlaveLiofilizadorVer1.c: 63: void Rele1Ligado(void);
+[v _Rele1Ligado `(v ~T0 @X0 0 ef ]
+"66
+[; ;SlaveLiofilizadorVer1.c: 66: void Rele0Desligado(void);
+[v _Rele0Desligado `(v ~T0 @X0 0 ef ]
+"67
+[; ;SlaveLiofilizadorVer1.c: 67: void Rele1Desligado(void);
+[v _Rele1Desligado `(v ~T0 @X0 0 ef ]
+"54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
 "61
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 61: __asm("TMR0 equ 01h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 61: __asm("TMR0 equ 01h");
 [; <" TMR0 equ 01h ;# ">
 "68
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 68: __asm("PCL equ 02h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 68: __asm("PCL equ 02h");
 [; <" PCL equ 02h ;# ">
 "75
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 75: __asm("STATUS equ 03h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 75: __asm("STATUS equ 03h");
 [; <" STATUS equ 03h ;# ">
 "161
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 161: __asm("FSR equ 04h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 161: __asm("FSR equ 04h");
 [; <" FSR equ 04h ;# ">
 "168
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 168: __asm("PORTA equ 05h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 168: __asm("PORTA equ 05h");
 [; <" PORTA equ 05h ;# ">
 "230
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 230: __asm("PORTB equ 06h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 230: __asm("PORTB equ 06h");
 [; <" PORTB equ 06h ;# ">
 "292
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 292: __asm("PORTC equ 07h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 292: __asm("PORTC equ 07h");
 [; <" PORTC equ 07h ;# ">
 "354
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 354: __asm("PORTE equ 09h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 354: __asm("PORTE equ 09h");
 [; <" PORTE equ 09h ;# ">
 "375
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 375: __asm("PCLATH equ 0Ah");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 375: __asm("PCLATH equ 0Ah");
 [; <" PCLATH equ 0Ah ;# ">
 "382
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 382: __asm("INTCON equ 0Bh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 382: __asm("INTCON equ 0Bh");
 [; <" INTCON equ 0Bh ;# ">
 "460
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 460: __asm("PIR1 equ 0Ch");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 460: __asm("PIR1 equ 0Ch");
 [; <" PIR1 equ 0Ch ;# ">
 "516
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 516: __asm("PIR2 equ 0Dh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 516: __asm("PIR2 equ 0Dh");
 [; <" PIR2 equ 0Dh ;# ">
 "573
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 573: __asm("TMR1 equ 0Eh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 573: __asm("TMR1 equ 0Eh");
 [; <" TMR1 equ 0Eh ;# ">
 "580
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 580: __asm("TMR1L equ 0Eh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 580: __asm("TMR1L equ 0Eh");
 [; <" TMR1L equ 0Eh ;# ">
 "587
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 587: __asm("TMR1H equ 0Fh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 587: __asm("TMR1H equ 0Fh");
 [; <" TMR1H equ 0Fh ;# ">
 "594
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 594: __asm("T1CON equ 010h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 594: __asm("T1CON equ 010h");
 [; <" T1CON equ 010h ;# ">
 "688
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 688: __asm("TMR2 equ 011h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 688: __asm("TMR2 equ 011h");
 [; <" TMR2 equ 011h ;# ">
 "695
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 695: __asm("T2CON equ 012h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 695: __asm("T2CON equ 012h");
 [; <" T2CON equ 012h ;# ">
 "766
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 766: __asm("SSPBUF equ 013h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 766: __asm("SSPBUF equ 013h");
 [; <" SSPBUF equ 013h ;# ">
 "773
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 773: __asm("SSPCON equ 014h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 773: __asm("SSPCON equ 014h");
 [; <" SSPCON equ 014h ;# ">
 "843
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 843: __asm("CCPR1 equ 015h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 843: __asm("CCPR1 equ 015h");
 [; <" CCPR1 equ 015h ;# ">
 "850
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 850: __asm("CCPR1L equ 015h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 850: __asm("CCPR1L equ 015h");
 [; <" CCPR1L equ 015h ;# ">
 "857
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 857: __asm("CCPR1H equ 016h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 857: __asm("CCPR1H equ 016h");
 [; <" CCPR1H equ 016h ;# ">
 "864
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 864: __asm("CCP1CON equ 017h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 864: __asm("CCP1CON equ 017h");
 [; <" CCP1CON equ 017h ;# ">
 "961
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 961: __asm("RCSTA equ 018h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 961: __asm("RCSTA equ 018h");
 [; <" RCSTA equ 018h ;# ">
 "1056
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1056: __asm("TXREG equ 019h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1056: __asm("TXREG equ 019h");
 [; <" TXREG equ 019h ;# ">
 "1063
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1063: __asm("RCREG equ 01Ah");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1063: __asm("RCREG equ 01Ah");
 [; <" RCREG equ 01Ah ;# ">
 "1070
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1070: __asm("CCPR2 equ 01Bh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1070: __asm("CCPR2 equ 01Bh");
 [; <" CCPR2 equ 01Bh ;# ">
 "1077
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1077: __asm("CCPR2L equ 01Bh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1077: __asm("CCPR2L equ 01Bh");
 [; <" CCPR2L equ 01Bh ;# ">
 "1084
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1084: __asm("CCPR2H equ 01Ch");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1084: __asm("CCPR2H equ 01Ch");
 [; <" CCPR2H equ 01Ch ;# ">
 "1091
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1091: __asm("CCP2CON equ 01Dh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1091: __asm("CCP2CON equ 01Dh");
 [; <" CCP2CON equ 01Dh ;# ">
 "1161
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1161: __asm("ADRESH equ 01Eh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1161: __asm("ADRESH equ 01Eh");
 [; <" ADRESH equ 01Eh ;# ">
 "1168
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1168: __asm("ADCON0 equ 01Fh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1168: __asm("ADCON0 equ 01Fh");
 [; <" ADCON0 equ 01Fh ;# ">
 "1269
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1269: __asm("OPTION_REG equ 081h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1269: __asm("OPTION_REG equ 081h");
 [; <" OPTION_REG equ 081h ;# ">
 "1339
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1339: __asm("TRISA equ 085h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1339: __asm("TRISA equ 085h");
 [; <" TRISA equ 085h ;# ">
 "1401
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1401: __asm("TRISB equ 086h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1401: __asm("TRISB equ 086h");
 [; <" TRISB equ 086h ;# ">
 "1463
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1463: __asm("TRISC equ 087h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1463: __asm("TRISC equ 087h");
 [; <" TRISC equ 087h ;# ">
 "1525
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1525: __asm("TRISE equ 089h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1525: __asm("TRISE equ 089h");
 [; <" TRISE equ 089h ;# ">
 "1546
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1546: __asm("PIE1 equ 08Ch");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1546: __asm("PIE1 equ 08Ch");
 [; <" PIE1 equ 08Ch ;# ">
 "1602
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1602: __asm("PIE2 equ 08Dh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1602: __asm("PIE2 equ 08Dh");
 [; <" PIE2 equ 08Dh ;# ">
 "1659
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1659: __asm("PCON equ 08Eh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1659: __asm("PCON equ 08Eh");
 [; <" PCON equ 08Eh ;# ">
 "1706
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1706: __asm("OSCCON equ 08Fh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1706: __asm("OSCCON equ 08Fh");
 [; <" OSCCON equ 08Fh ;# ">
 "1771
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1771: __asm("OSCTUNE equ 090h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1771: __asm("OSCTUNE equ 090h");
 [; <" OSCTUNE equ 090h ;# ">
 "1823
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1823: __asm("SSPCON2 equ 091h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1823: __asm("SSPCON2 equ 091h");
 [; <" SSPCON2 equ 091h ;# ">
 "1885
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1885: __asm("PR2 equ 092h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1885: __asm("PR2 equ 092h");
 [; <" PR2 equ 092h ;# ">
 "1892
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1892: __asm("SSPADD equ 093h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1892: __asm("SSPADD equ 093h");
 [; <" SSPADD equ 093h ;# ">
 "1899
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1899: __asm("SSPMSK equ 093h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1899: __asm("SSPMSK equ 093h");
 [; <" SSPMSK equ 093h ;# ">
 "1904
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1904: __asm("MSK equ 093h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1904: __asm("MSK equ 093h");
 [; <" MSK equ 093h ;# ">
 "2021
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2021: __asm("SSPSTAT equ 094h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2021: __asm("SSPSTAT equ 094h");
 [; <" SSPSTAT equ 094h ;# ">
 "2190
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2190: __asm("WPUB equ 095h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2190: __asm("WPUB equ 095h");
 [; <" WPUB equ 095h ;# ">
 "2260
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2260: __asm("IOCB equ 096h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2260: __asm("IOCB equ 096h");
 [; <" IOCB equ 096h ;# ">
 "2330
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2330: __asm("VRCON equ 097h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2330: __asm("VRCON equ 097h");
 [; <" VRCON equ 097h ;# ">
 "2400
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2400: __asm("TXSTA equ 098h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2400: __asm("TXSTA equ 098h");
 [; <" TXSTA equ 098h ;# ">
 "2486
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2486: __asm("SPBRG equ 099h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2486: __asm("SPBRG equ 099h");
 [; <" SPBRG equ 099h ;# ">
 "2548
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2548: __asm("SPBRGH equ 09Ah");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2548: __asm("SPBRGH equ 09Ah");
 [; <" SPBRGH equ 09Ah ;# ">
 "2618
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2618: __asm("PWM1CON equ 09Bh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2618: __asm("PWM1CON equ 09Bh");
 [; <" PWM1CON equ 09Bh ;# ">
 "2688
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2688: __asm("ECCPAS equ 09Ch");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2688: __asm("ECCPAS equ 09Ch");
 [; <" ECCPAS equ 09Ch ;# ">
 "2770
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2770: __asm("PSTRCON equ 09Dh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2770: __asm("PSTRCON equ 09Dh");
 [; <" PSTRCON equ 09Dh ;# ">
 "2814
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2814: __asm("ADRESL equ 09Eh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2814: __asm("ADRESL equ 09Eh");
 [; <" ADRESL equ 09Eh ;# ">
 "2821
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2821: __asm("ADCON1 equ 09Fh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2821: __asm("ADCON1 equ 09Fh");
 [; <" ADCON1 equ 09Fh ;# ">
 "2855
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2855: __asm("WDTCON equ 0105h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2855: __asm("WDTCON equ 0105h");
 [; <" WDTCON equ 0105h ;# ">
 "2908
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2908: __asm("CM1CON0 equ 0107h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2908: __asm("CM1CON0 equ 0107h");
 [; <" CM1CON0 equ 0107h ;# ">
 "2973
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2973: __asm("CM2CON0 equ 0108h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2973: __asm("CM2CON0 equ 0108h");
 [; <" CM2CON0 equ 0108h ;# ">
 "3038
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3038: __asm("CM2CON1 equ 0109h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3038: __asm("CM2CON1 equ 0109h");
 [; <" CM2CON1 equ 0109h ;# ">
 "3089
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3089: __asm("EEDATA equ 010Ch");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3089: __asm("EEDATA equ 010Ch");
 [; <" EEDATA equ 010Ch ;# ">
 "3094
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3094: __asm("EEDAT equ 010Ch");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3094: __asm("EEDAT equ 010Ch");
 [; <" EEDAT equ 010Ch ;# ">
 "3101
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3101: __asm("EEADR equ 010Dh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3101: __asm("EEADR equ 010Dh");
 [; <" EEADR equ 010Dh ;# ">
 "3108
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3108: __asm("EEDATH equ 010Eh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3108: __asm("EEDATH equ 010Eh");
 [; <" EEDATH equ 010Eh ;# ">
 "3115
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3115: __asm("EEADRH equ 010Fh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3115: __asm("EEADRH equ 010Fh");
 [; <" EEADRH equ 010Fh ;# ">
 "3122
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3122: __asm("SRCON equ 0185h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3122: __asm("SRCON equ 0185h");
 [; <" SRCON equ 0185h ;# ">
 "3179
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3179: __asm("BAUDCTL equ 0187h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3179: __asm("BAUDCTL equ 0187h");
 [; <" BAUDCTL equ 0187h ;# ">
 "3231
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3231: __asm("ANSEL equ 0188h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3231: __asm("ANSEL equ 0188h");
 [; <" ANSEL equ 0188h ;# ">
 "3275
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3275: __asm("ANSELH equ 0189h");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3275: __asm("ANSELH equ 0189h");
 [; <" ANSELH equ 0189h ;# ">
 "3325
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3325: __asm("EECON1 equ 018Ch");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3325: __asm("EECON1 equ 018Ch");
 [; <" EECON1 equ 018Ch ;# ">
 "3370
-[; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3370: __asm("EECON2 equ 018Dh");
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3370: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 "32 ./global.h
 [p x FOSC  =  INTRC_NOCLKOUT ]
@@ -556,990 +577,1663 @@ Version 4.0 HI-TECH Software Intermediate Code
 "121
 [; ;./global.h: 121:       } statuspower;
 [v _statuspower `S141 ~T0 @X0 1 e ]
-"128 SlaveLiofilizadorVer1.c
-[; ;SlaveLiofilizadorVer1.c: 128: float Temperatura0,Temperatura1;
+"100 SlaveLiofilizadorVer1.c
+[; ;SlaveLiofilizadorVer1.c: 100: int Status0;
+[v _Status0 `i ~T0 @X0 1 e ]
+"101
+[; ;SlaveLiofilizadorVer1.c: 101: volatile float SetPoint0;
+[v _SetPoint0 `Vf ~T0 @X0 1 e ]
+"102
+[; ;SlaveLiofilizadorVer1.c: 102: float Histerese0;
+[v _Histerese0 `f ~T0 @X0 1 e ]
+"103
+[; ;SlaveLiofilizadorVer1.c: 103: char TempoON_0;
+[v _TempoON_0 `uc ~T0 @X0 1 e ]
+"104
+[; ;SlaveLiofilizadorVer1.c: 104: char TempoOFF_0;
+[v _TempoOFF_0 `uc ~T0 @X0 1 e ]
+"105
+[; ;SlaveLiofilizadorVer1.c: 105: char IndexLeitura_0;
+[v _IndexLeitura_0 `uc ~T0 @X0 1 e ]
+"106
+[; ;SlaveLiofilizadorVer1.c: 106: volatile char TempoCNT_0;
+[v _TempoCNT_0 `Vuc ~T0 @X0 1 e ]
+"109
+[; ;SlaveLiofilizadorVer1.c: 109: int Status1;
+[v _Status1 `i ~T0 @X0 1 e ]
+"110
+[; ;SlaveLiofilizadorVer1.c: 110: volatile float SetPoint1;
+[v _SetPoint1 `Vf ~T0 @X0 1 e ]
+"111
+[; ;SlaveLiofilizadorVer1.c: 111: char Histerese1;
+[v _Histerese1 `uc ~T0 @X0 1 e ]
+"112
+[; ;SlaveLiofilizadorVer1.c: 112: char TempoON_1;
+[v _TempoON_1 `uc ~T0 @X0 1 e ]
+"113
+[; ;SlaveLiofilizadorVer1.c: 113: char TempoOFF_1;
+[v _TempoOFF_1 `uc ~T0 @X0 1 e ]
+"114
+[; ;SlaveLiofilizadorVer1.c: 114: char IndexLeitura_1;
+[v _IndexLeitura_1 `uc ~T0 @X0 1 e ]
+"115
+[; ;SlaveLiofilizadorVer1.c: 115: volatile char TempoCNT_1;
+[v _TempoCNT_1 `Vuc ~T0 @X0 1 e ]
+"118
+[; ;SlaveLiofilizadorVer1.c: 118: float Temperatura0,Temperatura1;
 [v _Temperatura0 `f ~T0 @X0 1 e ]
 [v _Temperatura1 `f ~T0 @X0 1 e ]
-"131
-[; ;SlaveLiofilizadorVer1.c: 131: t_usart_protocol usart_protocol;
+"119
+[; ;SlaveLiofilizadorVer1.c: 119: unsigned char RL0Status=1;
+[v _RL0Status `uc ~T0 @X0 1 e ]
+[i _RL0Status
+-> -> 1 `i `uc
+]
+"120
+[; ;SlaveLiofilizadorVer1.c: 120: unsigned char RL1Status=1;
+[v _RL1Status `uc ~T0 @X0 1 e ]
+[i _RL1Status
+-> -> 1 `i `uc
+]
+"122
+[; ;SlaveLiofilizadorVer1.c: 122: unsigned char modoAutonomo0=0;
+[v _modoAutonomo0 `uc ~T0 @X0 1 e ]
+[i _modoAutonomo0
+-> -> 0 `i `uc
+]
+"123
+[; ;SlaveLiofilizadorVer1.c: 123: unsigned char modoAutonomo1=0;
+[v _modoAutonomo1 `uc ~T0 @X0 1 e ]
+[i _modoAutonomo1
+-> -> 0 `i `uc
+]
+"135
+[; ;SlaveLiofilizadorVer1.c: 135: t_usart_protocol usart_protocol;
 [v _usart_protocol `S134 ~T0 @X0 1 e ]
-"132
-[; ;SlaveLiofilizadorVer1.c: 132: unsigned char canal;
-[v _canal `uc ~T0 @X0 1 e ]
-"133
-[; ;SlaveLiofilizadorVer1.c: 133: char Board_Number;
-[v _Board_Number `uc ~T0 @X0 1 e ]
-"134
-[; ;SlaveLiofilizadorVer1.c: 134: char buffer[33];
-[v _buffer `uc ~T0 @X0 -> 33 `i e ]
 "136
-[; ;SlaveLiofilizadorVer1.c: 136: unsigned char statuspower_memo;
-[v _statuspower_memo `uc ~T0 @X0 1 e ]
-"139
-[; ;SlaveLiofilizadorVer1.c: 139: unsigned int header;
-[v _header `ui ~T0 @X0 1 e ]
+[; ;SlaveLiofilizadorVer1.c: 136: unsigned char canal;
+[v _canal `uc ~T0 @X0 1 e ]
+"137
+[; ;SlaveLiofilizadorVer1.c: 137: char Board_Number;
+[v _Board_Number `uc ~T0 @X0 1 e ]
+"138
+[; ;SlaveLiofilizadorVer1.c: 138: char buffer[33];
+[v _buffer `uc ~T0 @X0 -> 33 `i e ]
 "140
-[; ;SlaveLiofilizadorVer1.c: 140: unsigned char destino;
+[; ;SlaveLiofilizadorVer1.c: 140: unsigned char statuspower_memo;
+[v _statuspower_memo `uc ~T0 @X0 1 e ]
+"143
+[; ;SlaveLiofilizadorVer1.c: 143: unsigned int header;
+[v _header `ui ~T0 @X0 1 e ]
+"144
+[; ;SlaveLiofilizadorVer1.c: 144: unsigned char destino;
 [v _destino `uc ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"144
-[; ;SlaveLiofilizadorVer1.c: 144: void main(void) {
+"148
+[; ;SlaveLiofilizadorVer1.c: 148: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"145
-[; ;SlaveLiofilizadorVer1.c: 145:      _delay((unsigned long)((100)*(8000000/4000.0)));
+"149
+[; ;SlaveLiofilizadorVer1.c: 149:      _delay((unsigned long)((100)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"146
-[; ;SlaveLiofilizadorVer1.c: 146:      OSCCONbits.IRCF0=1;
-[e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
-"147
-[; ;SlaveLiofilizadorVer1.c: 147:      OSCCONbits.IRCF1=1;
-[e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"148
-[; ;SlaveLiofilizadorVer1.c: 148:      OSCCONbits.IRCF2=1;
-[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "150
-[; ;SlaveLiofilizadorVer1.c: 150:      PORTA=0;
-[e = _PORTA -> -> 0 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 150:      OSCCONbits.IRCF0=1;
+[e = . . _OSCCONbits 1 1 -> -> 1 `i `uc ]
 "151
-[; ;SlaveLiofilizadorVer1.c: 151:      PORTB=0;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 151:      OSCCONbits.IRCF1=1;
+[e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
 "152
-[; ;SlaveLiofilizadorVer1.c: 152:      PORTC=0;
-[e = _PORTC -> -> 0 `i `uc ]
-"153
-[; ;SlaveLiofilizadorVer1.c: 153:      PORTE=0;
-[e = _PORTE -> -> 0 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 152:      OSCCONbits.IRCF2=1;
+[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
 "154
-[; ;SlaveLiofilizadorVer1.c: 154:      TRISA=0b11101111;
-[e = _TRISA -> -> 239 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 154:      PORTA=0;
+[e = _PORTA -> -> 0 `i `uc ]
 "155
-[; ;SlaveLiofilizadorVer1.c: 155:      TRISB=0b00001111;
-[e = _TRISB -> -> 15 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 155:      PORTB=0;
+[e = _PORTB -> -> 0 `i `uc ]
 "156
-[; ;SlaveLiofilizadorVer1.c: 156:      TRISC=0xF0;
-[e = _TRISC -> -> 240 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 156:      PORTC=0;
+[e = _PORTC -> -> 0 `i `uc ]
 "157
-[; ;SlaveLiofilizadorVer1.c: 157:      TRISE=0xFF;
-[e = _TRISE -> -> 255 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 157:      PORTE=0;
+[e = _PORTE -> -> 0 `i `uc ]
+"158
+[; ;SlaveLiofilizadorVer1.c: 158:      TRISA=0b11101111;
+[e = _TRISA -> -> 239 `i `uc ]
 "159
-[; ;SlaveLiofilizadorVer1.c: 159:      ANSEL=0x00000011;
-[e = _ANSEL -> -> 17 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 159:      TRISB=0b00001111;
+[e = _TRISB -> -> 15 `i `uc ]
 "160
-[; ;SlaveLiofilizadorVer1.c: 160:      ANSELH=0x00000000;
-[e = _ANSELH -> -> 0 `i `uc ]
-"162
-[; ;SlaveLiofilizadorVer1.c: 162:      OPTION_REGbits.nRBPU=0;
-[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 160:      TRISC=0xF0;
+[e = _TRISC -> -> 240 `i `uc ]
+"161
+[; ;SlaveLiofilizadorVer1.c: 161:      TRISE=0xFF;
+[e = _TRISE -> -> 255 `i `uc ]
 "163
-[; ;SlaveLiofilizadorVer1.c: 163:      WPUB=0b00001111;
-[e = _WPUB -> -> 15 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 163:      ANSEL=0x00000011;
+[e = _ANSEL -> -> 17 `i `uc ]
+"164
+[; ;SlaveLiofilizadorVer1.c: 164:      ANSELH=0x00000000;
+[e = _ANSELH -> -> 0 `i `uc ]
 "166
-[; ;SlaveLiofilizadorVer1.c: 166:      PORTBbits.RB7 =1;
-[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 166:      OPTION_REGbits.nRBPU=0;
+[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
 "167
-[; ;SlaveLiofilizadorVer1.c: 167:      PORTBbits.RB6 =1;
-[e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
-"168
-[; ;SlaveLiofilizadorVer1.c: 168:      PORTBbits.RB5=1;
-[e = . . _PORTBbits 0 5 -> -> 1 `i `uc ]
-"169
-[; ;SlaveLiofilizadorVer1.c: 169:      my_delay_ms_WDT(1000);
-[e ( _my_delay_ms_WDT (1 -> -> 1000 `i `l ]
+[; ;SlaveLiofilizadorVer1.c: 167:      WPUB=0b00001111;
+[e = _WPUB -> -> 15 `i `uc ]
+"170
+[; ;SlaveLiofilizadorVer1.c: 170:      PORTBbits.RB7 =1;
+[e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
 "171
-[; ;SlaveLiofilizadorVer1.c: 171:      OPTION_REGbits.T0CS=0;
-[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 171:      PORTBbits.RB6 =1;
+[e = . . _PORTBbits 0 6 -> -> 1 `i `uc ]
 "172
-[; ;SlaveLiofilizadorVer1.c: 172:      OPTION_REGbits.PSA =1;
-[e = . . _OPTION_REGbits 0 1 -> -> 1 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 172:      PORTBbits.RB5=1;
+[e = . . _PORTBbits 0 5 -> -> 1 `i `uc ]
 "173
-[; ;SlaveLiofilizadorVer1.c: 173:      OPTION_REGbits.PS0 =1;
-[e = . . _OPTION_REGbits 1 0 -> -> 1 `i `uc ]
-"174
-[; ;SlaveLiofilizadorVer1.c: 174:      OPTION_REGbits.PS1 =1;
-[e = . . _OPTION_REGbits 1 1 -> -> 1 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 173:      my_delay_ms_WDT(1000);
+[e ( _my_delay_ms_WDT (1 -> -> 1000 `i `l ]
 "175
-[; ;SlaveLiofilizadorVer1.c: 175:      OPTION_REGbits.PS2 =1;
-[e = . . _OPTION_REGbits 1 2 -> -> 1 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 175:      OPTION_REGbits.T0CS=0;
+[e = . . _OPTION_REGbits 0 3 -> -> 0 `i `uc ]
 "176
-[; ;SlaveLiofilizadorVer1.c: 176:      INTCONbits.T0IE =0;
-[e = . . _INTCONbits 0 5 -> -> 0 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 176:      OPTION_REGbits.PSA =1;
+[e = . . _OPTION_REGbits 0 1 -> -> 1 `i `uc ]
 "177
-[; ;SlaveLiofilizadorVer1.c: 177:      INTCONbits.INTE =0;
-[e = . . _INTCONbits 0 4 -> -> 0 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 177:      OPTION_REGbits.PS0 =1;
+[e = . . _OPTION_REGbits 1 0 -> -> 1 `i `uc ]
 "178
-[; ;SlaveLiofilizadorVer1.c: 178:      INTCONbits.GIE =1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 178:      OPTION_REGbits.PS1 =1;
+[e = . . _OPTION_REGbits 1 1 -> -> 1 `i `uc ]
+"179
+[; ;SlaveLiofilizadorVer1.c: 179:      OPTION_REGbits.PS2 =1;
+[e = . . _OPTION_REGbits 1 2 -> -> 1 `i `uc ]
+"180
+[; ;SlaveLiofilizadorVer1.c: 180:      INTCONbits.T0IE =0;
+[e = . . _INTCONbits 0 5 -> -> 0 `i `uc ]
 "181
-[; ;SlaveLiofilizadorVer1.c: 181:      INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 181:      INTCONbits.INTE =0;
+[e = . . _INTCONbits 0 4 -> -> 0 `i `uc ]
 "182
-[; ;SlaveLiofilizadorVer1.c: 182:      T1CKPS0=1;
-[e = _T1CKPS0 -> -> 1 `i `b ]
-"183
-[; ;SlaveLiofilizadorVer1.c: 183:      T1CKPS1=1;
-[e = _T1CKPS1 -> -> 1 `i `b ]
-"184
-[; ;SlaveLiofilizadorVer1.c: 184:      TMR1CS=0;
-[e = _TMR1CS -> -> 0 `i `b ]
+[; ;SlaveLiofilizadorVer1.c: 182:      INTCONbits.GIE =1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "185
-[; ;SlaveLiofilizadorVer1.c: 185:      TMR1IE=1;
-[e = _TMR1IE -> -> 1 `i `b ]
+[; ;SlaveLiofilizadorVer1.c: 185:      INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
 "186
-[; ;SlaveLiofilizadorVer1.c: 186:      T1CON=1;
+[; ;SlaveLiofilizadorVer1.c: 186:      T1CKPS0=1;
+[e = _T1CKPS0 -> -> 1 `i `b ]
+"187
+[; ;SlaveLiofilizadorVer1.c: 187:      T1CKPS1=1;
+[e = _T1CKPS1 -> -> 1 `i `b ]
+"188
+[; ;SlaveLiofilizadorVer1.c: 188:      TMR1CS=0;
+[e = _TMR1CS -> -> 0 `i `b ]
+"189
+[; ;SlaveLiofilizadorVer1.c: 189:      TMR1IE=1;
+[e = _TMR1IE -> -> 1 `i `b ]
+"190
+[; ;SlaveLiofilizadorVer1.c: 190:      T1CON=1;
 [e = _T1CON -> -> 1 `i `uc ]
-"192
-[; ;SlaveLiofilizadorVer1.c: 192:      __asm("CLRWDT");
+"196
+[; ;SlaveLiofilizadorVer1.c: 196:      __asm("CLRWDT");
 [; <" CLRWDT ;# ">
-"193
-[; ;SlaveLiofilizadorVer1.c: 193:      ADC_init();
+"197
+[; ;SlaveLiofilizadorVer1.c: 197:      ADC_init();
 [e ( _ADC_init ..  ]
-"194
-[; ;SlaveLiofilizadorVer1.c: 194:      I2C_Master_Init(100000);
+"198
+[; ;SlaveLiofilizadorVer1.c: 198:      I2C_Master_Init(100000);
 [e ( _I2C_Master_Init (1 -> -> 100000 `l `ul ]
-"195
-[; ;SlaveLiofilizadorVer1.c: 195:      USART_init(115200);
+"199
+[; ;SlaveLiofilizadorVer1.c: 199:      USART_init(115200);
 [e ( _USART_init (1 -> -> 115200 `l `ul ]
-"201
-[; ;SlaveLiofilizadorVer1.c: 201:      {
+"205
+[; ;SlaveLiofilizadorVer1.c: 205:      {
 {
-"202
-[; ;SlaveLiofilizadorVer1.c: 202:      unsigned int reset;
+"206
+[; ;SlaveLiofilizadorVer1.c: 206:      unsigned int reset;
 [v _reset `ui ~T0 @X0 1 a ]
-"203
-[; ;SlaveLiofilizadorVer1.c: 203:      reset=EEPROM_Read_Integer(0x10);
+"207
+[; ;SlaveLiofilizadorVer1.c: 207:      reset=EEPROM_Read_Integer(0x10);
 [e = _reset ( _EEPROM_Read_Integer (1 -> -> 16 `i `uc ]
-"204
-[; ;SlaveLiofilizadorVer1.c: 204:      if(reset==0xFFFF) EEPROM_Write_Integer(0x10,0);
+"208
+[; ;SlaveLiofilizadorVer1.c: 208:      if(reset==0xFFFF) EEPROM_Write_Integer(0x10,0);
 [e $ ! == _reset -> 65535 `ui 145  ]
 [e ( _EEPROM_Write_Integer (2 , -> -> 16 `i `uc -> -> 0 `i `ui ]
 [e :U 145 ]
-"205
-[; ;SlaveLiofilizadorVer1.c: 205:      reset++;
+"209
+[; ;SlaveLiofilizadorVer1.c: 209:      reset++;
 [e ++ _reset -> -> 1 `i `ui ]
-"206
-[; ;SlaveLiofilizadorVer1.c: 206:      EEPROM_Write_Integer(0x10,reset);
+"210
+[; ;SlaveLiofilizadorVer1.c: 210:      EEPROM_Write_Integer(0x10,reset);
 [e ( _EEPROM_Write_Integer (2 , -> -> 16 `i `uc _reset ]
-"207
-[; ;SlaveLiofilizadorVer1.c: 207:      }
-}
 "211
-[; ;SlaveLiofilizadorVer1.c: 211:      Delay_Led_Tmr0 = 0;
-[e = _Delay_Led_Tmr0 -> -> 0 `i `ui ]
-"212
-[; ;SlaveLiofilizadorVer1.c: 212:      Delay_Led_Usart = 0;
-[e = _Delay_Led_Usart -> -> 0 `i `ui ]
-"213
-[; ;SlaveLiofilizadorVer1.c: 213:      Delay_Led_Memory = 0;
-[e = _Delay_Led_Memory -> -> 0 `i `ui ]
+[; ;SlaveLiofilizadorVer1.c: 211:      }
+}
 "215
-[; ;SlaveLiofilizadorVer1.c: 215:      segundo=0;
-[e = _segundo -> -> 0 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 215:      Delay_Led_Tmr0 = 0;
+[e = _Delay_Led_Tmr0 -> -> 0 `i `ui ]
 "216
-[; ;SlaveLiofilizadorVer1.c: 216:      hora=0;
-[e = _hora -> -> 0 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 216:      Delay_Led_Usart = 0;
+[e = _Delay_Led_Usart -> -> 0 `i `ui ]
 "217
-[; ;SlaveLiofilizadorVer1.c: 217:      PORTCbits.RC0=0;
-[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-"218
-[; ;SlaveLiofilizadorVer1.c: 218:      PORTCbits.RC1=0;
-[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 217:      Delay_Led_Memory = 0;
+[e = _Delay_Led_Memory -> -> 0 `i `ui ]
 "219
-[; ;SlaveLiofilizadorVer1.c: 219:      PORTAbits.RA2=0;
-[e = . . _PORTAbits 0 2 -> -> 0 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 219:      segundo=0;
+[e = _segundo -> -> 0 `i `uc ]
 "220
-[; ;SlaveLiofilizadorVer1.c: 220:      PORTAbits.RA3=0;
-[e = . . _PORTAbits 0 3 -> -> 0 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 220:      hora=0;
+[e = _hora -> -> 0 `i `uc ]
+"221
+[; ;SlaveLiofilizadorVer1.c: 221:      PORTCbits.RC0=0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"222
+[; ;SlaveLiofilizadorVer1.c: 222:      PORTCbits.RC1=0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
 "223
-[; ;SlaveLiofilizadorVer1.c: 223:      Board_Number=(((0x0F)&(~PORTB)));
-[e = _Board_Number -> & -> 15 `i ~ -> _PORTB `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 223:      PORTAbits.RA2=0;
+[e = . . _PORTAbits 0 2 -> -> 0 `i `uc ]
 "224
-[; ;SlaveLiofilizadorVer1.c: 224:      canal=1;
-[e = _canal -> -> 1 `i `uc ]
+[; ;SlaveLiofilizadorVer1.c: 224:      PORTAbits.RA3=0;
+[e = . . _PORTAbits 0 3 -> -> 0 `i `uc ]
+"227
+[; ;SlaveLiofilizadorVer1.c: 227:      Board_Number=(((0x0F)&(~PORTB)));
+[e = _Board_Number -> & -> 15 `i ~ -> _PORTB `i `uc ]
 "228
-[; ;SlaveLiofilizadorVer1.c: 228:      statuspower.flag_global_condensador=0;
-[e = . . _statuspower 1 1 -> -> 0 `i `uc ]
-"245
-[; ;SlaveLiofilizadorVer1.c: 245:      while(1)
+[; ;SlaveLiofilizadorVer1.c: 228:      canal=1;
+[e = _canal -> -> 1 `i `uc ]
+"242
+[; ;SlaveLiofilizadorVer1.c: 242:      Load_Work();
+[e ( _Load_Work ..  ]
+"243
+[; ;SlaveLiofilizadorVer1.c: 243:      generic_status.flag_global_hot=0;
+[e = . _generic_status 6 -> -> 0 `i `uc ]
+"249
+[; ;SlaveLiofilizadorVer1.c: 249:      while(1)
 [e :U 147 ]
-"246
-[; ;SlaveLiofilizadorVer1.c: 246:           {
+"250
+[; ;SlaveLiofilizadorVer1.c: 250:           {
 {
-"248
-[; ;SlaveLiofilizadorVer1.c: 248:          generic_status.flag_main_loop_WDT=1;
+"252
+[; ;SlaveLiofilizadorVer1.c: 252:          generic_status.flag_main_loop_WDT=1;
 [e = . _generic_status 7 -> -> 1 `i `uc ]
-"269
-[; ;SlaveLiofilizadorVer1.c: 269:          if(++canal==2) canal=0;
+"256
+[; ;SlaveLiofilizadorVer1.c: 256:          if(++canal==2) canal=0;
 [e $ ! == -> =+ _canal -> -> 1 `i `uc `i -> 2 `i 149  ]
 [e = _canal -> -> 0 `i `uc ]
 [e :U 149 ]
-"270
-[; ;SlaveLiofilizadorVer1.c: 270:          mediaLeituraPt100Umidadde(canal);
-[e ( _mediaLeituraPt100Umidadde (1 _canal ]
-"283
-[; ;SlaveLiofilizadorVer1.c: 283:          if(generic_status.flag_usart_rx==1)
-[e $ ! == -> . _generic_status 0 `i -> 1 `i 150  ]
-"284
-[; ;SlaveLiofilizadorVer1.c: 284:             {
+"257
+[; ;SlaveLiofilizadorVer1.c: 257:          mediatemperaturaNTC(canal);
+[e ( _mediatemperaturaNTC (1 _canal ]
+"260
+[; ;SlaveLiofilizadorVer1.c: 260:          if(generic_status.flag_global_hot)
+[e $ ! != -> . _generic_status 6 `i -> 0 `i 150  ]
+"261
+[; ;SlaveLiofilizadorVer1.c: 261:             {
 {
-"285
-[; ;SlaveLiofilizadorVer1.c: 285:             header =(((unsigned int)usart_buffer[0]<<8)+usart_buffer[1]);
-[e = _header + << -> *U + &U _usart_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _usart_buffer `ui `ux `ui -> 8 `i -> *U + &U _usart_buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _usart_buffer `ui `ux `ui ]
-"286
-[; ;SlaveLiofilizadorVer1.c: 286:             if(header==0xAABB)
-[e $ ! == _header -> 43707 `ui 151  ]
-"287
-[; ;SlaveLiofilizadorVer1.c: 287:                {
-{
-"288
-[; ;SlaveLiofilizadorVer1.c: 288:                destino =usart_buffer[3];
-[e = _destino -> *U + &U _usart_buffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _usart_buffer `ui `ux `uc ]
-"289
-[; ;SlaveLiofilizadorVer1.c: 289:                if((destino==Board_Number)||(destino==0XFF))
-[e $ ! || == -> _destino `i -> _Board_Number `i == -> _destino `i -> 255 `i 152  ]
-"290
-[; ;SlaveLiofilizadorVer1.c: 290:                       {
-{
-"291
-[; ;SlaveLiofilizadorVer1.c: 291:                       Delay_Led_Usart=20;
-[e = _Delay_Led_Usart -> -> 20 `i `ui ]
-"292
-[; ;SlaveLiofilizadorVer1.c: 292:                       Decodify_Command();
-[e ( _Decodify_Command ..  ]
-"293
-[; ;SlaveLiofilizadorVer1.c: 293:                       generic_status.flag_usart_rx=0;
-[e = . _generic_status 0 -> -> 0 `i `uc ]
-"294
-[; ;SlaveLiofilizadorVer1.c: 294:                       }
+"262
+[; ;SlaveLiofilizadorVer1.c: 262:              Auto_Relay0();
+[e ( _Auto_Relay0 ..  ]
+"263
+[; ;SlaveLiofilizadorVer1.c: 263:              Auto_Relay1();
+[e ( _Auto_Relay1 ..  ]
+"264
+[; ;SlaveLiofilizadorVer1.c: 264:             }
 }
-[e :U 152 ]
-"295
-[; ;SlaveLiofilizadorVer1.c: 295:                }
+[e $U 151  ]
+"265
+[; ;SlaveLiofilizadorVer1.c: 265:          else
+[e :U 150 ]
+"266
+[; ;SlaveLiofilizadorVer1.c: 266:             {
+{
+"267
+[; ;SlaveLiofilizadorVer1.c: 267:             PORTCbits.RC0=0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"268
+[; ;SlaveLiofilizadorVer1.c: 268:             PORTCbits.RC1=0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+"269
+[; ;SlaveLiofilizadorVer1.c: 269:             }
 }
 [e :U 151 ]
+"287
+[; ;SlaveLiofilizadorVer1.c: 287:          if(generic_status.flag_usart_rx==1)
+[e $ ! == -> . _generic_status 0 `i -> 1 `i 152  ]
+"288
+[; ;SlaveLiofilizadorVer1.c: 288:             {
+{
+"289
+[; ;SlaveLiofilizadorVer1.c: 289:             header =(((unsigned int)usart_buffer[0]<<8)+usart_buffer[1]);
+[e = _header + << -> *U + &U _usart_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _usart_buffer `ui `ux `ui -> 8 `i -> *U + &U _usart_buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _usart_buffer `ui `ux `ui ]
+"290
+[; ;SlaveLiofilizadorVer1.c: 290:             if(header==0xAABB)
+[e $ ! == _header -> 43707 `ui 153  ]
+"291
+[; ;SlaveLiofilizadorVer1.c: 291:                {
+{
+"292
+[; ;SlaveLiofilizadorVer1.c: 292:                destino =usart_buffer[3];
+[e = _destino -> *U + &U _usart_buffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _usart_buffer `ui `ux `uc ]
+"293
+[; ;SlaveLiofilizadorVer1.c: 293:                if((destino==Board_Number)||(destino==0XFF))
+[e $ ! || == -> _destino `i -> _Board_Number `i == -> _destino `i -> 255 `i 154  ]
+"294
+[; ;SlaveLiofilizadorVer1.c: 294:                       {
+{
+"295
+[; ;SlaveLiofilizadorVer1.c: 295:                       Delay_Led_Usart=20;
+[e = _Delay_Led_Usart -> -> 20 `i `ui ]
 "296
-[; ;SlaveLiofilizadorVer1.c: 296:             }
+[; ;SlaveLiofilizadorVer1.c: 296:                       Decodify_Command();
+[e ( _Decodify_Command ..  ]
+"297
+[; ;SlaveLiofilizadorVer1.c: 297:                       generic_status.flag_usart_rx=0;
+[e = . _generic_status 0 -> -> 0 `i `uc ]
+"298
+[; ;SlaveLiofilizadorVer1.c: 298:                       }
 }
-[e :U 150 ]
+[e :U 154 ]
 "299
-[; ;SlaveLiofilizadorVer1.c: 299:          }
+[; ;SlaveLiofilizadorVer1.c: 299:                }
+}
+[e :U 153 ]
+"300
+[; ;SlaveLiofilizadorVer1.c: 300:             }
+}
+[e :U 152 ]
+"303
+[; ;SlaveLiofilizadorVer1.c: 303:          }
 }
 [e :U 146 ]
 [e $U 147  ]
 [e :U 148 ]
-"300
-[; ;SlaveLiofilizadorVer1.c: 300:  }
+"304
+[; ;SlaveLiofilizadorVer1.c: 304:  }
 [e :UE 144 ]
 }
-"304
-[; ;SlaveLiofilizadorVer1.c: 304: void Decodify_Command(void)
+"308
+[; ;SlaveLiofilizadorVer1.c: 308: void Decodify_Command(void)
 [v _Decodify_Command `(v ~T0 @X0 1 ef ]
-"305
-[; ;SlaveLiofilizadorVer1.c: 305: {
+"309
+[; ;SlaveLiofilizadorVer1.c: 309: {
 {
 [e :U _Decodify_Command ]
 [f ]
-"306
-[; ;SlaveLiofilizadorVer1.c: 306:     int dados;
-[v _dados `i ~T0 @X0 1 a ]
-"307
-[; ;SlaveLiofilizadorVer1.c: 307:     char tempchar;
-[v _tempchar `uc ~T0 @X0 1 a ]
-"308
-[; ;SlaveLiofilizadorVer1.c: 308:     int tempint;
-[v _tempint `i ~T0 @X0 1 a ]
-"309
-[; ;SlaveLiofilizadorVer1.c: 309:     float OutPut;
-[v _OutPut `f ~T0 @X0 1 a ]
 "310
-[; ;SlaveLiofilizadorVer1.c: 310:     unsigned long add_24LCxxxx;
+[; ;SlaveLiofilizadorVer1.c: 310:     int dados;
+[v _dados `i ~T0 @X0 1 a ]
+"311
+[; ;SlaveLiofilizadorVer1.c: 311:     char tempchar;
+[v _tempchar `uc ~T0 @X0 1 a ]
+"312
+[; ;SlaveLiofilizadorVer1.c: 312:     int tempint;
+[v _tempint `i ~T0 @X0 1 a ]
+"313
+[; ;SlaveLiofilizadorVer1.c: 313:     float OutPut;
+[v _OutPut `f ~T0 @X0 1 a ]
+"314
+[; ;SlaveLiofilizadorVer1.c: 314:     unsigned long add_24LCxxxx;
 [v _add_24LCxxxx `ul ~T0 @X0 1 a ]
-"322
-[; ;SlaveLiofilizadorVer1.c: 322:     USART_to_Protocol(&usart_protocol);
-[e ( _USART_to_Protocol (1 &U _usart_protocol ]
-"324
-[; ;SlaveLiofilizadorVer1.c: 324:     ((char *)&add_24LCxxxx)[3]=(usart_protocol.value[1]);
-[e = *U + -> &U _add_24LCxxxx `*uc * -> -> 3 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"325
-[; ;SlaveLiofilizadorVer1.c: 325:     ((char *)&add_24LCxxxx)[2]=(usart_protocol.value[2]);
-[e = *U + -> &U _add_24LCxxxx `*uc * -> -> 2 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
 "326
-[; ;SlaveLiofilizadorVer1.c: 326:     ((char *)&add_24LCxxxx)[1]=(usart_protocol.value[3]);
+[; ;SlaveLiofilizadorVer1.c: 326:     USART_to_Protocol(&usart_protocol);
+[e ( _USART_to_Protocol (1 &U _usart_protocol ]
+"328
+[; ;SlaveLiofilizadorVer1.c: 328:     ((char *)&add_24LCxxxx)[3]=(usart_protocol.value[1]);
+[e = *U + -> &U _add_24LCxxxx `*uc * -> -> 3 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
+"329
+[; ;SlaveLiofilizadorVer1.c: 329:     ((char *)&add_24LCxxxx)[2]=(usart_protocol.value[2]);
+[e = *U + -> &U _add_24LCxxxx `*uc * -> -> 2 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
+"330
+[; ;SlaveLiofilizadorVer1.c: 330:     ((char *)&add_24LCxxxx)[1]=(usart_protocol.value[3]);
 [e = *U + -> &U _add_24LCxxxx `*uc * -> -> 1 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"327
-[; ;SlaveLiofilizadorVer1.c: 327:     ((char *)&add_24LCxxxx)[0]=(usart_protocol.value[4]);
+"331
+[; ;SlaveLiofilizadorVer1.c: 331:     ((char *)&add_24LCxxxx)[0]=(usart_protocol.value[4]);
 [e = *U + -> &U _add_24LCxxxx `*uc * -> -> 0 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 4 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"334
-[; ;SlaveLiofilizadorVer1.c: 334:     switch(usart_protocol.command){
-[e $U 155  ]
+"338
+[; ;SlaveLiofilizadorVer1.c: 338:     switch(usart_protocol.command){
+[e $U 157  ]
 {
-"342
-[; ;SlaveLiofilizadorVer1.c: 342:         case 0x41:
-[e :U 156 ]
-"343
-[; ;SlaveLiofilizadorVer1.c: 343:              strcpy(buffer,"v1.0.24");
-[e ( _strcpy (2 , &U _buffer :s 1C ]
-"344
-[; ;SlaveLiofilizadorVer1.c: 344:              Send_To_MB(11);
-[e ( _Send_To_MB (1 -> -> 11 `i `uc ]
-"345
-[; ;SlaveLiofilizadorVer1.c: 345:              USART_put_string(buffer);
-[e ( _USART_put_string (1 &U _buffer ]
 "346
-[; ;SlaveLiofilizadorVer1.c: 346:              break;
-[e $U 154  ]
-"347
-[; ;SlaveLiofilizadorVer1.c: 347:         case 0X1A:
-[e :U 157 ]
-"356
-[; ;SlaveLiofilizadorVer1.c: 356:              if(usart_protocol.value[0]==0)
-[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 158  ]
-"357
-[; ;SlaveLiofilizadorVer1.c: 357:                 OutPut=Temperatura0;
-[e = _OutPut _Temperatura0 ]
-[e $U 159  ]
-"358
-[; ;SlaveLiofilizadorVer1.c: 358:              else
+[; ;SlaveLiofilizadorVer1.c: 346:         case 0x41:
 [e :U 158 ]
-"359
-[; ;SlaveLiofilizadorVer1.c: 359:                 OutPut=Temperatura1;
-[e = _OutPut _Temperatura1 ]
+"347
+[; ;SlaveLiofilizadorVer1.c: 347:              strcpy(buffer,"v1.0.24");
+[e ( _strcpy (2 , &U _buffer :s 1C ]
+"348
+[; ;SlaveLiofilizadorVer1.c: 348:              Send_To_MB(11);
+[e ( _Send_To_MB (1 -> -> 11 `i `uc ]
+"349
+[; ;SlaveLiofilizadorVer1.c: 349:              USART_put_string(buffer);
+[e ( _USART_put_string (1 &U _buffer ]
+"350
+[; ;SlaveLiofilizadorVer1.c: 350:              break;
+[e $U 156  ]
+"351
+[; ;SlaveLiofilizadorVer1.c: 351:         case 0X1A:
 [e :U 159 ]
-"370
-[; ;SlaveLiofilizadorVer1.c: 370:              OutPut*=10.0;
-[e =* _OutPut -> .10.0 `f ]
-"372
-[; ;SlaveLiofilizadorVer1.c: 372:              INTCONbits.GIE=0;
-[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
-"373
-[; ;SlaveLiofilizadorVer1.c: 373:              Send_To_MB(2);
-[e ( _Send_To_MB (1 -> -> 2 `i `uc ]
-"374
-[; ;SlaveLiofilizadorVer1.c: 374:              USART_put_int(OutPut);
-[e ( _USART_put_int (1 -> _OutPut `i ]
-"375
-[; ;SlaveLiofilizadorVer1.c: 375:              INTCONbits.GIE=1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"376
-[; ;SlaveLiofilizadorVer1.c: 376:              break;
-[e $U 154  ]
-"379
-[; ;SlaveLiofilizadorVer1.c: 379:         case 0x02:
+"353
+[; ;SlaveLiofilizadorVer1.c: 353:              if(usart_protocol.value[0]==0)
+[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 160  ]
+"354
+[; ;SlaveLiofilizadorVer1.c: 354:                 OutPut=Temperatura0;
+[e = _OutPut _Temperatura0 ]
+[e $U 161  ]
+"355
+[; ;SlaveLiofilizadorVer1.c: 355:              else
 [e :U 160 ]
-"381
-[; ;SlaveLiofilizadorVer1.c: 381:              ((char *)&add_24LCxxxx)[3] =(usart_protocol.value[0]);
-[e = *U + -> &U _add_24LCxxxx `*uc * -> -> 3 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"382
-[; ;SlaveLiofilizadorVer1.c: 382:              ((char *)&add_24LCxxxx)[2] =(usart_protocol.value[1]);
-[e = *U + -> &U _add_24LCxxxx `*uc * -> -> 2 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"383
-[; ;SlaveLiofilizadorVer1.c: 383:              ((char *)&add_24LCxxxx)[1] =(usart_protocol.value[2]);
-[e = *U + -> &U _add_24LCxxxx `*uc * -> -> 1 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"384
-[; ;SlaveLiofilizadorVer1.c: 384:              ((char *)&add_24LCxxxx)[0] =(usart_protocol.value[3]);
-[e = *U + -> &U _add_24LCxxxx `*uc * -> -> 0 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"385
-[; ;SlaveLiofilizadorVer1.c: 385:              Save_Log(add_24LCxxxx);
-[e ( _Save_Log (1 _add_24LCxxxx ]
-"386
-[; ;SlaveLiofilizadorVer1.c: 386:              Delay_Led_Tmr0=0;
-[e = _Delay_Led_Tmr0 -> -> 0 `i `ui ]
-"387
-[; ;SlaveLiofilizadorVer1.c: 387:              milisegundo=0;
-[e = _milisegundo -> -> 0 `i `ui ]
-"388
-[; ;SlaveLiofilizadorVer1.c: 388:              break;
-[e $U 154  ]
-"399
-[; ;SlaveLiofilizadorVer1.c: 399:         case 0x03:
+"356
+[; ;SlaveLiofilizadorVer1.c: 356:                 OutPut=Temperatura1;
+[e = _OutPut _Temperatura1 ]
 [e :U 161 ]
-"400
-[; ;SlaveLiofilizadorVer1.c: 400:              Send_To_MB(2);
+"374
+[; ;SlaveLiofilizadorVer1.c: 374:              OutPut*=10.0;
+[e =* _OutPut -> .10.0 `f ]
+"376
+[; ;SlaveLiofilizadorVer1.c: 376:              INTCONbits.GIE=0;
+[e = . . _INTCONbits 0 7 -> -> 0 `i `uc ]
+"377
+[; ;SlaveLiofilizadorVer1.c: 377:              Send_To_MB(2);
 [e ( _Send_To_MB (1 -> -> 2 `i `uc ]
-"406
-[; ;SlaveLiofilizadorVer1.c: 406:              USART_put_int(2);
-[e ( _USART_put_int (1 -> 2 `i ]
-"412
-[; ;SlaveLiofilizadorVer1.c: 412:              break;
-[e $U 154  ]
-"428
-[; ;SlaveLiofilizadorVer1.c: 428:         case 0x08:
+"378
+[; ;SlaveLiofilizadorVer1.c: 378:              USART_put_int(OutPut);
+[e ( _USART_put_int (1 -> _OutPut `i ]
+"379
+[; ;SlaveLiofilizadorVer1.c: 379:              INTCONbits.GIE=1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"380
+[; ;SlaveLiofilizadorVer1.c: 380:              break;
+[e $U 156  ]
+"383
+[; ;SlaveLiofilizadorVer1.c: 383:         case 0x02:
 [e :U 162 ]
-"429
-[; ;SlaveLiofilizadorVer1.c: 429:              EEPROM_Write_Byte(usart_protocol.value[0],
-[e ( _EEPROM_Write_Byte (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc ]
-"431
-[; ;SlaveLiofilizadorVer1.c: 431:              Send_To_MB(3);
-[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"432
-[; ;SlaveLiofilizadorVer1.c: 432:              Send_Reply_OK();
-[e ( _Send_Reply_OK ..  ]
-"433
-[; ;SlaveLiofilizadorVer1.c: 433:              break;
-[e $U 154  ]
-"434
-[; ;SlaveLiofilizadorVer1.c: 434:         case 0x09:
+"385
+[; ;SlaveLiofilizadorVer1.c: 385:              ((char *)&add_24LCxxxx)[3] =(usart_protocol.value[0]);
+[e = *U + -> &U _add_24LCxxxx `*uc * -> -> 3 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
+"386
+[; ;SlaveLiofilizadorVer1.c: 386:              ((char *)&add_24LCxxxx)[2] =(usart_protocol.value[1]);
+[e = *U + -> &U _add_24LCxxxx `*uc * -> -> 2 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
+"387
+[; ;SlaveLiofilizadorVer1.c: 387:              ((char *)&add_24LCxxxx)[1] =(usart_protocol.value[2]);
+[e = *U + -> &U _add_24LCxxxx `*uc * -> -> 1 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
+"388
+[; ;SlaveLiofilizadorVer1.c: 388:              ((char *)&add_24LCxxxx)[0] =(usart_protocol.value[3]);
+[e = *U + -> &U _add_24LCxxxx `*uc * -> -> 0 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 3 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
+"389
+[; ;SlaveLiofilizadorVer1.c: 389:              Save_Log(add_24LCxxxx);
+[e ( _Save_Log (1 _add_24LCxxxx ]
+"390
+[; ;SlaveLiofilizadorVer1.c: 390:              Delay_Led_Tmr0=0;
+[e = _Delay_Led_Tmr0 -> -> 0 `i `ui ]
+"391
+[; ;SlaveLiofilizadorVer1.c: 391:              milisegundo=0;
+[e = _milisegundo -> -> 0 `i `ui ]
+"392
+[; ;SlaveLiofilizadorVer1.c: 392:              break;
+[e $U 156  ]
+"395
+[; ;SlaveLiofilizadorVer1.c: 395:         case 0x40:
 [e :U 163 ]
-"435
-[; ;SlaveLiofilizadorVer1.c: 435:              tempchar=EEPROM_Read_Byte(usart_protocol.value[0]);
-[e = _tempchar -> ( _EEPROM_Read_Byte (1 -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc `uc ]
-"436
-[; ;SlaveLiofilizadorVer1.c: 436:              Send_To_MB(1);;
-[e ( _Send_To_MB (1 -> -> 1 `i `uc ]
-"437
-[; ;SlaveLiofilizadorVer1.c: 437:              USART_putc(tempchar);
-[e ( _USART_putc (1 _tempchar ]
-"438
-[; ;SlaveLiofilizadorVer1.c: 438:              break;
-[e $U 154  ]
-"439
-[; ;SlaveLiofilizadorVer1.c: 439:         case 0x0A:
+"396
+[; ;SlaveLiofilizadorVer1.c: 396:              if(usart_protocol.value[0]==0)
+[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 164  ]
+"397
+[; ;SlaveLiofilizadorVer1.c: 397:                 generic_status.flag_global_hot=0;
+[e = . _generic_status 6 -> -> 0 `i `uc ]
+[e $U 165  ]
+"398
+[; ;SlaveLiofilizadorVer1.c: 398:              else
 [e :U 164 ]
-"440
-[; ;SlaveLiofilizadorVer1.c: 440:              {
-{
-"441
-[; ;SlaveLiofilizadorVer1.c: 441:              unsigned char add;
-[v _add `uc ~T0 @X0 1 a ]
-"442
-[; ;SlaveLiofilizadorVer1.c: 442:              add=usart_protocol.value[0];
-[e = _add -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc ]
-"443
-[; ;SlaveLiofilizadorVer1.c: 443:              dados=(usart_protocol.value[1]<<8)|usart_protocol.value[2];
-[e = _dados | << -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 8 `i -> *U + &U . _usart_protocol 5 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i ]
-"444
-[; ;SlaveLiofilizadorVer1.c: 444:              EEPROM_Write_Integer(add,dados);
-[e ( _EEPROM_Write_Integer (2 , _add -> _dados `ui ]
-"445
-[; ;SlaveLiofilizadorVer1.c: 445:              Send_To_MB(3);
-[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"446
-[; ;SlaveLiofilizadorVer1.c: 446:              Send_Reply_OK();
-[e ( _Send_Reply_OK ..  ]
-"447
-[; ;SlaveLiofilizadorVer1.c: 447:              }
-}
-"448
-[; ;SlaveLiofilizadorVer1.c: 448:              break;
-[e $U 154  ]
-"449
-[; ;SlaveLiofilizadorVer1.c: 449:         case 0x0B:
+"399
+[; ;SlaveLiofilizadorVer1.c: 399:                 generic_status.flag_global_hot=1;
+[e = . _generic_status 6 -> -> 1 `i `uc ]
 [e :U 165 ]
-"450
-[; ;SlaveLiofilizadorVer1.c: 450:              tempint=EEPROM_Read_Integer(usart_protocol.value[0]);
-[e = _tempint -> ( _EEPROM_Read_Integer (1 -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc `i ]
-"451
-[; ;SlaveLiofilizadorVer1.c: 451:              Send_To_MB(2);
-[e ( _Send_To_MB (1 -> -> 2 `i `uc ]
-"452
-[; ;SlaveLiofilizadorVer1.c: 452:              USART_put_int(tempint);
-[e ( _USART_put_int (1 _tempint ]
-"453
-[; ;SlaveLiofilizadorVer1.c: 453:              break;
-[e $U 154  ]
-"455
-[; ;SlaveLiofilizadorVer1.c: 455:         case 0x0C :
+"400
+[; ;SlaveLiofilizadorVer1.c: 400:              break;
+[e $U 156  ]
+"403
+[; ;SlaveLiofilizadorVer1.c: 403:         case 0x03:
 [e :U 166 ]
-"456
-[; ;SlaveLiofilizadorVer1.c: 456:              EEPROM_Write_String(usart_protocol.value[0],
-[e ( _EEPROM_Write_String (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc &U *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"458
-[; ;SlaveLiofilizadorVer1.c: 458:              Send_To_MB(3);
-[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"459
-[; ;SlaveLiofilizadorVer1.c: 459:              Send_Reply_OK();
-[e ( _Send_Reply_OK ..  ]
-"460
-[; ;SlaveLiofilizadorVer1.c: 460:              break;
-[e $U 154  ]
-"461
-[; ;SlaveLiofilizadorVer1.c: 461:         case 0x0D:
-[e :U 167 ]
-"462
-[; ;SlaveLiofilizadorVer1.c: 462:              {
-{
-"463
-[; ;SlaveLiofilizadorVer1.c: 463:              EEPROM_Read_String(usart_protocol.value[0],buffer);
-[e ( _EEPROM_Read_String (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc &U _buffer ]
-"464
-[; ;SlaveLiofilizadorVer1.c: 464:              Send_To_MB(sizeof(buffer));
-[e ( _Send_To_MB (1 -> -> # _buffer `ui `uc ]
-"465
-[; ;SlaveLiofilizadorVer1.c: 465:              USART_put_string(buffer);
-[e ( _USART_put_string (1 &U _buffer ]
-"466
-[; ;SlaveLiofilizadorVer1.c: 466:              break;
-[e $U 154  ]
-"467
-[; ;SlaveLiofilizadorVer1.c: 467:              }
-}
-"470
-[; ;SlaveLiofilizadorVer1.c: 470:         case 0x11:
-[e :U 168 ]
-"471
-[; ;SlaveLiofilizadorVer1.c: 471:              EEPROM_24C1025_Write_Byte(usart_protocol.value[0],
-[e ( _EEPROM_24C1025_Write_Byte (3 , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"474
-[; ;SlaveLiofilizadorVer1.c: 474:              Send_To_MB(3);
-[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"475
-[; ;SlaveLiofilizadorVer1.c: 475:              Send_Reply_OK();
-[e ( _Send_Reply_OK ..  ]
-"476
-[; ;SlaveLiofilizadorVer1.c: 476:              break;
-[e $U 154  ]
-"477
-[; ;SlaveLiofilizadorVer1.c: 477:         case 0x12:
-[e :U 169 ]
-"478
-[; ;SlaveLiofilizadorVer1.c: 478:              tempchar=EEPROM_24C1025_Read_Byte(usart_protocol.value[0],
-[e = _tempchar -> ( _EEPROM_24C1025_Read_Byte (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx `uc ]
-"482
-[; ;SlaveLiofilizadorVer1.c: 482:              Send_To_MB(1);
-[e ( _Send_To_MB (1 -> -> 1 `i `uc ]
-"483
-[; ;SlaveLiofilizadorVer1.c: 483:              USART_putc(tempchar);
-[e ( _USART_putc (1 _tempchar ]
-"484
-[; ;SlaveLiofilizadorVer1.c: 484:              break;
-[e $U 154  ]
-"485
-[; ;SlaveLiofilizadorVer1.c: 485:         case 0x13:
-[e :U 170 ]
-"486
-[; ;SlaveLiofilizadorVer1.c: 486:              {
-{
-"487
-[; ;SlaveLiofilizadorVer1.c: 487:              EEPROM_24C1025_Write_Int(usart_protocol.value[0],
-[e ( _EEPROM_24C1025_Write_Int (3 , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx | << -> *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 8 `i -> *U + &U . _usart_protocol 5 * -> -> -> 6 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i ]
-"492
-[; ;SlaveLiofilizadorVer1.c: 492:              Send_To_MB(3);
-[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"493
-[; ;SlaveLiofilizadorVer1.c: 493:              Send_Reply_OK();
-[e ( _Send_Reply_OK ..  ]
-"494
-[; ;SlaveLiofilizadorVer1.c: 494:              break;
-[e $U 154  ]
-"495
-[; ;SlaveLiofilizadorVer1.c: 495:              }
-}
-"496
-[; ;SlaveLiofilizadorVer1.c: 496:         case 0x14:
-[e :U 171 ]
-"497
-[; ;SlaveLiofilizadorVer1.c: 497:              tempint=EEPROM_24C1025_Read_Int(usart_protocol.value[0],
-[e = _tempint -> ( _EEPROM_24C1025_Read_Int (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx `i ]
-"499
-[; ;SlaveLiofilizadorVer1.c: 499:              Send_To_MB(2);
+"404
+[; ;SlaveLiofilizadorVer1.c: 404:              Send_To_MB(2);
 [e ( _Send_To_MB (1 -> -> 2 `i `uc ]
-"500
-[; ;SlaveLiofilizadorVer1.c: 500:              USART_put_int(tempint);
+"414
+[; ;SlaveLiofilizadorVer1.c: 414:              USART_put_int(3);
+[e ( _USART_put_int (1 -> 3 `i ]
+"416
+[; ;SlaveLiofilizadorVer1.c: 416:              break;
+[e $U 156  ]
+"424
+[; ;SlaveLiofilizadorVer1.c: 424:         case 0x01:
+[e :U 167 ]
+"425
+[; ;SlaveLiofilizadorVer1.c: 425:              Send_To_MB(3);
+[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
+"426
+[; ;SlaveLiofilizadorVer1.c: 426:              Send_Reply_OK();
+[e ( _Send_Reply_OK ..  ]
+"427
+[; ;SlaveLiofilizadorVer1.c: 427:              Load_Work();
+[e ( _Load_Work ..  ]
+"428
+[; ;SlaveLiofilizadorVer1.c: 428:              break;
+[e $U 156  ]
+"432
+[; ;SlaveLiofilizadorVer1.c: 432:         case 0x08:
+[e :U 168 ]
+"433
+[; ;SlaveLiofilizadorVer1.c: 433:              EEPROM_Write_Byte(usart_protocol.value[0],
+[e ( _EEPROM_Write_Byte (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc ]
+"435
+[; ;SlaveLiofilizadorVer1.c: 435:              Send_To_MB(3);
+[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
+"436
+[; ;SlaveLiofilizadorVer1.c: 436:              Send_Reply_OK();
+[e ( _Send_Reply_OK ..  ]
+"437
+[; ;SlaveLiofilizadorVer1.c: 437:              break;
+[e $U 156  ]
+"438
+[; ;SlaveLiofilizadorVer1.c: 438:         case 0x09:
+[e :U 169 ]
+"439
+[; ;SlaveLiofilizadorVer1.c: 439:              tempchar=EEPROM_Read_Byte(usart_protocol.value[0]);
+[e = _tempchar -> ( _EEPROM_Read_Byte (1 -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc `uc ]
+"440
+[; ;SlaveLiofilizadorVer1.c: 440:              Send_To_MB(1);;
+[e ( _Send_To_MB (1 -> -> 1 `i `uc ]
+"441
+[; ;SlaveLiofilizadorVer1.c: 441:              USART_putc(tempchar);
+[e ( _USART_putc (1 _tempchar ]
+"442
+[; ;SlaveLiofilizadorVer1.c: 442:              break;
+[e $U 156  ]
+"443
+[; ;SlaveLiofilizadorVer1.c: 443:         case 0x0A:
+[e :U 170 ]
+"444
+[; ;SlaveLiofilizadorVer1.c: 444:              {
+{
+"445
+[; ;SlaveLiofilizadorVer1.c: 445:              unsigned char add;
+[v _add `uc ~T0 @X0 1 a ]
+"446
+[; ;SlaveLiofilizadorVer1.c: 446:              add=usart_protocol.value[0];
+[e = _add -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc ]
+"447
+[; ;SlaveLiofilizadorVer1.c: 447:              dados=(usart_protocol.value[1]<<8)|usart_protocol.value[2];
+[e = _dados | << -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 8 `i -> *U + &U . _usart_protocol 5 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i ]
+"448
+[; ;SlaveLiofilizadorVer1.c: 448:              EEPROM_Write_Integer(add,dados);
+[e ( _EEPROM_Write_Integer (2 , _add -> _dados `ui ]
+"449
+[; ;SlaveLiofilizadorVer1.c: 449:              Send_To_MB(3);
+[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
+"450
+[; ;SlaveLiofilizadorVer1.c: 450:              Send_Reply_OK();
+[e ( _Send_Reply_OK ..  ]
+"451
+[; ;SlaveLiofilizadorVer1.c: 451:              }
+}
+"452
+[; ;SlaveLiofilizadorVer1.c: 452:              break;
+[e $U 156  ]
+"453
+[; ;SlaveLiofilizadorVer1.c: 453:         case 0x0B:
+[e :U 171 ]
+"454
+[; ;SlaveLiofilizadorVer1.c: 454:              tempint=EEPROM_Read_Integer(usart_protocol.value[0]);
+[e = _tempint -> ( _EEPROM_Read_Integer (1 -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc `i ]
+"455
+[; ;SlaveLiofilizadorVer1.c: 455:              Send_To_MB(2);
+[e ( _Send_To_MB (1 -> -> 2 `i `uc ]
+"456
+[; ;SlaveLiofilizadorVer1.c: 456:              USART_put_int(tempint);
 [e ( _USART_put_int (1 _tempint ]
-"501
-[; ;SlaveLiofilizadorVer1.c: 501:              break;
-[e $U 154  ]
-"504
-[; ;SlaveLiofilizadorVer1.c: 504:         case 0x18:
+"457
+[; ;SlaveLiofilizadorVer1.c: 457:              break;
+[e $U 156  ]
+"459
+[; ;SlaveLiofilizadorVer1.c: 459:         case 0x0C :
 [e :U 172 ]
-"505
-[; ;SlaveLiofilizadorVer1.c: 505:              {
-{
-"506
-[; ;SlaveLiofilizadorVer1.c: 506:              char sizedata;
-[v _sizedata `uc ~T0 @X0 1 a ]
-"507
-[; ;SlaveLiofilizadorVer1.c: 507:              sizedata=usart_protocol.value[5];
-[e = _sizedata *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"508
-[; ;SlaveLiofilizadorVer1.c: 508:              Send_To_MB(sizedata);
-[e ( _Send_To_MB (1 -> _sizedata `uc ]
-"509
-[; ;SlaveLiofilizadorVer1.c: 509:              EEPROM_24C1025_Read_Buffer_USART(usart_protocol.value[0],
-[e ( _EEPROM_24C1025_Read_Buffer_USART (4 , , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx -> _sizedata `uc &U _buffer ]
-"514
-[; ;SlaveLiofilizadorVer1.c: 514:              }
-}
-"515
-[; ;SlaveLiofilizadorVer1.c: 515:              break;
-[e $U 154  ]
-"517
-[; ;SlaveLiofilizadorVer1.c: 517:         case 0x17:
+"460
+[; ;SlaveLiofilizadorVer1.c: 460:              EEPROM_Write_String(usart_protocol.value[0],
+[e ( _EEPROM_Write_String (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc &U *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
+"462
+[; ;SlaveLiofilizadorVer1.c: 462:              Send_To_MB(3);
+[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
+"463
+[; ;SlaveLiofilizadorVer1.c: 463:              Send_Reply_OK();
+[e ( _Send_Reply_OK ..  ]
+"464
+[; ;SlaveLiofilizadorVer1.c: 464:              break;
+[e $U 156  ]
+"465
+[; ;SlaveLiofilizadorVer1.c: 465:         case 0x0D:
 [e :U 173 ]
-"518
-[; ;SlaveLiofilizadorVer1.c: 518:              EEPROM_24C1025_Write_Buffer(usart_protocol.value[0],
-[e ( _EEPROM_24C1025_Write_Buffer (4 , , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx -> *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc &U *U + &U . _usart_protocol 5 * -> -> -> 6 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"523
-[; ;SlaveLiofilizadorVer1.c: 523:              Send_To_MB(3);
-[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"524
-[; ;SlaveLiofilizadorVer1.c: 524:              Send_Reply_OK();
-[e ( _Send_Reply_OK ..  ]
-"525
-[; ;SlaveLiofilizadorVer1.c: 525:              break;
-[e $U 154  ]
-"527
-[; ;SlaveLiofilizadorVer1.c: 527:         case 0x15 :
-[e :U 174 ]
-"528
-[; ;SlaveLiofilizadorVer1.c: 528:              EEPROM_24C1025_Write_Str(usart_protocol.value[0],
-[e ( _EEPROM_24C1025_Write_Str (3 , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx &U *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"531
-[; ;SlaveLiofilizadorVer1.c: 531:              Send_To_MB(3);
-[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"532
-[; ;SlaveLiofilizadorVer1.c: 532:              Send_Reply_OK();
-[e ( _Send_Reply_OK ..  ]
-"533
-[; ;SlaveLiofilizadorVer1.c: 533:              break;
-[e $U 154  ]
-"534
-[; ;SlaveLiofilizadorVer1.c: 534:         case 0x16:
-[e :U 175 ]
-"535
-[; ;SlaveLiofilizadorVer1.c: 535:              {
+"466
+[; ;SlaveLiofilizadorVer1.c: 466:              {
 {
-"536
-[; ;SlaveLiofilizadorVer1.c: 536:              EEPROM_24C1025_Read_Str(usart_protocol.value[0],
-[e ( _EEPROM_24C1025_Read_Str (3 , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx &U _buffer ]
-"540
-[; ;SlaveLiofilizadorVer1.c: 540:              Send_To_MB(strlen(buffer)+1);
-[e ( _Send_To_MB (1 -> + ( _strlen (1 -> &U _buffer `*Cuc -> -> 1 `i `ui `uc ]
-"541
-[; ;SlaveLiofilizadorVer1.c: 541:              USART_put_string(buffer);
+"467
+[; ;SlaveLiofilizadorVer1.c: 467:              EEPROM_Read_String(usart_protocol.value[0],buffer);
+[e ( _EEPROM_Read_String (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc &U _buffer ]
+"468
+[; ;SlaveLiofilizadorVer1.c: 468:              Send_To_MB(sizeof(buffer));
+[e ( _Send_To_MB (1 -> -> # _buffer `ui `uc ]
+"469
+[; ;SlaveLiofilizadorVer1.c: 469:              USART_put_string(buffer);
 [e ( _USART_put_string (1 &U _buffer ]
-"542
-[; ;SlaveLiofilizadorVer1.c: 542:              break;
-[e $U 154  ]
-"543
-[; ;SlaveLiofilizadorVer1.c: 543:              }
+"470
+[; ;SlaveLiofilizadorVer1.c: 470:              break;
+[e $U 156  ]
+"471
+[; ;SlaveLiofilizadorVer1.c: 471:              }
 }
-"545
-[; ;SlaveLiofilizadorVer1.c: 545:         case 0x19:
+"474
+[; ;SlaveLiofilizadorVer1.c: 474:         case 0x11:
+[e :U 174 ]
+"475
+[; ;SlaveLiofilizadorVer1.c: 475:              EEPROM_24C1025_Write_Byte(usart_protocol.value[0],
+[e ( _EEPROM_24C1025_Write_Byte (3 , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
+"478
+[; ;SlaveLiofilizadorVer1.c: 478:              Send_To_MB(3);
+[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
+"479
+[; ;SlaveLiofilizadorVer1.c: 479:              Send_Reply_OK();
+[e ( _Send_Reply_OK ..  ]
+"480
+[; ;SlaveLiofilizadorVer1.c: 480:              break;
+[e $U 156  ]
+"481
+[; ;SlaveLiofilizadorVer1.c: 481:         case 0x12:
+[e :U 175 ]
+"482
+[; ;SlaveLiofilizadorVer1.c: 482:              tempchar=EEPROM_24C1025_Read_Byte(usart_protocol.value[0],
+[e = _tempchar -> ( _EEPROM_24C1025_Read_Byte (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx `uc ]
+"486
+[; ;SlaveLiofilizadorVer1.c: 486:              Send_To_MB(1);
+[e ( _Send_To_MB (1 -> -> 1 `i `uc ]
+"487
+[; ;SlaveLiofilizadorVer1.c: 487:              USART_putc(tempchar);
+[e ( _USART_putc (1 _tempchar ]
+"488
+[; ;SlaveLiofilizadorVer1.c: 488:              break;
+[e $U 156  ]
+"489
+[; ;SlaveLiofilizadorVer1.c: 489:         case 0x13:
 [e :U 176 ]
-"546
-[; ;SlaveLiofilizadorVer1.c: 546:              EEPROM_24C1025_Fill_All(usart_protocol.value[0],
-[e ( _EEPROM_24C1025_Fill_All (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `ui ]
-"548
-[; ;SlaveLiofilizadorVer1.c: 548:              Send_To_MB(3);
+"490
+[; ;SlaveLiofilizadorVer1.c: 490:              {
+{
+"491
+[; ;SlaveLiofilizadorVer1.c: 491:              EEPROM_24C1025_Write_Int(usart_protocol.value[0],
+[e ( _EEPROM_24C1025_Write_Int (3 , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx | << -> *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 8 `i -> *U + &U . _usart_protocol 5 * -> -> -> 6 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i ]
+"496
+[; ;SlaveLiofilizadorVer1.c: 496:              Send_To_MB(3);
 [e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"549
-[; ;SlaveLiofilizadorVer1.c: 549:              Send_Reply_OK();
+"497
+[; ;SlaveLiofilizadorVer1.c: 497:              Send_Reply_OK();
 [e ( _Send_Reply_OK ..  ]
-"550
-[; ;SlaveLiofilizadorVer1.c: 550:              break;
-[e $U 154  ]
-"552
-[; ;SlaveLiofilizadorVer1.c: 552:         case 0X25:
+"498
+[; ;SlaveLiofilizadorVer1.c: 498:              break;
+[e $U 156  ]
+"499
+[; ;SlaveLiofilizadorVer1.c: 499:              }
+}
+"500
+[; ;SlaveLiofilizadorVer1.c: 500:         case 0x14:
 [e :U 177 ]
-"553
-[; ;SlaveLiofilizadorVer1.c: 553:              PROCULUS_Show_Screen(usart_protocol.value[0]);
-[e ( _PROCULUS_Show_Screen (1 -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `ui ]
-"554
-[; ;SlaveLiofilizadorVer1.c: 554:              Send_To_MB(3);
-[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"555
-[; ;SlaveLiofilizadorVer1.c: 555:              Send_Reply_OK();
-[e ( _Send_Reply_OK ..  ]
-"556
-[; ;SlaveLiofilizadorVer1.c: 556:              break;
-[e $U 154  ]
-"558
-[; ;SlaveLiofilizadorVer1.c: 558:         case 0X24:
+"501
+[; ;SlaveLiofilizadorVer1.c: 501:              tempint=EEPROM_24C1025_Read_Int(usart_protocol.value[0],
+[e = _tempint -> ( _EEPROM_24C1025_Read_Int (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx `i ]
+"503
+[; ;SlaveLiofilizadorVer1.c: 503:              Send_To_MB(2);
+[e ( _Send_To_MB (1 -> -> 2 `i `uc ]
+"504
+[; ;SlaveLiofilizadorVer1.c: 504:              USART_put_int(tempint);
+[e ( _USART_put_int (1 _tempint ]
+"505
+[; ;SlaveLiofilizadorVer1.c: 505:              break;
+[e $U 156  ]
+"508
+[; ;SlaveLiofilizadorVer1.c: 508:         case 0x18:
 [e :U 178 ]
-"559
-[; ;SlaveLiofilizadorVer1.c: 559:              PROCULUS_Buzzer((usart_protocol.value[0]<<8)+
-[e ( _PROCULUS_Buzzer (1 -> + << -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 8 `i -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i `ui ]
-"561
-[; ;SlaveLiofilizadorVer1.c: 561:              Send_To_MB(3);
-[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"562
-[; ;SlaveLiofilizadorVer1.c: 562:              Send_Reply_OK();
-[e ( _Send_Reply_OK ..  ]
-"563
-[; ;SlaveLiofilizadorVer1.c: 563:              break;
-[e $U 154  ]
-"564
-[; ;SlaveLiofilizadorVer1.c: 564:         case 0X22:
+"509
+[; ;SlaveLiofilizadorVer1.c: 509:              {
+{
+"510
+[; ;SlaveLiofilizadorVer1.c: 510:              char sizedata;
+[v _sizedata `uc ~T0 @X0 1 a ]
+"511
+[; ;SlaveLiofilizadorVer1.c: 511:              sizedata=usart_protocol.value[5];
+[e = _sizedata *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
+"512
+[; ;SlaveLiofilizadorVer1.c: 512:              Send_To_MB(sizedata);
+[e ( _Send_To_MB (1 -> _sizedata `uc ]
+"513
+[; ;SlaveLiofilizadorVer1.c: 513:              EEPROM_24C1025_Read_Buffer_USART(usart_protocol.value[0],
+[e ( _EEPROM_24C1025_Read_Buffer_USART (4 , , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx -> _sizedata `uc &U _buffer ]
+"518
+[; ;SlaveLiofilizadorVer1.c: 518:              }
+}
+"519
+[; ;SlaveLiofilizadorVer1.c: 519:              break;
+[e $U 156  ]
+"521
+[; ;SlaveLiofilizadorVer1.c: 521:         case 0x17:
 [e :U 179 ]
-"565
-[; ;SlaveLiofilizadorVer1.c: 565:              PROCULUS_VP_Write_String((usart_protocol.value[0]<<8)+
-[e ( _PROCULUS_VP_Write_String (2 , -> + << -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 8 `i -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i `ui &U *U + &U . _usart_protocol 5 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
-"568
-[; ;SlaveLiofilizadorVer1.c: 568:              Send_To_MB(3);
+"522
+[; ;SlaveLiofilizadorVer1.c: 522:              EEPROM_24C1025_Write_Buffer(usart_protocol.value[0],
+[e ( _EEPROM_24C1025_Write_Buffer (4 , , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx -> *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc &U *U + &U . _usart_protocol 5 * -> -> -> 6 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
+"527
+[; ;SlaveLiofilizadorVer1.c: 527:              Send_To_MB(3);
 [e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"569
-[; ;SlaveLiofilizadorVer1.c: 569:              Send_Reply_OK();
+"528
+[; ;SlaveLiofilizadorVer1.c: 528:              Send_Reply_OK();
 [e ( _Send_Reply_OK ..  ]
-"570
-[; ;SlaveLiofilizadorVer1.c: 570:              break;
-[e $U 154  ]
-"573
-[; ;SlaveLiofilizadorVer1.c: 573:         case 0x30:
+"529
+[; ;SlaveLiofilizadorVer1.c: 529:              break;
+[e $U 156  ]
+"531
+[; ;SlaveLiofilizadorVer1.c: 531:         case 0x15 :
 [e :U 180 ]
-"574
-[; ;SlaveLiofilizadorVer1.c: 574:              if(usart_protocol.value[0]==0)
-[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 181  ]
-"575
-[; ;SlaveLiofilizadorVer1.c: 575:                 {
-{
-"576
-[; ;SlaveLiofilizadorVer1.c: 576:                 if(!usart_protocol.value[1])
-[e $ ! ! != -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 182  ]
-"577
-[; ;SlaveLiofilizadorVer1.c: 577:                    PORTCbits.RC0=0;
-[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-[e $U 183  ]
-"578
-[; ;SlaveLiofilizadorVer1.c: 578:                 else
-[e :U 182 ]
-"579
-[; ;SlaveLiofilizadorVer1.c: 579:                    PORTCbits.RC0=1;
-[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-[e :U 183 ]
-"580
-[; ;SlaveLiofilizadorVer1.c: 580:                 }
-}
-[e $U 184  ]
-"581
-[; ;SlaveLiofilizadorVer1.c: 581:              else if (usart_protocol.value[0]==1)
-[e :U 181 ]
-[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 1 `i 185  ]
-"582
-[; ;SlaveLiofilizadorVer1.c: 582:                      {
-{
-"583
-[; ;SlaveLiofilizadorVer1.c: 583:                       if(!usart_protocol.value[1])
-[e $ ! ! != -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 186  ]
-"584
-[; ;SlaveLiofilizadorVer1.c: 584:                          PORTCbits.RC1=0;
-[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-[e $U 187  ]
-"585
-[; ;SlaveLiofilizadorVer1.c: 585:                       else
-[e :U 186 ]
-"586
-[; ;SlaveLiofilizadorVer1.c: 586:                          PORTCbits.RC1=1;
-[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
-[e :U 187 ]
-"587
-[; ;SlaveLiofilizadorVer1.c: 587:                      }
-}
-[e :U 185 ]
-[e :U 184 ]
-"588
-[; ;SlaveLiofilizadorVer1.c: 588:              Send_To_MB(3);
+"532
+[; ;SlaveLiofilizadorVer1.c: 532:              EEPROM_24C1025_Write_Str(usart_protocol.value[0],
+[e ( _EEPROM_24C1025_Write_Str (3 , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx &U *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
+"535
+[; ;SlaveLiofilizadorVer1.c: 535:              Send_To_MB(3);
 [e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"589
-[; ;SlaveLiofilizadorVer1.c: 589:              Send_Reply_OK();
+"536
+[; ;SlaveLiofilizadorVer1.c: 536:              Send_Reply_OK();
 [e ( _Send_Reply_OK ..  ]
+"537
+[; ;SlaveLiofilizadorVer1.c: 537:              break;
+[e $U 156  ]
+"538
+[; ;SlaveLiofilizadorVer1.c: 538:         case 0x16:
+[e :U 181 ]
+"539
+[; ;SlaveLiofilizadorVer1.c: 539:              {
+{
+"540
+[; ;SlaveLiofilizadorVer1.c: 540:              EEPROM_24C1025_Read_Str(usart_protocol.value[0],
+[e ( _EEPROM_24C1025_Read_Str (3 , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx &U _buffer ]
+"544
+[; ;SlaveLiofilizadorVer1.c: 544:              Send_To_MB(strlen(buffer)+1);
+[e ( _Send_To_MB (1 -> + ( _strlen (1 -> &U _buffer `*Cuc -> -> 1 `i `ui `uc ]
+"545
+[; ;SlaveLiofilizadorVer1.c: 545:              USART_put_string(buffer);
+[e ( _USART_put_string (1 &U _buffer ]
+"546
+[; ;SlaveLiofilizadorVer1.c: 546:              break;
+[e $U 156  ]
+"547
+[; ;SlaveLiofilizadorVer1.c: 547:              }
+}
+"549
+[; ;SlaveLiofilizadorVer1.c: 549:         case 0x19:
+[e :U 182 ]
+"550
+[; ;SlaveLiofilizadorVer1.c: 550:              EEPROM_24C1025_Fill_All(usart_protocol.value[0],
+[e ( _EEPROM_24C1025_Fill_All (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `ui ]
+"552
+[; ;SlaveLiofilizadorVer1.c: 552:              Send_To_MB(3);
+[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
+"553
+[; ;SlaveLiofilizadorVer1.c: 553:              Send_Reply_OK();
+[e ( _Send_Reply_OK ..  ]
+"554
+[; ;SlaveLiofilizadorVer1.c: 554:              break;
+[e $U 156  ]
+"556
+[; ;SlaveLiofilizadorVer1.c: 556:         case 0X25:
+[e :U 183 ]
+"557
+[; ;SlaveLiofilizadorVer1.c: 557:              PROCULUS_Show_Screen(usart_protocol.value[0]);
+[e ( _PROCULUS_Show_Screen (1 -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `ui ]
+"558
+[; ;SlaveLiofilizadorVer1.c: 558:              Send_To_MB(3);
+[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
+"559
+[; ;SlaveLiofilizadorVer1.c: 559:              Send_Reply_OK();
+[e ( _Send_Reply_OK ..  ]
+"560
+[; ;SlaveLiofilizadorVer1.c: 560:              break;
+[e $U 156  ]
+"562
+[; ;SlaveLiofilizadorVer1.c: 562:         case 0X24:
+[e :U 184 ]
+"563
+[; ;SlaveLiofilizadorVer1.c: 563:              PROCULUS_Buzzer((usart_protocol.value[0]<<8)+
+[e ( _PROCULUS_Buzzer (1 -> + << -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 8 `i -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i `ui ]
+"565
+[; ;SlaveLiofilizadorVer1.c: 565:              Send_To_MB(3);
+[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
+"566
+[; ;SlaveLiofilizadorVer1.c: 566:              Send_Reply_OK();
+[e ( _Send_Reply_OK ..  ]
+"567
+[; ;SlaveLiofilizadorVer1.c: 567:              break;
+[e $U 156  ]
+"568
+[; ;SlaveLiofilizadorVer1.c: 568:         case 0X22:
+[e :U 185 ]
+"569
+[; ;SlaveLiofilizadorVer1.c: 569:              PROCULUS_VP_Write_String((usart_protocol.value[0]<<8)+
+[e ( _PROCULUS_VP_Write_String (2 , -> + << -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 8 `i -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i `ui &U *U + &U . _usart_protocol 5 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
+"572
+[; ;SlaveLiofilizadorVer1.c: 572:              Send_To_MB(3);
+[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
+"573
+[; ;SlaveLiofilizadorVer1.c: 573:              Send_Reply_OK();
+[e ( _Send_Reply_OK ..  ]
+"574
+[; ;SlaveLiofilizadorVer1.c: 574:              break;
+[e $U 156  ]
+"577
+[; ;SlaveLiofilizadorVer1.c: 577:         case 0x30:
+[e :U 186 ]
+"578
+[; ;SlaveLiofilizadorVer1.c: 578:              if(usart_protocol.value[0]==0)
+[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 187  ]
+"579
+[; ;SlaveLiofilizadorVer1.c: 579:                 {
+{
+"580
+[; ;SlaveLiofilizadorVer1.c: 580:                 unsigned char modoAutonomo0=1;
+[v _modoAutonomo0 `uc ~T0 @X0 1 a ]
+[e = _modoAutonomo0 -> -> 1 `i `uc ]
+"581
+[; ;SlaveLiofilizadorVer1.c: 581:                 if(!usart_protocol.value[1])
+[e $ ! ! != -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 188  ]
+"582
+[; ;SlaveLiofilizadorVer1.c: 582:                    PORTCbits.RC0=0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+[e $U 189  ]
+"583
+[; ;SlaveLiofilizadorVer1.c: 583:                 else
+[e :U 188 ]
+"584
+[; ;SlaveLiofilizadorVer1.c: 584:                    PORTCbits.RC0=1;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+[e :U 189 ]
+"585
+[; ;SlaveLiofilizadorVer1.c: 585:                 }
+}
+[e $U 190  ]
+"586
+[; ;SlaveLiofilizadorVer1.c: 586:              else if (usart_protocol.value[0]==1)
+[e :U 187 ]
+[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 1 `i 191  ]
+"587
+[; ;SlaveLiofilizadorVer1.c: 587:                      {
+{
+"588
+[; ;SlaveLiofilizadorVer1.c: 588:                       modoAutonomo1=1;
+[e = _modoAutonomo1 -> -> 1 `i `uc ]
+"589
+[; ;SlaveLiofilizadorVer1.c: 589:                       if(!usart_protocol.value[1])
+[e $ ! ! != -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 192  ]
 "590
-[; ;SlaveLiofilizadorVer1.c: 590:              break;
-[e $U 154  ]
+[; ;SlaveLiofilizadorVer1.c: 590:                          PORTCbits.RC1=0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+[e $U 193  ]
+"591
+[; ;SlaveLiofilizadorVer1.c: 591:                       else
+[e :U 192 ]
 "592
-[; ;SlaveLiofilizadorVer1.c: 592:     }
-}
-[e $U 154  ]
-[e :U 155 ]
-[e [\ -> . _usart_protocol 3 `i , $ -> 65 `i 156
- , $ -> 26 `i 157
- , $ -> 2 `i 160
- , $ -> 3 `i 161
- , $ -> 8 `i 162
- , $ -> 9 `i 163
- , $ -> 10 `i 164
- , $ -> 11 `i 165
- , $ -> 12 `i 166
- , $ -> 13 `i 167
- , $ -> 17 `i 168
- , $ -> 18 `i 169
- , $ -> 19 `i 170
- , $ -> 20 `i 171
- , $ -> 24 `i 172
- , $ -> 23 `i 173
- , $ -> 21 `i 174
- , $ -> 22 `i 175
- , $ -> 25 `i 176
- , $ -> 37 `i 177
- , $ -> 36 `i 178
- , $ -> 34 `i 179
- , $ -> 48 `i 180
- 154 ]
-[e :U 154 ]
+[; ;SlaveLiofilizadorVer1.c: 592:                          PORTCbits.RC1=1;
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+[e :U 193 ]
 "593
-[; ;SlaveLiofilizadorVer1.c: 593: }
-[e :UE 153 ]
+[; ;SlaveLiofilizadorVer1.c: 593:                      }
 }
+[e :U 191 ]
+[e :U 190 ]
+"594
+[; ;SlaveLiofilizadorVer1.c: 594:              Send_To_MB(3);
+[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
+"595
+[; ;SlaveLiofilizadorVer1.c: 595:              Send_Reply_OK();
+[e ( _Send_Reply_OK ..  ]
+"596
+[; ;SlaveLiofilizadorVer1.c: 596:              break;
+[e $U 156  ]
+"597
+[; ;SlaveLiofilizadorVer1.c: 597:         case 0x50:
+[e :U 194 ]
 "598
-[; ;SlaveLiofilizadorVer1.c: 598: void Send_To_MB(unsigned char size){
+[; ;SlaveLiofilizadorVer1.c: 598:              if(usart_protocol.value[0]==0)
+[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 195  ]
+"599
+[; ;SlaveLiofilizadorVer1.c: 599:                {
+{
+"600
+[; ;SlaveLiofilizadorVer1.c: 600:                Status1=1;
+[e = _Status1 -> 1 `i ]
+"601
+[; ;SlaveLiofilizadorVer1.c: 601:                SetPoint1=-100;
+[e = _SetPoint1 -> -U -> 100 `i `f ]
+"602
+[; ;SlaveLiofilizadorVer1.c: 602:                Histerese1=1;
+[e = _Histerese1 -> -> 1 `i `uc ]
+"603
+[; ;SlaveLiofilizadorVer1.c: 603:                TempoON_1 =0;
+[e = _TempoON_1 -> -> 0 `i `uc ]
+"604
+[; ;SlaveLiofilizadorVer1.c: 604:                TempoOFF_1=10;
+[e = _TempoOFF_1 -> -> 10 `i `uc ]
+"605
+[; ;SlaveLiofilizadorVer1.c: 605:                }
+}
+[e $U 196  ]
+"606
+[; ;SlaveLiofilizadorVer1.c: 606:              else
+[e :U 195 ]
+"607
+[; ;SlaveLiofilizadorVer1.c: 607:                {
+{
+"608
+[; ;SlaveLiofilizadorVer1.c: 608:                Status1=1;
+[e = _Status1 -> 1 `i ]
+"609
+[; ;SlaveLiofilizadorVer1.c: 609:                SetPoint1=-100;
+[e = _SetPoint1 -> -U -> 100 `i `f ]
+"610
+[; ;SlaveLiofilizadorVer1.c: 610:                Histerese1=1;
+[e = _Histerese1 -> -> 1 `i `uc ]
+"611
+[; ;SlaveLiofilizadorVer1.c: 611:                TempoON_1 =10;
+[e = _TempoON_1 -> -> 10 `i `uc ]
+"612
+[; ;SlaveLiofilizadorVer1.c: 612:                TempoOFF_1=0;
+[e = _TempoOFF_1 -> -> 0 `i `uc ]
+"613
+[; ;SlaveLiofilizadorVer1.c: 613:                }
+}
+[e :U 196 ]
+"614
+[; ;SlaveLiofilizadorVer1.c: 614:              break;
+[e $U 156  ]
+"615
+[; ;SlaveLiofilizadorVer1.c: 615:     }
+}
+[e $U 156  ]
+[e :U 157 ]
+[e [\ -> . _usart_protocol 3 `i , $ -> 65 `i 158
+ , $ -> 26 `i 159
+ , $ -> 2 `i 162
+ , $ -> 64 `i 163
+ , $ -> 3 `i 166
+ , $ -> 1 `i 167
+ , $ -> 8 `i 168
+ , $ -> 9 `i 169
+ , $ -> 10 `i 170
+ , $ -> 11 `i 171
+ , $ -> 12 `i 172
+ , $ -> 13 `i 173
+ , $ -> 17 `i 174
+ , $ -> 18 `i 175
+ , $ -> 19 `i 176
+ , $ -> 20 `i 177
+ , $ -> 24 `i 178
+ , $ -> 23 `i 179
+ , $ -> 21 `i 180
+ , $ -> 22 `i 181
+ , $ -> 25 `i 182
+ , $ -> 37 `i 183
+ , $ -> 36 `i 184
+ , $ -> 34 `i 185
+ , $ -> 48 `i 186
+ , $ -> 80 `i 194
+ 156 ]
+[e :U 156 ]
+"616
+[; ;SlaveLiofilizadorVer1.c: 616: }
+[e :UE 155 ]
+}
+"621
+[; ;SlaveLiofilizadorVer1.c: 621: void Send_To_MB(unsigned char size){
 [v _Send_To_MB `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _Send_To_MB ]
 [v _size `uc ~T0 @X0 1 r1 ]
 [f ]
-"600
-[; ;SlaveLiofilizadorVer1.c: 600:      USART_putc(0xAA);
+"623
+[; ;SlaveLiofilizadorVer1.c: 623:      USART_putc(0xAA);
 [e ( _USART_putc (1 -> -> 170 `i `uc ]
-"601
-[; ;SlaveLiofilizadorVer1.c: 601:      USART_putc(0xBB);
+"624
+[; ;SlaveLiofilizadorVer1.c: 624:      USART_putc(0xBB);
 [e ( _USART_putc (1 -> -> 187 `i `uc ]
-"602
-[; ;SlaveLiofilizadorVer1.c: 602:      USART_putc(Board_Number);
+"625
+[; ;SlaveLiofilizadorVer1.c: 625:      USART_putc(Board_Number);
 [e ( _USART_putc (1 _Board_Number ]
-"603
-[; ;SlaveLiofilizadorVer1.c: 603:      USART_putc(0x00);
+"626
+[; ;SlaveLiofilizadorVer1.c: 626:      USART_putc(0x00);
 [e ( _USART_putc (1 -> -> 0 `i `uc ]
-"604
-[; ;SlaveLiofilizadorVer1.c: 604:      USART_putc(usart_protocol.command);
+"627
+[; ;SlaveLiofilizadorVer1.c: 627:      USART_putc(usart_protocol.command);
 [e ( _USART_putc (1 -> . _usart_protocol 3 `uc ]
-"605
-[; ;SlaveLiofilizadorVer1.c: 605:      USART_putc(size);
+"628
+[; ;SlaveLiofilizadorVer1.c: 628:      USART_putc(size);
 [e ( _USART_putc (1 -> _size `uc ]
-"606
-[; ;SlaveLiofilizadorVer1.c: 606: }
-[e :UE 188 ]
+"629
+[; ;SlaveLiofilizadorVer1.c: 629: }
+[e :UE 197 ]
 }
-"609
-[; ;SlaveLiofilizadorVer1.c: 609: void Send_Reply_OK(void){
+"632
+[; ;SlaveLiofilizadorVer1.c: 632: void Send_Reply_OK(void){
 [v _Send_Reply_OK `(v ~T0 @X0 1 ef ]
 {
 [e :U _Send_Reply_OK ]
 [f ]
-"610
-[; ;SlaveLiofilizadorVer1.c: 610:      USART_put_string("OK");
+"633
+[; ;SlaveLiofilizadorVer1.c: 633:      USART_put_string("OK");
 [e ( _USART_put_string (1 :s 2C ]
-"612
-[; ;SlaveLiofilizadorVer1.c: 612:  }
-[e :UE 189 ]
+"635
+[; ;SlaveLiofilizadorVer1.c: 635:  }
+[e :UE 198 ]
 }
-"685
-[; ;SlaveLiofilizadorVer1.c: 685: void mediaLeituraPt100Umidadde(unsigned char canal)
-[v _mediaLeituraPt100Umidadde `(v ~T0 @X0 1 ef1`uc ]
-"686
-[; ;SlaveLiofilizadorVer1.c: 686:      {
+"644
+[; ;SlaveLiofilizadorVer1.c: 644: void DelayRele(char canal){
+[v _DelayRele `(v ~T0 @X0 1 ef1`uc ]
 {
-[e :U _mediaLeituraPt100Umidadde ]
-"685
-[; ;SlaveLiofilizadorVer1.c: 685: void mediaLeituraPt100Umidadde(unsigned char canal)
+[e :U _DelayRele ]
 [v _canal `uc ~T0 @X0 1 r1 ]
-"686
-[; ;SlaveLiofilizadorVer1.c: 686:      {
 [f ]
-"687
-[; ;SlaveLiofilizadorVer1.c: 687:      float Temp;
+"645
+[; ;SlaveLiofilizadorVer1.c: 645:      my_delay_ms((canal+2*Board_Number-2)*10);
+[e ( _my_delay_ms (1 -> * - + -> _canal `i * -> 2 `i -> _Board_Number `i -> 2 `i -> 10 `i `l ]
+"646
+[; ;SlaveLiofilizadorVer1.c: 646: }
+[e :UE 199 ]
+}
+"654
+[; ;SlaveLiofilizadorVer1.c: 654: void mediatemperaturaNTC(unsigned char canal)
+[v _mediatemperaturaNTC `(v ~T0 @X0 1 ef1`uc ]
+"655
+[; ;SlaveLiofilizadorVer1.c: 655:      {
+{
+[e :U _mediatemperaturaNTC ]
+"654
+[; ;SlaveLiofilizadorVer1.c: 654: void mediatemperaturaNTC(unsigned char canal)
+[v _canal `uc ~T0 @X0 1 r1 ]
+"655
+[; ;SlaveLiofilizadorVer1.c: 655:      {
+[f ]
+"656
+[; ;SlaveLiofilizadorVer1.c: 656:      float Temp;
 [v _Temp `f ~T0 @X0 1 a ]
-"689
-[; ;SlaveLiofilizadorVer1.c: 689:      char i;
+"657
+[; ;SlaveLiofilizadorVer1.c: 657:      char i;
 [v _i `uc ~T0 @X0 1 a ]
-"691
-[; ;SlaveLiofilizadorVer1.c: 691:      ADCON0bits.CHS=canal;
+"659
+[; ;SlaveLiofilizadorVer1.c: 659:      ADCON0bits.CHS=canal;
 [e = . . _ADCON0bits 0 2 _canal ]
-"692
-[; ;SlaveLiofilizadorVer1.c: 692:      my_delay_ms(1);
+"660
+[; ;SlaveLiofilizadorVer1.c: 660:      my_delay_ms(1);
 [e ( _my_delay_ms (1 -> -> 1 `i `l ]
-"693
-[; ;SlaveLiofilizadorVer1.c: 693:      Temp=0;
+"662
+[; ;SlaveLiofilizadorVer1.c: 662:      Temp=0;
 [e = _Temp -> -> 0 `i `f ]
-"695
-[; ;SlaveLiofilizadorVer1.c: 695:      for(i=1;i<15;i++)
+"664
+[; ;SlaveLiofilizadorVer1.c: 664:      for(i=1;i<15;i++)
 {
 [e = _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 15 `i 191  ]
-[e $U 192  ]
-[e :U 191 ]
-"696
-[; ;SlaveLiofilizadorVer1.c: 696:         {
+[e $ < -> _i `i -> 15 `i 201  ]
+[e $U 202  ]
+[e :U 201 ]
+"665
+[; ;SlaveLiofilizadorVer1.c: 665:          {
 {
-"697
-[; ;SlaveLiofilizadorVer1.c: 697:         Temp+=ADC_Media_10bits(canal);
-[e =+ _Temp ( _ADC_Media_10bits (1 -> _canal `uc ]
-"698
-[; ;SlaveLiofilizadorVer1.c: 698:         if(Package_Usart_is_for_me()==1) break;
-[e $ ! == -> ( _Package_Usart_is_for_me ..  `i -> 1 `i 194  ]
-[e $U 192  ]
-[e :U 194 ]
-"699
-[; ;SlaveLiofilizadorVer1.c: 699:         }
+"666
+[; ;SlaveLiofilizadorVer1.c: 666:          Temp+=ADC_Read_NTC(canal);
+[e =+ _Temp ( _ADC_Read_NTC (1 -> _canal `uc ]
+"668
+[; ;SlaveLiofilizadorVer1.c: 668:          if(Package_Usart_is_for_me()==1) break;
+[e $ ! == -> ( _Package_Usart_is_for_me ..  `i -> 1 `i 204  ]
+[e $U 202  ]
+[e :U 204 ]
+"670
+[; ;SlaveLiofilizadorVer1.c: 670:          if(generic_status.flag_global_hot)
+[e $ ! != -> . _generic_status 6 `i -> 0 `i 205  ]
+"671
+[; ;SlaveLiofilizadorVer1.c: 671:            {
+{
+"673
+[; ;SlaveLiofilizadorVer1.c: 673:            if((TempoCNT_0==0)&&
+[e $ ! && && == -> _TempoCNT_0 `i -> 0 `i == -> _RL0Status `i -> 1 `i == _Status0 -> 1 `i 206  ]
+"675
+[; ;SlaveLiofilizadorVer1.c: 675:               (Status0==1)) Rele0Ligado();
+[e ( _Rele0Ligado ..  ]
+[e :U 206 ]
+"677
+[; ;SlaveLiofilizadorVer1.c: 677:            if((TempoCNT_1==0)&&
+[e $ ! && && == -> _TempoCNT_1 `i -> 0 `i == -> _RL1Status `i -> 1 `i == _Status1 -> 1 `i 207  ]
+"679
+[; ;SlaveLiofilizadorVer1.c: 679:               (Status1==1)) Rele1Ligado();
+[e ( _Rele1Ligado ..  ]
+[e :U 207 ]
+"681
+[; ;SlaveLiofilizadorVer1.c: 681:            }
+}
+[e :U 205 ]
+"682
+[; ;SlaveLiofilizadorVer1.c: 682:          }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 15 `i 191  ]
-[e :U 192 ]
+[e $ < -> _i `i -> 15 `i 201  ]
+[e :U 202 ]
 }
-"700
-[; ;SlaveLiofilizadorVer1.c: 700:      if(i<10)
-[e $ ! < -> _i `i -> 10 `i 195  ]
-"701
-[; ;SlaveLiofilizadorVer1.c: 701:         {
+"683
+[; ;SlaveLiofilizadorVer1.c: 683:      if(i<10)
+[e $ ! < -> _i `i -> 10 `i 208  ]
+"684
+[; ;SlaveLiofilizadorVer1.c: 684:        {
 {
-"703
-[; ;SlaveLiofilizadorVer1.c: 703:         return;
-[e $UE 190  ]
-"704
-[; ;SlaveLiofilizadorVer1.c: 704:         }
+"686
+[; ;SlaveLiofilizadorVer1.c: 686:        return;
+[e $UE 200  ]
+"687
+[; ;SlaveLiofilizadorVer1.c: 687:        }
 }
-[e :U 195 ]
-"707
-[; ;SlaveLiofilizadorVer1.c: 707:      if(i==15)
-[e $ ! == -> _i `i -> 15 `i 196  ]
-"708
-[; ;SlaveLiofilizadorVer1.c: 708:        Temp/=(i-1);
+[e :U 208 ]
+"688
+[; ;SlaveLiofilizadorVer1.c: 688:      if(i==15)
+[e $ ! == -> _i `i -> 15 `i 209  ]
+"689
+[; ;SlaveLiofilizadorVer1.c: 689:         Temp/=(i-1);
 [e =/ _Temp -> - -> _i `i -> 1 `i `f ]
-[e $U 197  ]
-"709
-[; ;SlaveLiofilizadorVer1.c: 709:      else
-[e :U 196 ]
-"710
-[; ;SlaveLiofilizadorVer1.c: 710:        Temp/=(i);
+[e $U 210  ]
+"690
+[; ;SlaveLiofilizadorVer1.c: 690:      else
+[e :U 209 ]
+"691
+[; ;SlaveLiofilizadorVer1.c: 691:         Temp/=(i);
 [e =/ _Temp -> -> _i `i `f ]
-[e :U 197 ]
-"722
-[; ;SlaveLiofilizadorVer1.c: 722:      if(canal==0)
-[e $ ! == -> _canal `i -> 0 `i 198  ]
-"723
-[; ;SlaveLiofilizadorVer1.c: 723:         {
+[e :U 210 ]
+"693
+[; ;SlaveLiofilizadorVer1.c: 693:      if(canal==0)
+[e $ ! == -> _canal `i -> 0 `i 211  ]
+"694
+[; ;SlaveLiofilizadorVer1.c: 694:         {
 {
-"724
-[; ;SlaveLiofilizadorVer1.c: 724:         Temperatura0=((200.0 * Temp) / 1023.0) - 110.0;
-[e = _Temperatura0 -> - / * .200.0 -> _Temp `d .1023.0 .110.0 `f ]
-"725
-[; ;SlaveLiofilizadorVer1.c: 725:         }
+"695
+[; ;SlaveLiofilizadorVer1.c: 695:         Temperatura0=Temp;
+[e = _Temperatura0 _Temp ]
+"696
+[; ;SlaveLiofilizadorVer1.c: 696:         }
 }
-[e $U 199  ]
-"726
-[; ;SlaveLiofilizadorVer1.c: 726:      else
-[e :U 198 ]
-"727
-[; ;SlaveLiofilizadorVer1.c: 727:         {
+[e $U 212  ]
+"697
+[; ;SlaveLiofilizadorVer1.c: 697:      else
+[e :U 211 ]
+"698
+[; ;SlaveLiofilizadorVer1.c: 698:         {
 {
-"728
-[; ;SlaveLiofilizadorVer1.c: 728:         Temperatura1=((200.0 * Temp) / 1023.0) - 110.0;
-[e = _Temperatura1 -> - / * .200.0 -> _Temp `d .1023.0 .110.0 `f ]
-"730
-[; ;SlaveLiofilizadorVer1.c: 730:         }
+"699
+[; ;SlaveLiofilizadorVer1.c: 699:         Temperatura1=Temp;
+[e = _Temperatura1 _Temp ]
+"700
+[; ;SlaveLiofilizadorVer1.c: 700:         }
 }
-[e :U 199 ]
-"732
-[; ;SlaveLiofilizadorVer1.c: 732:      }
-[e :UE 190 ]
+[e :U 212 ]
+"702
+[; ;SlaveLiofilizadorVer1.c: 702:      }
+[e :UE 200 ]
 }
+"857
+[; ;SlaveLiofilizadorVer1.c: 857: void Auto_Relay0(void){
+[v _Auto_Relay0 `(v ~T0 @X0 1 ef ]
+{
+[e :U _Auto_Relay0 ]
+[f ]
+"858
+[; ;SlaveLiofilizadorVer1.c: 858:              if(Status0==0)
+[e $ ! == _Status0 -> 0 `i 214  ]
+"859
+[; ;SlaveLiofilizadorVer1.c: 859:                  {
+{
+"860
+[; ;SlaveLiofilizadorVer1.c: 860:                  if(modoAutonomo0==0)Rele0Desligado();
+[e $ ! == -> _modoAutonomo0 `i -> 0 `i 215  ]
+[e ( _Rele0Desligado ..  ]
+[e :U 215 ]
+"861
+[; ;SlaveLiofilizadorVer1.c: 861:                  }
+}
+[e $U 216  ]
+"862
+[; ;SlaveLiofilizadorVer1.c: 862:              else
+[e :U 214 ]
+"863
+[; ;SlaveLiofilizadorVer1.c: 863:                  {
+{
+"865
+[; ;SlaveLiofilizadorVer1.c: 865:                  if (Temperatura0<=(SetPoint0-Histerese0))
+[e $ ! <= _Temperatura0 - _SetPoint0 _Histerese0 217  ]
+"866
+[; ;SlaveLiofilizadorVer1.c: 866:                     {
+{
+"867
+[; ;SlaveLiofilizadorVer1.c: 867:                     RL0Status=1;
+[e = _RL0Status -> -> 1 `i `uc ]
+"868
+[; ;SlaveLiofilizadorVer1.c: 868:                     Rele0Ligado();
+[e ( _Rele0Ligado ..  ]
+"869
+[; ;SlaveLiofilizadorVer1.c: 869:                     }
+}
+[e $U 218  ]
+"870
+[; ;SlaveLiofilizadorVer1.c: 870:                  else if (Temperatura0<=SetPoint0)
+[e :U 217 ]
+[e $ ! <= _Temperatura0 _SetPoint0 219  ]
+"871
+[; ;SlaveLiofilizadorVer1.c: 871:                           {
+{
+"872
+[; ;SlaveLiofilizadorVer1.c: 872:                           if(RL0Status==1)
+[e $ ! == -> _RL0Status `i -> 1 `i 220  ]
+"873
+[; ;SlaveLiofilizadorVer1.c: 873:                               {
+{
+"874
+[; ;SlaveLiofilizadorVer1.c: 874:                               Rele0Ligado();
+[e ( _Rele0Ligado ..  ]
+"875
+[; ;SlaveLiofilizadorVer1.c: 875:                               }
+}
+[e $U 221  ]
+"876
+[; ;SlaveLiofilizadorVer1.c: 876:                           else
+[e :U 220 ]
+"877
+[; ;SlaveLiofilizadorVer1.c: 877:                               {
+{
+"878
+[; ;SlaveLiofilizadorVer1.c: 878:                               Rele0Desligado();
+[e ( _Rele0Desligado ..  ]
+"879
+[; ;SlaveLiofilizadorVer1.c: 879:                               }
+}
+[e :U 221 ]
+"880
+[; ;SlaveLiofilizadorVer1.c: 880:                           }
+}
+[e $U 222  ]
+"881
+[; ;SlaveLiofilizadorVer1.c: 881:                  else if (Temperatura0>SetPoint0)
+[e :U 219 ]
+[e $ ! > _Temperatura0 _SetPoint0 223  ]
+"882
+[; ;SlaveLiofilizadorVer1.c: 882:                           {
+{
+"883
+[; ;SlaveLiofilizadorVer1.c: 883:                           RL0Status=0;
+[e = _RL0Status -> -> 0 `i `uc ]
+"884
+[; ;SlaveLiofilizadorVer1.c: 884:                           Rele0Desligado();
+[e ( _Rele0Desligado ..  ]
+"885
+[; ;SlaveLiofilizadorVer1.c: 885:                           }
+}
+[e :U 223 ]
+[e :U 222 ]
+[e :U 218 ]
+"886
+[; ;SlaveLiofilizadorVer1.c: 886:                  }
+}
+[e :U 216 ]
+"889
+[; ;SlaveLiofilizadorVer1.c: 889: }
+[e :UE 213 ]
+}
+"893
+[; ;SlaveLiofilizadorVer1.c: 893: void Auto_Relay1(void){
+[v _Auto_Relay1 `(v ~T0 @X0 1 ef ]
+{
+[e :U _Auto_Relay1 ]
+[f ]
+"894
+[; ;SlaveLiofilizadorVer1.c: 894:              if(Status1==0)
+[e $ ! == _Status1 -> 0 `i 225  ]
+"895
+[; ;SlaveLiofilizadorVer1.c: 895:                  {
+{
+"896
+[; ;SlaveLiofilizadorVer1.c: 896:                  if(modoAutonomo1==0)Rele1Desligado();
+[e $ ! == -> _modoAutonomo1 `i -> 0 `i 226  ]
+[e ( _Rele1Desligado ..  ]
+[e :U 226 ]
+"897
+[; ;SlaveLiofilizadorVer1.c: 897:                  }
+}
+[e $U 227  ]
+"898
+[; ;SlaveLiofilizadorVer1.c: 898:              else
+[e :U 225 ]
+"899
+[; ;SlaveLiofilizadorVer1.c: 899:                  {
+{
+"901
+[; ;SlaveLiofilizadorVer1.c: 901:                  if (Temperatura1<=(SetPoint1-Histerese1))
+[e $ ! <= _Temperatura1 - _SetPoint1 -> -> _Histerese1 `i `f 228  ]
+"902
+[; ;SlaveLiofilizadorVer1.c: 902:                     {
+{
+"903
+[; ;SlaveLiofilizadorVer1.c: 903:                     RL1Status=1;
+[e = _RL1Status -> -> 1 `i `uc ]
+"904
+[; ;SlaveLiofilizadorVer1.c: 904:                     Rele1Ligado();
+[e ( _Rele1Ligado ..  ]
+"905
+[; ;SlaveLiofilizadorVer1.c: 905:                     }
+}
+[e $U 229  ]
+"906
+[; ;SlaveLiofilizadorVer1.c: 906:                  else if (Temperatura1<=SetPoint1)
+[e :U 228 ]
+[e $ ! <= _Temperatura1 _SetPoint1 230  ]
+"907
+[; ;SlaveLiofilizadorVer1.c: 907:                           {
+{
+"908
+[; ;SlaveLiofilizadorVer1.c: 908:                           if(RL1Status==1)
+[e $ ! == -> _RL1Status `i -> 1 `i 231  ]
+"909
+[; ;SlaveLiofilizadorVer1.c: 909:                               {
+{
+"910
+[; ;SlaveLiofilizadorVer1.c: 910:                               Rele1Ligado();
+[e ( _Rele1Ligado ..  ]
+"911
+[; ;SlaveLiofilizadorVer1.c: 911:                               }
+}
+[e $U 232  ]
+"912
+[; ;SlaveLiofilizadorVer1.c: 912:                           else
+[e :U 231 ]
+"913
+[; ;SlaveLiofilizadorVer1.c: 913:                               {
+{
+"914
+[; ;SlaveLiofilizadorVer1.c: 914:                               Rele1Desligado();
+[e ( _Rele1Desligado ..  ]
+"915
+[; ;SlaveLiofilizadorVer1.c: 915:                               }
+}
+[e :U 232 ]
+"916
+[; ;SlaveLiofilizadorVer1.c: 916:                           }
+}
+[e $U 233  ]
+"917
+[; ;SlaveLiofilizadorVer1.c: 917:                  else if (Temperatura1>SetPoint1)
+[e :U 230 ]
+[e $ ! > _Temperatura1 _SetPoint1 234  ]
+"918
+[; ;SlaveLiofilizadorVer1.c: 918:                           {
+{
+"919
+[; ;SlaveLiofilizadorVer1.c: 919:                           RL1Status=0;
+[e = _RL1Status -> -> 0 `i `uc ]
+"920
+[; ;SlaveLiofilizadorVer1.c: 920:                           Rele1Desligado();
+[e ( _Rele1Desligado ..  ]
+"921
+[; ;SlaveLiofilizadorVer1.c: 921:                           }
+}
+[e :U 234 ]
+[e :U 233 ]
+[e :U 229 ]
+"922
+[; ;SlaveLiofilizadorVer1.c: 922:                  }
+}
+[e :U 227 ]
+"925
+[; ;SlaveLiofilizadorVer1.c: 925: }
+[e :UE 224 ]
+}
+"928
+[; ;SlaveLiofilizadorVer1.c: 928: void Rele0Desligado(void){
+[v _Rele0Desligado `(v ~T0 @X0 1 ef ]
+{
+[e :U _Rele0Desligado ]
+[f ]
+"929
+[; ;SlaveLiofilizadorVer1.c: 929:      PORTCbits.RC0=0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"930
+[; ;SlaveLiofilizadorVer1.c: 930: }
+[e :UE 235 ]
+}
+"932
+[; ;SlaveLiofilizadorVer1.c: 932: void Rele1Desligado(void){
+[v _Rele1Desligado `(v ~T0 @X0 1 ef ]
+{
+[e :U _Rele1Desligado ]
+[f ]
+"933
+[; ;SlaveLiofilizadorVer1.c: 933:      PORTCbits.RC1=0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+"934
+[; ;SlaveLiofilizadorVer1.c: 934: }
+[e :UE 236 ]
+}
+"937
+[; ;SlaveLiofilizadorVer1.c: 937: void Rele0Ligado(void){
+[v _Rele0Ligado `(v ~T0 @X0 1 ef ]
+{
+[e :U _Rele0Ligado ]
+[f ]
+"940
+[; ;SlaveLiofilizadorVer1.c: 940:         if(TempoCNT_0==0)
+[e $ ! == -> _TempoCNT_0 `i -> 0 `i 238  ]
+"941
+[; ;SlaveLiofilizadorVer1.c: 941:             {
+{
+"944
+[; ;SlaveLiofilizadorVer1.c: 944:             if(PORTCbits.RC0==0)
+[e $ ! == -> . . _PORTCbits 0 0 `i -> 0 `i 239  ]
+"945
+[; ;SlaveLiofilizadorVer1.c: 945:               {
+{
+"946
+[; ;SlaveLiofilizadorVer1.c: 946:               if(TempoON_0!=0)
+[e $ ! != -> _TempoON_0 `i -> 0 `i 240  ]
+"947
+[; ;SlaveLiofilizadorVer1.c: 947:                  {
+{
+"948
+[; ;SlaveLiofilizadorVer1.c: 948:                  TempoCNT_0=TempoON_0;
+[e = _TempoCNT_0 _TempoON_0 ]
+"949
+[; ;SlaveLiofilizadorVer1.c: 949:                  PORTCbits.RC0=1;
+[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
+"950
+[; ;SlaveLiofilizadorVer1.c: 950:                  }
+}
+[e :U 240 ]
+"951
+[; ;SlaveLiofilizadorVer1.c: 951:               }
+}
+[e $U 241  ]
+"952
+[; ;SlaveLiofilizadorVer1.c: 952:             else
+[e :U 239 ]
+"953
+[; ;SlaveLiofilizadorVer1.c: 953:               {
+{
+"954
+[; ;SlaveLiofilizadorVer1.c: 954:               if(TempoOFF_0!=0)
+[e $ ! != -> _TempoOFF_0 `i -> 0 `i 242  ]
+"955
+[; ;SlaveLiofilizadorVer1.c: 955:                  {
+{
+"956
+[; ;SlaveLiofilizadorVer1.c: 956:                  TempoCNT_0=TempoOFF_0;
+[e = _TempoCNT_0 _TempoOFF_0 ]
+"957
+[; ;SlaveLiofilizadorVer1.c: 957:                  PORTCbits.RC0=0;
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
+"958
+[; ;SlaveLiofilizadorVer1.c: 958:                  }
+}
+[e :U 242 ]
+"959
+[; ;SlaveLiofilizadorVer1.c: 959:               }
+}
+[e :U 241 ]
+"960
+[; ;SlaveLiofilizadorVer1.c: 960:             }
+}
+[e :U 238 ]
+"961
+[; ;SlaveLiofilizadorVer1.c: 961: }
+[e :UE 237 ]
+}
+"964
+[; ;SlaveLiofilizadorVer1.c: 964: void Rele1Ligado(void){
+[v _Rele1Ligado `(v ~T0 @X0 1 ef ]
+{
+[e :U _Rele1Ligado ]
+[f ]
+"967
+[; ;SlaveLiofilizadorVer1.c: 967:         if(TempoCNT_1==0)
+[e $ ! == -> _TempoCNT_1 `i -> 0 `i 244  ]
+"968
+[; ;SlaveLiofilizadorVer1.c: 968:             {
+{
+"971
+[; ;SlaveLiofilizadorVer1.c: 971:             if(PORTCbits.RC1==0)
+[e $ ! == -> . . _PORTCbits 0 1 `i -> 0 `i 245  ]
+"972
+[; ;SlaveLiofilizadorVer1.c: 972:               {
+{
+"973
+[; ;SlaveLiofilizadorVer1.c: 973:               if(TempoON_1!=0)
+[e $ ! != -> _TempoON_1 `i -> 0 `i 246  ]
+"974
+[; ;SlaveLiofilizadorVer1.c: 974:                  {
+{
+"975
+[; ;SlaveLiofilizadorVer1.c: 975:                  TempoCNT_1=TempoON_1;
+[e = _TempoCNT_1 _TempoON_1 ]
+"976
+[; ;SlaveLiofilizadorVer1.c: 976:                  PORTCbits.RC1=1;
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
+"977
+[; ;SlaveLiofilizadorVer1.c: 977:                  }
+}
+[e :U 246 ]
+"978
+[; ;SlaveLiofilizadorVer1.c: 978:               }
+}
+[e $U 247  ]
+"979
+[; ;SlaveLiofilizadorVer1.c: 979:             else
+[e :U 245 ]
+"980
+[; ;SlaveLiofilizadorVer1.c: 980:               {
+{
+"981
+[; ;SlaveLiofilizadorVer1.c: 981:               if(TempoOFF_1!=0)
+[e $ ! != -> _TempoOFF_1 `i -> 0 `i 248  ]
+"982
+[; ;SlaveLiofilizadorVer1.c: 982:                  {
+{
+"983
+[; ;SlaveLiofilizadorVer1.c: 983:                  TempoCNT_1=TempoOFF_1;
+[e = _TempoCNT_1 _TempoOFF_1 ]
+"984
+[; ;SlaveLiofilizadorVer1.c: 984:                  PORTCbits.RC1=0;
+[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
+"985
+[; ;SlaveLiofilizadorVer1.c: 985:                  }
+}
+[e :U 248 ]
+"986
+[; ;SlaveLiofilizadorVer1.c: 986:               }
+}
+[e :U 247 ]
+"987
+[; ;SlaveLiofilizadorVer1.c: 987:             }
+}
+[e :U 244 ]
+"988
+[; ;SlaveLiofilizadorVer1.c: 988: }
+[e :UE 243 ]
+}
+"994
+[; ;SlaveLiofilizadorVer1.c: 994: void Load_Work(void){
+[v _Load_Work `(v ~T0 @X0 1 ef ]
+{
+[e :U _Load_Work ]
+[f ]
+"997
+[; ;SlaveLiofilizadorVer1.c: 997:      SetPoint0 = EEPROM_Read_Integer(0);
+[e = _SetPoint0 -> ( _EEPROM_Read_Integer (1 -> -> 0 `i `uc `f ]
+"998
+[; ;SlaveLiofilizadorVer1.c: 998:      SetPoint0/=10;
+[e =/ _SetPoint0 -> -> 10 `i `f ]
+"999
+[; ;SlaveLiofilizadorVer1.c: 999:      TempoON_0 = EEPROM_Read_Byte(2);
+[e = _TempoON_0 -> ( _EEPROM_Read_Byte (1 -> -> 2 `i `uc `uc ]
+"1000
+[; ;SlaveLiofilizadorVer1.c: 1000:      TempoOFF_0= EEPROM_Read_Byte(3);
+[e = _TempoOFF_0 -> ( _EEPROM_Read_Byte (1 -> -> 3 `i `uc `uc ]
+"1001
+[; ;SlaveLiofilizadorVer1.c: 1001:      Histerese0= EEPROM_Read_Byte(4);
+[e = _Histerese0 -> ( _EEPROM_Read_Byte (1 -> -> 4 `i `uc `f ]
+"1002
+[; ;SlaveLiofilizadorVer1.c: 1002:      Status0 = EEPROM_Read_Integer(5);
+[e = _Status0 -> ( _EEPROM_Read_Integer (1 -> -> 5 `i `uc `i ]
+"1004
+[; ;SlaveLiofilizadorVer1.c: 1004:      SetPoint1 = EEPROM_Read_Integer(7);
+[e = _SetPoint1 -> ( _EEPROM_Read_Integer (1 -> -> 7 `i `uc `f ]
 "1005
-[; ;SlaveLiofilizadorVer1.c: 1005: void Save_Log(unsigned long add_datalog){
+[; ;SlaveLiofilizadorVer1.c: 1005:      SetPoint1/=10;
+[e =/ _SetPoint1 -> -> 10 `i `f ]
+"1006
+[; ;SlaveLiofilizadorVer1.c: 1006:      TempoON_1 = EEPROM_Read_Byte(9);
+[e = _TempoON_1 -> ( _EEPROM_Read_Byte (1 -> -> 9 `i `uc `uc ]
+"1007
+[; ;SlaveLiofilizadorVer1.c: 1007:      TempoOFF_1= EEPROM_Read_Byte(10);
+[e = _TempoOFF_1 -> ( _EEPROM_Read_Byte (1 -> -> 10 `i `uc `uc ]
+"1008
+[; ;SlaveLiofilizadorVer1.c: 1008:      Histerese1= EEPROM_Read_Byte(11);
+[e = _Histerese1 -> ( _EEPROM_Read_Byte (1 -> -> 11 `i `uc `uc ]
+"1009
+[; ;SlaveLiofilizadorVer1.c: 1009:      Status1 = EEPROM_Read_Integer(12);
+[e = _Status1 -> ( _EEPROM_Read_Integer (1 -> -> 12 `i `uc `i ]
+"1011
+[; ;SlaveLiofilizadorVer1.c: 1011:      statuspower.bits=EEPROM_Read_Byte(14);
+[e = . _statuspower 0 ( _EEPROM_Read_Byte (1 -> -> 14 `i `uc ]
+"1012
+[; ;SlaveLiofilizadorVer1.c: 1012: }
+[e :UE 249 ]
+}
+"1017
+[; ;SlaveLiofilizadorVer1.c: 1017: void Save_Log(unsigned long add_datalog){
 [v _Save_Log `(v ~T0 @X0 1 ef1`ul ]
 {
 [e :U _Save_Log ]
 [v _add_datalog `ul ~T0 @X0 1 r1 ]
 [f ]
-"1006
-[; ;SlaveLiofilizadorVer1.c: 1006:      EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura0*10.0);
+"1018
+[; ;SlaveLiofilizadorVer1.c: 1018:      EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura0*10.0);
 [e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 0 `i `uc _add_datalog -> * -> _Temperatura0 `d .10.0 `i ]
-"1007
-[; ;SlaveLiofilizadorVer1.c: 1007:      EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura1*10.0);
-[e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 0 `i `uc _add_datalog -> * -> _Temperatura1 `d .10.0 `i ]
-"1012
-[; ;SlaveLiofilizadorVer1.c: 1012: }
-[e :UE 200 ]
+"1019
+[; ;SlaveLiofilizadorVer1.c: 1019:      EEPROM_24C1025_Write_Int(0x01, add_datalog, Temperatura1*10.0);
+[e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 1 `i `uc _add_datalog -> * -> _Temperatura1 `d .10.0 `i ]
+"1023
+[; ;SlaveLiofilizadorVer1.c: 1023: }
+[e :UE 250 ]
 }
 [a 2C 79 75 0 ]
 [a 1C 118 49 46 48 46 50 52 0 ]

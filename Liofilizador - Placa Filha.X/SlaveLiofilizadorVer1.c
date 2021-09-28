@@ -105,6 +105,7 @@ char  TempoOFF_0;
 char  IndexLeitura_0;
 volatile char  TempoCNT_0;
 
+
 int   Status1;
 volatile float SetPoint1;
 char  Histerese1;
@@ -117,6 +118,9 @@ volatile char TempoCNT_1;
 float Temperatura0,Temperatura1;
 unsigned char RL0Status=SOBE; 
 unsigned char RL1Status=SOBE;
+
+unsigned char modoAutonomo0=0;
+unsigned char modoAutonomo1=0;
 #endif
 
 
@@ -573,6 +577,7 @@ void Decodify_Command(void)
         case COMMAND_RELAY:            
              if(usart_protocol.value[0]==0)
                 { 
+                unsigned char modoAutonomo0=1;
                 if(!usart_protocol.value[1]) 
                    RELE_0=0;
                 else
@@ -580,6 +585,7 @@ void Decodify_Command(void)
                 }        
              else if (usart_protocol.value[0]==1)
                      {
+                      modoAutonomo1=1;     
                       if(!usart_protocol.value[1]) 
                          RELE_1=0;
                       else
@@ -588,7 +594,24 @@ void Decodify_Command(void)
              Send_To_MB(3);
              Send_Reply_OK();              
              break; 
-                                    
+        case COMMAND_FLUIDO_TERMICO:   
+             if(usart_protocol.value[0]==0)
+               {  
+               Status1=1;
+               SetPoint1=-100;
+               Histerese1=1;
+               TempoON_1 =0;
+               TempoOFF_1=10;
+               }
+             else
+               {
+               Status1=1;
+               SetPoint1=-100;
+               Histerese1=1;                
+               TempoON_1 =10;
+               TempoOFF_1=0;                 
+               }  
+             break;             
     }//case
 }//function
 
@@ -834,7 +857,7 @@ void MediaPlacaVaccum(unsigned char canal){
 void Auto_Relay0(void){
              if(Status0==0)
                  {
-                 Rele0Desligado();
+                 if(modoAutonomo0==0)Rele0Desligado();
                  }  
              else        
                  {
@@ -870,7 +893,7 @@ void Auto_Relay0(void){
 void Auto_Relay1(void){
              if(Status1==0)
                  {
-                 Rele1Desligado();
+                 if(modoAutonomo1==0)Rele1Desligado();
                  }                   
              else
                  {
@@ -920,34 +943,46 @@ void Rele0Ligado(void){
             //Load_Work();
             if(RELE_0==0)
               {  
-              TempoCNT_0=TempoON_0;               
-              RELE_0=1;            
+              if(TempoON_0!=0)  
+                 {
+                 TempoCNT_0=TempoON_0;               
+                 RELE_0=1;            
+                 }
               }
             else 
               {  
-              TempoCNT_0=TempoOFF_0;               
-              RELE_0=0;  
+              if(TempoOFF_0!=0)  
+                 {                
+                 TempoCNT_0=TempoOFF_0;               
+                 RELE_0=0;  
+                 }
               }
             }               
 }    
 
 
 void Rele1Ligado(void){
-        //--------------------------RELE 0 LIGADO-------------------------------
+        //--------------------------RELE 1 LIGADO-------------------------------
            
         if(TempoCNT_1==0)
             {  
             //my_delay_ms((0+2*Board_Number-2)*10);DelayRele(0);
             //Load_Work();
             if(RELE_1==0)
-              {  
-              TempoCNT_1=TempoON_1;               
-              RELE_1=1;            
+              { 
+              if(TempoON_1!=0)  
+                 {                
+                 TempoCNT_1=TempoON_1;               
+                 RELE_1=1;
+                 }
               }
             else 
-              {  
-              TempoCNT_1=TempoOFF_1;               
-              RELE_1=0;  
+              { 
+              if(TempoOFF_1!=0)  
+                 {                
+                 TempoCNT_1=TempoOFF_1;               
+                 RELE_1=0; 
+                 }
               }
             }               
 } 
