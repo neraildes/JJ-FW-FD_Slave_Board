@@ -1,5 +1,8 @@
 ﻿PT100 NTC BOARD 4 EM 1
 
+v1.0.26
+   Documentando commit para posterior recuperação
+
 v1.0.24
    PLACA VACUO
          Destravamento automatico no RX
