@@ -117,31 +117,31 @@
 [v _PROCULUS_Delay PROCULUS_Delay `(v  1 e 1 0 ]
 "8 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\protocolo.c
 [v _Package_Usart_is_for_me Package_Usart_is_for_me `(uc  1 e 1 0 ]
-"148 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
+"149 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
 [v _main main `(v  1 e 1 0 ]
-"308
+"313
 [v _Decodify_Command Decodify_Command `(v  1 e 1 0 ]
-"621
+"608
 [v _Send_To_MB Send_To_MB `(v  1 e 1 0 ]
-"632
+"619
 [v _Send_Reply_OK Send_Reply_OK `(v  1 e 1 0 ]
-"654
+"641
 [v _mediatemperaturaNTC mediatemperaturaNTC `(v  1 e 1 0 ]
-"857
+"844
 [v _Auto_Relay0 Auto_Relay0 `(v  1 e 1 0 ]
-"893
+"880
 [v _Auto_Relay1 Auto_Relay1 `(v  1 e 1 0 ]
-"928
+"915
 [v _Rele0Desligado Rele0Desligado `(v  1 e 1 0 ]
-"932
+"919
 [v _Rele1Desligado Rele1Desligado `(v  1 e 1 0 ]
-"937
+"924
 [v _Rele0Ligado Rele0Ligado `(v  1 e 1 0 ]
-"964
+"951
 [v _Rele1Ligado Rele1Ligado `(v  1 e 1 0 ]
-"994
+"981
 [v _Load_Work Load_Work `(v  1 e 1 0 ]
-"1017
+"1004
 [v _Save_Log Save_Log `(v  1 e 1 0 ]
 "18 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\usart.c
 [v _USART_init USART_init `(v  1 e 1 0 ]
@@ -162,7 +162,7 @@
 `uc 1 flag_global_hot 1 0 :1:6 
 `uc 1 flag_main_loop_WDT 1 0 :1:7 
 ]
-"103 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X/global.h
+"102 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X/global.h
 [v _generic_status generic_status `S22  1 e 1 0 ]
 "166 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -225,7 +225,7 @@
 ]
 [u S246 . 1 `S232 1 . 1 0 `S241 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES246  1 e 1 @11 ]
-[s S1055 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S1052 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -234,8 +234,8 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "474
-[u S1063 . 1 `S1055 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES1063  1 e 1 @12 ]
+[u S1060 . 1 `S1052 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES1060  1 e 1 @12 ]
 "578
 [v _TMR1L TMR1L `VEuc  1 e 1 @14 ]
 "585
@@ -246,7 +246,7 @@
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "771
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-[s S1091 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S1088 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -256,18 +256,18 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "989
-[s S1100 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S1097 . 1 `uc 1 RCD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S1104 . 1 `uc 1 . 1 0 :6:0 
+[s S1101 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 nRC8 1 0 :1:6 
 ]
-[s S1107 . 1 `uc 1 . 1 0 :6:0 
+[s S1104 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[u S1110 . 1 `S1091 1 . 1 0 `S1100 1 . 1 0 `S1104 1 . 1 0 `S1107 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES1110  1 e 1 @24 ]
+[u S1107 . 1 `S1088 1 . 1 0 `S1097 1 . 1 0 `S1101 1 . 1 0 `S1104 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES1107  1 e 1 @24 ]
 "1054
 [v _TXREG TXREG `VEuc  1 e 1 @25 ]
 "1061
@@ -319,7 +319,7 @@
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1523
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
-[s S1494 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S1491 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -328,8 +328,8 @@
 `uc 1 ADIE 1 0 :1:6 
 ]
 "1560
-[u S1502 . 1 `S1494 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES1502  1 e 1 @140 ]
+[u S1499 . 1 `S1491 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES1499  1 e 1 @140 ]
 [s S345 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
@@ -364,7 +364,7 @@
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
 "2188
 [v _WPUB WPUB `VEuc  1 e 1 @149 ]
-[s S1438 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S1435 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -374,35 +374,35 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "2424
-[s S1447 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S1444 . 1 `uc 1 TXD8 1 0 :1:0 
 `uc 1 . 1 0 :5:1 
 `uc 1 nTX8 1 0 :1:6 
 ]
-[s S1451 . 1 `uc 1 . 1 0 :6:0 
+[s S1448 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[u S1454 . 1 `S1438 1 . 1 0 `S1447 1 . 1 0 `S1451 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES1454  1 e 1 @152 ]
+[u S1451 . 1 `S1435 1 . 1 0 `S1444 1 . 1 0 `S1448 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES1451  1 e 1 @152 ]
 "2484
 [v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2812
 [v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
 "2819
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
-[s S871 . 1 `uc 1 . 1 0 :4:0 
+[s S868 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 VCFG0 1 0 :1:4 
 `uc 1 VCFG1 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 ADFM 1 0 :1:7 
 ]
 "2833
-[u S877 . 1 `S871 1 . 1 0 ]
-[v _ADCON1bits ADCON1bits `VES877  1 e 1 @159 ]
+[u S874 . 1 `S868 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES874  1 e 1 @159 ]
 "3087
 [v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
 "3099
 [v _EEADR EEADR `VEuc  1 e 1 @269 ]
-[s S1513 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S1510 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -412,13 +412,13 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "3194
-[u S1522 . 1 `S1513 1 . 1 0 ]
-[v _BAUDCTLbits BAUDCTLbits `VES1522  1 e 1 @391 ]
+[u S1519 . 1 `S1510 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES1519  1 e 1 @391 ]
 "3229
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3273
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-[s S949 . 1 `uc 1 RD 1 0 :1:0 
+[s S946 . 1 `uc 1 RD 1 0 :1:0 
 `uc 1 WR 1 0 :1:1 
 `uc 1 WREN 1 0 :1:2 
 `uc 1 WRERR 1 0 :1:3 
@@ -426,8 +426,8 @@
 `uc 1 EEPGD 1 0 :1:7 
 ]
 "3338
-[u S956 . 1 `S949 1 . 1 0 ]
-[v _EECON1bits EECON1bits `VES956  1 e 1 @396 ]
+[u S953 . 1 `S946 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES953  1 e 1 @396 ]
 "3368
 [v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
 "3651
@@ -499,43 +499,41 @@
 [v _RL0Status RL0Status `uc  1 e 1 0 ]
 "120
 [v _RL1Status RL1Status `uc  1 e 1 0 ]
-"123
-[v _modoAutonomo1 modoAutonomo1 `uc  1 e 1 0 ]
 [s S336 . 58 `ui 1 header 2 0 `uc 1 origem 1 2 `uc 1 destino 1 3 `uc 1 command 1 4 `uc 1 size 1 5 `[52]uc 1 value 52 6 ]
-"135
-[v _usart_protocol usart_protocol `S336  1 e 58 0 ]
 "136
-[v _canal canal `uc  1 e 1 0 ]
+[v _usart_protocol usart_protocol `S336  1 e 58 0 ]
 "137
-[v _Board_Number Board_Number `uc  1 e 1 0 ]
+[v _canal canal `uc  1 e 1 0 ]
 "138
+[v _Board_Number Board_Number `uc  1 e 1 0 ]
+"139
 [v _buffer buffer `[33]uc  1 e 33 0 ]
-"143
-[v _header header `ui  1 e 2 0 ]
 "144
+[v _header header `ui  1 e 2 0 ]
+"145
 [v _destino destino `uc  1 e 1 0 ]
 "10 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\usart.c
 [v _usart_buffer usart_buffer `VE[52]uc  1 e 52 0 ]
-"148 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
+"149 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
 [v _main main `(v  1 e 1 0 ]
 {
-"206
+"208
 [v main@reset reset `ui  1 a 2 59 ]
-"304
+"309
 } 0
-"654
+"641
 [v _mediatemperaturaNTC mediatemperaturaNTC `(v  1 e 1 0 ]
 {
 [v mediatemperaturaNTC@canal canal `uc  1 a 1 wreg ]
-"656
+"643
 [v mediatemperaturaNTC@Temp Temp `f  1 a 4 51 ]
-"657
+"644
 [v mediatemperaturaNTC@i i `uc  1 a 1 55 ]
-"654
+"641
 [v mediatemperaturaNTC@canal canal `uc  1 a 1 wreg ]
-"659
+"646
 [v mediatemperaturaNTC@canal canal `uc  1 a 1 50 ]
-"702
+"689
 } 0
 "5 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\my_delay.c
 [v _my_delay_ms my_delay_ms `(v  1 e 1 0 ]
@@ -638,24 +636,24 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"308 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
+"313 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
 [v _Decodify_Command Decodify_Command `(v  1 e 1 0 ]
 {
-"510
+"515
 [v Decodify_Command@sizedata sizedata `uc  1 a 1 34 ]
-"445
+"450
 [v Decodify_Command@add add `uc  1 a 1 33 ]
-"314
+"319
 [v Decodify_Command@add_24LCxxxx add_24LCxxxx `ul  1 a 4 42 ]
-"313
+"318
 [v Decodify_Command@OutPut OutPut `f  1 a 4 37 ]
-"312
+"317
 [v Decodify_Command@tempint tempint `i  1 a 2 35 ]
-"310
+"315
 [v Decodify_Command@dados dados `i  1 a 2 31 ]
-"311
+"316
 [v Decodify_Command@tempchar tempchar `uc  1 a 1 41 ]
-"616
+"603
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\strcpy.c
 [v _strcpy strcpy `(*.5uc  1 e 1 0 ]
@@ -682,19 +680,19 @@
 [v USART_to_Protocol@usart_protocol usart_protocol `*.5S336  1 a 1 4 ]
 "85
 } 0
-"621 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
+"608 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
 [v _Send_To_MB Send_To_MB `(v  1 e 1 0 ]
 {
 [v Send_To_MB@size size `uc  1 a 1 wreg ]
 [v Send_To_MB@size size `uc  1 a 1 wreg ]
-"623
+"610
 [v Send_To_MB@size size `uc  1 a 1 1 ]
-"629
+"616
 } 0
-"632
+"619
 [v _Send_Reply_OK Send_Reply_OK `(v  1 e 1 0 ]
 {
-"635
+"622
 } 0
 "167 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\usart.c
 [v _USART_put_string USART_put_string `(v  1 e 1 0 ]
@@ -705,11 +703,11 @@
 [v USART_put_string@vetor vetor `*.26uc  1 p 2 1 ]
 "176
 } 0
-"1017 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
+"1004 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
 [v _Save_Log Save_Log `(v  1 e 1 0 ]
 {
 [v Save_Log@add_datalog add_datalog `ul  1 p 4 17 ]
-"1023
+"1010
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
@@ -724,17 +722,17 @@
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1863 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1860 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1868 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S1871 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1863 1 fAsBytes 4 0 `S1868 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1871  1 a 4 71 ]
+[s S1865 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1868 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1860 1 fAsBytes 4 0 `S1865 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1868  1 a 4 71 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 67 ]
-[s S1940 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1937 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1943 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1940 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1943  1 a 2 75 ]
+[u S1940 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1937 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1940  1 a 2 75 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 66 ]
 "11
@@ -850,10 +848,10 @@
 [v PROCULUS_Delay@tempo_ms tempo_ms `ui  1 p 2 0 ]
 "271
 } 0
-"994 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
+"981 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
 [v _Load_Work Load_Work `(v  1 e 1 0 ]
 {
-"1012
+"999
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
@@ -1166,10 +1164,10 @@
 [v I2C_Master_Wait@tempo tempo `uc  1 a 1 2 ]
 "50
 } 0
-"893 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
+"880 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
 [v _Auto_Relay1 Auto_Relay1 `(v  1 e 1 0 ]
 {
-"925
+"912
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -1186,20 +1184,20 @@
 [v ___xxtofl@sign sign `uc  1 a 1 18 ]
 "44
 } 0
-"964 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
+"951 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
 [v _Rele1Ligado Rele1Ligado `(v  1 e 1 0 ]
 {
-"988
+"975
 } 0
-"932
+"919
 [v _Rele1Desligado Rele1Desligado `(v  1 e 1 0 ]
 {
-"934
+"921
 } 0
-"857
+"844
 [v _Auto_Relay0 Auto_Relay0 `(v  1 e 1 0 ]
 {
-"889
+"876
 } 0
 "242 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
 [v ___flsub __flsub `(d  1 e 4 0 ]
@@ -1231,15 +1229,15 @@
 [v ___flge@ff2 ff2 `d  1 p 4 56 ]
 "19
 } 0
-"937 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
+"924 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
 [v _Rele0Ligado Rele0Ligado `(v  1 e 1 0 ]
 {
-"961
+"948
 } 0
-"928
+"915
 [v _Rele0Desligado Rele0Desligado `(v  1 e 1 0 ]
 {
-"930
+"917
 } 0
 "10 C:\Indka(r)\FD_Slave_Board\Liofilizador - Placa Filha.X\adc.c
 [v _ADC_init ADC_init `(v  1 e 1 0 ]

@@ -118,10 +118,11 @@ volatile char TempoCNT_1;
 float Temperatura0,Temperatura1;
 unsigned char RL0Status=SOBE; 
 unsigned char RL1Status=SOBE;
-
-unsigned char modoAutonomo0=0;
-unsigned char modoAutonomo1=0;
 #endif
+
+//unsigned char modoAutonomo0=0; //Antiga tentativa de fazer a estante funcionar
+//unsigned char modoAutonomo1=0; //na placa pt100
+
 
 
 #ifdef VACCUM_BOARD
@@ -170,6 +171,7 @@ void main(void) {
      flag_led_tmr0  =1; 
      flag_led_usart =1;  
      flag_led_memory=1;
+     flag_usart_error=0;
      my_delay_ms_WDT(1000);     
      
      OPTION_REGbits.T0CS=0;
@@ -255,6 +257,9 @@ void main(void) {
          #ifdef NTC_BOARD 
          if(++canal==2) canal=0;
          mediatemperaturaNTC(canal);
+         
+         //====================SINALIZA ERRO DE COMUNICAÇÃO
+         if (flag_usart_error) Delay_Led_Memory=200;
          
          //=====================================================================
          if(flag_global_hot)             
@@ -577,7 +582,7 @@ void Decodify_Command(void)
         case COMMAND_RELAY:            
              if(usart_protocol.value[0]==0)
                 { 
-                unsigned char modoAutonomo0=1;
+                //modoAutonomo0=1;
                 if(!usart_protocol.value[1]) 
                    RELE_0=0;
                 else
@@ -585,7 +590,7 @@ void Decodify_Command(void)
                 }        
              else if (usart_protocol.value[0]==1)
                      {
-                      modoAutonomo1=1;     
+                      //modoAutonomo1=1;     
                       if(!usart_protocol.value[1]) 
                          RELE_1=0;
                       else
@@ -593,25 +598,7 @@ void Decodify_Command(void)
                      } 
              Send_To_MB(3);
              Send_Reply_OK();              
-             break; 
-        case COMMAND_FLUIDO_TERMICO:   
-             if(usart_protocol.value[0]==0)
-               {  
-               Status1=1;
-               SetPoint1=-100;
-               Histerese1=1;
-               TempoON_1 =0;
-               TempoOFF_1=10;
-               }
-             else
-               {
-               Status1=1;
-               SetPoint1=-100;
-               Histerese1=1;                
-               TempoON_1 =10;
-               TempoOFF_1=0;                 
-               }  
-             break;             
+             break;    
     }//case
 }//function
 
@@ -857,7 +844,7 @@ void MediaPlacaVaccum(unsigned char canal){
 void Auto_Relay0(void){
              if(Status0==0)
                  {
-                 if(modoAutonomo0==0)Rele0Desligado();
+                 Rele0Desligado();
                  }  
              else        
                  {
@@ -893,7 +880,7 @@ void Auto_Relay0(void){
 void Auto_Relay1(void){
              if(Status1==0)
                  {
-                 if(modoAutonomo1==0)Rele1Desligado();
+                 Rele1Desligado();
                  }                   
              else
                  {

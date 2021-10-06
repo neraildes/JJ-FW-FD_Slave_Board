@@ -12,7 +12,7 @@
 
 
 # 1 "./global.h" 1
-# 32 "./global.h"
+# 31 "./global.h"
 #pragma config FOSC = INTRC_NOCLKOUT
 #pragma config WDTE = ON
 #pragma config PWRTE = ON
@@ -37,10 +37,10 @@
 # 1 "./isr.h" 1
 # 13 "./isr.h"
 void __attribute__((picinterrupt(("")))) isr(void);
-# 52 "./global.h" 2
+# 51 "./global.h" 2
 
 # 1 "./global.h" 1
-# 53 "./global.h" 2
+# 52 "./global.h" 2
 
 # 1 "./protocolo.h" 1
 
@@ -63,7 +63,7 @@ typedef struct {
 } t_usart_protocol;
 # 156 "./protocolo.h"
 char Package_Usart_is_for_me();
-# 54 "./global.h" 2
+# 53 "./global.h" 2
 
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
@@ -2425,7 +2425,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 55 "./global.h" 2
+# 54 "./global.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -2518,7 +2518,7 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 56 "./global.h" 2
+# 55 "./global.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 1 3
 # 11 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
@@ -2600,7 +2600,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 57 "./global.h" 2
+# 56 "./global.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
 # 14 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
@@ -2633,7 +2633,7 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 58 "./global.h" 2
+# 57 "./global.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\math.h" 1 3
 
@@ -2668,8 +2668,8 @@ extern double ldexp(double, int);
 extern double fmod(double, double);
 extern double trunc(double);
 extern double round(double);
-# 59 "./global.h" 2
-# 94 "./global.h"
+# 58 "./global.h" 2
+# 93 "./global.h"
 struct {
     unsigned flag_usart_rx : 1 ;
     unsigned flag_usart_error : 1 ;
@@ -2680,7 +2680,7 @@ struct {
     unsigned flag_global_hot : 1 ;
     unsigned flag_main_loop_WDT : 1 ;
 } generic_status;
-# 114 "./global.h"
+# 113 "./global.h"
 union {
       unsigned char bits;
       struct {

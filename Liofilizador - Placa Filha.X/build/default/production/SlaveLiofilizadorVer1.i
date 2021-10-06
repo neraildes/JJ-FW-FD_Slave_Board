@@ -2371,7 +2371,7 @@ extern __bank0 __bit __timeout;
 # 25 "SlaveLiofilizadorVer1.c" 2
 
 # 1 "./global.h" 1
-# 32 "./global.h"
+# 31 "./global.h"
 #pragma config FOSC = INTRC_NOCLKOUT
 #pragma config WDTE = ON
 #pragma config PWRTE = ON
@@ -2396,10 +2396,10 @@ extern __bank0 __bit __timeout;
 # 1 "./isr.h" 1
 # 13 "./isr.h"
 void __attribute__((picinterrupt(("")))) isr(void);
-# 52 "./global.h" 2
+# 51 "./global.h" 2
 
 # 1 "./global.h" 1
-# 53 "./global.h" 2
+# 52 "./global.h" 2
 
 # 1 "./protocolo.h" 1
 
@@ -2422,7 +2422,7 @@ typedef struct {
 } t_usart_protocol;
 # 156 "./protocolo.h"
 char Package_Usart_is_for_me();
-# 54 "./global.h" 2
+# 53 "./global.h" 2
 
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdlib.h" 1 3
@@ -2516,7 +2516,7 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 56 "./global.h" 2
+# 55 "./global.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 1 3
 # 11 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdio.h" 3
@@ -2598,7 +2598,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 57 "./global.h" 2
+# 56 "./global.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 1 3
 # 14 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\string.h" 3
@@ -2631,7 +2631,7 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 58 "./global.h" 2
+# 57 "./global.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\math.h" 1 3
 
@@ -2666,8 +2666,8 @@ extern double ldexp(double, int);
 extern double fmod(double, double);
 extern double trunc(double);
 extern double round(double);
-# 59 "./global.h" 2
-# 94 "./global.h"
+# 58 "./global.h" 2
+# 93 "./global.h"
 struct {
     unsigned flag_usart_rx : 1 ;
     unsigned flag_usart_error : 1 ;
@@ -2678,7 +2678,7 @@ struct {
     unsigned flag_global_hot : 1 ;
     unsigned flag_main_loop_WDT : 1 ;
 } generic_status;
-# 114 "./global.h"
+# 113 "./global.h"
 union {
       unsigned char bits;
       struct {
@@ -2911,10 +2911,7 @@ volatile char TempoCNT_1;
 float Temperatura0,Temperatura1;
 unsigned char RL0Status=1;
 unsigned char RL1Status=1;
-
-unsigned char modoAutonomo0=0;
-unsigned char modoAutonomo1=0;
-# 135 "SlaveLiofilizadorVer1.c"
+# 136 "SlaveLiofilizadorVer1.c"
 t_usart_protocol usart_protocol;
 unsigned char canal;
 char Board_Number;
@@ -2953,6 +2950,7 @@ void main(void) {
      PORTBbits.RB7 =1;
      PORTBbits.RB6 =1;
      PORTBbits.RB5=1;
+     generic_status.flag_usart_error=0;
      my_delay_ms_WDT(1000);
 
      OPTION_REGbits.T0CS=0;
@@ -3009,7 +3007,7 @@ void main(void) {
 
      Board_Number=(((0x0F)&(~PORTB)));
      canal=1;
-# 242 "SlaveLiofilizadorVer1.c"
+# 244 "SlaveLiofilizadorVer1.c"
      Load_Work();
      generic_status.flag_global_hot=0;
 
@@ -3028,6 +3026,9 @@ void main(void) {
          mediatemperaturaNTC(canal);
 
 
+         if (generic_status.flag_usart_error) Delay_Led_Memory=200;
+
+
          if(generic_status.flag_global_hot)
             {
              Auto_Relay0();
@@ -3038,7 +3039,7 @@ void main(void) {
             PORTCbits.RC0=0;
             PORTCbits.RC1=0;
             }
-# 287 "SlaveLiofilizadorVer1.c"
+# 292 "SlaveLiofilizadorVer1.c"
          if(generic_status.flag_usart_rx==1)
             {
             header =(((unsigned int)usart_buffer[0]<<8)+usart_buffer[1]);
@@ -3067,7 +3068,7 @@ void Decodify_Command(void)
     int tempint;
     float OutPut;
     unsigned long add_24LCxxxx;
-# 326 "SlaveLiofilizadorVer1.c"
+# 331 "SlaveLiofilizadorVer1.c"
     USART_to_Protocol(&usart_protocol);
 
     ((char *)&add_24LCxxxx)[3]=(usart_protocol.value[1]);
@@ -3089,7 +3090,7 @@ void Decodify_Command(void)
 
 
         case 0x41:
-             strcpy(buffer,"v1.0.24");
+             strcpy(buffer,"v1.0.26");
              Send_To_MB(11);
              USART_put_string(buffer);
              break;
@@ -3099,7 +3100,7 @@ void Decodify_Command(void)
                 OutPut=Temperatura0;
              else
                 OutPut=Temperatura1;
-# 374 "SlaveLiofilizadorVer1.c"
+# 379 "SlaveLiofilizadorVer1.c"
              OutPut*=10.0;
 
              INTCONbits.GIE=0;
@@ -3131,7 +3132,7 @@ void Decodify_Command(void)
 
         case 0x03:
              Send_To_MB(2);
-# 414 "SlaveLiofilizadorVer1.c"
+# 419 "SlaveLiofilizadorVer1.c"
              USART_put_int(3);
 
              break;
@@ -3298,7 +3299,7 @@ void Decodify_Command(void)
         case 0x30:
              if(usart_protocol.value[0]==0)
                 {
-                unsigned char modoAutonomo0=1;
+
                 if(!usart_protocol.value[1])
                    PORTCbits.RC0=0;
                 else
@@ -3306,7 +3307,7 @@ void Decodify_Command(void)
                 }
              else if (usart_protocol.value[0]==1)
                      {
-                      modoAutonomo1=1;
+
                       if(!usart_protocol.value[1])
                          PORTCbits.RC1=0;
                       else
@@ -3314,24 +3315,6 @@ void Decodify_Command(void)
                      }
              Send_To_MB(3);
              Send_Reply_OK();
-             break;
-        case 0x50:
-             if(usart_protocol.value[0]==0)
-               {
-               Status1=1;
-               SetPoint1=-100;
-               Histerese1=1;
-               TempoON_1 =0;
-               TempoOFF_1=10;
-               }
-             else
-               {
-               Status1=1;
-               SetPoint1=-100;
-               Histerese1=1;
-               TempoON_1 =10;
-               TempoOFF_1=0;
-               }
              break;
     }
 }
@@ -3354,7 +3337,7 @@ void Send_Reply_OK(void){
      USART_put_string("OK");
 
  }
-# 644 "SlaveLiofilizadorVer1.c"
+# 631 "SlaveLiofilizadorVer1.c"
 void DelayRele(char canal){
      my_delay_ms((canal+2*Board_Number-2)*10);
 }
@@ -3414,11 +3397,11 @@ void mediatemperaturaNTC(unsigned char canal)
         }
 
      }
-# 857 "SlaveLiofilizadorVer1.c"
+# 844 "SlaveLiofilizadorVer1.c"
 void Auto_Relay0(void){
              if(Status0==0)
                  {
-                 if(modoAutonomo0==0)Rele0Desligado();
+                 Rele0Desligado();
                  }
              else
                  {
@@ -3454,7 +3437,7 @@ void Auto_Relay0(void){
 void Auto_Relay1(void){
              if(Status1==0)
                  {
-                 if(modoAutonomo1==0)Rele1Desligado();
+                 Rele1Desligado();
                  }
              else
                  {

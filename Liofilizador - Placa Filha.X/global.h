@@ -15,7 +15,6 @@
 #define _XTAL_FREQ 8000000
 #define XTAL_8MHZ
 
-
 //#define VACCUM_BOARD
 
 //#define PT100_UMIDADE

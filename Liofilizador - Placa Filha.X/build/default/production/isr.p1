@@ -1,14 +1,14 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"94 ./global.h
-[; ;./global.h: 94: struct {
+"93 ./global.h
+[; ;./global.h: 93: struct {
 [s S140 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S140 . flag_usart_rx flag_usart_error flag_power_off flag_led_tmr0 flag_led_usart flag_led_memory flag_global_hot flag_main_loop_WDT ]
-"116
-[; ;./global.h: 116:       struct {
+"115
+[; ;./global.h: 115:       struct {
 [s S142 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S142 . flag_global_aquecimento flag_global_condensador flag_global_vacuo ]
-"114
-[; ;./global.h: 114: union {
+"113
+[; ;./global.h: 113: union {
 [u S141 `uc 1 `S142 1 ]
 [n S141 . bits . ]
 [t ~ __interrupt . k ]
@@ -91,29 +91,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3651
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3651: extern volatile __bit CREN __attribute__((address(0xC4)));
 [v _CREN `Vb ~T0 @X0 0 e@196 ]
-"32 ./global.h
+"31 ./global.h
 [p x FOSC  =  INTRC_NOCLKOUT ]
-"33
+"32
 [p x WDTE  =  ON         ]
-"34
+"33
 [p x PWRTE  =  ON        ]
-"35
+"34
 [p x MCLRE  =  OFF       ]
-"36
+"35
 [p x CP  =  ON           ]
-"37
+"36
 [p x CPD  =  OFF         ]
-"38
+"37
 [p x BOREN  =  ON        ]
-"39
+"38
 [p x IESO  =  ON         ]
-"40
+"39
 [p x FCMEN  =  ON        ]
-"41
+"40
 [p x LVP  =  OFF         ]
-"44
+"43
 [p x BOR4V  =  BOR40V    ]
-"45
+"44
 [p x WRT  =  OFF         ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 54: __asm("INDF equ 00h");
@@ -343,11 +343,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3370
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 3370: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"103 ./global.h
-[; ;./global.h: 103: } generic_status;
+"102 ./global.h
+[; ;./global.h: 102: } generic_status;
 [v _generic_status `S140 ~T0 @X0 1 e ]
-"121
-[; ;./global.h: 121:       } statuspower;
+"120
+[; ;./global.h: 120:       } statuspower;
 [v _statuspower `S141 ~T0 @X0 1 e ]
 "8 isr.c
 [; ;isr.c: 8: volatile unsigned char usart_buffer[32+20];
