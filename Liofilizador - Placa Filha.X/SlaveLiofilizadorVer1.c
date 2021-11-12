@@ -779,6 +779,9 @@ void MediaPlacaVaccum(unsigned char canal){
        else
          Temp/=(i);       
        
+       Temp=(1023.0-Temp);
+       
+       /*
        if(Temp<615)
           { 
           Vaccum0 =1023.0-(Temp-454.0);        
@@ -797,8 +800,17 @@ void MediaPlacaVaccum(unsigned char canal){
        
        
        //Vaccum0=1023.0-(Temp-327.0);
+       */
+       if(Temp<700)
+         {  
+         Vaccum0=Temp;
+         }
+       else
+         {
+         Vaccum0=Temp+((Temp-700)*3.05);
+         }
        
-       
+       if(Vaccum0>2000) Vaccum0=2000;
        
        
                  

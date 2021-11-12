@@ -179,18 +179,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "183
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 183: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
 [v _PORTAbits `VS5 ~T0 @X0 0 e@5 ]
-"57 SlaveLiofilizadorVer1.c
-[; ;SlaveLiofilizadorVer1.c: 57: void Load_Work(void);
-[v _Load_Work `(v ~T0 @X0 0 ef ]
-"56
-[; ;SlaveLiofilizadorVer1.c: 56: void mediatemperaturaNTC(unsigned char canal);
-[v _mediatemperaturaNTC `(v ~T0 @X0 0 ef1`uc ]
-"59
-[; ;SlaveLiofilizadorVer1.c: 59: void Auto_Relay0(void);
-[v _Auto_Relay0 `(v ~T0 @X0 0 ef ]
-"60
-[; ;SlaveLiofilizadorVer1.c: 60: void Auto_Relay1(void);
-[v _Auto_Relay1 `(v ~T0 @X0 0 ef ]
+"75 SlaveLiofilizadorVer1.c
+[; ;SlaveLiofilizadorVer1.c: 75: void MediaPlacaVaccum(unsigned char canal);
+[v _MediaPlacaVaccum `(v ~T0 @X0 0 ef1`uc ]
 "80
 [; ;SlaveLiofilizadorVer1.c: 80: extern volatile char usart_buffer[32+20];
 [v _usart_buffer `Vuc ~T0 @X0 -> 0 `x e ]
@@ -218,13 +209,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "86
 [; ;SlaveLiofilizadorVer1.c: 86: extern volatile unsigned int milisegundo;
 [v _milisegundo `Vui ~T0 @X0 0 e ]
-"49
-[; ;SlaveLiofilizadorVer1.c: 49: void Send_Reply_OK(void);
-[v _Send_Reply_OK `(v ~T0 @X0 0 ef ]
 "14 ./eeprom.h
 [; ;./eeprom.h: 14: void EEPROM_Write_Byte(unsigned char addr, unsigned char dado);
 [v _EEPROM_Write_Byte `(v ~T0 @X0 0 ef2`uc`uc ]
-"15
+"49 SlaveLiofilizadorVer1.c
+[; ;SlaveLiofilizadorVer1.c: 49: void Send_Reply_OK(void);
+[v _Send_Reply_OK `(v ~T0 @X0 0 ef ]
+"15 ./eeprom.h
 [; ;./eeprom.h: 15: unsigned char EEPROM_Read_Byte(unsigned char addr);
 [v _EEPROM_Read_Byte `(uc ~T0 @X0 0 ef1`uc ]
 "32 ./usart.h
@@ -275,10 +266,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "104
 [; ;./proculus.h: 104: void PROCULUS_VP_Write_String(unsigned int vp,char *text);
 [v _PROCULUS_VP_Write_String `(v ~T0 @X0 0 ef2`ui`*uc ]
-"5 ./my_delay.h
-[; ;./my_delay.h: 5: void my_delay_ms(long time);
-[v _my_delay_ms `(v ~T0 @X0 0 ef1`l ]
-"1172 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
+"2825 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2825:     struct {
+[s S112 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S112 . . VCFG0 VCFG1 . ADFM ]
+"2824
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2824: typedef union {
+[u S111 `S112 1 ]
+[n S111 . . ]
+"2833
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 2833: extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0x09F)));
+[v _ADCON1bits `VS111 ~T0 @X0 0 e@159 ]
+"1172
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1172:     struct {
 [s S43 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
 [n S43 . ADON GO_nDONE CHS ADCS ]
@@ -301,24 +300,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1197
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 1197: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x01F)));
 [v _ADCON0bits `VS42 ~T0 @X0 0 e@31 ]
-"18 ./adc.h
-[; ;./adc.h: 18: float ADC_Read_NTC(char canal);
-[v _ADC_Read_NTC `(f ~T0 @X0 0 ef1`uc ]
+"5 ./my_delay.h
+[; ;./my_delay.h: 5: void my_delay_ms(long time);
+[v _my_delay_ms `(v ~T0 @X0 0 ef1`l ]
+"19 ./adc.h
+[; ;./adc.h: 19: float ADC_Media_10bits(char canal);
+[v _ADC_Media_10bits `(f ~T0 @X0 0 ef1`uc ]
 "156 ./protocolo.h
 [; ;./protocolo.h: 156: char Package_Usart_is_for_me();
 [v _Package_Usart_is_for_me `(uc ~T0 @X0 0 e? ]
-"62 SlaveLiofilizadorVer1.c
-[; ;SlaveLiofilizadorVer1.c: 62: void Rele0Ligado(void);
-[v _Rele0Ligado `(v ~T0 @X0 0 ef ]
-"63
-[; ;SlaveLiofilizadorVer1.c: 63: void Rele1Ligado(void);
-[v _Rele1Ligado `(v ~T0 @X0 0 ef ]
-"66
-[; ;SlaveLiofilizadorVer1.c: 66: void Rele0Desligado(void);
-[v _Rele0Desligado `(v ~T0 @X0 0 ef ]
-"67
-[; ;SlaveLiofilizadorVer1.c: 67: void Rele1Desligado(void);
-[v _Rele1Desligado `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f886.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -577,64 +567,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "120
 [; ;./global.h: 120:       } statuspower;
 [v _statuspower `S141 ~T0 @X0 1 e ]
-"100 SlaveLiofilizadorVer1.c
-[; ;SlaveLiofilizadorVer1.c: 100: int Status0;
-[v _Status0 `i ~T0 @X0 1 e ]
-"101
-[; ;SlaveLiofilizadorVer1.c: 101: volatile float SetPoint0;
-[v _SetPoint0 `Vf ~T0 @X0 1 e ]
-"102
-[; ;SlaveLiofilizadorVer1.c: 102: float Histerese0;
-[v _Histerese0 `f ~T0 @X0 1 e ]
-"103
-[; ;SlaveLiofilizadorVer1.c: 103: char TempoON_0;
-[v _TempoON_0 `uc ~T0 @X0 1 e ]
-"104
-[; ;SlaveLiofilizadorVer1.c: 104: char TempoOFF_0;
-[v _TempoOFF_0 `uc ~T0 @X0 1 e ]
-"105
-[; ;SlaveLiofilizadorVer1.c: 105: char IndexLeitura_0;
-[v _IndexLeitura_0 `uc ~T0 @X0 1 e ]
-"106
-[; ;SlaveLiofilizadorVer1.c: 106: volatile char TempoCNT_0;
-[v _TempoCNT_0 `Vuc ~T0 @X0 1 e ]
-"109
-[; ;SlaveLiofilizadorVer1.c: 109: int Status1;
-[v _Status1 `i ~T0 @X0 1 e ]
-"110
-[; ;SlaveLiofilizadorVer1.c: 110: volatile float SetPoint1;
-[v _SetPoint1 `Vf ~T0 @X0 1 e ]
-"111
-[; ;SlaveLiofilizadorVer1.c: 111: char Histerese1;
-[v _Histerese1 `uc ~T0 @X0 1 e ]
-"112
-[; ;SlaveLiofilizadorVer1.c: 112: char TempoON_1;
-[v _TempoON_1 `uc ~T0 @X0 1 e ]
-"113
-[; ;SlaveLiofilizadorVer1.c: 113: char TempoOFF_1;
-[v _TempoOFF_1 `uc ~T0 @X0 1 e ]
-"114
-[; ;SlaveLiofilizadorVer1.c: 114: char IndexLeitura_1;
-[v _IndexLeitura_1 `uc ~T0 @X0 1 e ]
-"115
-[; ;SlaveLiofilizadorVer1.c: 115: volatile char TempoCNT_1;
-[v _TempoCNT_1 `Vuc ~T0 @X0 1 e ]
-"118
-[; ;SlaveLiofilizadorVer1.c: 118: float Temperatura0,Temperatura1;
-[v _Temperatura0 `f ~T0 @X0 1 e ]
-[v _Temperatura1 `f ~T0 @X0 1 e ]
-"119
-[; ;SlaveLiofilizadorVer1.c: 119: unsigned char RL0Status=1;
-[v _RL0Status `uc ~T0 @X0 1 e ]
-[i _RL0Status
--> -> 1 `i `uc
-]
-"120
-[; ;SlaveLiofilizadorVer1.c: 120: unsigned char RL1Status=1;
-[v _RL1Status `uc ~T0 @X0 1 e ]
-[i _RL1Status
--> -> 1 `i `uc
-]
+"129 SlaveLiofilizadorVer1.c
+[; ;SlaveLiofilizadorVer1.c: 129: float Vaccum0, Tensao1;
+[v _Vaccum0 `f ~T0 @X0 1 e ]
+[v _Tensao1 `f ~T0 @X0 1 e ]
 "136
 [; ;SlaveLiofilizadorVer1.c: 136: t_usart_protocol usart_protocol;
 [v _usart_protocol `S134 ~T0 @X0 1 e ]
@@ -836,12 +772,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "230
 [; ;SlaveLiofilizadorVer1.c: 230:      canal=1;
 [e = _canal -> -> 1 `i `uc ]
-"244
-[; ;SlaveLiofilizadorVer1.c: 244:      Load_Work();
-[e ( _Load_Work ..  ]
-"245
-[; ;SlaveLiofilizadorVer1.c: 245:      generic_status.flag_global_hot=0;
-[e = . _generic_status 6 -> -> 0 `i `uc ]
+"238
+[; ;SlaveLiofilizadorVer1.c: 238:      statuspower.flag_global_vacuo=0;
+[e = . . _statuspower 1 2 -> -> 0 `i `uc ]
 "251
 [; ;SlaveLiofilizadorVer1.c: 251:      while(1)
 [e :U 147 ]
@@ -851,54 +784,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "254
 [; ;SlaveLiofilizadorVer1.c: 254:          generic_status.flag_main_loop_WDT=1;
 [e = . _generic_status 7 -> -> 1 `i `uc ]
-"258
-[; ;SlaveLiofilizadorVer1.c: 258:          if(++canal==2) canal=0;
+"283
+[; ;SlaveLiofilizadorVer1.c: 283:          if(++canal==2) canal=0;
 [e $ ! == -> =+ _canal -> -> 1 `i `uc `i -> 2 `i 149  ]
 [e = _canal -> -> 0 `i `uc ]
 [e :U 149 ]
-"259
-[; ;SlaveLiofilizadorVer1.c: 259:          mediatemperaturaNTC(canal);
-[e ( _mediatemperaturaNTC (1 _canal ]
-"262
-[; ;SlaveLiofilizadorVer1.c: 262:          if (generic_status.flag_usart_error) Delay_Led_Memory=200;
-[e $ ! != -> . _generic_status 1 `i -> 0 `i 150  ]
-[e = _Delay_Led_Memory -> -> 200 `i `ui ]
-[e :U 150 ]
-"265
-[; ;SlaveLiofilizadorVer1.c: 265:          if(generic_status.flag_global_hot)
-[e $ ! != -> . _generic_status 6 `i -> 0 `i 151  ]
-"266
-[; ;SlaveLiofilizadorVer1.c: 266:             {
-{
-"267
-[; ;SlaveLiofilizadorVer1.c: 267:              Auto_Relay0();
-[e ( _Auto_Relay0 ..  ]
-"268
-[; ;SlaveLiofilizadorVer1.c: 268:              Auto_Relay1();
-[e ( _Auto_Relay1 ..  ]
-"269
-[; ;SlaveLiofilizadorVer1.c: 269:             }
-}
-[e $U 152  ]
-"270
-[; ;SlaveLiofilizadorVer1.c: 270:          else
-[e :U 151 ]
-"271
-[; ;SlaveLiofilizadorVer1.c: 271:             {
-{
-"272
-[; ;SlaveLiofilizadorVer1.c: 272:             PORTCbits.RC0=0;
-[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-"273
-[; ;SlaveLiofilizadorVer1.c: 273:             PORTCbits.RC1=0;
-[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-"274
-[; ;SlaveLiofilizadorVer1.c: 274:             }
-}
-[e :U 152 ]
+"284
+[; ;SlaveLiofilizadorVer1.c: 284:          MediaPlacaVaccum(canal);
+[e ( _MediaPlacaVaccum (1 _canal ]
 "292
 [; ;SlaveLiofilizadorVer1.c: 292:          if(generic_status.flag_usart_rx==1)
-[e $ ! == -> . _generic_status 0 `i -> 1 `i 153  ]
+[e $ ! == -> . _generic_status 0 `i -> 1 `i 150  ]
 "293
 [; ;SlaveLiofilizadorVer1.c: 293:             {
 {
@@ -907,7 +803,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _header + << -> *U + &U _usart_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _usart_buffer `ui `ux `ui -> 8 `i -> *U + &U _usart_buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _usart_buffer `ui `ux `ui ]
 "295
 [; ;SlaveLiofilizadorVer1.c: 295:             if(header==0xAABB)
-[e $ ! == _header -> 43707 `ui 154  ]
+[e $ ! == _header -> 43707 `ui 151  ]
 "296
 [; ;SlaveLiofilizadorVer1.c: 296:                {
 {
@@ -916,7 +812,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _destino -> *U + &U _usart_buffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _usart_buffer `ui `ux `uc ]
 "298
 [; ;SlaveLiofilizadorVer1.c: 298:                if((destino==Board_Number)||(destino==0XFF))
-[e $ ! || == -> _destino `i -> _Board_Number `i == -> _destino `i -> 255 `i 155  ]
+[e $ ! || == -> _destino `i -> _Board_Number `i == -> _destino `i -> 255 `i 152  ]
 "299
 [; ;SlaveLiofilizadorVer1.c: 299:                       {
 {
@@ -932,15 +828,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "303
 [; ;SlaveLiofilizadorVer1.c: 303:                       }
 }
-[e :U 155 ]
+[e :U 152 ]
 "304
 [; ;SlaveLiofilizadorVer1.c: 304:                }
 }
-[e :U 154 ]
+[e :U 151 ]
 "305
 [; ;SlaveLiofilizadorVer1.c: 305:             }
 }
-[e :U 153 ]
+[e :U 150 ]
 "308
 [; ;SlaveLiofilizadorVer1.c: 308:          }
 }
@@ -991,13 +887,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = *U + -> &U _add_24LCxxxx `*uc * -> -> 0 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 4 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
 "343
 [; ;SlaveLiofilizadorVer1.c: 343:     switch(usart_protocol.command){
-[e $U 158  ]
+[e $U 155  ]
 {
 "351
 [; ;SlaveLiofilizadorVer1.c: 351:         case 0x41:
-[e :U 159 ]
+[e :U 156 ]
 "352
-[; ;SlaveLiofilizadorVer1.c: 352:              strcpy(buffer,"v1.0.26");
+[; ;SlaveLiofilizadorVer1.c: 352:              strcpy(buffer,"1.0.28_beta_vaccum");
 [e ( _strcpy (2 , &U _buffer :s 1C ]
 "353
 [; ;SlaveLiofilizadorVer1.c: 353:              Send_To_MB(11);
@@ -1007,24 +903,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _USART_put_string (1 &U _buffer ]
 "355
 [; ;SlaveLiofilizadorVer1.c: 355:              break;
-[e $U 157  ]
+[e $U 154  ]
 "356
 [; ;SlaveLiofilizadorVer1.c: 356:         case 0X1A:
-[e :U 160 ]
-"358
-[; ;SlaveLiofilizadorVer1.c: 358:              if(usart_protocol.value[0]==0)
-[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 161  ]
-"359
-[; ;SlaveLiofilizadorVer1.c: 359:                 OutPut=Temperatura0;
-[e = _OutPut _Temperatura0 ]
-[e $U 162  ]
-"360
-[; ;SlaveLiofilizadorVer1.c: 360:              else
-[e :U 161 ]
-"361
-[; ;SlaveLiofilizadorVer1.c: 361:                 OutPut=Temperatura1;
-[e = _OutPut _Temperatura1 ]
-[e :U 162 ]
+[e :U 157 ]
+"373
+[; ;SlaveLiofilizadorVer1.c: 373:              if(usart_protocol.value[0]==0)
+[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 158  ]
+"374
+[; ;SlaveLiofilizadorVer1.c: 374:                 OutPut=Tensao1;
+[e = _OutPut _Tensao1 ]
+[e $U 159  ]
+"375
+[; ;SlaveLiofilizadorVer1.c: 375:              else
+[e :U 158 ]
+"376
+[; ;SlaveLiofilizadorVer1.c: 376:                 OutPut=Vaccum0;
+[e = _OutPut _Vaccum0 ]
+[e :U 159 ]
 "379
 [; ;SlaveLiofilizadorVer1.c: 379:              OutPut*=10.0;
 [e =* _OutPut -> .10.0 `f ]
@@ -1042,10 +938,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "385
 [; ;SlaveLiofilizadorVer1.c: 385:              break;
-[e $U 157  ]
+[e $U 154  ]
 "388
 [; ;SlaveLiofilizadorVer1.c: 388:         case 0x02:
-[e :U 163 ]
+[e :U 160 ]
 "390
 [; ;SlaveLiofilizadorVer1.c: 390:              ((char *)&add_24LCxxxx)[3] =(usart_protocol.value[0]);
 [e = *U + -> &U _add_24LCxxxx `*uc * -> -> 3 `i `x -> -> # *U -> &U _add_24LCxxxx `*uc `i `x *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
@@ -1069,57 +965,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _milisegundo -> -> 0 `i `ui ]
 "397
 [; ;SlaveLiofilizadorVer1.c: 397:              break;
-[e $U 157  ]
-"400
-[; ;SlaveLiofilizadorVer1.c: 400:         case 0x40:
-[e :U 164 ]
-"401
-[; ;SlaveLiofilizadorVer1.c: 401:              if(usart_protocol.value[0]==0)
-[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 165  ]
-"402
-[; ;SlaveLiofilizadorVer1.c: 402:                 generic_status.flag_global_hot=0;
-[e = . _generic_status 6 -> -> 0 `i `uc ]
-[e $U 166  ]
-"403
-[; ;SlaveLiofilizadorVer1.c: 403:              else
-[e :U 165 ]
-"404
-[; ;SlaveLiofilizadorVer1.c: 404:                 generic_status.flag_global_hot=1;
-[e = . _generic_status 6 -> -> 1 `i `uc ]
-[e :U 166 ]
-"405
-[; ;SlaveLiofilizadorVer1.c: 405:              break;
-[e $U 157  ]
+[e $U 154  ]
 "408
 [; ;SlaveLiofilizadorVer1.c: 408:         case 0x03:
-[e :U 167 ]
+[e :U 161 ]
 "409
 [; ;SlaveLiofilizadorVer1.c: 409:              Send_To_MB(2);
 [e ( _Send_To_MB (1 -> -> 2 `i `uc ]
-"419
-[; ;SlaveLiofilizadorVer1.c: 419:              USART_put_int(3);
-[e ( _USART_put_int (1 -> 3 `i ]
+"411
+[; ;SlaveLiofilizadorVer1.c: 411:              USART_put_int(1);
+[e ( _USART_put_int (1 -> 1 `i ]
 "421
 [; ;SlaveLiofilizadorVer1.c: 421:              break;
-[e $U 157  ]
-"429
-[; ;SlaveLiofilizadorVer1.c: 429:         case 0x01:
-[e :U 168 ]
-"430
-[; ;SlaveLiofilizadorVer1.c: 430:              Send_To_MB(3);
-[e ( _Send_To_MB (1 -> -> 3 `i `uc ]
-"431
-[; ;SlaveLiofilizadorVer1.c: 431:              Send_Reply_OK();
-[e ( _Send_Reply_OK ..  ]
-"432
-[; ;SlaveLiofilizadorVer1.c: 432:              Load_Work();
-[e ( _Load_Work ..  ]
-"433
-[; ;SlaveLiofilizadorVer1.c: 433:              break;
-[e $U 157  ]
+[e $U 154  ]
 "437
 [; ;SlaveLiofilizadorVer1.c: 437:         case 0x08:
-[e :U 169 ]
+[e :U 162 ]
 "438
 [; ;SlaveLiofilizadorVer1.c: 438:              EEPROM_Write_Byte(usart_protocol.value[0],
 [e ( _EEPROM_Write_Byte (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc ]
@@ -1131,10 +992,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Send_Reply_OK ..  ]
 "442
 [; ;SlaveLiofilizadorVer1.c: 442:              break;
-[e $U 157  ]
+[e $U 154  ]
 "443
 [; ;SlaveLiofilizadorVer1.c: 443:         case 0x09:
-[e :U 170 ]
+[e :U 163 ]
 "444
 [; ;SlaveLiofilizadorVer1.c: 444:              tempchar=EEPROM_Read_Byte(usart_protocol.value[0]);
 [e = _tempchar -> ( _EEPROM_Read_Byte (1 -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc `uc ]
@@ -1146,10 +1007,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _USART_putc (1 _tempchar ]
 "447
 [; ;SlaveLiofilizadorVer1.c: 447:              break;
-[e $U 157  ]
+[e $U 154  ]
 "448
 [; ;SlaveLiofilizadorVer1.c: 448:         case 0x0A:
-[e :U 171 ]
+[e :U 164 ]
 "449
 [; ;SlaveLiofilizadorVer1.c: 449:              {
 {
@@ -1176,10 +1037,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "457
 [; ;SlaveLiofilizadorVer1.c: 457:              break;
-[e $U 157  ]
+[e $U 154  ]
 "458
 [; ;SlaveLiofilizadorVer1.c: 458:         case 0x0B:
-[e :U 172 ]
+[e :U 165 ]
 "459
 [; ;SlaveLiofilizadorVer1.c: 459:              tempint=EEPROM_Read_Integer(usart_protocol.value[0]);
 [e = _tempint -> ( _EEPROM_Read_Integer (1 -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc `i ]
@@ -1191,10 +1052,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _USART_put_int (1 _tempint ]
 "462
 [; ;SlaveLiofilizadorVer1.c: 462:              break;
-[e $U 157  ]
+[e $U 154  ]
 "464
 [; ;SlaveLiofilizadorVer1.c: 464:         case 0x0C :
-[e :U 173 ]
+[e :U 166 ]
 "465
 [; ;SlaveLiofilizadorVer1.c: 465:              EEPROM_Write_String(usart_protocol.value[0],
 [e ( _EEPROM_Write_String (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc &U *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
@@ -1206,10 +1067,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Send_Reply_OK ..  ]
 "469
 [; ;SlaveLiofilizadorVer1.c: 469:              break;
-[e $U 157  ]
+[e $U 154  ]
 "470
 [; ;SlaveLiofilizadorVer1.c: 470:         case 0x0D:
-[e :U 174 ]
+[e :U 167 ]
 "471
 [; ;SlaveLiofilizadorVer1.c: 471:              {
 {
@@ -1224,13 +1085,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _USART_put_string (1 &U _buffer ]
 "475
 [; ;SlaveLiofilizadorVer1.c: 475:              break;
-[e $U 157  ]
+[e $U 154  ]
 "476
 [; ;SlaveLiofilizadorVer1.c: 476:              }
 }
 "479
 [; ;SlaveLiofilizadorVer1.c: 479:         case 0x11:
-[e :U 175 ]
+[e :U 168 ]
 "480
 [; ;SlaveLiofilizadorVer1.c: 480:              EEPROM_24C1025_Write_Byte(usart_protocol.value[0],
 [e ( _EEPROM_24C1025_Write_Byte (3 , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
@@ -1242,10 +1103,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Send_Reply_OK ..  ]
 "485
 [; ;SlaveLiofilizadorVer1.c: 485:              break;
-[e $U 157  ]
+[e $U 154  ]
 "486
 [; ;SlaveLiofilizadorVer1.c: 486:         case 0x12:
-[e :U 176 ]
+[e :U 169 ]
 "487
 [; ;SlaveLiofilizadorVer1.c: 487:              tempchar=EEPROM_24C1025_Read_Byte(usart_protocol.value[0],
 [e = _tempchar -> ( _EEPROM_24C1025_Read_Byte (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx `uc ]
@@ -1257,10 +1118,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _USART_putc (1 _tempchar ]
 "493
 [; ;SlaveLiofilizadorVer1.c: 493:              break;
-[e $U 157  ]
+[e $U 154  ]
 "494
 [; ;SlaveLiofilizadorVer1.c: 494:         case 0x13:
-[e :U 177 ]
+[e :U 170 ]
 "495
 [; ;SlaveLiofilizadorVer1.c: 495:              {
 {
@@ -1275,13 +1136,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Send_Reply_OK ..  ]
 "503
 [; ;SlaveLiofilizadorVer1.c: 503:              break;
-[e $U 157  ]
+[e $U 154  ]
 "504
 [; ;SlaveLiofilizadorVer1.c: 504:              }
 }
 "505
 [; ;SlaveLiofilizadorVer1.c: 505:         case 0x14:
-[e :U 178 ]
+[e :U 171 ]
 "506
 [; ;SlaveLiofilizadorVer1.c: 506:              tempint=EEPROM_24C1025_Read_Int(usart_protocol.value[0],
 [e = _tempint -> ( _EEPROM_24C1025_Read_Int (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx `i ]
@@ -1293,10 +1154,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _USART_put_int (1 _tempint ]
 "510
 [; ;SlaveLiofilizadorVer1.c: 510:              break;
-[e $U 157  ]
+[e $U 154  ]
 "513
 [; ;SlaveLiofilizadorVer1.c: 513:         case 0x18:
-[e :U 179 ]
+[e :U 172 ]
 "514
 [; ;SlaveLiofilizadorVer1.c: 514:              {
 {
@@ -1317,10 +1178,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "524
 [; ;SlaveLiofilizadorVer1.c: 524:              break;
-[e $U 157  ]
+[e $U 154  ]
 "526
 [; ;SlaveLiofilizadorVer1.c: 526:         case 0x17:
-[e :U 180 ]
+[e :U 173 ]
 "527
 [; ;SlaveLiofilizadorVer1.c: 527:              EEPROM_24C1025_Write_Buffer(usart_protocol.value[0],
 [e ( _EEPROM_24C1025_Write_Buffer (4 , , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx -> *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc &U *U + &U . _usart_protocol 5 * -> -> -> 6 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
@@ -1332,10 +1193,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Send_Reply_OK ..  ]
 "534
 [; ;SlaveLiofilizadorVer1.c: 534:              break;
-[e $U 157  ]
+[e $U 154  ]
 "536
 [; ;SlaveLiofilizadorVer1.c: 536:         case 0x15 :
-[e :U 181 ]
+[e :U 174 ]
 "537
 [; ;SlaveLiofilizadorVer1.c: 537:              EEPROM_24C1025_Write_Str(usart_protocol.value[0],
 [e ( _EEPROM_24C1025_Write_Str (3 , , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc _add_24LCxxxx &U *U + &U . _usart_protocol 5 * -> -> -> 5 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
@@ -1347,10 +1208,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Send_Reply_OK ..  ]
 "542
 [; ;SlaveLiofilizadorVer1.c: 542:              break;
-[e $U 157  ]
+[e $U 154  ]
 "543
 [; ;SlaveLiofilizadorVer1.c: 543:         case 0x16:
-[e :U 182 ]
+[e :U 175 ]
 "544
 [; ;SlaveLiofilizadorVer1.c: 544:              {
 {
@@ -1365,13 +1226,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _USART_put_string (1 &U _buffer ]
 "551
 [; ;SlaveLiofilizadorVer1.c: 551:              break;
-[e $U 157  ]
+[e $U 154  ]
 "552
 [; ;SlaveLiofilizadorVer1.c: 552:              }
 }
 "554
 [; ;SlaveLiofilizadorVer1.c: 554:         case 0x19:
-[e :U 183 ]
+[e :U 176 ]
 "555
 [; ;SlaveLiofilizadorVer1.c: 555:              EEPROM_24C1025_Fill_All(usart_protocol.value[0],
 [e ( _EEPROM_24C1025_Fill_All (2 , -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `uc -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `ui ]
@@ -1383,10 +1244,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Send_Reply_OK ..  ]
 "559
 [; ;SlaveLiofilizadorVer1.c: 559:              break;
-[e $U 157  ]
+[e $U 154  ]
 "561
 [; ;SlaveLiofilizadorVer1.c: 561:         case 0X25:
-[e :U 184 ]
+[e :U 177 ]
 "562
 [; ;SlaveLiofilizadorVer1.c: 562:              PROCULUS_Show_Screen(usart_protocol.value[0]);
 [e ( _PROCULUS_Show_Screen (1 -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `ui ]
@@ -1398,10 +1259,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Send_Reply_OK ..  ]
 "565
 [; ;SlaveLiofilizadorVer1.c: 565:              break;
-[e $U 157  ]
+[e $U 154  ]
 "567
 [; ;SlaveLiofilizadorVer1.c: 567:         case 0X24:
-[e :U 185 ]
+[e :U 178 ]
 "568
 [; ;SlaveLiofilizadorVer1.c: 568:              PROCULUS_Buzzer((usart_protocol.value[0]<<8)+
 [e ( _PROCULUS_Buzzer (1 -> + << -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 8 `i -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i `ui ]
@@ -1413,10 +1274,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Send_Reply_OK ..  ]
 "572
 [; ;SlaveLiofilizadorVer1.c: 572:              break;
-[e $U 157  ]
+[e $U 154  ]
 "573
 [; ;SlaveLiofilizadorVer1.c: 573:         case 0X22:
-[e :U 186 ]
+[e :U 179 ]
 "574
 [; ;SlaveLiofilizadorVer1.c: 574:              PROCULUS_VP_Write_String((usart_protocol.value[0]<<8)+
 [e ( _PROCULUS_VP_Write_String (2 , -> + << -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 8 `i -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i `ui &U *U + &U . _usart_protocol 5 * -> -> -> 2 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux ]
@@ -1428,60 +1289,60 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Send_Reply_OK ..  ]
 "579
 [; ;SlaveLiofilizadorVer1.c: 579:              break;
-[e $U 157  ]
+[e $U 154  ]
 "582
 [; ;SlaveLiofilizadorVer1.c: 582:         case 0x30:
-[e :U 187 ]
+[e :U 180 ]
 "583
 [; ;SlaveLiofilizadorVer1.c: 583:              if(usart_protocol.value[0]==0)
-[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 188  ]
+[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 181  ]
 "584
 [; ;SlaveLiofilizadorVer1.c: 584:                 {
 {
 "586
 [; ;SlaveLiofilizadorVer1.c: 586:                 if(!usart_protocol.value[1])
-[e $ ! ! != -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 189  ]
+[e $ ! ! != -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 182  ]
 "587
 [; ;SlaveLiofilizadorVer1.c: 587:                    PORTCbits.RC0=0;
 [e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-[e $U 190  ]
+[e $U 183  ]
 "588
 [; ;SlaveLiofilizadorVer1.c: 588:                 else
-[e :U 189 ]
+[e :U 182 ]
 "589
 [; ;SlaveLiofilizadorVer1.c: 589:                    PORTCbits.RC0=1;
 [e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-[e :U 190 ]
+[e :U 183 ]
 "590
 [; ;SlaveLiofilizadorVer1.c: 590:                 }
 }
-[e $U 191  ]
+[e $U 184  ]
 "591
 [; ;SlaveLiofilizadorVer1.c: 591:              else if (usart_protocol.value[0]==1)
-[e :U 188 ]
-[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 1 `i 192  ]
+[e :U 181 ]
+[e $ ! == -> *U + &U . _usart_protocol 5 * -> -> -> 0 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 1 `i 185  ]
 "592
 [; ;SlaveLiofilizadorVer1.c: 592:                      {
 {
 "594
 [; ;SlaveLiofilizadorVer1.c: 594:                       if(!usart_protocol.value[1])
-[e $ ! ! != -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 193  ]
+[e $ ! ! != -> *U + &U . _usart_protocol 5 * -> -> -> 1 `i `ui `ux -> -> # *U &U . _usart_protocol 5 `ui `ux `i -> 0 `i 186  ]
 "595
 [; ;SlaveLiofilizadorVer1.c: 595:                          PORTCbits.RC1=0;
 [e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-[e $U 194  ]
+[e $U 187  ]
 "596
 [; ;SlaveLiofilizadorVer1.c: 596:                       else
-[e :U 193 ]
+[e :U 186 ]
 "597
 [; ;SlaveLiofilizadorVer1.c: 597:                          PORTCbits.RC1=1;
 [e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
-[e :U 194 ]
+[e :U 187 ]
 "598
 [; ;SlaveLiofilizadorVer1.c: 598:                      }
 }
-[e :U 192 ]
-[e :U 191 ]
+[e :U 185 ]
+[e :U 184 ]
 "599
 [; ;SlaveLiofilizadorVer1.c: 599:              Send_To_MB(3);
 [e ( _Send_To_MB (1 -> -> 3 `i `uc ]
@@ -1490,42 +1351,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Send_Reply_OK ..  ]
 "601
 [; ;SlaveLiofilizadorVer1.c: 601:              break;
-[e $U 157  ]
+[e $U 154  ]
 "602
 [; ;SlaveLiofilizadorVer1.c: 602:     }
 }
-[e $U 157  ]
-[e :U 158 ]
-[e [\ -> . _usart_protocol 3 `i , $ -> 65 `i 159
- , $ -> 26 `i 160
- , $ -> 2 `i 163
- , $ -> 64 `i 164
- , $ -> 3 `i 167
- , $ -> 1 `i 168
- , $ -> 8 `i 169
- , $ -> 9 `i 170
- , $ -> 10 `i 171
- , $ -> 11 `i 172
- , $ -> 12 `i 173
- , $ -> 13 `i 174
- , $ -> 17 `i 175
- , $ -> 18 `i 176
- , $ -> 19 `i 177
- , $ -> 20 `i 178
- , $ -> 24 `i 179
- , $ -> 23 `i 180
- , $ -> 21 `i 181
- , $ -> 22 `i 182
- , $ -> 25 `i 183
- , $ -> 37 `i 184
- , $ -> 36 `i 185
- , $ -> 34 `i 186
- , $ -> 48 `i 187
- 157 ]
-[e :U 157 ]
+[e $U 154  ]
+[e :U 155 ]
+[e [\ -> . _usart_protocol 3 `i , $ -> 65 `i 156
+ , $ -> 26 `i 157
+ , $ -> 2 `i 160
+ , $ -> 3 `i 161
+ , $ -> 8 `i 162
+ , $ -> 9 `i 163
+ , $ -> 10 `i 164
+ , $ -> 11 `i 165
+ , $ -> 12 `i 166
+ , $ -> 13 `i 167
+ , $ -> 17 `i 168
+ , $ -> 18 `i 169
+ , $ -> 19 `i 170
+ , $ -> 20 `i 171
+ , $ -> 24 `i 172
+ , $ -> 23 `i 173
+ , $ -> 21 `i 174
+ , $ -> 22 `i 175
+ , $ -> 25 `i 176
+ , $ -> 37 `i 177
+ , $ -> 36 `i 178
+ , $ -> 34 `i 179
+ , $ -> 48 `i 180
+ 154 ]
+[e :U 154 ]
 "603
 [; ;SlaveLiofilizadorVer1.c: 603: }
-[e :UE 156 ]
+[e :UE 153 ]
 }
 "608
 [; ;SlaveLiofilizadorVer1.c: 608: void Send_To_MB(unsigned char size){
@@ -1554,7 +1413,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _USART_putc (1 -> _size `uc ]
 "616
 [; ;SlaveLiofilizadorVer1.c: 616: }
-[e :UE 195 ]
+[e :UE 188 ]
 }
 "619
 [; ;SlaveLiofilizadorVer1.c: 619: void Send_Reply_OK(void){
@@ -1567,601 +1426,238 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _USART_put_string (1 :s 2C ]
 "622
 [; ;SlaveLiofilizadorVer1.c: 622:  }
-[e :UE 196 ]
+[e :UE 189 ]
 }
-"631
-[; ;SlaveLiofilizadorVer1.c: 631: void DelayRele(char canal){
-[v _DelayRele `(v ~T0 @X0 1 ef1`uc ]
+"752
+[; ;SlaveLiofilizadorVer1.c: 752: void MediaPlacaVaccum(unsigned char canal){
+[v _MediaPlacaVaccum `(v ~T0 @X0 1 ef1`uc ]
 {
-[e :U _DelayRele ]
+[e :U _MediaPlacaVaccum ]
 [v _canal `uc ~T0 @X0 1 r1 ]
 [f ]
-"632
-[; ;SlaveLiofilizadorVer1.c: 632:      my_delay_ms((canal+2*Board_Number-2)*10);
-[e ( _my_delay_ms (1 -> * - + -> _canal `i * -> 2 `i -> _Board_Number `i -> 2 `i -> 10 `i `l ]
-"633
-[; ;SlaveLiofilizadorVer1.c: 633: }
-[e :UE 197 ]
-}
-"641
-[; ;SlaveLiofilizadorVer1.c: 641: void mediatemperaturaNTC(unsigned char canal)
-[v _mediatemperaturaNTC `(v ~T0 @X0 1 ef1`uc ]
-"642
-[; ;SlaveLiofilizadorVer1.c: 642:      {
-{
-[e :U _mediatemperaturaNTC ]
-"641
-[; ;SlaveLiofilizadorVer1.c: 641: void mediatemperaturaNTC(unsigned char canal)
-[v _canal `uc ~T0 @X0 1 r1 ]
-"642
-[; ;SlaveLiofilizadorVer1.c: 642:      {
-[f ]
-"643
-[; ;SlaveLiofilizadorVer1.c: 643:      float Temp;
+"753
+[; ;SlaveLiofilizadorVer1.c: 753:      float Temp,Valor;
 [v _Temp `f ~T0 @X0 1 a ]
-"644
-[; ;SlaveLiofilizadorVer1.c: 644:      char i;
-[v _i `uc ~T0 @X0 1 a ]
-"646
-[; ;SlaveLiofilizadorVer1.c: 646:      ADCON0bits.CHS=canal;
+[v _Valor `f ~T0 @X0 1 a ]
+"754
+[; ;SlaveLiofilizadorVer1.c: 754:      unsigned int i;
+[v _i `ui ~T0 @X0 1 a ]
+"758
+[; ;SlaveLiofilizadorVer1.c: 758:      if(canal==0)
+[e $ ! == -> _canal `i -> 0 `i 191  ]
+"759
+[; ;SlaveLiofilizadorVer1.c: 759:        {
+{
+"760
+[; ;SlaveLiofilizadorVer1.c: 760:        ADCON1bits.VCFG0=1;
+[e = . . _ADCON1bits 0 1 -> -> 1 `i `uc ]
+"761
+[; ;SlaveLiofilizadorVer1.c: 761:        ADCON1bits.VCFG1=1;
+[e = . . _ADCON1bits 0 2 -> -> 1 `i `uc ]
+"762
+[; ;SlaveLiofilizadorVer1.c: 762:        ADCON0bits.CHS=canal;
 [e = . . _ADCON0bits 0 2 _canal ]
-"647
-[; ;SlaveLiofilizadorVer1.c: 647:      my_delay_ms(1);
+"763
+[; ;SlaveLiofilizadorVer1.c: 763:        my_delay_ms(1);
 [e ( _my_delay_ms (1 -> -> 1 `i `l ]
-"649
-[; ;SlaveLiofilizadorVer1.c: 649:      Temp=0;
+"764
+[; ;SlaveLiofilizadorVer1.c: 764:        Temp=0;
 [e = _Temp -> -> 0 `i `f ]
-"651
-[; ;SlaveLiofilizadorVer1.c: 651:      for(i=1;i<15;i++)
+"766
+[; ;SlaveLiofilizadorVer1.c: 766:        for(i=1;i<15;i++)
 {
-[e = _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 15 `i 199  ]
+[e = _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 15 `i `ui 192  ]
+[e $U 193  ]
+[e :U 192 ]
+"767
+[; ;SlaveLiofilizadorVer1.c: 767:            {
+{
+"768
+[; ;SlaveLiofilizadorVer1.c: 768:            Temp+=ADC_Media_10bits(canal);
+[e =+ _Temp ( _ADC_Media_10bits (1 -> _canal `uc ]
+"769
+[; ;SlaveLiofilizadorVer1.c: 769:            if(Package_Usart_is_for_me()==1) break;
+[e $ ! == -> ( _Package_Usart_is_for_me ..  `i -> 1 `i 195  ]
+[e $U 193  ]
+[e :U 195 ]
+"770
+[; ;SlaveLiofilizadorVer1.c: 770:            }
+}
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 15 `i `ui 192  ]
+[e :U 193 ]
+}
+"771
+[; ;SlaveLiofilizadorVer1.c: 771:        if(i<10)
+[e $ ! < _i -> -> 10 `i `ui 196  ]
+"772
+[; ;SlaveLiofilizadorVer1.c: 772:          {
+{
+"774
+[; ;SlaveLiofilizadorVer1.c: 774:          return;
+[e $UE 190  ]
+"775
+[; ;SlaveLiofilizadorVer1.c: 775:          }
+}
+[e :U 196 ]
+"777
+[; ;SlaveLiofilizadorVer1.c: 777:        if(i==15)
+[e $ ! == _i -> -> 15 `i `ui 197  ]
+"778
+[; ;SlaveLiofilizadorVer1.c: 778:          Temp/=(i-1);
+[e =/ _Temp -> - _i -> -> 1 `i `ui `f ]
+[e $U 198  ]
+"779
+[; ;SlaveLiofilizadorVer1.c: 779:        else
+[e :U 197 ]
+"780
+[; ;SlaveLiofilizadorVer1.c: 780:          Temp/=(i);
+[e =/ _Temp -> _i `f ]
+[e :U 198 ]
+"782
+[; ;SlaveLiofilizadorVer1.c: 782:        Temp=(1023.0-Temp);
+[e = _Temp -> - .1023.0 -> _Temp `d `f ]
+"804
+[; ;SlaveLiofilizadorVer1.c: 804:        if(Temp<700)
+[e $ ! < _Temp -> -> 700 `i `f 199  ]
+"805
+[; ;SlaveLiofilizadorVer1.c: 805:          {
+{
+"806
+[; ;SlaveLiofilizadorVer1.c: 806:          Vaccum0=Temp;
+[e = _Vaccum0 _Temp ]
+"807
+[; ;SlaveLiofilizadorVer1.c: 807:          }
+}
 [e $U 200  ]
+"808
+[; ;SlaveLiofilizadorVer1.c: 808:        else
 [e :U 199 ]
-"652
-[; ;SlaveLiofilizadorVer1.c: 652:          {
+"809
+[; ;SlaveLiofilizadorVer1.c: 809:          {
 {
-"653
-[; ;SlaveLiofilizadorVer1.c: 653:          Temp+=ADC_Read_NTC(canal);
-[e =+ _Temp ( _ADC_Read_NTC (1 -> _canal `uc ]
-"655
-[; ;SlaveLiofilizadorVer1.c: 655:          if(Package_Usart_is_for_me()==1) break;
-[e $ ! == -> ( _Package_Usart_is_for_me ..  `i -> 1 `i 202  ]
-[e $U 200  ]
-[e :U 202 ]
-"657
-[; ;SlaveLiofilizadorVer1.c: 657:          if(generic_status.flag_global_hot)
-[e $ ! != -> . _generic_status 6 `i -> 0 `i 203  ]
-"658
-[; ;SlaveLiofilizadorVer1.c: 658:            {
-{
-"660
-[; ;SlaveLiofilizadorVer1.c: 660:            if((TempoCNT_0==0)&&
-[e $ ! && && == -> _TempoCNT_0 `i -> 0 `i == -> _RL0Status `i -> 1 `i == _Status0 -> 1 `i 204  ]
-"662
-[; ;SlaveLiofilizadorVer1.c: 662:               (Status0==1)) Rele0Ligado();
-[e ( _Rele0Ligado ..  ]
-[e :U 204 ]
-"664
-[; ;SlaveLiofilizadorVer1.c: 664:            if((TempoCNT_1==0)&&
-[e $ ! && && == -> _TempoCNT_1 `i -> 0 `i == -> _RL1Status `i -> 1 `i == _Status1 -> 1 `i 205  ]
-"666
-[; ;SlaveLiofilizadorVer1.c: 666:               (Status1==1)) Rele1Ligado();
-[e ( _Rele1Ligado ..  ]
-[e :U 205 ]
-"668
-[; ;SlaveLiofilizadorVer1.c: 668:            }
+"810
+[; ;SlaveLiofilizadorVer1.c: 810:          Vaccum0=Temp+((Temp-700)*3.05);
+[e = _Vaccum0 -> + -> _Temp `d * -> - _Temp -> -> 700 `i `f `d .3.05 `f ]
+"811
+[; ;SlaveLiofilizadorVer1.c: 811:          }
 }
-[e :U 203 ]
-"669
-[; ;SlaveLiofilizadorVer1.c: 669:          }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 15 `i 199  ]
 [e :U 200 ]
+"813
+[; ;SlaveLiofilizadorVer1.c: 813:        if(Vaccum0>2000) Vaccum0=2000;
+[e $ ! > _Vaccum0 -> -> 2000 `i `f 201  ]
+[e = _Vaccum0 -> -> 2000 `i `f ]
+[e :U 201 ]
+"818
+[; ;SlaveLiofilizadorVer1.c: 818:        }
 }
-"670
-[; ;SlaveLiofilizadorVer1.c: 670:      if(i<10)
-[e $ ! < -> _i `i -> 10 `i 206  ]
-"671
-[; ;SlaveLiofilizadorVer1.c: 671:        {
+[e $U 202  ]
+"819
+[; ;SlaveLiofilizadorVer1.c: 819:      else
+[e :U 191 ]
+"820
+[; ;SlaveLiofilizadorVer1.c: 820:        {
 {
-"673
-[; ;SlaveLiofilizadorVer1.c: 673:        return;
-[e $UE 198  ]
-"674
-[; ;SlaveLiofilizadorVer1.c: 674:        }
-}
+"821
+[; ;SlaveLiofilizadorVer1.c: 821:        ADCON1bits.VCFG0=0;
+[e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
+"822
+[; ;SlaveLiofilizadorVer1.c: 822:        ADCON1bits.VCFG1=0;
+[e = . . _ADCON1bits 0 2 -> -> 0 `i `uc ]
+"823
+[; ;SlaveLiofilizadorVer1.c: 823:        ADCON0bits.CHS=canal;
+[e = . . _ADCON0bits 0 2 _canal ]
+"824
+[; ;SlaveLiofilizadorVer1.c: 824:        my_delay_ms(1);
+[e ( _my_delay_ms (1 -> -> 1 `i `l ]
+"825
+[; ;SlaveLiofilizadorVer1.c: 825:        Temp=0;
+[e = _Temp -> -> 0 `i `f ]
+"827
+[; ;SlaveLiofilizadorVer1.c: 827:        for(i=1;i<15;i++)
+{
+[e = _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 15 `i `ui 203  ]
+[e $U 204  ]
+[e :U 203 ]
+"828
+[; ;SlaveLiofilizadorVer1.c: 828:            {
+{
+"831
+[; ;SlaveLiofilizadorVer1.c: 831:            Temp+=ADC_Media_10bits(canal);
+[e =+ _Temp ( _ADC_Media_10bits (1 -> _canal `uc ]
+"832
+[; ;SlaveLiofilizadorVer1.c: 832:            if(Package_Usart_is_for_me()==1) break;
+[e $ ! == -> ( _Package_Usart_is_for_me ..  `i -> 1 `i 206  ]
+[e $U 204  ]
 [e :U 206 ]
-"675
-[; ;SlaveLiofilizadorVer1.c: 675:      if(i==15)
-[e $ ! == -> _i `i -> 15 `i 207  ]
-"676
-[; ;SlaveLiofilizadorVer1.c: 676:         Temp/=(i-1);
-[e =/ _Temp -> - -> _i `i -> 1 `i `f ]
-[e $U 208  ]
-"677
-[; ;SlaveLiofilizadorVer1.c: 677:      else
+"833
+[; ;SlaveLiofilizadorVer1.c: 833:            }
+}
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 15 `i `ui 203  ]
+[e :U 204 ]
+}
+"834
+[; ;SlaveLiofilizadorVer1.c: 834:         if(i<10)
+[e $ ! < _i -> -> 10 `i `ui 207  ]
+"835
+[; ;SlaveLiofilizadorVer1.c: 835:           {
+{
+"837
+[; ;SlaveLiofilizadorVer1.c: 837:           return;
+[e $UE 190  ]
+"838
+[; ;SlaveLiofilizadorVer1.c: 838:           }
+}
 [e :U 207 ]
-"678
-[; ;SlaveLiofilizadorVer1.c: 678:         Temp/=(i);
-[e =/ _Temp -> -> _i `i `f ]
+"840
+[; ;SlaveLiofilizadorVer1.c: 840:        if(i==15)
+[e $ ! == _i -> -> 15 `i `ui 208  ]
+"841
+[; ;SlaveLiofilizadorVer1.c: 841:          Temp/=(i-1);
+[e =/ _Temp -> - _i -> -> 1 `i `ui `f ]
+[e $U 209  ]
+"842
+[; ;SlaveLiofilizadorVer1.c: 842:        else
 [e :U 208 ]
-"680
-[; ;SlaveLiofilizadorVer1.c: 680:      if(canal==0)
-[e $ ! == -> _canal `i -> 0 `i 209  ]
-"681
-[; ;SlaveLiofilizadorVer1.c: 681:         {
-{
-"682
-[; ;SlaveLiofilizadorVer1.c: 682:         Temperatura0=Temp;
-[e = _Temperatura0 _Temp ]
-"683
-[; ;SlaveLiofilizadorVer1.c: 683:         }
-}
-[e $U 210  ]
-"684
-[; ;SlaveLiofilizadorVer1.c: 684:      else
+"843
+[; ;SlaveLiofilizadorVer1.c: 843:          Temp/=(i);
+[e =/ _Temp -> _i `f ]
 [e :U 209 ]
-"685
-[; ;SlaveLiofilizadorVer1.c: 685:         {
-{
-"686
-[; ;SlaveLiofilizadorVer1.c: 686:         Temperatura1=Temp;
-[e = _Temperatura1 _Temp ]
-"687
-[; ;SlaveLiofilizadorVer1.c: 687:         }
-}
-[e :U 210 ]
-"689
-[; ;SlaveLiofilizadorVer1.c: 689:      }
-[e :UE 198 ]
-}
-"844
-[; ;SlaveLiofilizadorVer1.c: 844: void Auto_Relay0(void){
-[v _Auto_Relay0 `(v ~T0 @X0 1 ef ]
-{
-[e :U _Auto_Relay0 ]
-[f ]
 "845
-[; ;SlaveLiofilizadorVer1.c: 845:              if(Status0==0)
-[e $ ! == _Status0 -> 0 `i 212  ]
+[; ;SlaveLiofilizadorVer1.c: 845:         Tensao1 =Temp*0.558296;
+[e = _Tensao1 -> * -> _Temp `d .0.558296 `f ]
 "846
-[; ;SlaveLiofilizadorVer1.c: 846:                  {
-{
-"847
-[; ;SlaveLiofilizadorVer1.c: 847:                  Rele0Desligado();
-[e ( _Rele0Desligado ..  ]
+[; ;SlaveLiofilizadorVer1.c: 846:         if(Tensao1<15) Tensao1=0;
+[e $ ! < _Tensao1 -> -> 15 `i `f 210  ]
+[e = _Tensao1 -> -> 0 `i `f ]
+[e :U 210 ]
 "848
-[; ;SlaveLiofilizadorVer1.c: 848:                  }
+[; ;SlaveLiofilizadorVer1.c: 848:        }
 }
-[e $U 213  ]
+[e :U 202 ]
 "849
-[; ;SlaveLiofilizadorVer1.c: 849:              else
-[e :U 212 ]
-"850
-[; ;SlaveLiofilizadorVer1.c: 850:                  {
-{
-"852
-[; ;SlaveLiofilizadorVer1.c: 852:                  if (Temperatura0<=(SetPoint0-Histerese0))
-[e $ ! <= _Temperatura0 - _SetPoint0 _Histerese0 214  ]
-"853
-[; ;SlaveLiofilizadorVer1.c: 853:                     {
-{
-"854
-[; ;SlaveLiofilizadorVer1.c: 854:                     RL0Status=1;
-[e = _RL0Status -> -> 1 `i `uc ]
-"855
-[; ;SlaveLiofilizadorVer1.c: 855:                     Rele0Ligado();
-[e ( _Rele0Ligado ..  ]
-"856
-[; ;SlaveLiofilizadorVer1.c: 856:                     }
+[; ;SlaveLiofilizadorVer1.c: 849: }
+[e :UE 190 ]
 }
-[e $U 215  ]
-"857
-[; ;SlaveLiofilizadorVer1.c: 857:                  else if (Temperatura0<=SetPoint0)
-[e :U 214 ]
-[e $ ! <= _Temperatura0 _SetPoint0 216  ]
-"858
-[; ;SlaveLiofilizadorVer1.c: 858:                           {
-{
-"859
-[; ;SlaveLiofilizadorVer1.c: 859:                           if(RL0Status==1)
-[e $ ! == -> _RL0Status `i -> 1 `i 217  ]
-"860
-[; ;SlaveLiofilizadorVer1.c: 860:                               {
-{
-"861
-[; ;SlaveLiofilizadorVer1.c: 861:                               Rele0Ligado();
-[e ( _Rele0Ligado ..  ]
-"862
-[; ;SlaveLiofilizadorVer1.c: 862:                               }
-}
-[e $U 218  ]
-"863
-[; ;SlaveLiofilizadorVer1.c: 863:                           else
-[e :U 217 ]
-"864
-[; ;SlaveLiofilizadorVer1.c: 864:                               {
-{
-"865
-[; ;SlaveLiofilizadorVer1.c: 865:                               Rele0Desligado();
-[e ( _Rele0Desligado ..  ]
-"866
-[; ;SlaveLiofilizadorVer1.c: 866:                               }
-}
-[e :U 218 ]
-"867
-[; ;SlaveLiofilizadorVer1.c: 867:                           }
-}
-[e $U 219  ]
-"868
-[; ;SlaveLiofilizadorVer1.c: 868:                  else if (Temperatura0>SetPoint0)
-[e :U 216 ]
-[e $ ! > _Temperatura0 _SetPoint0 220  ]
-"869
-[; ;SlaveLiofilizadorVer1.c: 869:                           {
-{
-"870
-[; ;SlaveLiofilizadorVer1.c: 870:                           RL0Status=0;
-[e = _RL0Status -> -> 0 `i `uc ]
-"871
-[; ;SlaveLiofilizadorVer1.c: 871:                           Rele0Desligado();
-[e ( _Rele0Desligado ..  ]
-"872
-[; ;SlaveLiofilizadorVer1.c: 872:                           }
-}
-[e :U 220 ]
-[e :U 219 ]
-[e :U 215 ]
-"873
-[; ;SlaveLiofilizadorVer1.c: 873:                  }
-}
-[e :U 213 ]
-"876
-[; ;SlaveLiofilizadorVer1.c: 876: }
-[e :UE 211 ]
-}
-"880
-[; ;SlaveLiofilizadorVer1.c: 880: void Auto_Relay1(void){
-[v _Auto_Relay1 `(v ~T0 @X0 1 ef ]
-{
-[e :U _Auto_Relay1 ]
-[f ]
-"881
-[; ;SlaveLiofilizadorVer1.c: 881:              if(Status1==0)
-[e $ ! == _Status1 -> 0 `i 222  ]
-"882
-[; ;SlaveLiofilizadorVer1.c: 882:                  {
-{
-"883
-[; ;SlaveLiofilizadorVer1.c: 883:                  Rele1Desligado();
-[e ( _Rele1Desligado ..  ]
-"884
-[; ;SlaveLiofilizadorVer1.c: 884:                  }
-}
-[e $U 223  ]
-"885
-[; ;SlaveLiofilizadorVer1.c: 885:              else
-[e :U 222 ]
-"886
-[; ;SlaveLiofilizadorVer1.c: 886:                  {
-{
-"888
-[; ;SlaveLiofilizadorVer1.c: 888:                  if (Temperatura1<=(SetPoint1-Histerese1))
-[e $ ! <= _Temperatura1 - _SetPoint1 -> -> _Histerese1 `i `f 224  ]
-"889
-[; ;SlaveLiofilizadorVer1.c: 889:                     {
-{
-"890
-[; ;SlaveLiofilizadorVer1.c: 890:                     RL1Status=1;
-[e = _RL1Status -> -> 1 `i `uc ]
-"891
-[; ;SlaveLiofilizadorVer1.c: 891:                     Rele1Ligado();
-[e ( _Rele1Ligado ..  ]
-"892
-[; ;SlaveLiofilizadorVer1.c: 892:                     }
-}
-[e $U 225  ]
-"893
-[; ;SlaveLiofilizadorVer1.c: 893:                  else if (Temperatura1<=SetPoint1)
-[e :U 224 ]
-[e $ ! <= _Temperatura1 _SetPoint1 226  ]
-"894
-[; ;SlaveLiofilizadorVer1.c: 894:                           {
-{
-"895
-[; ;SlaveLiofilizadorVer1.c: 895:                           if(RL1Status==1)
-[e $ ! == -> _RL1Status `i -> 1 `i 227  ]
-"896
-[; ;SlaveLiofilizadorVer1.c: 896:                               {
-{
-"897
-[; ;SlaveLiofilizadorVer1.c: 897:                               Rele1Ligado();
-[e ( _Rele1Ligado ..  ]
-"898
-[; ;SlaveLiofilizadorVer1.c: 898:                               }
-}
-[e $U 228  ]
-"899
-[; ;SlaveLiofilizadorVer1.c: 899:                           else
-[e :U 227 ]
-"900
-[; ;SlaveLiofilizadorVer1.c: 900:                               {
-{
-"901
-[; ;SlaveLiofilizadorVer1.c: 901:                               Rele1Desligado();
-[e ( _Rele1Desligado ..  ]
-"902
-[; ;SlaveLiofilizadorVer1.c: 902:                               }
-}
-[e :U 228 ]
-"903
-[; ;SlaveLiofilizadorVer1.c: 903:                           }
-}
-[e $U 229  ]
-"904
-[; ;SlaveLiofilizadorVer1.c: 904:                  else if (Temperatura1>SetPoint1)
-[e :U 226 ]
-[e $ ! > _Temperatura1 _SetPoint1 230  ]
-"905
-[; ;SlaveLiofilizadorVer1.c: 905:                           {
-{
-"906
-[; ;SlaveLiofilizadorVer1.c: 906:                           RL1Status=0;
-[e = _RL1Status -> -> 0 `i `uc ]
-"907
-[; ;SlaveLiofilizadorVer1.c: 907:                           Rele1Desligado();
-[e ( _Rele1Desligado ..  ]
-"908
-[; ;SlaveLiofilizadorVer1.c: 908:                           }
-}
-[e :U 230 ]
-[e :U 229 ]
-[e :U 225 ]
-"909
-[; ;SlaveLiofilizadorVer1.c: 909:                  }
-}
-[e :U 223 ]
-"912
-[; ;SlaveLiofilizadorVer1.c: 912: }
-[e :UE 221 ]
-}
-"915
-[; ;SlaveLiofilizadorVer1.c: 915: void Rele0Desligado(void){
-[v _Rele0Desligado `(v ~T0 @X0 1 ef ]
-{
-[e :U _Rele0Desligado ]
-[f ]
-"916
-[; ;SlaveLiofilizadorVer1.c: 916:      PORTCbits.RC0=0;
-[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-"917
-[; ;SlaveLiofilizadorVer1.c: 917: }
-[e :UE 231 ]
-}
-"919
-[; ;SlaveLiofilizadorVer1.c: 919: void Rele1Desligado(void){
-[v _Rele1Desligado `(v ~T0 @X0 1 ef ]
-{
-[e :U _Rele1Desligado ]
-[f ]
-"920
-[; ;SlaveLiofilizadorVer1.c: 920:      PORTCbits.RC1=0;
-[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-"921
-[; ;SlaveLiofilizadorVer1.c: 921: }
-[e :UE 232 ]
-}
-"924
-[; ;SlaveLiofilizadorVer1.c: 924: void Rele0Ligado(void){
-[v _Rele0Ligado `(v ~T0 @X0 1 ef ]
-{
-[e :U _Rele0Ligado ]
-[f ]
-"927
-[; ;SlaveLiofilizadorVer1.c: 927:         if(TempoCNT_0==0)
-[e $ ! == -> _TempoCNT_0 `i -> 0 `i 234  ]
-"928
-[; ;SlaveLiofilizadorVer1.c: 928:             {
-{
-"931
-[; ;SlaveLiofilizadorVer1.c: 931:             if(PORTCbits.RC0==0)
-[e $ ! == -> . . _PORTCbits 0 0 `i -> 0 `i 235  ]
-"932
-[; ;SlaveLiofilizadorVer1.c: 932:               {
-{
-"933
-[; ;SlaveLiofilizadorVer1.c: 933:               if(TempoON_0!=0)
-[e $ ! != -> _TempoON_0 `i -> 0 `i 236  ]
-"934
-[; ;SlaveLiofilizadorVer1.c: 934:                  {
-{
-"935
-[; ;SlaveLiofilizadorVer1.c: 935:                  TempoCNT_0=TempoON_0;
-[e = _TempoCNT_0 _TempoON_0 ]
-"936
-[; ;SlaveLiofilizadorVer1.c: 936:                  PORTCbits.RC0=1;
-[e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-"937
-[; ;SlaveLiofilizadorVer1.c: 937:                  }
-}
-[e :U 236 ]
-"938
-[; ;SlaveLiofilizadorVer1.c: 938:               }
-}
-[e $U 237  ]
-"939
-[; ;SlaveLiofilizadorVer1.c: 939:             else
-[e :U 235 ]
-"940
-[; ;SlaveLiofilizadorVer1.c: 940:               {
-{
-"941
-[; ;SlaveLiofilizadorVer1.c: 941:               if(TempoOFF_0!=0)
-[e $ ! != -> _TempoOFF_0 `i -> 0 `i 238  ]
-"942
-[; ;SlaveLiofilizadorVer1.c: 942:                  {
-{
-"943
-[; ;SlaveLiofilizadorVer1.c: 943:                  TempoCNT_0=TempoOFF_0;
-[e = _TempoCNT_0 _TempoOFF_0 ]
-"944
-[; ;SlaveLiofilizadorVer1.c: 944:                  PORTCbits.RC0=0;
-[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
-"945
-[; ;SlaveLiofilizadorVer1.c: 945:                  }
-}
-[e :U 238 ]
-"946
-[; ;SlaveLiofilizadorVer1.c: 946:               }
-}
-[e :U 237 ]
-"947
-[; ;SlaveLiofilizadorVer1.c: 947:             }
-}
-[e :U 234 ]
-"948
-[; ;SlaveLiofilizadorVer1.c: 948: }
-[e :UE 233 ]
-}
-"951
-[; ;SlaveLiofilizadorVer1.c: 951: void Rele1Ligado(void){
-[v _Rele1Ligado `(v ~T0 @X0 1 ef ]
-{
-[e :U _Rele1Ligado ]
-[f ]
-"954
-[; ;SlaveLiofilizadorVer1.c: 954:         if(TempoCNT_1==0)
-[e $ ! == -> _TempoCNT_1 `i -> 0 `i 240  ]
-"955
-[; ;SlaveLiofilizadorVer1.c: 955:             {
-{
-"958
-[; ;SlaveLiofilizadorVer1.c: 958:             if(PORTCbits.RC1==0)
-[e $ ! == -> . . _PORTCbits 0 1 `i -> 0 `i 241  ]
-"959
-[; ;SlaveLiofilizadorVer1.c: 959:               {
-{
-"960
-[; ;SlaveLiofilizadorVer1.c: 960:               if(TempoON_1!=0)
-[e $ ! != -> _TempoON_1 `i -> 0 `i 242  ]
-"961
-[; ;SlaveLiofilizadorVer1.c: 961:                  {
-{
-"962
-[; ;SlaveLiofilizadorVer1.c: 962:                  TempoCNT_1=TempoON_1;
-[e = _TempoCNT_1 _TempoON_1 ]
-"963
-[; ;SlaveLiofilizadorVer1.c: 963:                  PORTCbits.RC1=1;
-[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
-"964
-[; ;SlaveLiofilizadorVer1.c: 964:                  }
-}
-[e :U 242 ]
-"965
-[; ;SlaveLiofilizadorVer1.c: 965:               }
-}
-[e $U 243  ]
-"966
-[; ;SlaveLiofilizadorVer1.c: 966:             else
-[e :U 241 ]
-"967
-[; ;SlaveLiofilizadorVer1.c: 967:               {
-{
-"968
-[; ;SlaveLiofilizadorVer1.c: 968:               if(TempoOFF_1!=0)
-[e $ ! != -> _TempoOFF_1 `i -> 0 `i 244  ]
-"969
-[; ;SlaveLiofilizadorVer1.c: 969:                  {
-{
-"970
-[; ;SlaveLiofilizadorVer1.c: 970:                  TempoCNT_1=TempoOFF_1;
-[e = _TempoCNT_1 _TempoOFF_1 ]
-"971
-[; ;SlaveLiofilizadorVer1.c: 971:                  PORTCbits.RC1=0;
-[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-"972
-[; ;SlaveLiofilizadorVer1.c: 972:                  }
-}
-[e :U 244 ]
-"973
-[; ;SlaveLiofilizadorVer1.c: 973:               }
-}
-[e :U 243 ]
-"974
-[; ;SlaveLiofilizadorVer1.c: 974:             }
-}
-[e :U 240 ]
-"975
-[; ;SlaveLiofilizadorVer1.c: 975: }
-[e :UE 239 ]
-}
-"981
-[; ;SlaveLiofilizadorVer1.c: 981: void Load_Work(void){
-[v _Load_Work `(v ~T0 @X0 1 ef ]
-{
-[e :U _Load_Work ]
-[f ]
-"984
-[; ;SlaveLiofilizadorVer1.c: 984:      SetPoint0 = EEPROM_Read_Integer(0);
-[e = _SetPoint0 -> ( _EEPROM_Read_Integer (1 -> -> 0 `i `uc `f ]
-"985
-[; ;SlaveLiofilizadorVer1.c: 985:      SetPoint0/=10;
-[e =/ _SetPoint0 -> -> 10 `i `f ]
-"986
-[; ;SlaveLiofilizadorVer1.c: 986:      TempoON_0 = EEPROM_Read_Byte(2);
-[e = _TempoON_0 -> ( _EEPROM_Read_Byte (1 -> -> 2 `i `uc `uc ]
-"987
-[; ;SlaveLiofilizadorVer1.c: 987:      TempoOFF_0= EEPROM_Read_Byte(3);
-[e = _TempoOFF_0 -> ( _EEPROM_Read_Byte (1 -> -> 3 `i `uc `uc ]
-"988
-[; ;SlaveLiofilizadorVer1.c: 988:      Histerese0= EEPROM_Read_Byte(4);
-[e = _Histerese0 -> ( _EEPROM_Read_Byte (1 -> -> 4 `i `uc `f ]
-"989
-[; ;SlaveLiofilizadorVer1.c: 989:      Status0 = EEPROM_Read_Integer(5);
-[e = _Status0 -> ( _EEPROM_Read_Integer (1 -> -> 5 `i `uc `i ]
-"991
-[; ;SlaveLiofilizadorVer1.c: 991:      SetPoint1 = EEPROM_Read_Integer(7);
-[e = _SetPoint1 -> ( _EEPROM_Read_Integer (1 -> -> 7 `i `uc `f ]
-"992
-[; ;SlaveLiofilizadorVer1.c: 992:      SetPoint1/=10;
-[e =/ _SetPoint1 -> -> 10 `i `f ]
-"993
-[; ;SlaveLiofilizadorVer1.c: 993:      TempoON_1 = EEPROM_Read_Byte(9);
-[e = _TempoON_1 -> ( _EEPROM_Read_Byte (1 -> -> 9 `i `uc `uc ]
-"994
-[; ;SlaveLiofilizadorVer1.c: 994:      TempoOFF_1= EEPROM_Read_Byte(10);
-[e = _TempoOFF_1 -> ( _EEPROM_Read_Byte (1 -> -> 10 `i `uc `uc ]
-"995
-[; ;SlaveLiofilizadorVer1.c: 995:      Histerese1= EEPROM_Read_Byte(11);
-[e = _Histerese1 -> ( _EEPROM_Read_Byte (1 -> -> 11 `i `uc `uc ]
-"996
-[; ;SlaveLiofilizadorVer1.c: 996:      Status1 = EEPROM_Read_Integer(12);
-[e = _Status1 -> ( _EEPROM_Read_Integer (1 -> -> 12 `i `uc `i ]
-"998
-[; ;SlaveLiofilizadorVer1.c: 998:      statuspower.bits=EEPROM_Read_Byte(14);
-[e = . _statuspower 0 ( _EEPROM_Read_Byte (1 -> -> 14 `i `uc ]
-"999
-[; ;SlaveLiofilizadorVer1.c: 999: }
-[e :UE 245 ]
-}
-"1004
-[; ;SlaveLiofilizadorVer1.c: 1004: void Save_Log(unsigned long add_datalog){
+"1028
+[; ;SlaveLiofilizadorVer1.c: 1028: void Save_Log(unsigned long add_datalog){
 [v _Save_Log `(v ~T0 @X0 1 ef1`ul ]
 {
 [e :U _Save_Log ]
 [v _add_datalog `ul ~T0 @X0 1 r1 ]
 [f ]
-"1005
-[; ;SlaveLiofilizadorVer1.c: 1005:      EEPROM_24C1025_Write_Int(0x00, add_datalog, Temperatura0*10.0);
-[e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 0 `i `uc _add_datalog -> * -> _Temperatura0 `d .10.0 `i ]
-"1006
-[; ;SlaveLiofilizadorVer1.c: 1006:      EEPROM_24C1025_Write_Int(0x01, add_datalog, Temperatura1*10.0);
-[e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 1 `i `uc _add_datalog -> * -> _Temperatura1 `d .10.0 `i ]
-"1010
-[; ;SlaveLiofilizadorVer1.c: 1010: }
-[e :UE 246 ]
+"1029
+[; ;SlaveLiofilizadorVer1.c: 1029:      EEPROM_24C1025_Write_Int(0x00, add_datalog, (Tensao1*10.0));
+[e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 0 `i `uc _add_datalog -> * -> _Tensao1 `d .10.0 `i ]
+"1030
+[; ;SlaveLiofilizadorVer1.c: 1030:      EEPROM_24C1025_Write_Int(0x01, add_datalog, (Vaccum0*10.0));
+[e ( _EEPROM_24C1025_Write_Int (3 , , -> -> 1 `i `uc _add_datalog -> * -> _Vaccum0 `d .10.0 `i ]
+"1034
+[; ;SlaveLiofilizadorVer1.c: 1034: }
+[e :UE 211 ]
 }
+[a 1C 49 46 48 46 50 56 95 98 101 116 97 95 118 97 99 99 117 109 0 ]
 [a 2C 79 75 0 ]
-[a 1C 118 49 46 48 46 50 54 0 ]

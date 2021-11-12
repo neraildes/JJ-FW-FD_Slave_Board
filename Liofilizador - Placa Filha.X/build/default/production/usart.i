@@ -2792,6 +2792,24 @@ void USART_put_buffer(char *vetor, char size){
         loop++;
     }
 }
+
+
+
+unsigned char USART_input_buffer(void){
+    unsigned int time=0;
+    unsigned char result=0;
+
+    while(time<30){
+        if(generic_status.flag_usart_rx){
+           generic_status.flag_usart_rx=0;
+           result = 1;
+           break;
+           }
+        time++;
+        _delay((unsigned long)((1)*(8000000/4000.0)));
+    }
+    return result;
+}
 # 137 "usart.c"
 void USART_put_int(int value){
      char *dado;

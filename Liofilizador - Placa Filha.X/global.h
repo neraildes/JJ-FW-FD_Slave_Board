@@ -15,11 +15,11 @@
 #define _XTAL_FREQ 8000000
 #define XTAL_8MHZ
 
-//#define VACCUM_BOARD
+#define VACCUM_BOARD
 
 //#define PT100_UMIDADE
 
-#define NTC_BOARD  //Retorno para maquina real
+//#define NTC_BOARD  //Retorno para maquina real
 
 //------------------------------------------------------------------------------
 

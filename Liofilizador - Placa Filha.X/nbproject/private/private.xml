@@ -5,19 +5,16 @@
             <url>SlaveLiofilizadorVer1.c</url>
             <bookmark id="1">
                 <name/>
-                <line>953</line>
+                <line>965</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Indka(r)/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/SlaveLiofilizadorVer1.c</file>
-            <file>file:/C:/Indka(r)/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/isr.c</file>
-            <file>file:/C:/Indka(r)/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/global.h</file>
-            <file>file:/C:/Indka(r)/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/versao.h</file>
-            <file>file:/C:/Indka(r)/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/protocolo.h</file>
-            <file>file:/C:/Indka(r)/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/eeprom.c</file>
+            <file>file:/C:/Indka(R)/17-JJCientifica%20($)/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/versao.h</file>
+            <file>file:/C:/Indka(R)/17-JJCientifica%20($)/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/global.h</file>
+            <file>file:/C:/Indka(R)/17-JJCientifica%20($)/Liofilizador/Firmware/FD_Slave_Board/Liofilizador%20-%20Placa%20Filha.X/SlaveLiofilizadorVer1.c</file>
         </group>
     </open-files>
 </project-private>

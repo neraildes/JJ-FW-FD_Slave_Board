@@ -281,3 +281,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _PT100_TRANSLADA
 -U .1.3
 ]
+"6 pt100.c
+[; ;pt100.c: 6: double PT100_Read_Temperature(unsigned char canal){
+[v _PT100_Read_Temperature `(d ~T0 @X0 1 ef1`uc ]
+{
+[e :U _PT100_Read_Temperature ]
+[v _canal `uc ~T0 @X0 1 r1 ]
+[f ]
+"10
+[; ;pt100.c: 10:        return 0;
+[e ) -> -> 0 `i `d ]
+[e $UE 143  ]
+"11
+[; ;pt100.c: 11: }
+[e :UE 143 ]
+}
