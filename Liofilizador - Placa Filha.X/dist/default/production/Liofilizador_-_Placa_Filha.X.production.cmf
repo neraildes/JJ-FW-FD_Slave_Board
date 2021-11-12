@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
+$C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 12 12 3 2
 config CONFIG 4 2007 2007 2 2
@@ -140,31 +140,31 @@ STRING 1800-1900 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
-15 cinit CODE >2667:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-15 cinit CODE >2670:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-15 cinit CODE >2771:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-16 cinit CODE >2772:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-17 cinit CODE >2773:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-18 cinit CODE >2774:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-19 cinit CODE >2775:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1A cinit CODE >2776:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1B cinit CODE >2779:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1C cinit CODE >2780:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1D cinit CODE >2781:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1E cinit CODE >2782:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1F cinit CODE >2783:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-24 cinit CODE >2786:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-25 cinit CODE >2787:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-26 cinit CODE >2788:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-27 cinit CODE >2789:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-28 cinit CODE >2790:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-2D cinit CODE >2793:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-2E cinit CODE >2794:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-2F cinit CODE >2795:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-30 cinit CODE >2796:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-33 cinit CODE >2802:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-33 cinit CODE >2804:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-34 cinit CODE >2805:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
+15 cinit CODE >2667:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+15 cinit CODE >2670:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+15 cinit CODE >2771:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+16 cinit CODE >2772:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+17 cinit CODE >2773:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+18 cinit CODE >2774:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+19 cinit CODE >2775:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1A cinit CODE >2776:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1B cinit CODE >2779:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1C cinit CODE >2780:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1D cinit CODE >2781:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1E cinit CODE >2782:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1F cinit CODE >2783:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+24 cinit CODE >2786:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+25 cinit CODE >2787:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+26 cinit CODE >2788:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+27 cinit CODE >2789:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+28 cinit CODE >2790:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+2D cinit CODE >2793:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+2E cinit CODE >2794:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+2F cinit CODE >2795:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+30 cinit CODE >2796:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+33 cinit CODE >2802:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+33 cinit CODE >2804:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+34 cinit CODE >2805:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
 4 intentry CODE >29:C:\Indka(R)\17-JJCientifica ($)\Liofilizador\Firmware\FD_Slave_Board\Liofilizador - Placa Filha.X\isr.c
 11A9 text58 CODE >29:C:\Indka(R)\17-JJCientifica ($)\Liofilizador\Firmware\FD_Slave_Board\Liofilizador - Placa Filha.X\isr.c
 11A9 text58 CODE >34:C:\Indka(R)\17-JJCientifica ($)\Liofilizador\Firmware\FD_Slave_Board\Liofilizador - Placa Filha.X\isr.c
@@ -1740,16 +1740,16 @@ FFF text2 CODE >849:C:\Indka(R)\17-JJCientifica ($)\Liofilizador\Firmware\FD_Sla
 960 maintext CODE >301:C:\Indka(R)\17-JJCientifica ($)\Liofilizador\Firmware\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
 965 maintext CODE >302:C:\Indka(R)\17-JJCientifica ($)\Liofilizador\Firmware\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
 968 maintext CODE >305:C:\Indka(R)\17-JJCientifica ($)\Liofilizador\Firmware\FD_Slave_Board\Liofilizador - Placa Filha.X\SlaveLiofilizadorVer1.c
-1901 clrtext CODE >2758:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1901 clrtext CODE >2759:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1902 clrtext CODE >2760:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1902 clrtext CODE >2761:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1903 clrtext CODE >2762:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1904 clrtext CODE >2763:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1905 clrtext CODE >2764:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1906 clrtext CODE >2765:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1907 clrtext CODE >2766:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
-1908 clrtext CODE >2767:C:\Users\Nera\AppData\Local\Temp\xcAsajo.s
+1901 clrtext CODE >2758:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1901 clrtext CODE >2759:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1902 clrtext CODE >2760:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1902 clrtext CODE >2761:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1903 clrtext CODE >2762:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1904 clrtext CODE >2763:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1905 clrtext CODE >2764:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1906 clrtext CODE >2765:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1907 clrtext CODE >2766:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
+1908 clrtext CODE >2767:C:\Users\Nera\AppData\Local\Temp\xcAsbsk.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1787,13 +1787,13 @@ __Hstrings 0 0 ABS 0 strings -
 my_delay_ms_WDT@time 20 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 _CREN C4 0 ABS 0 - dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
+___sp 0 0 STACK 2 stack C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
 _hora 7C 0 COMMON 1 bssCOMMON dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 _main 10DA 0 CODE 0 maintext dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 EEPROM_24C1025_Write_Str@mem_add 2A 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 _Delay_Led_Memory DD 0 BANK1 1 bssBANK1 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
-start 24 0 CODE 0 init C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
+start 24 0 CODE 0 init C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
 ___flmul@aexp 59 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 ___flmul@bexp 5E 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 ___flmul@prod 5F 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
@@ -1830,12 +1830,12 @@ __size_of_ADC_init 0 0 ABS 0 - dist/default/production\Liofilizador_-_Placa_Filh
 _EEPROM_24C1025_Read_Byte 3354 0 CODE 0 text43 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 ?_ADC_Media_10bits 2E 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 USART_put_string@vetor 21 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 USART_put_string@ptr 23 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 __end_oflog@coeff 2090 0 STRING 0 strings dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
@@ -1898,8 +1898,8 @@ EEPROM_Read_String@c 26 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizad
 ?_strlen 20 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 __Umul8_16@multiplicand 20 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 __end_of_ADC_init 324C 0 CODE 0 text57 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
-___stacklo 0 0 ABS 0 - C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
+___stackhi 0 0 ABS 0 - C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
+___stacklo 0 0 ABS 0 - C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
 __size_of_my_delay_ms_WDT 0 0 ABS 0 - dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 _EEPROM_Write_Byte 3A78 0 CODE 0 text35 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 __end_of_Send_To_MB 3648 0 CODE 0 text17 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
@@ -1966,7 +1966,7 @@ _EEPROM_24C1025_Read_Buffer CF0 0 CODE 0 text44 dist/default/production\Liofiliz
 __end_of_RESISTOR_ROOM_TEMP 2038 0 STRING 0 strings dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 __size_of_USART_init 0 0 ABS 0 - dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 __size_of_USART_putc 0 0 ABS 0 - dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
+___int_sp 0 0 STACK 2 stack C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
 __size_of_EEPROM_24C1025_Read_Int 0 0 ABS 0 - dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 __size_of_EEPROM_24C1025_Read_Str 0 0 ABS 0 - dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
@@ -2077,7 +2077,7 @@ ___lldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizador_-
 _header D7 0 BANK1 1 bssBANK1 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 __stringtab 2000 0 STRING 0 strings dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 Decodify_Command@sizedata B8 0 BANK1 1 cstackBANK1 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Nera\AppData\Local\Temp\xcAsajo.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Nera\AppData\Local\Temp\xcAsbsk.o
 strlen@s 24 0 BANK0 1 cstackBANK0 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 __end_of_MAX_ADC 2048 0 STRING 0 strings dist/default/production\Liofilizador_-_Placa_Filha.X.production.o
 __end_of_Send_Reply_OK 3236 0 CODE 0 text18 dist/default/production\Liofilizador_-_Placa_Filha.X.production.o

@@ -1,5 +1,8 @@
 ﻿PT100 NTC BOARD 4 EM 1
 
+v1.0.30
+   VACCUM - Modificado a formula de calibrar a placa
+
 v1.0.26
    Documentando commit para posterior recuperação
 
