@@ -2,6 +2,9 @@
 
 v1.0.30
    VACCUM - Modificado a formula de calibrar a placa
+	    Alterar referencia para 3.5V.
+	    Modificar amplificação até que tenha a
+            medidad da placa de calibração.
 
 v1.0.26
    Documentando commit para posterior recuperação

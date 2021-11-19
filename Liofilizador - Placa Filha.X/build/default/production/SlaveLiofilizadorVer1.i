@@ -3043,7 +3043,7 @@ void Decodify_Command(void)
 
 
         case 0x41:
-             strcpy(buffer,"1.0.28_beta_vaccum");
+             strcpy(buffer,"v1.0.30");
              Send_To_MB(11);
              USART_put_string(buffer);
              break;
