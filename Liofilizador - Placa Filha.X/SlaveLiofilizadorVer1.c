@@ -810,6 +810,9 @@ void MediaPlacaVaccum(unsigned char canal){
          Vaccum0=Temp+((Temp-700)*3.05);
          }
        
+       //Este calculo usa a conversão direta, então
+       //ele nunca chega a um numero negativo.
+       
        if(Vaccum0>2000) Vaccum0=2000;
        
        
