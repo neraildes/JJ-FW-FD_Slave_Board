@@ -810,6 +810,9 @@ void MediaPlacaVaccum(unsigned char canal){
          Vaccum0=Temp+((Temp-700)*3.05);
          }
        
+       //Esta é uma conversão direta de final de escala, isso significa que o
+       //valor do vácuo nunca será menor do que zero.
+       
        if(Vaccum0>2000) Vaccum0=2000;
        
        
